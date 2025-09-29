@@ -1,123 +1,141 @@
-using NUnit.Framework;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler, IDragHandler
 {
-    //Attach to the container
-
+    [Header("Draggable")]
+    [Tooltip("What Transform to move. If not set, uses this GameObject's Transform.")]
     private Transform objectToDrag;
+
+    [Header("Drop Targets")]
+    [Tooltip("Auto find all DropTarget targets in the scene")]
+    [SerializeField] private bool autoFindTargets = true;
+
+    [Tooltip("Leave empty if autoFindTargets == true")]
+    [SerializeField] private DropTarget[] targets;
+
     private Vector3 originalPosition;
+    private bool dragging;
 
-    private bool dragging = false;
-
-    private GameObject humanObject;
-    private RectTransform[] placingPositions;
-
-    [SerializeField] private float snapDistance = 300f;
-
-    private Transform currentPlace;
+    // UI helpers
+    private RectTransform rect;
+    private Canvas canvas;
+    private RectTransform canvasRect;
+    private Vector2 pointerToAnchorOffset;
+    private float snapDist = 250f;
 
     private void Start()
     {
-        if (transform.GetChild(0) == null)
+        if (objectToDrag == null)
         {
-            Debug.LogError("No child object found to drag!");
-            return;
+            var objToDrag = transform.GetChild(0);
+
+            if (objToDrag == null)
+                objectToDrag = transform;
+            else
+                objectToDrag = objToDrag;
         }
 
-        objectToDrag = transform.GetChild(0);
-        originalPosition = objectToDrag.position;
+        rect = objectToDrag as RectTransform;
+        if (rect != null)
+        {
+            canvas = rect.GetComponentInParent<Canvas>();
+            canvasRect = canvas ? (RectTransform)canvas.transform : null;
+        }
 
-        PlacingObjectsInit();
+        AutoFindTargets();
     }
 
-    private void PlacingObjectsInit()
+    private void AutoFindTargets()
     {
-        humanObject = GameObject.FindGameObjectWithTag("Human");
-
-        if (humanObject == null)
+        if (autoFindTargets == true)
         {
-            Debug.LogWarning("No GameObject with tag 'Human' found.");
-            return;
-        }
-
-        RectTransform[] allObjs = humanObject.GetComponentsInChildren<RectTransform>();
-        RectTransform parentRect = humanObject.transform as RectTransform;
-
-        int c = 0;
-
-        for (int i = 0; i < allObjs.Length; i++)
-        {
-            if (allObjs[i] != parentRect) c++;
-        }
-
-        placingPositions = new RectTransform[c];
-        int index = 0;
-        for (int i = 0; i < allObjs.Length; i++)
-        {
-            if (allObjs[i] != parentRect)
-            {
-                placingPositions[index] = allObjs[i];
-                index++;
-            }
+            targets = FindObjectsByType<DropTarget>(FindObjectsSortMode.None);
         }
     }
+
 
     public void OnDrag(PointerEventData eventData)
     {
-        objectToDrag.position = eventData.position;
-        dragging = true;
+        if (!dragging || objectToDrag == null) return;
+
+        if (rect != null && canvas != null)
+        {
+            Vector2 localPointerPosition;
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, eventData.position, eventData.pressEventCamera, out localPointerPosition))
+            {
+                objectToDrag.position = canvas.transform.TransformPoint(localPointerPosition - pointerToAnchorOffset);
+            }
+        }
+        else
+        {
+            Vector3 screenPoint = new Vector3(eventData.position.x, eventData.position.y, Camera.main.WorldToScreenPoint(objectToDrag.position).z);
+            objectToDrag.position = Camera.main.ScreenToWorldPoint(screenPoint);
+        }
+
+        var closestTarget = GetClosestTarget(objectToDrag.position, targets);
+        if (closestTarget != null)
+        {
+            if (closestTarget.GetSnapWorldPosition().magnitude < snapDist)
+            {
+               Debug.DrawLine(objectToDrag.position, closestTarget.GetSnapWorldPosition(), Color.green);
+            }
+        }
     }
 
-    public void OnPointerDown(PointerEventData eventData) { }
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (objectToDrag == null) return;
 
+        dragging = true;
+        originalPosition = objectToDrag.position;
+    }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (!dragging) return;
         dragging = false;
 
-        if (currentPlace == null)
-            objectToDrag.position = originalPosition;
-        else
-            objectToDrag.position = currentPlace.position;
-    }
-
-    private void Update()
-    {
-        if (!dragging) return;
-
-        GetClosestPlace();
-    }
-
-    private void GetClosestPlace()
-    {
-        Transform potentialPlace = null;
-        float maxDist = Mathf.Infinity;
-
-        for (int i = 0; i < placingPositions.Length; i++)
+        var closestTarget = GetClosestTarget(objectToDrag.position, targets);
+        if (closestTarget != null)
         {
-            Transform place = placingPositions[i];
-            if (place == null) continue;
-
-            float dist = Vector2.Distance(objectToDrag.position, place.position);
-
-            if (dist <= maxDist)
+            if (closestTarget.GetSnapWorldPosition().magnitude < snapDist)
             {
-                maxDist = dist;
-                potentialPlace = place;
+                objectToDrag.position = closestTarget.GetSnapWorldPosition();
+            }
+            else
+                objectToDrag.position = originalPosition;
+        }
+        else
+        {
+            objectToDrag.position = originalPosition;
+        }
+    }
+
+    private DropTarget GetClosestTarget(Vector3 position, DropTarget[] targets)
+    {
+        if (targets == null || targets.Length == 0) return null;
+
+        DropTarget closest = null;
+        float closestDistanceSqr = Mathf.Infinity;
+        Vector3 p = objectToDrag.position;
+
+        for (int i = 0; i < targets.Length; i++)
+        {
+            var target = targets[i];
+            if (target == null) continue;
+
+            var snapPos = target.GetSnapWorldPosition();
+            float dSqr = (snapPos - p).sqrMagnitude;
+
+            if (dSqr <= closestDistanceSqr)
+            {
+                closestDistanceSqr = dSqr;
+                closest = target;
             }
         }
 
-        currentPlace = potentialPlace;
-
-        if (currentPlace != null)
-        {
-            if (Vector2.Distance(objectToDrag.position, currentPlace.position) <= snapDistance)
-                Debug.DrawLine(objectToDrag.position, currentPlace.position);
-            else 
-                currentPlace = null;
-        }
+        return closest;
     }
 }
