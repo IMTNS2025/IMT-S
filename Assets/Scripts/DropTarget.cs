@@ -8,7 +8,7 @@ public class DropTarget : MonoBehaviour
 
     public Vector3 GetSnapWorldPosition()
     {
-        Transform t = snapPoint != null ? snapPoint : transform.GetChild(0);
+        Transform t = snapPoint != null ? snapPoint : transform;
         Vector3 pos = t.position;
         return pos;
     }

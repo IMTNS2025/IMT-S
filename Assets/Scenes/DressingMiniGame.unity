@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 630550274}
   - component: {fileID: 630550276}
   - component: {fileID: 630550275}
+  - component: {fileID: 630550277}
   m_Layer: 5
   m_Name: Position MId
   m_TagString: Untagged
@@ -409,6 +410,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630550273}
   m_CullTransparentMesh: 1
+--- !u!114 &630550277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630550273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a603dd322a902134e81f8ae1f00b0059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropTarget
+  snapPoint: {fileID: 0}
 --- !u!1 &804573086
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +591,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12b4d4c4e130c7468f14bb0f16f4a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
-  snapDistance: 300
+  autoFindTargets: 1
+  targets: []
+  currentTarget: {fileID: 0}
 --- !u!1 &909478198
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +836,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12b4d4c4e130c7468f14bb0f16f4a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
-  snapDistance: 300
+  autoFindTargets: 1
+  targets: []
+  currentTarget: {fileID: 0}
 --- !u!1 &1394769922
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +850,7 @@ GameObject:
   - component: {fileID: 1394769923}
   - component: {fileID: 1394769925}
   - component: {fileID: 1394769924}
+  - component: {fileID: 1394769926}
   m_Layer: 5
   m_Name: Position Bot
   m_TagString: Untagged
@@ -896,6 +915,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394769922}
   m_CullTransparentMesh: 1
+--- !u!114 &1394769926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394769922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a603dd322a902134e81f8ae1f00b0059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropTarget
+  snapPoint: {fileID: 0}
 --- !u!1 &1617011561 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3086712422674389918, guid: 0d07555b76a60904b9918f86536e16ff, type: 3}
@@ -1097,6 +1129,7 @@ GameObject:
   - component: {fileID: 1878077973}
   - component: {fileID: 1878077975}
   - component: {fileID: 1878077974}
+  - component: {fileID: 1878077976}
   m_Layer: 5
   m_Name: Position Top
   m_TagString: Untagged
@@ -1161,6 +1194,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878077972}
   m_CullTransparentMesh: 1
+--- !u!114 &1878077976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878077972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a603dd322a902134e81f8ae1f00b0059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropTarget
+  snapPoint: {fileID: 0}
 --- !u!1 &2023311517
 GameObject:
   m_ObjectHideFlags: 0

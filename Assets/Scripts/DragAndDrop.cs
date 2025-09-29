@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEngine.GraphicsBuffer;
 
 public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler, IDragHandler
 {
@@ -15,6 +16,8 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     [Tooltip("Leave empty if autoFindTargets == true")]
     [SerializeField] private DropTarget[] targets;
 
+    [SerializeField] private float snapDist = 250f;
+    
     private Vector3 originalPosition;
     private bool dragging;
 
@@ -23,7 +26,9 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     private Canvas canvas;
     private RectTransform canvasRect;
     private Vector2 pointerToAnchorOffset;
-    private float snapDist = 250f;
+
+
+    [SerializeField] DropTarget currentTarget;
 
     private void Start()
     {
@@ -73,14 +78,14 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
             Vector3 screenPoint = new Vector3(eventData.position.x, eventData.position.y, Camera.main.WorldToScreenPoint(objectToDrag.position).z);
             objectToDrag.position = Camera.main.ScreenToWorldPoint(screenPoint);
         }
-
         var closestTarget = GetClosestTarget(objectToDrag.position, targets);
-        if (closestTarget != null)
+
+        float dist = Vector3.Distance(objectToDrag.position, closestTarget.GetSnapWorldPosition());
+
+        if (dist < snapDist)
         {
-            if (closestTarget.GetSnapWorldPosition().magnitude < snapDist)
-            {
-               Debug.DrawLine(objectToDrag.position, closestTarget.GetSnapWorldPosition(), Color.green);
-            }
+            Debug.DrawLine(objectToDrag.position, closestTarget.GetSnapWorldPosition(), Color.red);
+
         }
     }
 
@@ -89,7 +94,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         if (objectToDrag == null) return;
 
         dragging = true;
-        originalPosition = objectToDrag.position;
+        originalPosition = transform.position;
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -98,19 +103,15 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         dragging = false;
 
         var closestTarget = GetClosestTarget(objectToDrag.position, targets);
-        if (closestTarget != null)
+
+        float dist = Vector3.Distance(objectToDrag.position, closestTarget.GetSnapWorldPosition());
+
+        if (dist < snapDist)
         {
-            if (closestTarget.GetSnapWorldPosition().magnitude < snapDist)
-            {
-                objectToDrag.position = closestTarget.GetSnapWorldPosition();
-            }
-            else
-                objectToDrag.position = originalPosition;
+            objectToDrag.position = closestTarget.GetSnapWorldPosition();
         }
         else
-        {
             objectToDrag.position = originalPosition;
-        }
     }
 
     private DropTarget GetClosestTarget(Vector3 position, DropTarget[] targets)
@@ -118,7 +119,9 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         if (targets == null || targets.Length == 0) return null;
 
         DropTarget closest = null;
+
         float closestDistanceSqr = Mathf.Infinity;
+
         Vector3 p = objectToDrag.position;
 
         for (int i = 0; i < targets.Length; i++)
