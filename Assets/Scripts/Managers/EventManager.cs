@@ -15,4 +15,7 @@ public static class EventManager
     //and we avoid reference issues and coupling.
 
     public static UnityEvent<List<Vector3>> OnPathCalculated = new();
+
+    public static UnityEvent<DragAndDrop> OnItemReturnedToPocket = new();
+    public static UnityEvent<DragAndDrop> OnItemRemovedFromPocket = new();
 }

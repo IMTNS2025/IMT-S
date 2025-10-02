@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +7,26 @@ public class PocketsSysten : MonoBehaviour
     [SerializeField] Image[] itemsInPocket;
 
     private float pocketSizeX, pocketSizeY;
+
+    [SerializeField] private List<GameObject> itemInPocket;
+
+    private void OnEnable()
+    {
+        EventManager.OnItemReturnedToPocket.AddListener((item) =>
+        {
+            itemInPocket.Add(item.gameObject);
+        });
+
+        EventManager.OnItemRemovedFromPocket.AddListener((item) =>
+        {
+            itemInPocket.Remove(item.gameObject);
+        });
+    }
+    private void OnDisable()
+    {
+        EventManager.OnItemReturnedToPocket.RemoveAllListeners();
+        EventManager.OnItemRemovedFromPocket.RemoveAllListeners();
+    }
 
     private void Start()
     {
@@ -24,7 +45,8 @@ public class PocketsSysten : MonoBehaviour
                 Random.Range(pocketBounds.min.y + itemsInPocket[i].rectTransform.rect.height / 2, pocketBounds.max.y - itemsInPocket[i].rectTransform.rect.height / 2)
             );
 
-            Instantiate(itemsInPocket[i], randomPosition, Quaternion.identity, transform);
+            var go = Instantiate(itemsInPocket[i], randomPosition, Quaternion.identity, transform);
+            itemInPocket.Add(go.gameObject);
         }
     }
 }
