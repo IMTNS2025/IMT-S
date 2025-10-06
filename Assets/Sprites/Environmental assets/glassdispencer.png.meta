@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: c33d4093fa210da418820d34f707b5ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5683771595966206885
+    second: glassdispencer_0
+  - first:
+      213: -2109029814026506121
+    second: glassdispencer_1
+  - first:
+      213: -3504734601091515317
+    second: glassdispencer_2
+  - first:
+      213: 130681207500434664
+    second: glassdispencer_3
+  - first:
+      213: 4807163349254835966
+    second: glassdispencer_4
+  - first:
+      213: -3008294279560000094
+    second: glassdispencer_5
+  - first:
+      213: 1761797166263992726
+    second: glassdispencer_6
+  - first:
+      213: 4075486873325994876
+    second: glassdispencer_7
+  - first:
+      213: 6125176680898177603
+    second: glassdispencer_8
+  - first:
+      213: 715924271914334065
+    second: glassdispencer_9
+  - first:
+      213: 3601509397612909922
+    second: glassdispencer_10
+  - first:
+      213: -408325812884912830
+    second: glassdispencer_11
+  - first:
+      213: -284879562988126275
+    second: glassdispencer_12
+  - first:
+      213: 7094821550439284435
+    second: glassdispencer_13
+  - first:
+      213: -5050225002826654550
+    second: glassdispencer_14
+  - first:
+      213: 5568007798022448385
+    second: glassdispencer_15
+  - first:
+      213: -1830851474409441847
+    second: glassdispencer_16
+  - first:
+      213: 6579715763909736773
+    second: glassdispencer_17
+  - first:
+      213: -6712763832761865722
+    second: glassdispencer_18
+  - first:
+      213: 4699084657928449666
+    second: glassdispencer_19
+  - first:
+      213: -3637613107692694261
+    second: glassdispencer_20
+  - first:
+      213: -6391742319491816541
+    second: glassdispencer_21
+  - first:
+      213: 8630629270329134212
+    second: glassdispencer_22
+  - first:
+      213: 4504528209528942889
+    second: glassdispencer_23
+  - first:
+      213: -6263457414693892027
+    second: glassdispencer_24
+  - first:
+      213: 2858967887894599384
+    second: glassdispencer_25
+  - first:
+      213: 5998321739959182203
+    second: glassdispencer_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: glassdispencer_0
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1006
+        width: 2142
+        height: 2894
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a355021720d0ee40800000000000000
+      internalID: 5683771595966206885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_1
+      rect:
+        serializedVersion: 2
+        x: 3279
+        y: 3525
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770fd3aee883bb2e0800000000000000
+      internalID: -2109029814026506121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_2
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 3437
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4c7bedf27eac5fc0800000000000000
+      internalID: -3504734601091515317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_3
+      rect:
+        serializedVersion: 2
+        x: 3394
+        y: 3283
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ece1e7add540d100800000000000000
+      internalID: 130681207500434664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_4
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 2912
+        width: 43
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe8c91c89976b240800000000000000
+      internalID: 4807163349254835966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_5
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 2902
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad8cf69a446046d0800000000000000
+      internalID: -3008294279560000094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_6
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2895
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69184753039237810800000000000000
+      internalID: 1761797166263992726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_7
+      rect:
+        serializedVersion: 2
+        x: 3406
+        y: 2883
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c730d5be7b90f8830800000000000000
+      internalID: 4075486873325994876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_8
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 2885
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34a217b1dbff00550800000000000000
+      internalID: 6125176680898177603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_9
+      rect:
+        serializedVersion: 2
+        x: 3383
+        y: 2868
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177b88905597fe900800000000000000
+      internalID: 715924271914334065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_10
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 2739
+        width: 12
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 265d2fb27b12bf130800000000000000
+      internalID: 3601509397612909922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_11
+      rect:
+        serializedVersion: 2
+        x: 3387
+        y: 2091
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2454f5a26d5555af0800000000000000
+      internalID: -408325812884912830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_12
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 923
+        width: 23
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbff25cfb87eb0cf0800000000000000
+      internalID: -284879562988126275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_13
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 998
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de38b23c9ed57260800000000000000
+      internalID: 7094821550439284435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_14
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 966
+        width: 53
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac98befd1ff9e9b0800000000000000
+      internalID: -5050225002826654550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_15
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 931
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105abbb7799854d40800000000000000
+      internalID: 5568007798022448385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_16
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 952
+        width: 49
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c53357c8428796e0800000000000000
+      internalID: -1830851474409441847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_17
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 916
+        width: 96
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549b0ee50a8df4b50800000000000000
+      internalID: 6579715763909736773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_18
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 898
+        width: 58
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60aa32f1cd877d2a0800000000000000
+      internalID: -6712763832761865722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_19
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 762
+        width: 10
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e205d7990863140800000000000000
+      internalID: 4699084657928449666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_20
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 821
+        width: 76
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b051ca5c62a948dc0800000000000000
+      internalID: -3637613107692694261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_21
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 816
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a3ebdea938fb47a0800000000000000
+      internalID: -6391742319491816541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_22
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 719
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c8e06289726c770800000000000000
+      internalID: 8630629270329134212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_23
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 708
+        width: 10
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921f2b16a8c438e30800000000000000
+      internalID: 4504528209528942889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_24
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 685
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5405263aaaab319a0800000000000000
+      internalID: -6263457414693892027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_25
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 524
+        width: 23
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d6d43685281da720800000000000000
+      internalID: 2858967887894599384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassdispencer_26
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 507
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7325ce87d15e3350800000000000000
+      internalID: 5998321739959182203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      glassdispencer_0: 5683771595966206885
+      glassdispencer_1: -2109029814026506121
+      glassdispencer_10: 3601509397612909922
+      glassdispencer_11: -408325812884912830
+      glassdispencer_12: -284879562988126275
+      glassdispencer_13: 7094821550439284435
+      glassdispencer_14: -5050225002826654550
+      glassdispencer_15: 5568007798022448385
+      glassdispencer_16: -1830851474409441847
+      glassdispencer_17: 6579715763909736773
+      glassdispencer_18: -6712763832761865722
+      glassdispencer_19: 4699084657928449666
+      glassdispencer_2: -3504734601091515317
+      glassdispencer_20: -3637613107692694261
+      glassdispencer_21: -6391742319491816541
+      glassdispencer_22: 8630629270329134212
+      glassdispencer_23: 4504528209528942889
+      glassdispencer_24: -6263457414693892027
+      glassdispencer_25: 2858967887894599384
+      glassdispencer_26: 5998321739959182203
+      glassdispencer_3: 130681207500434664
+      glassdispencer_4: 4807163349254835966
+      glassdispencer_5: -3008294279560000094
+      glassdispencer_6: 1761797166263992726
+      glassdispencer_7: 4075486873325994876
+      glassdispencer_8: 6125176680898177603
+      glassdispencer_9: 715924271914334065
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

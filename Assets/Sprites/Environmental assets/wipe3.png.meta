@@ -1,0 +1,2119 @@
+fileFormatVersion: 2
+guid: 042bc9b4a781be7439b441f0419e611c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1263532220515056355
+    second: wipe3_0
+  - first:
+      213: 5753387283021224250
+    second: wipe3_1
+  - first:
+      213: 298526969009659175
+    second: wipe3_2
+  - first:
+      213: -5775335367672304683
+    second: wipe3_3
+  - first:
+      213: -6711986550584791955
+    second: wipe3_4
+  - first:
+      213: 7223802375592811385
+    second: wipe3_5
+  - first:
+      213: -7340360505121207579
+    second: wipe3_6
+  - first:
+      213: 7179442646740783565
+    second: wipe3_7
+  - first:
+      213: -8144426672338592237
+    second: wipe3_8
+  - first:
+      213: 791647313342375265
+    second: wipe3_9
+  - first:
+      213: 3612423290723434047
+    second: wipe3_10
+  - first:
+      213: -6509000553704117365
+    second: wipe3_11
+  - first:
+      213: -3504376263737663884
+    second: wipe3_12
+  - first:
+      213: 6320532029842602159
+    second: wipe3_13
+  - first:
+      213: 7190207533501509735
+    second: wipe3_14
+  - first:
+      213: 4296363048653495065
+    second: wipe3_15
+  - first:
+      213: 731340024148410499
+    second: wipe3_16
+  - first:
+      213: -1848789477392759749
+    second: wipe3_17
+  - first:
+      213: 743159073425041200
+    second: wipe3_18
+  - first:
+      213: -850517973252045361
+    second: wipe3_19
+  - first:
+      213: 7013473527415575396
+    second: wipe3_20
+  - first:
+      213: 6843976412796919748
+    second: wipe3_21
+  - first:
+      213: -6145228273231029349
+    second: wipe3_22
+  - first:
+      213: 4782756947327157151
+    second: wipe3_23
+  - first:
+      213: 568434395440328907
+    second: wipe3_24
+  - first:
+      213: -1590503132009305830
+    second: wipe3_25
+  - first:
+      213: 1981537811159738570
+    second: wipe3_26
+  - first:
+      213: 6799434257689027092
+    second: wipe3_27
+  - first:
+      213: -3194169404243654873
+    second: wipe3_28
+  - first:
+      213: 8169267078734656894
+    second: wipe3_29
+  - first:
+      213: 273419192004557081
+    second: wipe3_30
+  - first:
+      213: -3497872495621831573
+    second: wipe3_31
+  - first:
+      213: -1240985777011649022
+    second: wipe3_32
+  - first:
+      213: -606660099109680596
+    second: wipe3_33
+  - first:
+      213: 8676201622143733048
+    second: wipe3_34
+  - first:
+      213: 8078376352725729798
+    second: wipe3_35
+  - first:
+      213: 1964256111296251037
+    second: wipe3_36
+  - first:
+      213: 3930379977428028680
+    second: wipe3_37
+  - first:
+      213: 8297938604962328743
+    second: wipe3_38
+  - first:
+      213: 6939916308587671532
+    second: wipe3_39
+  - first:
+      213: 8647856387668962337
+    second: wipe3_40
+  - first:
+      213: 5609507710375438993
+    second: wipe3_41
+  - first:
+      213: -8531560888988433314
+    second: wipe3_42
+  - first:
+      213: 4419857228326076723
+    second: wipe3_43
+  - first:
+      213: 3290438655735945381
+    second: wipe3_44
+  - first:
+      213: -1400919291488616951
+    second: wipe3_45
+  - first:
+      213: -7025488050248531256
+    second: wipe3_46
+  - first:
+      213: -6950700884073040458
+    second: wipe3_47
+  - first:
+      213: -4531039505776105637
+    second: wipe3_48
+  - first:
+      213: -7035823124448500232
+    second: wipe3_49
+  - first:
+      213: -8329083936964185324
+    second: wipe3_50
+  - first:
+      213: 3162694029839683066
+    second: wipe3_51
+  - first:
+      213: 4857420306806321022
+    second: wipe3_52
+  - first:
+      213: -8352601314365967362
+    second: wipe3_53
+  - first:
+      213: 766437182680035695
+    second: wipe3_54
+  - first:
+      213: 427911665562693937
+    second: wipe3_55
+  - first:
+      213: -9054528202625540520
+    second: wipe3_56
+  - first:
+      213: -1145130956556914820
+    second: wipe3_57
+  - first:
+      213: -8180464711193127469
+    second: wipe3_58
+  - first:
+      213: -8196189539773650075
+    second: wipe3_59
+  - first:
+      213: 3185406887047186346
+    second: wipe3_60
+  - first:
+      213: -2512312155989233756
+    second: wipe3_61
+  - first:
+      213: -7724183523455403576
+    second: wipe3_62
+  - first:
+      213: 5381986450454106733
+    second: wipe3_63
+  - first:
+      213: 322220366959404394
+    second: wipe3_64
+  - first:
+      213: 8883735531980637444
+    second: wipe3_65
+  - first:
+      213: 8304274081029021817
+    second: wipe3_66
+  - first:
+      213: -719982774056576507
+    second: wipe3_67
+  - first:
+      213: 1822670596477944320
+    second: wipe3_68
+  - first:
+      213: -2071262388675445091
+    second: wipe3_69
+  - first:
+      213: -5992479694710167786
+    second: wipe3_70
+  - first:
+      213: 1309574342359800589
+    second: wipe3_71
+  - first:
+      213: -5666698721648467697
+    second: wipe3_72
+  - first:
+      213: 5039914663225005586
+    second: wipe3_73
+  - first:
+      213: 2050073131646313416
+    second: wipe3_74
+  - first:
+      213: 3467164450336233684
+    second: wipe3_75
+  - first:
+      213: 1684021403241757541
+    second: wipe3_76
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wipe3_0
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 1643
+        width: 1985
+        height: 1786
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1580f1d328077ee0800000000000000
+      internalID: -1263532220515056355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_1
+      rect:
+        serializedVersion: 2
+        x: 2056
+        y: 3357
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a39dabb404328df40800000000000000
+      internalID: 5753387283021224250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_2
+      rect:
+        serializedVersion: 2
+        x: 2153
+        y: 3312
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72dd1b752b4942400800000000000000
+      internalID: 298526969009659175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_3
+      rect:
+        serializedVersion: 2
+        x: 2161
+        y: 3317
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5db64270513e9dfa0800000000000000
+      internalID: -5775335367672304683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_4
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 3308
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ca13b3bcb3ad2a0800000000000000
+      internalID: -6711986550584791955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_5
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 3302
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b15dcbcf9104460800000000000000
+      internalID: 7223802375592811385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_6
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 3287
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea81f0f20dc12a90800000000000000
+      internalID: -7340360505121207579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_7
+      rect:
+        serializedVersion: 2
+        x: 2302
+        y: 3291
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc156448c0182a360800000000000000
+      internalID: 7179442646740783565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_8
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 3299
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e9a00b71f29fe80800000000000000
+      internalID: -8144426672338592237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_9
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 3290
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1652a23890f7cfa00800000000000000
+      internalID: 791647313342375265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_10
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 3286
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3efaede7d7e12230800000000000000
+      internalID: 3612423290723434047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_11
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 3292
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b25a98b726ba5a0800000000000000
+      internalID: -6509000553704117365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_12
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 3279
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e1b98ea54fd5fc0800000000000000
+      internalID: -3504376263737663884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_13
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 3278
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa83f3eb46a07b750800000000000000
+      internalID: 6320532029842602159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_14
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 3270
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760f1b708afb8c360800000000000000
+      internalID: 7190207533501509735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_15
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 3261
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b1b1dfd6fbf9b30800000000000000
+      internalID: 4296363048653495065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_16
+      rect:
+        serializedVersion: 2
+        x: 3031
+        y: 2892
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 380446d80ed362a00800000000000000
+      internalID: 731340024148410499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_17
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 2897
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b34468ff3c7c756e0800000000000000
+      internalID: -1848789477392759749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_18
+      rect:
+        serializedVersion: 2
+        x: 3047
+        y: 2902
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 037ab176d3b305a00800000000000000
+      internalID: 743159073425041200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_19
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 2885
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc50a39d86a5234f0800000000000000
+      internalID: -850517973252045361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_20
+      rect:
+        serializedVersion: 2
+        x: 3013
+        y: 2818
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4631633a30dd45160800000000000000
+      internalID: 7013473527415575396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_21
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 2814
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cf99e75940bafe50800000000000000
+      internalID: 6843976412796919748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_22
+      rect:
+        serializedVersion: 2
+        x: 3042
+        y: 2809
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b906eb173c7baa0800000000000000
+      internalID: -6145228273231029349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_23
+      rect:
+        serializedVersion: 2
+        x: 3012
+        y: 2709
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f93877c7a14cf5240800000000000000
+      internalID: 4782756947327157151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_24
+      rect:
+        serializedVersion: 2
+        x: 3019
+        y: 2702
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0b55a221c73e700800000000000000
+      internalID: 568434395440328907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_25
+      rect:
+        serializedVersion: 2
+        x: 3037
+        y: 2689
+        width: 41
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a19607a04d56de9e0800000000000000
+      internalID: -1590503132009305830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_26
+      rect:
+        serializedVersion: 2
+        x: 3069
+        y: 2673
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac86e2ff326df7b10800000000000000
+      internalID: 1981537811159738570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_27
+      rect:
+        serializedVersion: 2
+        x: 3109
+        y: 2682
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4122d23be617c5e50800000000000000
+      internalID: 6799434257689027092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_28
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 2675
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 727c2aba9d70ca3d0800000000000000
+      internalID: -3194169404243654873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_29
+      rect:
+        serializedVersion: 2
+        x: 3134
+        y: 2662
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e75b54f10211f5170800000000000000
+      internalID: 8169267078734656894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_30
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 2612
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 919b4367e416bc300800000000000000
+      internalID: 273419192004557081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_31
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 2605
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b640adc6f7f057fc0800000000000000
+      internalID: -3497872495621831573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_32
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 2600
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20698e5c20227cee0800000000000000
+      internalID: -1240985777011649022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_33
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 2586
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a0a25aad5b497f0800000000000000
+      internalID: -606660099109680596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_34
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 2589
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d8b87286f086870800000000000000
+      internalID: 8676201622143733048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_35
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 2579
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6020222ed782c1070800000000000000
+      internalID: 8078376352725729798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_36
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 2540
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9404b1b680724b10800000000000000
+      internalID: 1964256111296251037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_37
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 2562
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80dc7e2f3c38b8630800000000000000
+      internalID: 3930379977428028680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_38
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 2535
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a0b7c46233382370800000000000000
+      internalID: 8297938604962328743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_39
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 2527
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cefee480d198f4060800000000000000
+      internalID: 6939916308587671532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_40
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 2516
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ce997f09b530870800000000000000
+      internalID: 8647856387668962337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_41
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 2523
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a2eb9ca89f8dd40800000000000000
+      internalID: 5609507710375438993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_42
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 2510
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e548a38d29ec99980800000000000000
+      internalID: -8531560888988433314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_43
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 2504
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33181545bbc765d30800000000000000
+      internalID: 4419857228326076723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_44
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 2477
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a8da5e168cf9ad20800000000000000
+      internalID: 3290438655735945381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_45
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 2472
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e34d7a35fee8ce0800000000000000
+      internalID: -1400919291488616951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_46
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 2425
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c24f2747d3708e90800000000000000
+      internalID: -7025488050248531256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_47
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 2441
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b535d05f562a8f90800000000000000
+      internalID: -6950700884073040458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_48
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 2386
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5724f273938e11c0800000000000000
+      internalID: -4531039505776105637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_49
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 2393
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f5a4cc452cbb5e90800000000000000
+      internalID: -7035823124448500232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_50
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 2402
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41376d8e946296c80800000000000000
+      internalID: -8329083936964185324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_51
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 2379
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afdc7d5a67524eb20800000000000000
+      internalID: 3162694029839683066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_52
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 2382
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fa5f78806096340800000000000000
+      internalID: 4857420306806321022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_53
+      rect:
+        serializedVersion: 2
+        x: 2981
+        y: 2303
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef371cacb59951c80800000000000000
+      internalID: -8352601314365967362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_54
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 2300
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f617b409e8ee2aa00800000000000000
+      internalID: 766437182680035695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_55
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 2296
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1313c15846f30f500800000000000000
+      internalID: 427911665562693937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_56
+      rect:
+        serializedVersion: 2
+        x: 3012
+        y: 2288
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e9fb9929ad75280800000000000000
+      internalID: -9054528202625540520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_57
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 2283
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f2f11567dab10f0800000000000000
+      internalID: -1145130956556914820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_58
+      rect:
+        serializedVersion: 2
+        x: 3059
+        y: 2267
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d517b7efa6297e80800000000000000
+      internalID: -8180464711193127469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_59
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 2257
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56be402f909414e80800000000000000
+      internalID: -8196189539773650075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_60
+      rect:
+        serializedVersion: 2
+        x: 3094
+        y: 2251
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7c78fcfa6d43c20800000000000000
+      internalID: 3185406887047186346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_61
+      rect:
+        serializedVersion: 2
+        x: 3113
+        y: 2252
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4afad59a769722dd0800000000000000
+      internalID: -2512312155989233756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_62
+      rect:
+        serializedVersion: 2
+        x: 3114
+        y: 2242
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9f38882003ec490800000000000000
+      internalID: -7724183523455403576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_63
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 2232
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6258456928a0ba40800000000000000
+      internalID: 5381986450454106733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_64
+      rect:
+        serializedVersion: 2
+        x: 3151
+        y: 2226
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65e20077b1c87400800000000000000
+      internalID: 322220366959404394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_65
+      rect:
+        serializedVersion: 2
+        x: 3172
+        y: 2218
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 405c836f56e594b70800000000000000
+      internalID: 8883735531980637444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_66
+      rect:
+        serializedVersion: 2
+        x: 3189
+        y: 2210
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 970e73d5745be3370800000000000000
+      internalID: 8304274081029021817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_67
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 2202
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a15fb4b7b1206f0800000000000000
+      internalID: -719982774056576507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_68
+      rect:
+        serializedVersion: 2
+        x: 3229
+        y: 2194
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0020e95204d6b4910800000000000000
+      internalID: 1822670596477944320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_69
+      rect:
+        serializedVersion: 2
+        x: 3252
+        y: 2180
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e7f5ed4d56143e0800000000000000
+      internalID: -2071262388675445091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_70
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 1632
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6172f09977f66dca0800000000000000
+      internalID: -5992479694710167786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_71
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 1622
+        width: 39
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0b525b0dea8c2210800000000000000
+      internalID: 1309574342359800589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_72
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 1609
+        width: 37
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f01abfe3987db51b0800000000000000
+      internalID: -5666698721648467697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_73
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 1603
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2161fcffeaf51f540800000000000000
+      internalID: 5039914663225005586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_74
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1598
+        width: 37
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3e957c6a2537c10800000000000000
+      internalID: 2050073131646313416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_75
+      rect:
+        serializedVersion: 2
+        x: 2065
+        y: 1580
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d85720a2b7dd1030800000000000000
+      internalID: 3467164450336233684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipe3_76
+      rect:
+        serializedVersion: 2
+        x: 2073
+        y: 1582
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b316e3b88de5710800000000000000
+      internalID: 1684021403241757541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      wipe3_0: -1263532220515056355
+      wipe3_1: 5753387283021224250
+      wipe3_10: 3612423290723434047
+      wipe3_11: -6509000553704117365
+      wipe3_12: -3504376263737663884
+      wipe3_13: 6320532029842602159
+      wipe3_14: 7190207533501509735
+      wipe3_15: 4296363048653495065
+      wipe3_16: 731340024148410499
+      wipe3_17: -1848789477392759749
+      wipe3_18: 743159073425041200
+      wipe3_19: -850517973252045361
+      wipe3_2: 298526969009659175
+      wipe3_20: 7013473527415575396
+      wipe3_21: 6843976412796919748
+      wipe3_22: -6145228273231029349
+      wipe3_23: 4782756947327157151
+      wipe3_24: 568434395440328907
+      wipe3_25: -1590503132009305830
+      wipe3_26: 1981537811159738570
+      wipe3_27: 6799434257689027092
+      wipe3_28: -3194169404243654873
+      wipe3_29: 8169267078734656894
+      wipe3_3: -5775335367672304683
+      wipe3_30: 273419192004557081
+      wipe3_31: -3497872495621831573
+      wipe3_32: -1240985777011649022
+      wipe3_33: -606660099109680596
+      wipe3_34: 8676201622143733048
+      wipe3_35: 8078376352725729798
+      wipe3_36: 1964256111296251037
+      wipe3_37: 3930379977428028680
+      wipe3_38: 8297938604962328743
+      wipe3_39: 6939916308587671532
+      wipe3_4: -6711986550584791955
+      wipe3_40: 8647856387668962337
+      wipe3_41: 5609507710375438993
+      wipe3_42: -8531560888988433314
+      wipe3_43: 4419857228326076723
+      wipe3_44: 3290438655735945381
+      wipe3_45: -1400919291488616951
+      wipe3_46: -7025488050248531256
+      wipe3_47: -6950700884073040458
+      wipe3_48: -4531039505776105637
+      wipe3_49: -7035823124448500232
+      wipe3_5: 7223802375592811385
+      wipe3_50: -8329083936964185324
+      wipe3_51: 3162694029839683066
+      wipe3_52: 4857420306806321022
+      wipe3_53: -8352601314365967362
+      wipe3_54: 766437182680035695
+      wipe3_55: 427911665562693937
+      wipe3_56: -9054528202625540520
+      wipe3_57: -1145130956556914820
+      wipe3_58: -8180464711193127469
+      wipe3_59: -8196189539773650075
+      wipe3_6: -7340360505121207579
+      wipe3_60: 3185406887047186346
+      wipe3_61: -2512312155989233756
+      wipe3_62: -7724183523455403576
+      wipe3_63: 5381986450454106733
+      wipe3_64: 322220366959404394
+      wipe3_65: 8883735531980637444
+      wipe3_66: 8304274081029021817
+      wipe3_67: -719982774056576507
+      wipe3_68: 1822670596477944320
+      wipe3_69: -2071262388675445091
+      wipe3_7: 7179442646740783565
+      wipe3_70: -5992479694710167786
+      wipe3_71: 1309574342359800589
+      wipe3_72: -5666698721648467697
+      wipe3_73: 5039914663225005586
+      wipe3_74: 2050073131646313416
+      wipe3_75: 3467164450336233684
+      wipe3_76: 1684021403241757541
+      wipe3_8: -8144426672338592237
+      wipe3_9: 791647313342375265
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

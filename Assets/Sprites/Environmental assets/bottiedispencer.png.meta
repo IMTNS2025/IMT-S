@@ -1,0 +1,1625 @@
+fileFormatVersion: 2
+guid: bfc75458ce5e5934da412bef6fc03c8c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8678266105584935501
+    second: bottiedispencer_0
+  - first:
+      213: 3435881323413894858
+    second: bottiedispencer_1
+  - first:
+      213: 7987157489676506102
+    second: bottiedispencer_2
+  - first:
+      213: -1982576862617983604
+    second: bottiedispencer_3
+  - first:
+      213: 496251072311049165
+    second: bottiedispencer_4
+  - first:
+      213: 1883644716893845103
+    second: bottiedispencer_5
+  - first:
+      213: -3591300469066364966
+    second: bottiedispencer_6
+  - first:
+      213: 8620374983345650602
+    second: bottiedispencer_7
+  - first:
+      213: -8564085998826887586
+    second: bottiedispencer_8
+  - first:
+      213: -690513938710174557
+    second: bottiedispencer_9
+  - first:
+      213: -5844553532474001171
+    second: bottiedispencer_10
+  - first:
+      213: -7834653481737556738
+    second: bottiedispencer_11
+  - first:
+      213: -3137218168669221287
+    second: bottiedispencer_12
+  - first:
+      213: -1271801387005815286
+    second: bottiedispencer_13
+  - first:
+      213: -5316904339426561684
+    second: bottiedispencer_14
+  - first:
+      213: -7396256056731827622
+    second: bottiedispencer_15
+  - first:
+      213: 8554201433378631543
+    second: bottiedispencer_16
+  - first:
+      213: 6840241320713952574
+    second: bottiedispencer_17
+  - first:
+      213: 5375299854118589129
+    second: bottiedispencer_18
+  - first:
+      213: -5524740343387587730
+    second: bottiedispencer_19
+  - first:
+      213: 8931159042884722380
+    second: bottiedispencer_20
+  - first:
+      213: 130582753388354241
+    second: bottiedispencer_21
+  - first:
+      213: 8091815267768597934
+    second: bottiedispencer_22
+  - first:
+      213: -8251789225047196586
+    second: bottiedispencer_23
+  - first:
+      213: -451319297486545712
+    second: bottiedispencer_24
+  - first:
+      213: 8998882043606530475
+    second: bottiedispencer_25
+  - first:
+      213: -2376012680590849202
+    second: bottiedispencer_26
+  - first:
+      213: -8823679441091130040
+    second: bottiedispencer_27
+  - first:
+      213: -1824109803601238435
+    second: bottiedispencer_28
+  - first:
+      213: -1146255600417083641
+    second: bottiedispencer_29
+  - first:
+      213: 5983687738783721265
+    second: bottiedispencer_30
+  - first:
+      213: -7085209225591254793
+    second: bottiedispencer_31
+  - first:
+      213: -721986186185803798
+    second: bottiedispencer_32
+  - first:
+      213: -6767611357324219140
+    second: bottiedispencer_33
+  - first:
+      213: 5151578655603246968
+    second: bottiedispencer_34
+  - first:
+      213: -1254196847708275942
+    second: bottiedispencer_35
+  - first:
+      213: -3908268351756609688
+    second: bottiedispencer_36
+  - first:
+      213: 7080691004354798342
+    second: bottiedispencer_37
+  - first:
+      213: 951573008444757104
+    second: bottiedispencer_38
+  - first:
+      213: 4382483577151115142
+    second: bottiedispencer_39
+  - first:
+      213: 556210706529177199
+    second: bottiedispencer_40
+  - first:
+      213: 1279634271289268697
+    second: bottiedispencer_41
+  - first:
+      213: 1083054709066886995
+    second: bottiedispencer_42
+  - first:
+      213: 4887451651251420810
+    second: bottiedispencer_43
+  - first:
+      213: -8627411145803687986
+    second: bottiedispencer_44
+  - first:
+      213: 5473272206025253864
+    second: bottiedispencer_45
+  - first:
+      213: -6722459984891320754
+    second: bottiedispencer_46
+  - first:
+      213: -6405459494966548006
+    second: bottiedispencer_47
+  - first:
+      213: 2301955400820894657
+    second: bottiedispencer_48
+  - first:
+      213: -9149137378156727033
+    second: bottiedispencer_49
+  - first:
+      213: 3706477031217329747
+    second: bottiedispencer_50
+  - first:
+      213: -8556872143417850729
+    second: bottiedispencer_51
+  - first:
+      213: -4290134849910532185
+    second: bottiedispencer_52
+  - first:
+      213: -5905707475943214996
+    second: bottiedispencer_53
+  - first:
+      213: 1335945870098231806
+    second: bottiedispencer_54
+  - first:
+      213: -4652393418461570710
+    second: bottiedispencer_55
+  - first:
+      213: 2335865304217295346
+    second: bottiedispencer_56
+  - first:
+      213: -5828122740533055882
+    second: bottiedispencer_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bottiedispencer_0
+      rect:
+        serializedVersion: 2
+        x: 2321
+        y: 3921
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bd1c46d4fa909780800000000000000
+      internalID: -8678266105584935501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_1
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 586
+        width: 1422
+        height: 3314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac6fb7c0cd3beaf20800000000000000
+      internalID: 3435881323413894858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_2
+      rect:
+        serializedVersion: 2
+        x: 2315
+        y: 3894
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f3d4494b6518de60800000000000000
+      internalID: 7987157489676506102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_3
+      rect:
+        serializedVersion: 2
+        x: 2327
+        y: 3900
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c852fbbf8d87c74e0800000000000000
+      internalID: -1982576862617983604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_4
+      rect:
+        serializedVersion: 2
+        x: 2332
+        y: 3877
+        width: 51
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcbb18498b903e600800000000000000
+      internalID: 496251072311049165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_5
+      rect:
+        serializedVersion: 2
+        x: 2989
+        y: 3598
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66bf79d3ec042a10800000000000000
+      internalID: 1883644716893845103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_6
+      rect:
+        serializedVersion: 2
+        x: 3016
+        y: 3564
+        width: 110
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad70b9b3043292ec0800000000000000
+      internalID: -3591300469066364966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_7
+      rect:
+        serializedVersion: 2
+        x: 3124
+        y: 3562
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab3bf8ef59b1a770800000000000000
+      internalID: 8620374983345650602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_8
+      rect:
+        serializedVersion: 2
+        x: 3125
+        y: 3570
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e56e6069821462980800000000000000
+      internalID: -8564085998826887586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_9
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 3341
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a469b23b3dca66f0800000000000000
+      internalID: -690513938710174557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_10
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 3337
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8f12a2789f3eea0800000000000000
+      internalID: -5844553532474001171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_11
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 3329
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efc61ca0b28b54390800000000000000
+      internalID: -7834653481737556738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_12
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 3325
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ec19182bc5674d0800000000000000
+      internalID: -3137218168669221287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_13
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 3320
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a065ba67067a95ee0800000000000000
+      internalID: -1271801387005815286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_14
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 3312
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c613fb76caf8636b0800000000000000
+      internalID: -5316904339426561684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_15
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 3304
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a520baead483b5990800000000000000
+      internalID: -7396256056731827622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_16
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 3292
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77fabada1e0a6b670800000000000000
+      internalID: 8554201433378631543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_17
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 3258
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3d9a137d3b6dee50800000000000000
+      internalID: 6840241320713952574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_18
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 3267
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c292fddcb6e89a40800000000000000
+      internalID: 5375299854118589129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_19
+      rect:
+        serializedVersion: 2
+        x: 2921
+        y: 3260
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6bfc14dded2453b0800000000000000
+      internalID: -5524740343387587730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_20
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 3222
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce59a784d9d1fb70800000000000000
+      internalID: 8931159042884722380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_21
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 3239
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca5185825cefc100800000000000000
+      internalID: 130582753388354241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_22
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 3195
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eadfd6f1d17eb4070800000000000000
+      internalID: 8091815267768597934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_23
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 3210
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65c7aaf6b61cb7d80800000000000000
+      internalID: -8251789225047196586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_24
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 3182
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc19097d779cb9f0800000000000000
+      internalID: -451319297486545712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_25
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 3192
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba9fec06a8372ec70800000000000000
+      internalID: 8998882043606530475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_26
+      rect:
+        serializedVersion: 2
+        x: 2969
+        y: 2874
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b0f8f3e05b60fd0800000000000000
+      internalID: -2376012680590849202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_27
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2890
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d88d55c4efb8580800000000000000
+      internalID: -8823679441091130040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_28
+      rect:
+        serializedVersion: 2
+        x: 2945
+        y: 2858
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d566a055cc57fa6e0800000000000000
+      internalID: -1824109803601238435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_29
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 2847
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f6653ca9ea710f0800000000000000
+      internalID: -1146255600417083641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_30
+      rect:
+        serializedVersion: 2
+        x: 2996
+        y: 2859
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1376015ab445a0350800000000000000
+      internalID: 5983687738783721265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_31
+      rect:
+        serializedVersion: 2
+        x: 2945
+        y: 2824
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f010559fb74cad90800000000000000
+      internalID: -7085209225591254793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_32
+      rect:
+        serializedVersion: 2
+        x: 2956
+        y: 2832
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7f7af836dfaf5f0800000000000000
+      internalID: -721986186185803798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_33
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 2841
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc6acca35d9412a0800000000000000
+      internalID: -6767611357324219140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_34
+      rect:
+        serializedVersion: 2
+        x: 2931
+        y: 2645
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87747b73e751e7740800000000000000
+      internalID: 5151578655603246968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_35
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 2628
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1bfeedac92389ee0800000000000000
+      internalID: -1254196847708275942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_36
+      rect:
+        serializedVersion: 2
+        x: 2945
+        y: 2618
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86755a614aa03c9c0800000000000000
+      internalID: -3908268351756609688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_37
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 2600
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6032fde04faa34260800000000000000
+      internalID: 7080691004354798342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_38
+      rect:
+        serializedVersion: 2
+        x: 2929
+        y: 2607
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 074133a0c9aa43d00800000000000000
+      internalID: 951573008444757104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_39
+      rect:
+        serializedVersion: 2
+        x: 2907
+        y: 2594
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f43121895b1dc30800000000000000
+      internalID: 4382483577151115142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_40
+      rect:
+        serializedVersion: 2
+        x: 2983
+        y: 2486
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ec0fec0be08b700800000000000000
+      internalID: 556210706529177199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_41
+      rect:
+        serializedVersion: 2
+        x: 2918
+        y: 2440
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9dc96079c22c110800000000000000
+      internalID: 1279634271289268697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_42
+      rect:
+        serializedVersion: 2
+        x: 2931
+        y: 2449
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35fee360588c70f00800000000000000
+      internalID: 1083054709066886995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_43
+      rect:
+        serializedVersion: 2
+        x: 2939
+        y: 2455
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8ebcb9c167b3d340800000000000000
+      internalID: 4887451651251420810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_44
+      rect:
+        serializedVersion: 2
+        x: 2983
+        y: 2452
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec7102bd547454880800000000000000
+      internalID: -8627411145803687986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_45
+      rect:
+        serializedVersion: 2
+        x: 2919
+        y: 2408
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e3672f9218f4fb40800000000000000
+      internalID: 5473272206025253864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_46
+      rect:
+        serializedVersion: 2
+        x: 2931
+        y: 2415
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4666c7c24605b2a0800000000000000
+      internalID: -6722459984891320754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_47
+      rect:
+        serializedVersion: 2
+        x: 2938
+        y: 2419
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9ad53e68c3b17a0800000000000000
+      internalID: -6405459494966548006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_48
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 2054
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cba8b2ad3032ff10800000000000000
+      internalID: 2301955400820894657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_49
+      rect:
+        serializedVersion: 2
+        x: 2931
+        y: 2061
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70538bd570cb70180800000000000000
+      internalID: -9149137378156727033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_50
+      rect:
+        serializedVersion: 2
+        x: 2932
+        y: 2028
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3567addd83d007330800000000000000
+      internalID: 3706477031217329747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_51
+      rect:
+        serializedVersion: 2
+        x: 2914
+        y: 1209
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 794c42f2f12ef3980800000000000000
+      internalID: -8556872143417850729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_52
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 1216
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a71f8885116674c0800000000000000
+      internalID: -4290134849910532185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_53
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 579
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6039052756ba0ea0800000000000000
+      internalID: -5905707475943214996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_54
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 570
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1fa52d0bb3a8210800000000000000
+      internalID: 1335945870098231806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_55
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 504
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a699b39d5d06f6fb0800000000000000
+      internalID: -4652393418461570710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_56
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 492
+        width: 36
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f918054e19aa6020800000000000000
+      internalID: 2335865304217295346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottiedispencer_57
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 479
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ea6270f395e1fa0800000000000000
+      internalID: -5828122740533055882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bottiedispencer_0: -8678266105584935501
+      bottiedispencer_1: 3435881323413894858
+      bottiedispencer_10: -5844553532474001171
+      bottiedispencer_11: -7834653481737556738
+      bottiedispencer_12: -3137218168669221287
+      bottiedispencer_13: -1271801387005815286
+      bottiedispencer_14: -5316904339426561684
+      bottiedispencer_15: -7396256056731827622
+      bottiedispencer_16: 8554201433378631543
+      bottiedispencer_17: 6840241320713952574
+      bottiedispencer_18: 5375299854118589129
+      bottiedispencer_19: -5524740343387587730
+      bottiedispencer_2: 7987157489676506102
+      bottiedispencer_20: 8931159042884722380
+      bottiedispencer_21: 130582753388354241
+      bottiedispencer_22: 8091815267768597934
+      bottiedispencer_23: -8251789225047196586
+      bottiedispencer_24: -451319297486545712
+      bottiedispencer_25: 8998882043606530475
+      bottiedispencer_26: -2376012680590849202
+      bottiedispencer_27: -8823679441091130040
+      bottiedispencer_28: -1824109803601238435
+      bottiedispencer_29: -1146255600417083641
+      bottiedispencer_3: -1982576862617983604
+      bottiedispencer_30: 5983687738783721265
+      bottiedispencer_31: -7085209225591254793
+      bottiedispencer_32: -721986186185803798
+      bottiedispencer_33: -6767611357324219140
+      bottiedispencer_34: 5151578655603246968
+      bottiedispencer_35: -1254196847708275942
+      bottiedispencer_36: -3908268351756609688
+      bottiedispencer_37: 7080691004354798342
+      bottiedispencer_38: 951573008444757104
+      bottiedispencer_39: 4382483577151115142
+      bottiedispencer_4: 496251072311049165
+      bottiedispencer_40: 556210706529177199
+      bottiedispencer_41: 1279634271289268697
+      bottiedispencer_42: 1083054709066886995
+      bottiedispencer_43: 4887451651251420810
+      bottiedispencer_44: -8627411145803687986
+      bottiedispencer_45: 5473272206025253864
+      bottiedispencer_46: -6722459984891320754
+      bottiedispencer_47: -6405459494966548006
+      bottiedispencer_48: 2301955400820894657
+      bottiedispencer_49: -9149137378156727033
+      bottiedispencer_5: 1883644716893845103
+      bottiedispencer_50: 3706477031217329747
+      bottiedispencer_51: -8556872143417850729
+      bottiedispencer_52: -4290134849910532185
+      bottiedispencer_53: -5905707475943214996
+      bottiedispencer_54: 1335945870098231806
+      bottiedispencer_55: -4652393418461570710
+      bottiedispencer_56: 2335865304217295346
+      bottiedispencer_57: -5828122740533055882
+      bottiedispencer_6: -3591300469066364966
+      bottiedispencer_7: 8620374983345650602
+      bottiedispencer_8: -8564085998826887586
+      bottiedispencer_9: -690513938710174557
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

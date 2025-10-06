@@ -1,0 +1,8099 @@
+fileFormatVersion: 2
+guid: 242a91187f378b94f85872c81faff5e0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7738765624333045665
+    second: wipefull_0
+  - first:
+      213: -7658052522906155170
+    second: wipefull_1
+  - first:
+      213: -5981558032867705184
+    second: wipefull_2
+  - first:
+      213: -220530466844685138
+    second: wipefull_3
+  - first:
+      213: -2154861235970169369
+    second: wipefull_4
+  - first:
+      213: 5603518900996002470
+    second: wipefull_5
+  - first:
+      213: -3573822267367326535
+    second: wipefull_6
+  - first:
+      213: 8042451700393622559
+    second: wipefull_7
+  - first:
+      213: -5812116479923861109
+    second: wipefull_8
+  - first:
+      213: -7324849496793918816
+    second: wipefull_9
+  - first:
+      213: -8164763941493084723
+    second: wipefull_10
+  - first:
+      213: 8571617826486645525
+    second: wipefull_11
+  - first:
+      213: -5630038761388968060
+    second: wipefull_12
+  - first:
+      213: 1502534522814765957
+    second: wipefull_13
+  - first:
+      213: 1893829692988646124
+    second: wipefull_14
+  - first:
+      213: -5910170832400947601
+    second: wipefull_15
+  - first:
+      213: -6742044497226379523
+    second: wipefull_16
+  - first:
+      213: -1039371471830544576
+    second: wipefull_17
+  - first:
+      213: -1548049185330055783
+    second: wipefull_18
+  - first:
+      213: -6180742371201757812
+    second: wipefull_19
+  - first:
+      213: -2185040306600027272
+    second: wipefull_20
+  - first:
+      213: -8291941346454230967
+    second: wipefull_21
+  - first:
+      213: -2207042320560283625
+    second: wipefull_22
+  - first:
+      213: 4356861893545749243
+    second: wipefull_23
+  - first:
+      213: -6478894833541584010
+    second: wipefull_24
+  - first:
+      213: -6987892978915297453
+    second: wipefull_25
+  - first:
+      213: -5188208899483588242
+    second: wipefull_26
+  - first:
+      213: -3897057098717882184
+    second: wipefull_27
+  - first:
+      213: -8865298849103737174
+    second: wipefull_28
+  - first:
+      213: 5746870265993156182
+    second: wipefull_29
+  - first:
+      213: 4081689093299798589
+    second: wipefull_30
+  - first:
+      213: 3419771146469452165
+    second: wipefull_31
+  - first:
+      213: 5333803306194846423
+    second: wipefull_32
+  - first:
+      213: -5476643672232866096
+    second: wipefull_33
+  - first:
+      213: -3196587598940170941
+    second: wipefull_34
+  - first:
+      213: -4187997933256608121
+    second: wipefull_35
+  - first:
+      213: -4018132202250777196
+    second: wipefull_36
+  - first:
+      213: -2780202882973397619
+    second: wipefull_37
+  - first:
+      213: -8541919727030167048
+    second: wipefull_38
+  - first:
+      213: 4614269341169155944
+    second: wipefull_39
+  - first:
+      213: 2978570269615438758
+    second: wipefull_40
+  - first:
+      213: 8916755331321968089
+    second: wipefull_41
+  - first:
+      213: 786217371511516519
+    second: wipefull_42
+  - first:
+      213: -3221266948178741296
+    second: wipefull_43
+  - first:
+      213: 6246286324099647899
+    second: wipefull_44
+  - first:
+      213: 3729006960396139922
+    second: wipefull_45
+  - first:
+      213: -8604237414689569709
+    second: wipefull_46
+  - first:
+      213: -903914595348118787
+    second: wipefull_47
+  - first:
+      213: -7777564359584610169
+    second: wipefull_48
+  - first:
+      213: 5752735525605674170
+    second: wipefull_49
+  - first:
+      213: -1045258230326921631
+    second: wipefull_50
+  - first:
+      213: 249568898466679996
+    second: wipefull_51
+  - first:
+      213: 4998599099031799477
+    second: wipefull_52
+  - first:
+      213: 6004941367228016937
+    second: wipefull_53
+  - first:
+      213: -2304154163458358994
+    second: wipefull_54
+  - first:
+      213: 669441967126304964
+    second: wipefull_55
+  - first:
+      213: -1813745241865096091
+    second: wipefull_56
+  - first:
+      213: 7098109813460388200
+    second: wipefull_57
+  - first:
+      213: -3470050339521391234
+    second: wipefull_58
+  - first:
+      213: -3743166371113237216
+    second: wipefull_59
+  - first:
+      213: -2666866580560395457
+    second: wipefull_60
+  - first:
+      213: -5655244723833629681
+    second: wipefull_61
+  - first:
+      213: 5190772864219398449
+    second: wipefull_62
+  - first:
+      213: 58935004381525108
+    second: wipefull_63
+  - first:
+      213: -6536795185101967683
+    second: wipefull_64
+  - first:
+      213: 3761870576536795774
+    second: wipefull_65
+  - first:
+      213: 4703101262399759826
+    second: wipefull_66
+  - first:
+      213: 1672388205332676341
+    second: wipefull_67
+  - first:
+      213: 5182473886103702571
+    second: wipefull_68
+  - first:
+      213: 6465191945699310734
+    second: wipefull_69
+  - first:
+      213: -4713989925591108231
+    second: wipefull_70
+  - first:
+      213: 7601966999308169235
+    second: wipefull_71
+  - first:
+      213: -7837263444174597973
+    second: wipefull_72
+  - first:
+      213: -8097039691184920566
+    second: wipefull_73
+  - first:
+      213: -3190317870151029643
+    second: wipefull_74
+  - first:
+      213: -8124813725587280215
+    second: wipefull_75
+  - first:
+      213: -8886605710983351565
+    second: wipefull_76
+  - first:
+      213: 3109177949290157569
+    second: wipefull_77
+  - first:
+      213: -3284928003504452970
+    second: wipefull_78
+  - first:
+      213: 2751697509942381413
+    second: wipefull_79
+  - first:
+      213: 2680038259334454032
+    second: wipefull_80
+  - first:
+      213: 6774874280218955514
+    second: wipefull_81
+  - first:
+      213: -6247436522093017687
+    second: wipefull_82
+  - first:
+      213: -2756587675506565815
+    second: wipefull_83
+  - first:
+      213: 1521309228091793714
+    second: wipefull_84
+  - first:
+      213: -1312929551697852915
+    second: wipefull_85
+  - first:
+      213: -8411461498387489986
+    second: wipefull_86
+  - first:
+      213: -4607223393598061988
+    second: wipefull_87
+  - first:
+      213: 4632712390357919903
+    second: wipefull_88
+  - first:
+      213: 490450744645058788
+    second: wipefull_89
+  - first:
+      213: 701888484249450821
+    second: wipefull_90
+  - first:
+      213: 4472867142772798766
+    second: wipefull_91
+  - first:
+      213: -7438770781079096
+    second: wipefull_92
+  - first:
+      213: 5597184045831793287
+    second: wipefull_93
+  - first:
+      213: 6157021571491810907
+    second: wipefull_94
+  - first:
+      213: -7584939417541654109
+    second: wipefull_95
+  - first:
+      213: 661791438312569715
+    second: wipefull_96
+  - first:
+      213: 7526487948587272147
+    second: wipefull_97
+  - first:
+      213: 6609727219065738399
+    second: wipefull_98
+  - first:
+      213: 5055958709422202597
+    second: wipefull_99
+  - first:
+      213: 2046318292811807468
+    second: wipefull_100
+  - first:
+      213: -5242278980361466566
+    second: wipefull_101
+  - first:
+      213: -4789023253237879610
+    second: wipefull_102
+  - first:
+      213: 8777519976055193667
+    second: wipefull_103
+  - first:
+      213: 2512734332186393827
+    second: wipefull_104
+  - first:
+      213: -5187717052117946323
+    second: wipefull_105
+  - first:
+      213: 7709841936520116017
+    second: wipefull_106
+  - first:
+      213: -606537473621764230
+    second: wipefull_107
+  - first:
+      213: -6297269159840408227
+    second: wipefull_108
+  - first:
+      213: -5927902563486639730
+    second: wipefull_109
+  - first:
+      213: 8097325865653038354
+    second: wipefull_110
+  - first:
+      213: 1178149131970502639
+    second: wipefull_111
+  - first:
+      213: 6275245831077226373
+    second: wipefull_112
+  - first:
+      213: -2492048530185856672
+    second: wipefull_113
+  - first:
+      213: 2775498825507026388
+    second: wipefull_114
+  - first:
+      213: -4538487455303438043
+    second: wipefull_115
+  - first:
+      213: 6833095381107153341
+    second: wipefull_116
+  - first:
+      213: -1742364717255178089
+    second: wipefull_117
+  - first:
+      213: -6733755737785301656
+    second: wipefull_118
+  - first:
+      213: 7949609224390220418
+    second: wipefull_119
+  - first:
+      213: -5779939855642975528
+    second: wipefull_120
+  - first:
+      213: 5365805595162878911
+    second: wipefull_121
+  - first:
+      213: -6322906286748445118
+    second: wipefull_122
+  - first:
+      213: 734403603810820932
+    second: wipefull_123
+  - first:
+      213: 7712606175390743143
+    second: wipefull_124
+  - first:
+      213: 1645777861305234894
+    second: wipefull_125
+  - first:
+      213: -8952689851883880831
+    second: wipefull_126
+  - first:
+      213: 2635443968053306809
+    second: wipefull_127
+  - first:
+      213: 5024405002030187193
+    second: wipefull_128
+  - first:
+      213: 411477052928871036
+    second: wipefull_129
+  - first:
+      213: 9078971502357542135
+    second: wipefull_130
+  - first:
+      213: 6785460374872942369
+    second: wipefull_131
+  - first:
+      213: -3696884883537379466
+    second: wipefull_132
+  - first:
+      213: 8239347147435001221
+    second: wipefull_133
+  - first:
+      213: -8370037222763947452
+    second: wipefull_134
+  - first:
+      213: -8588342650141559526
+    second: wipefull_135
+  - first:
+      213: 616872187234768048
+    second: wipefull_136
+  - first:
+      213: -8143831857717558078
+    second: wipefull_137
+  - first:
+      213: -8672711379480008588
+    second: wipefull_138
+  - first:
+      213: -2692455437684652191
+    second: wipefull_139
+  - first:
+      213: 7725292512434670564
+    second: wipefull_140
+  - first:
+      213: 8049642844187922544
+    second: wipefull_141
+  - first:
+      213: 9089569521379983802
+    second: wipefull_142
+  - first:
+      213: -641014582033317683
+    second: wipefull_143
+  - first:
+      213: -7663894925648958798
+    second: wipefull_144
+  - first:
+      213: 5174055610253976866
+    second: wipefull_145
+  - first:
+      213: -6312144351719106216
+    second: wipefull_146
+  - first:
+      213: -1216066757080367482
+    second: wipefull_147
+  - first:
+      213: -2582609463398233428
+    second: wipefull_148
+  - first:
+      213: -4358135382754116708
+    second: wipefull_149
+  - first:
+      213: 9006212739381908065
+    second: wipefull_150
+  - first:
+      213: -5971754858727616410
+    second: wipefull_151
+  - first:
+      213: 3483788715508365452
+    second: wipefull_152
+  - first:
+      213: -2364930682273043692
+    second: wipefull_153
+  - first:
+      213: -4608365323407644366
+    second: wipefull_154
+  - first:
+      213: 2132521455053410344
+    second: wipefull_155
+  - first:
+      213: -6180931268458599907
+    second: wipefull_156
+  - first:
+      213: -7590820148498775307
+    second: wipefull_157
+  - first:
+      213: -5773850406279122264
+    second: wipefull_158
+  - first:
+      213: 4440384279697675431
+    second: wipefull_159
+  - first:
+      213: 6228791756040175937
+    second: wipefull_160
+  - first:
+      213: -8755987536710702416
+    second: wipefull_161
+  - first:
+      213: -1976385129981200006
+    second: wipefull_162
+  - first:
+      213: 6334923423620536167
+    second: wipefull_163
+  - first:
+      213: 4067484185960103705
+    second: wipefull_164
+  - first:
+      213: -1647982788006756286
+    second: wipefull_165
+  - first:
+      213: -736876383711482563
+    second: wipefull_166
+  - first:
+      213: 6913109141206368579
+    second: wipefull_167
+  - first:
+      213: 153777311325849462
+    second: wipefull_168
+  - first:
+      213: -181121348250199409
+    second: wipefull_169
+  - first:
+      213: -5674776964719956950
+    second: wipefull_170
+  - first:
+      213: 6700841256163519178
+    second: wipefull_171
+  - first:
+      213: 2982825037012527034
+    second: wipefull_172
+  - first:
+      213: -5988901972103531639
+    second: wipefull_173
+  - first:
+      213: -3500163050678388990
+    second: wipefull_174
+  - first:
+      213: -1146300188978738645
+    second: wipefull_175
+  - first:
+      213: -2092931273602083837
+    second: wipefull_176
+  - first:
+      213: 2604139171548680834
+    second: wipefull_177
+  - first:
+      213: -8923664989589382721
+    second: wipefull_178
+  - first:
+      213: -2197617425343939782
+    second: wipefull_179
+  - first:
+      213: 5587707899779927715
+    second: wipefull_180
+  - first:
+      213: -5500430441467126753
+    second: wipefull_181
+  - first:
+      213: 5240081907861489037
+    second: wipefull_182
+  - first:
+      213: -7203702988395584862
+    second: wipefull_183
+  - first:
+      213: 4236296884236685953
+    second: wipefull_184
+  - first:
+      213: -8104024378305919615
+    second: wipefull_185
+  - first:
+      213: 3486239910403159373
+    second: wipefull_186
+  - first:
+      213: 4152370702534296431
+    second: wipefull_187
+  - first:
+      213: -2082512692003343198
+    second: wipefull_188
+  - first:
+      213: -8746614988568733413
+    second: wipefull_189
+  - first:
+      213: 7950995755762998919
+    second: wipefull_190
+  - first:
+      213: 8723659812468097277
+    second: wipefull_191
+  - first:
+      213: 4517014083161196882
+    second: wipefull_192
+  - first:
+      213: -2930694238280034082
+    second: wipefull_193
+  - first:
+      213: -5505703791210224051
+    second: wipefull_194
+  - first:
+      213: -1591375472904201453
+    second: wipefull_195
+  - first:
+      213: -3013644374619982453
+    second: wipefull_196
+  - first:
+      213: -701152403196451919
+    second: wipefull_197
+  - first:
+      213: -7673779678907080251
+    second: wipefull_198
+  - first:
+      213: -1485795577865003259
+    second: wipefull_199
+  - first:
+      213: 6464489740940993369
+    second: wipefull_200
+  - first:
+      213: -5043114575340738524
+    second: wipefull_201
+  - first:
+      213: 2528898809111388597
+    second: wipefull_202
+  - first:
+      213: 6551634957312686763
+    second: wipefull_203
+  - first:
+      213: 7575463121519595271
+    second: wipefull_204
+  - first:
+      213: -4513321658848737932
+    second: wipefull_205
+  - first:
+      213: -4286178234945492045
+    second: wipefull_206
+  - first:
+      213: 2804346024735947273
+    second: wipefull_207
+  - first:
+      213: 6499905277478750416
+    second: wipefull_208
+  - first:
+      213: -3392955539162725717
+    second: wipefull_209
+  - first:
+      213: -7772155179176431470
+    second: wipefull_210
+  - first:
+      213: 8781722795111678704
+    second: wipefull_211
+  - first:
+      213: 1198611127079214877
+    second: wipefull_212
+  - first:
+      213: -151470853009450794
+    second: wipefull_213
+  - first:
+      213: -9021492357153235072
+    second: wipefull_214
+  - first:
+      213: -6113027347747055102
+    second: wipefull_215
+  - first:
+      213: 7870025550976791585
+    second: wipefull_216
+  - first:
+      213: 831500895381756718
+    second: wipefull_217
+  - first:
+      213: -7277216196350653906
+    second: wipefull_218
+  - first:
+      213: -5618577149645115117
+    second: wipefull_219
+  - first:
+      213: 1602992178295651314
+    second: wipefull_220
+  - first:
+      213: -300992288216929809
+    second: wipefull_221
+  - first:
+      213: -9093084344645639848
+    second: wipefull_222
+  - first:
+      213: -8800155458483545826
+    second: wipefull_223
+  - first:
+      213: -8869767702208353428
+    second: wipefull_224
+  - first:
+      213: 3042546329336002395
+    second: wipefull_225
+  - first:
+      213: 6276234779028541929
+    second: wipefull_226
+  - first:
+      213: -6413696386726494859
+    second: wipefull_227
+  - first:
+      213: 4665756339799909681
+    second: wipefull_228
+  - first:
+      213: 667530957194389241
+    second: wipefull_229
+  - first:
+      213: 1903635189892761878
+    second: wipefull_230
+  - first:
+      213: 1959158559446057512
+    second: wipefull_231
+  - first:
+      213: -6773420259859432623
+    second: wipefull_232
+  - first:
+      213: -3142051676149594172
+    second: wipefull_233
+  - first:
+      213: -2758222958022188100
+    second: wipefull_234
+  - first:
+      213: -533646711707854093
+    second: wipefull_235
+  - first:
+      213: 4483979625095497085
+    second: wipefull_236
+  - first:
+      213: 3363749771848567637
+    second: wipefull_237
+  - first:
+      213: 3422281464268900864
+    second: wipefull_238
+  - first:
+      213: 1687455276792227270
+    second: wipefull_239
+  - first:
+      213: -6222842680975702721
+    second: wipefull_240
+  - first:
+      213: 1063779087231759102
+    second: wipefull_241
+  - first:
+      213: -5457937197743660237
+    second: wipefull_242
+  - first:
+      213: -7653853948661643623
+    second: wipefull_243
+  - first:
+      213: -473890713108916789
+    second: wipefull_244
+  - first:
+      213: 1903083115829855218
+    second: wipefull_245
+  - first:
+      213: 7758521108273468955
+    second: wipefull_246
+  - first:
+      213: 2546012666026686650
+    second: wipefull_247
+  - first:
+      213: -4123782239429186626
+    second: wipefull_248
+  - first:
+      213: 8726981947389639717
+    second: wipefull_249
+  - first:
+      213: 6914886256923453061
+    second: wipefull_250
+  - first:
+      213: 620466937090529079
+    second: wipefull_251
+  - first:
+      213: -6682792325199710996
+    second: wipefull_252
+  - first:
+      213: -1661389269069948614
+    second: wipefull_253
+  - first:
+      213: -6363626910365416730
+    second: wipefull_254
+  - first:
+      213: 8652059330215305153
+    second: wipefull_255
+  - first:
+      213: -1850344896365505448
+    second: wipefull_256
+  - first:
+      213: 2150062497393194555
+    second: wipefull_257
+  - first:
+      213: -6023666779207260223
+    second: wipefull_258
+  - first:
+      213: -5778075491133383728
+    second: wipefull_259
+  - first:
+      213: 765264549075343325
+    second: wipefull_260
+  - first:
+      213: -5055084309294343061
+    second: wipefull_261
+  - first:
+      213: 5645316249907064801
+    second: wipefull_262
+  - first:
+      213: 8526556436478807429
+    second: wipefull_263
+  - first:
+      213: 1229732960666418620
+    second: wipefull_264
+  - first:
+      213: 2634069624825999322
+    second: wipefull_265
+  - first:
+      213: -1857682645302366933
+    second: wipefull_266
+  - first:
+      213: 5973344654400414025
+    second: wipefull_267
+  - first:
+      213: -5370998811161536279
+    second: wipefull_268
+  - first:
+      213: -589593760995571479
+    second: wipefull_269
+  - first:
+      213: 2732394028131713527
+    second: wipefull_270
+  - first:
+      213: -491339808217974987
+    second: wipefull_271
+  - first:
+      213: -6882550789407123205
+    second: wipefull_272
+  - first:
+      213: -781804492650741858
+    second: wipefull_273
+  - first:
+      213: 3316302300916977552
+    second: wipefull_274
+  - first:
+      213: -7136776334673562729
+    second: wipefull_275
+  - first:
+      213: 8687321143700247749
+    second: wipefull_276
+  - first:
+      213: 4108929478377216038
+    second: wipefull_277
+  - first:
+      213: -6589739431992054013
+    second: wipefull_278
+  - first:
+      213: 7550849218406617440
+    second: wipefull_279
+  - first:
+      213: -4250310958283793275
+    second: wipefull_280
+  - first:
+      213: -2220056624221128697
+    second: wipefull_281
+  - first:
+      213: 6133060782500837781
+    second: wipefull_282
+  - first:
+      213: 3091933042536977984
+    second: wipefull_283
+  - first:
+      213: 4190933356941433153
+    second: wipefull_284
+  - first:
+      213: -1757530519109193812
+    second: wipefull_285
+  - first:
+      213: -5906328271618378644
+    second: wipefull_286
+  - first:
+      213: -4401430614700091151
+    second: wipefull_287
+  - first:
+      213: 1815581889824267557
+    second: wipefull_288
+  - first:
+      213: 663803380895072182
+    second: wipefull_289
+  - first:
+      213: 3055044177429120530
+    second: wipefull_290
+  - first:
+      213: -9185682247501536314
+    second: wipefull_291
+  - first:
+      213: -9021430013817224810
+    second: wipefull_292
+  - first:
+      213: 8086709554404214095
+    second: wipefull_293
+  - first:
+      213: -6286489054033818384
+    second: wipefull_294
+  - first:
+      213: 6397294574829663433
+    second: wipefull_295
+  - first:
+      213: -5506611108703528521
+    second: wipefull_296
+  - first:
+      213: -4751967064309580090
+    second: wipefull_297
+  - first:
+      213: -2882532998228407652
+    second: wipefull_298
+  - first:
+      213: 6069718905664272589
+    second: wipefull_299
+  - first:
+      213: 3568181334450432240
+    second: wipefull_300
+  - first:
+      213: -2940830874364406616
+    second: wipefull_301
+  - first:
+      213: -1975504074154121705
+    second: wipefull_302
+  - first:
+      213: 6511937025425438888
+    second: wipefull_303
+  - first:
+      213: 3044494576846536513
+    second: wipefull_304
+  - first:
+      213: 6576729027100351043
+    second: wipefull_305
+  - first:
+      213: 5472105335829328968
+    second: wipefull_306
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wipefull_0
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 3534
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1af0066655e956b60800000000000000
+      internalID: 7738765624333045665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_1
+      rect:
+        serializedVersion: 2
+        x: 2761
+        y: 3544
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5705e4fdc129b590800000000000000
+      internalID: -7658052522906155170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_2
+      rect:
+        serializedVersion: 2
+        x: 2890
+        y: 3501
+        width: 202
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae398729ac3dfca0800000000000000
+      internalID: -5981558032867705184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_3
+      rect:
+        serializedVersion: 2
+        x: 2761
+        y: 3511
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac429575b480fcf0800000000000000
+      internalID: -220530466844685138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_4
+      rect:
+        serializedVersion: 2
+        x: 2884
+        y: 3519
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e52db17f156812e0800000000000000
+      internalID: -2154861235970169369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_5
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 3518
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2dd0270c2b3cd40800000000000000
+      internalID: 5603518900996002470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_6
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 1498
+        width: 2061
+        height: 2006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc703f259b376ec0800000000000000
+      internalID: -3573822267367326535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_7
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 3501
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1cb235f5378c9f60800000000000000
+      internalID: 8042451700393622559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_8
+      rect:
+        serializedVersion: 2
+        x: 2890
+        y: 3481
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89c1fcfad6375fa0800000000000000
+      internalID: -5812116479923861109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_9
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 3485
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a2566ef038e85a90800000000000000
+      internalID: -7324849496793918816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_10
+      rect:
+        serializedVersion: 2
+        x: 2884
+        y: 3486
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcde268347ee0be80800000000000000
+      internalID: -8164763941493084723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_11
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 3458
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5137422bff084f670800000000000000
+      internalID: 8571617826486645525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_12
+      rect:
+        serializedVersion: 2
+        x: 2755
+        y: 3468
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487fab363951ed1b0800000000000000
+      internalID: -5630038761388968060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_13
+      rect:
+        serializedVersion: 2
+        x: 2763
+        y: 3473
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58b922f00331ad410800000000000000
+      internalID: 1502534522814765957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_14
+      rect:
+        serializedVersion: 2
+        x: 2813
+        y: 3467
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce2eca3621c384a10800000000000000
+      internalID: 1893829692988646124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_15
+      rect:
+        serializedVersion: 2
+        x: 2823
+        y: 3472
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66eddcf0fadafda0800000000000000
+      internalID: -5910170832400947601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_16
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 3454
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfec1fa20427f62a0800000000000000
+      internalID: -6742044497226379523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_17
+      rect:
+        serializedVersion: 2
+        x: 2884
+        y: 3448
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f8dd737296391f0800000000000000
+      internalID: -1039371471830544576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_18
+      rect:
+        serializedVersion: 2
+        x: 2890
+        y: 3443
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995b195c779348ae0800000000000000
+      internalID: -1548049185330055783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_19
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 3447
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8d40547f87993aa0800000000000000
+      internalID: -6180742371201757812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_20
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 3425
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87bd1310b6d2da1e0800000000000000
+      internalID: -2185040306600027272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_21
+      rect:
+        serializedVersion: 2
+        x: 2746
+        y: 3110
+        width: 364
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 948a83a274b1dec80800000000000000
+      internalID: -8291941346454230967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_22
+      rect:
+        serializedVersion: 2
+        x: 2763
+        y: 3440
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71020cee3b20f51e0800000000000000
+      internalID: -2207042320560283625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_23
+      rect:
+        serializedVersion: 2
+        x: 2823
+        y: 3439
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfaea3cfecea67c30800000000000000
+      internalID: 4356861893545749243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_24
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 3421
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67be3adb9775616a0800000000000000
+      internalID: -6478894833541584010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_25
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 3387
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 357be4feb54060f90800000000000000
+      internalID: -6987892978915297453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_26
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 3383
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e69a2c58e77cff7b0800000000000000
+      internalID: -5188208899483588242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_27
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 3345
+        width: 10
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b89189573fdae9c0800000000000000
+      internalID: -3897057098717882184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_28
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 3350
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae0e77caa128f480800000000000000
+      internalID: -8865298849103737174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_29
+      rect:
+        serializedVersion: 2
+        x: 3643
+        y: 3129
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 656d6c60f0cf0cf40800000000000000
+      internalID: 5746870265993156182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_30
+      rect:
+        serializedVersion: 2
+        x: 3643
+        y: 3096
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3288b9ca9215a830800000000000000
+      internalID: 4081689093299798589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_31
+      rect:
+        serializedVersion: 2
+        x: 3643
+        y: 3058
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 589217e2db7757f20800000000000000
+      internalID: 3419771146469452165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_32
+      rect:
+        serializedVersion: 2
+        x: 3643
+        y: 3025
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d24c87e8d9750a40800000000000000
+      internalID: 5333803306194846423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_33
+      rect:
+        serializedVersion: 2
+        x: 3638
+        y: 2992
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de4b2bb89d0ff3b0800000000000000
+      internalID: -5476643672232866096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_34
+      rect:
+        serializedVersion: 2
+        x: 3638
+        y: 2959
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34590c7d38073a3d0800000000000000
+      internalID: -3196587598940170941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_35
+      rect:
+        serializedVersion: 2
+        x: 3638
+        y: 2921
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7867b24911e31e5c0800000000000000
+      internalID: -4187997933256608121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_36
+      rect:
+        serializedVersion: 2
+        x: 3638
+        y: 2868
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49dc8401d0abc38c0800000000000000
+      internalID: -4018132202250777196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_37
+      rect:
+        serializedVersion: 2
+        x: 3759
+        y: 2889
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d8ad4453cba69d0800000000000000
+      internalID: -2780202882973397619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_38
+      rect:
+        serializedVersion: 2
+        x: 3638
+        y: 2860
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f9177ae341057980800000000000000
+      internalID: -8541919727030167048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_39
+      rect:
+        serializedVersion: 2
+        x: 3759
+        y: 2856
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ffc52b48d290040800000000000000
+      internalID: 4614269341169155944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_40
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 2816
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6abb7fa01e1065920800000000000000
+      internalID: 2978570269615438758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_41
+      rect:
+        serializedVersion: 2
+        x: 3638
+        y: 2827
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d534881bbdaebb70800000000000000
+      internalID: 8916755331321968089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_42
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 2806
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d6f29a88439ea00800000000000000
+      internalID: 786217371511516519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_43
+      rect:
+        serializedVersion: 2
+        x: 3759
+        y: 2818
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d7791317c2cb43d0800000000000000
+      internalID: -3221266948178741296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_44
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 2783
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b99075941544fa650800000000000000
+      internalID: 6246286324099647899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_45
+      rect:
+        serializedVersion: 2
+        x: 3638
+        y: 2794
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29dfe57c21810c330800000000000000
+      internalID: 3729006960396139922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_46
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 2773
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3548d4698ab979880800000000000000
+      internalID: -8604237414689569709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_47
+      rect:
+        serializedVersion: 2
+        x: 3759
+        y: 2785
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df20cf4f676a473f0800000000000000
+      internalID: -903914595348118787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_48
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 2745
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78888391c6a801490800000000000000
+      internalID: -7777564359584610169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_49
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 2763
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc0f723b72d5df40800000000000000
+      internalID: 5752735525605674170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_50
+      rect:
+        serializedVersion: 2
+        x: 3649
+        y: 2756
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1667fc27d2f7e71f0800000000000000
+      internalID: -1045258230326921631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_51
+      rect:
+        serializedVersion: 2
+        x: 3619
+        y: 2739
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc87144795a67300800000000000000
+      internalID: 249568898466679996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_52
+      rect:
+        serializedVersion: 2
+        x: 3633
+        y: 2746
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b6c06895679e5540800000000000000
+      internalID: 4998599099031799477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_53
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 2751
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 929aca2ab56d55350800000000000000
+      internalID: 6004941367228016937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_54
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 2752
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21c35b0ffff500e0800000000000000
+      internalID: -2304154163458358994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_55
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 2735
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c85d481ce55a4900800000000000000
+      internalID: 669441967126304964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_56
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 2730
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5647399ef4844d6e0800000000000000
+      internalID: -1813745241865096091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_57
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 2712
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8694508944d818260800000000000000
+      internalID: 7098109813460388200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_58
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 2719
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e759a10f997e7dfc0800000000000000
+      internalID: -3470050339521391234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_59
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 2702
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0258b92840a9d0cc0800000000000000
+      internalID: -3743166371113237216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_60
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 2692
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33465289f26dfad0800000000000000
+      internalID: -2666866580560395457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_61
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 2679
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f049efde2e88481b0800000000000000
+      internalID: -5655244723833629681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_62
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 2669
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131c8890b64590840800000000000000
+      internalID: 5190772864219398449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_63
+      rect:
+        serializedVersion: 2
+        x: 3615
+        y: 2672
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4743ff0031161d000800000000000000
+      internalID: 58935004381525108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_64
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 2681
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe638e9963a845a0800000000000000
+      internalID: -6536795185101967683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_65
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 2659
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a387dab59d43430800000000000000
+      internalID: 3761870576536795774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_66
+      rect:
+        serializedVersion: 2
+        x: 3629
+        y: 2668
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d567081ea5c44140800000000000000
+      internalID: 4703101262399759826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_67
+      rect:
+        serializedVersion: 2
+        x: 3644
+        y: 2663
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe38694634853710800000000000000
+      internalID: 1672388205332676341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_68
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 2646
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2c03fe9a88dbe740800000000000000
+      internalID: 5182473886103702571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_69
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 2636
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8cbf1012d9f8b950800000000000000
+      internalID: 6465191945699310734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_70
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 2648
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9753f52732b849eb0800000000000000
+      internalID: -4713989925591108231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_71
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 2608
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 310710c75bc9f7960800000000000000
+      internalID: 7601966999308169235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_72
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2626
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba091decb627c3390800000000000000
+      internalID: -7837263444174597973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_73
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 2620
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a082fa20d4981af80800000000000000
+      internalID: -8097039691184920566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_74
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 2598
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c2115dcc6b9b3d0800000000000000
+      internalID: -3190317870151029643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_75
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2593
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aee624b6fcde3f80800000000000000
+      internalID: -8124813725587280215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_76
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 2575
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f231e9603f6ca480800000000000000
+      internalID: -8886605710983351565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_77
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 2587
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106daea2fd4062b20800000000000000
+      internalID: 3109177949290157569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_78
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 2547
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69a426692679962d0800000000000000
+      internalID: -3284928003504452970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_79
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 2565
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b41716e4eff2620800000000000000
+      internalID: 2751697509942381413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_80
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2555
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b1610f898613520800000000000000
+      internalID: 2680038259334454032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_81
+      rect:
+        serializedVersion: 2
+        x: 3614
+        y: 2563
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe81665340350e50800000000000000
+      internalID: 6774874280218955514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_82
+      rect:
+        serializedVersion: 2
+        x: 3621
+        y: 2556
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a508df5595ac49a0800000000000000
+      internalID: -6247436522093017687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_83
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 2543
+        width: 41
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94d16393d12aeb9d0800000000000000
+      internalID: -2756587675506565815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_84
+      rect:
+        serializedVersion: 2
+        x: 3671
+        y: 2527
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2316fe5cea6cc1510800000000000000
+      internalID: 1521309228091793714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_85
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 2554
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d06cfe7678987cde0800000000000000
+      internalID: -1312929551697852915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_86
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 2537
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b1db2455c744b80800000000000000
+      internalID: -8411461498387489986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_87
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2522
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52c7bfcbbadf00c0800000000000000
+      internalID: -4607223393598061988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_88
+      rect:
+        serializedVersion: 2
+        x: 3583
+        y: 2527
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98a5d5bf53ba4040800000000000000
+      internalID: 4632712390357919903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_89
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 2536
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e0056e8a5e6ec600800000000000000
+      internalID: 490450744645058788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_90
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 2514
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54930af8bdb9db900800000000000000
+      internalID: 701888484249450821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_91
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 2523
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e253d74d7f0d21e30800000000000000
+      internalID: 4472867142772798766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_92
+      rect:
+        serializedVersion: 2
+        x: 3714
+        y: 2529
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c937063a7295eff0800000000000000
+      internalID: -7438770781079096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_93
+      rect:
+        serializedVersion: 2
+        x: 3736
+        y: 2516
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78aa94a0c313dad40800000000000000
+      internalID: 5597184045831793287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_94
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 2504
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ecf2b7f72227550800000000000000
+      internalID: 6157021571491810907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_95
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2494
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a9429659c1ecb690800000000000000
+      internalID: -7584939417541654109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_96
+      rect:
+        serializedVersion: 2
+        x: 3614
+        y: 2510
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37bf30c8ec72f2900800000000000000
+      internalID: 661791438312569715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_97
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 2481
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d78dc589e4737860800000000000000
+      internalID: 7526487948587272147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_98
+      rect:
+        serializedVersion: 2
+        x: 3583
+        y: 2494
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f94d4aac2e77abb50800000000000000
+      internalID: 6609727219065738399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_99
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 2490
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee172a98af5a2640800000000000000
+      internalID: 5055958709422202597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_100
+      rect:
+        serializedVersion: 2
+        x: 3661
+        y: 2494
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cea7e6c35abf56c10800000000000000
+      internalID: 2046318292811807468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_101
+      rect:
+        serializedVersion: 2
+        x: 3684
+        y: 2484
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3dce0aca0faf37b0800000000000000
+      internalID: -5242278980361466566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_102
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 2471
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ccaba979b8f98db0800000000000000
+      internalID: -4789023253237879610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_103
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2461
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3404aa5b9e300d970800000000000000
+      internalID: 8777519976055193667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_104
+      rect:
+        serializedVersion: 2
+        x: 3614
+        y: 2477
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ecf5e4ef860fd220800000000000000
+      internalID: 2512734332186393827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_105
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 2478
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d20f549a3d68108b0800000000000000
+      internalID: -5187717052117946323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_106
+      rect:
+        serializedVersion: 2
+        x: 3715
+        y: 2479
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137f0bc846cdefa60800000000000000
+      internalID: 7709841936520116017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_107
+      rect:
+        serializedVersion: 2
+        x: 3716
+        y: 2469
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77dfcd91652597f0800000000000000
+      internalID: -606537473621764230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_108
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 2466
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d90b0401b9b98a0800000000000000
+      internalID: -6297269159840408227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_109
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 2459
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e895040a60cdbbda0800000000000000
+      internalID: -5927902563486639730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_110
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 2455
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21de4dc29fa7f5070800000000000000
+      internalID: 8097325865653038354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_111
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 2446
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef5987b460a95010800000000000000
+      internalID: 1178149131970502639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_112
+      rect:
+        serializedVersion: 2
+        x: 3583
+        y: 2456
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587eb9fe5d6261750800000000000000
+      internalID: 6275245831077226373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_113
+      rect:
+        serializedVersion: 2
+        x: 3661
+        y: 2461
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 069dc33b0177a6dd0800000000000000
+      internalID: -2492048530185856672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_114
+      rect:
+        serializedVersion: 2
+        x: 3684
+        y: 2451
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d53cd00a7d848620800000000000000
+      internalID: 2775498825507026388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_115
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 2459
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521721194bd0401c0800000000000000
+      internalID: -4538487455303438043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_116
+      rect:
+        serializedVersion: 2
+        x: 3753
+        y: 2453
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db9114bbb0804de50800000000000000
+      internalID: 6833095381107153341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_117
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 2443
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 798c4d66580e1d7e0800000000000000
+      internalID: -1742364717255178089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_118
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 2452
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8650f0d55d4ec82a0800000000000000
+      internalID: -6733755737785301656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_119
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 2445
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a92f2887fa25e60800000000000000
+      internalID: 7949609224390220418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_120
+      rect:
+        serializedVersion: 2
+        x: 3715
+        y: 2446
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d22741235789cfa0800000000000000
+      internalID: -5779939855642975528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_121
+      rect:
+        serializedVersion: 2
+        x: 3774
+        y: 2445
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3ac7172cb277a40800000000000000
+      internalID: 5365805595162878911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_122
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 2433
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 246564e7b368048a0800000000000000
+      internalID: -6322906286748445118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_123
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2428
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44329e6cf20213a00800000000000000
+      internalID: 734403603810820932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_124
+      rect:
+        serializedVersion: 2
+        x: 3614
+        y: 2439
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a36a0147ea80b60800000000000000
+      internalID: 7712606175390743143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_125
+      rect:
+        serializedVersion: 2
+        x: 3716
+        y: 2436
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5fc42ce3af6d610800000000000000
+      internalID: 1645777861305234894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_126
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 2426
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e773a5308a1c380800000000000000
+      internalID: -8952689851883880831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_127
+      rect:
+        serializedVersion: 2
+        x: 3791
+        y: 2437
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b56345635af29420800000000000000
+      internalID: 2635443968053306809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_128
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 2429
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b284b99ab54ab540800000000000000
+      internalID: 5024405002030187193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_129
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 2410
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7acc05133cd5b500800000000000000
+      internalID: 411477052928871036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_130
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 2416
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f47aeb9a7cfefd70800000000000000
+      internalID: 9078971502357542135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_131
+      rect:
+        serializedVersion: 2
+        x: 3583
+        y: 2423
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1276ac1924cca2e50800000000000000
+      internalID: 6785460374872942369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_132
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 2419
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67f3e3d09c602bcc0800000000000000
+      internalID: -3696884883537379466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_133
+      rect:
+        serializedVersion: 2
+        x: 3661
+        y: 2423
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 585cdff939a085270800000000000000
+      internalID: 8239347147435001221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_134
+      rect:
+        serializedVersion: 2
+        x: 3684
+        y: 2413
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a9b540e77a7db80800000000000000
+      internalID: -8370037222763947452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_135
+      rect:
+        serializedVersion: 2
+        x: 3753
+        y: 2420
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15b9f8dcd310d880800000000000000
+      internalID: -8588342650141559526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_136
+      rect:
+        serializedVersion: 2
+        x: 3831
+        y: 2421
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b452f76cf19f8800800000000000000
+      internalID: 616872187234768048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_137
+      rect:
+        serializedVersion: 2
+        x: 3614
+        y: 2406
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c44c32c21c4bfe80800000000000000
+      internalID: -8143831857717558078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_138
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 2407
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4782b9a43f654a780800000000000000
+      internalID: -8672711379480008588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_139
+      rect:
+        serializedVersion: 2
+        x: 3715
+        y: 2408
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167cc3f6b0a72aad0800000000000000
+      internalID: -2692455437684652191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_140
+      rect:
+        serializedVersion: 2
+        x: 3774
+        y: 2412
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb47a51c90c53b60800000000000000
+      internalID: 7725292512434670564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_141
+      rect:
+        serializedVersion: 2
+        x: 3791
+        y: 2404
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0701698948316bf60800000000000000
+      internalID: 8049642844187922544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_142
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 2407
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab142133253a42e70800000000000000
+      internalID: 9089569521379983802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_143
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 2389
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc00f0642a8aa17f0800000000000000
+      internalID: -641014582033317683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_144
+      rect:
+        serializedVersion: 2
+        x: 3661
+        y: 2390
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ba66c09b2064a590800000000000000
+      internalID: -7663894925648958798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_145
+      rect:
+        serializedVersion: 2
+        x: 3716
+        y: 2398
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2252e490a20fdc740800000000000000
+      internalID: 5174055610253976866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_146
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 2388
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8595bc0c722c668a0800000000000000
+      internalID: -6312144351719106216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_147
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 2396
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e30193ab9af1fe0800000000000000
+      internalID: -1216066757080367482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_148
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 2381
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caa0694506ab82cd0800000000000000
+      internalID: -2582609463398233428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_149
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 2386
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9b31e3b5fac483c0800000000000000
+      internalID: -4358135382754116708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_150
+      rect:
+        serializedVersion: 2
+        x: 3684
+        y: 2380
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162d47ef4ce7cfc70800000000000000
+      internalID: 9006212739381908065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_151
+      rect:
+        serializedVersion: 2
+        x: 3753
+        y: 2382
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 660d3df7890102da0800000000000000
+      internalID: -5971754858727616410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_152
+      rect:
+        serializedVersion: 2
+        x: 3831
+        y: 2388
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c88f36cf067e85030800000000000000
+      internalID: 3483788715508365452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_153
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 2364
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41b61bc03141e2fd0800000000000000
+      internalID: -2364930682273043692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_154
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 2370
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2392f0f872ccb00c0800000000000000
+      internalID: -4608365323407644366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_155
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 2377
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8209b5cf6fc389d10800000000000000
+      internalID: 2132521455053410344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_156
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 2373
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1aab6262cbe83aa0800000000000000
+      internalID: -6180931268458599907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_157
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 2374
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f24ad6fa4df7a690800000000000000
+      internalID: -7590820148498775307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_158
+      rect:
+        serializedVersion: 2
+        x: 3715
+        y: 2375
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2fc7b85a92fdfa0800000000000000
+      internalID: -5773850406279122264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_159
+      rect:
+        serializedVersion: 2
+        x: 3716
+        y: 2365
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4db99e9f96f9d30800000000000000
+      internalID: 4440384279697675431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_160
+      rect:
+        serializedVersion: 2
+        x: 3774
+        y: 2374
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14108aeb91d117650800000000000000
+      internalID: 6228791756040175937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_161
+      rect:
+        serializedVersion: 2
+        x: 3791
+        y: 2366
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba6c900abb7c7680800000000000000
+      internalID: -8755987536710702416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_162
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 2374
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a793b1412387294e0800000000000000
+      internalID: -1976385129981200006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_163
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 2358
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76714383a4b2ae750800000000000000
+      internalID: 6334923423620536167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_164
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 2353
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91fbba1115b927830800000000000000
+      internalID: 4067484185960103705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_165
+      rect:
+        serializedVersion: 2
+        x: 3656
+        y: 2357
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24046ecb2603129e0800000000000000
+      internalID: -1647982788006756286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_166
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 2347
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3da08945d616c5f0800000000000000
+      internalID: -736876383711482563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_167
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 2355
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3418c1ff22c40ff50800000000000000
+      internalID: 6913109141206368579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_168
+      rect:
+        serializedVersion: 2
+        x: 3753
+        y: 2349
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677871066a3522200800000000000000
+      internalID: 153777311325849462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_169
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 2358
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a9e48e7178c7df0800000000000000
+      internalID: -181121348250199409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_170
+      rect:
+        serializedVersion: 2
+        x: 3831
+        y: 2350
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2c2c46ba642f31b0800000000000000
+      internalID: -5674776964719956950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_171
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 2334
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acaa8e1be9b2efc50800000000000000
+      internalID: 6700841256163519178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_172
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 2326
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab7e546419f156920800000000000000
+      internalID: 2982825037012527034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_173
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 2340
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983f12e036523eca0800000000000000
+      internalID: -5988901972103531639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_174
+      rect:
+        serializedVersion: 2
+        x: 3691
+        y: 2341
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 207fd54004cec6fc0800000000000000
+      internalID: -3500163050678388990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_175
+      rect:
+        serializedVersion: 2
+        x: 3710
+        y: 2342
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2a85fd2d068710f0800000000000000
+      internalID: -1146300188978738645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_176
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 2332
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30454a1781a64f2e0800000000000000
+      internalID: -2092931273602083837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_177
+      rect:
+        serializedVersion: 2
+        x: 3774
+        y: 2341
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282d6d977c2c32420800000000000000
+      internalID: 2604139171548680834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_178
+      rect:
+        serializedVersion: 2
+        x: 3791
+        y: 2333
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb95fe8b8f5c82480800000000000000
+      internalID: -8923664989589382721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_179
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 2336
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b7a2a589e7081e0800000000000000
+      internalID: -2197617425343939782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_180
+      rect:
+        serializedVersion: 2
+        x: 3656
+        y: 2324
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aec60bdab68b8d40800000000000000
+      internalID: 5587707899779927715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_181
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 2314
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c5b90f7ab8aa3b0800000000000000
+      internalID: -5500430441467126753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_182
+      rect:
+        serializedVersion: 2
+        x: 3725
+        y: 2322
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8509086bb288b840800000000000000
+      internalID: 5240081907861489037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_183
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 2316
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a2e2458c4e470c90800000000000000
+      internalID: -7203702988395584862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_184
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 2325
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182950442995aca30800000000000000
+      internalID: 4236296884236685953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_185
+      rect:
+        serializedVersion: 2
+        x: 3831
+        y: 2317
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18548ffc3c8b88f80800000000000000
+      internalID: -8104024378305919615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_186
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 2295
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45be554abc916030800000000000000
+      internalID: 3486239910403159373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_187
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 2315
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63cb4c572f20a930800000000000000
+      internalID: 4152370702534296431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_188
+      rect:
+        serializedVersion: 2
+        x: 3691
+        y: 2308
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4f5e08dbd6913e0800000000000000
+      internalID: -2082512692003343198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_189
+      rect:
+        serializedVersion: 2
+        x: 3710
+        y: 2309
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19d04b6208cd9680800000000000000
+      internalID: -8746614988568733413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_190
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 2308
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e54e0838c975e60800000000000000
+      internalID: 7950995755762998919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_191
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 2288
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df00387216aa01970800000000000000
+      internalID: 8723659812468097277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_192
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 2302
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25982406068afae30800000000000000
+      internalID: 4517014083161196882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_193
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 2299
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8d8062e151457d0800000000000000
+      internalID: -2930694238280034082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_194
+      rect:
+        serializedVersion: 2
+        x: 3725
+        y: 2289
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46a466829fc793b0800000000000000
+      internalID: -5505703791210224051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_195
+      rect:
+        serializedVersion: 2
+        x: 3786
+        y: 2300
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31b9649507c4ae9e0800000000000000
+      internalID: -1591375472904201453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_196
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 2292
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b85fb6388626d26d0800000000000000
+      internalID: -3013644374619982453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_197
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 2303
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b3601aaa910546f0800000000000000
+      internalID: -701152403196451919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_198
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 2271
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c1e12a1a02418590800000000000000
+      internalID: -7673779678907080251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_199
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 2282
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f92844bc4616be0800000000000000
+      internalID: -1485795577865003259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_200
+      rect:
+        serializedVersion: 2
+        x: 3656
+        y: 2286
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 953e1f64b2b76b950800000000000000
+      internalID: 6464489740940993369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_201
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 2276
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42868376302430ab0800000000000000
+      internalID: -5043114575340738524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_202
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 2283
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b12ef57114781320800000000000000
+      internalID: 2528898809111388597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_203
+      rect:
+        serializedVersion: 2
+        x: 3826
+        y: 2284
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baa77a818451cea50800000000000000
+      internalID: 6551634957312686763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_204
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 2269
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f4f3f8293712960800000000000000
+      internalID: 7575463121519595271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_205
+      rect:
+        serializedVersion: 2
+        x: 3691
+        y: 2270
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4758e372dd57d51c0800000000000000
+      internalID: -4513321658848737932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_206
+      rect:
+        serializedVersion: 2
+        x: 3710
+        y: 2271
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb201eba9f6484c0800000000000000
+      internalID: -4286178234945492045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_207
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 2275
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90a3aa7f9d90be620800000000000000
+      internalID: 2804346024735947273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_208
+      rect:
+        serializedVersion: 2
+        x: 3786
+        y: 2267
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d8cec1796d443a50800000000000000
+      internalID: 6499905277478750416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_209
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 2270
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba2038de9ecc9e0d0800000000000000
+      internalID: -3392955539162725717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_210
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 2247
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290f9fd0b02c32490800000000000000
+      internalID: -7772155179176431470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_211
+      rect:
+        serializedVersion: 2
+        x: 3656
+        y: 2253
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f20596ca52fed970800000000000000
+      internalID: 8781722795111678704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_212
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 2261
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1f1365387252a010800000000000000
+      internalID: 1198611127079214877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_213
+      rect:
+        serializedVersion: 2
+        x: 3725
+        y: 2251
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d8db8ccf0ed5edf0800000000000000
+      internalID: -151470853009450794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_214
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 2259
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fdaf3cf783dc280800000000000000
+      internalID: -9021492357153235072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_215
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 2240
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ad943f30a2a2ba0800000000000000
+      internalID: -6113027347747055102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_216
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 2254
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124383b9a82f73d60800000000000000
+      internalID: 7870025550976791585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_217
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 2243
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b16aba8a51a8b00800000000000000
+      internalID: 831500895381756718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_218
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 2245
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2acccefc62220b90800000000000000
+      internalID: -7277216196350653906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_219
+      rect:
+        serializedVersion: 2
+        x: 3826
+        y: 2251
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 311b644d9ddc602b0800000000000000
+      internalID: -5618577149645115117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_220
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 2233
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fbba05a4e8fe3610800000000000000
+      internalID: 1602992178295651314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_221
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 2236
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9a2bccb19a2dbf0800000000000000
+      internalID: -300992288216929809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_222
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 2241
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8512bbc37ffdec180800000000000000
+      internalID: -9093084344645639848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_223
+      rect:
+        serializedVersion: 2
+        x: 3691
+        y: 2237
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e199fd85c319fd580800000000000000
+      internalID: -8800155458483545826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_224
+      rect:
+        serializedVersion: 2
+        x: 3710
+        y: 2238
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b63a5d44148e480800000000000000
+      internalID: -8869767702208353428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_225
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 2228
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b57bdb434cb493a20800000000000000
+      internalID: 3042546329336002395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_226
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 2237
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e1d2f2574aa91750800000000000000
+      internalID: 6276234779028541929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_227
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 2237
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57df5f31e19fdf6a0800000000000000
+      internalID: -6413696386726494859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_228
+      rect:
+        serializedVersion: 2
+        x: 3656
+        y: 2225
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 135ec4abba810c040800000000000000
+      internalID: 4665756339799909681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_229
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 2215
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6e52c6edb834900800000000000000
+      internalID: 667530957194389241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_230
+      rect:
+        serializedVersion: 2
+        x: 3725
+        y: 2218
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 619cd7b8e121b6a10800000000000000
+      internalID: 1903635189892761878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_231
+      rect:
+        serializedVersion: 2
+        x: 3786
+        y: 2229
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 822c27a6454503b10800000000000000
+      internalID: 1959158559446057512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_232
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 2221
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15bf4a8292afff1a0800000000000000
+      internalID: -6773420259859432623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_233
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 2221
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c7ce29d5a03564d0800000000000000
+      internalID: -3142051676149594172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_234
+      rect:
+        serializedVersion: 2
+        x: 3691
+        y: 2209
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3a2c755d2d8b9d0800000000000000
+      internalID: -2758222958022188100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_235
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 2212
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa1911a42b1898f0800000000000000
+      internalID: -533646711707854093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_236
+      rect:
+        serializedVersion: 2
+        x: 3826
+        y: 2213
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7508ed36bb4a3e30800000000000000
+      internalID: 4483979625095497085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_237
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 2208
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55bc55878907eae20800000000000000
+      internalID: 3363749771848567637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_238
+      rect:
+        serializedVersion: 2
+        x: 3710
+        y: 2210
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ac6271cd26e7f20800000000000000
+      internalID: 3422281464268900864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_239
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 2200
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c52f8b32ab0b6710800000000000000
+      internalID: 1687455276792227270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_240
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 2204
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f35cd4b3d8504a9a0800000000000000
+      internalID: -6222842680975702721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_241
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 2199
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef230f5917d43ce00800000000000000
+      internalID: 1063779087231759102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_242
+      rect:
+        serializedVersion: 2
+        x: 3656
+        y: 2192
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333291a39038144b0800000000000000
+      internalID: -5457937197743660237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_243
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 2182
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9964d43b26c08c590800000000000000
+      internalID: -7653853948661643623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_244
+      rect:
+        serializedVersion: 2
+        x: 3725
+        y: 2190
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc559ce38e66c69f0800000000000000
+      internalID: -473890713108916789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_245
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 2184
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f30519c20c196a10800000000000000
+      internalID: 1903083115829855218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_246
+      rect:
+        serializedVersion: 2
+        x: 3786
+        y: 2196
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16920177ddcbab60800000000000000
+      internalID: 7758521108273468955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_247
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 2188
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab87a28c701455320800000000000000
+      internalID: 2546012666026686650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_248
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 2188
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb22c7e6e165c6c0800000000000000
+      internalID: -4123782239429186626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_249
+      rect:
+        serializedVersion: 2
+        x: 3691
+        y: 2176
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52cf767f7d77c1970800000000000000
+      internalID: 8726981947389639717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_250
+      rect:
+        serializedVersion: 2
+        x: 3826
+        y: 2180
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 586272ef96c96ff50800000000000000
+      internalID: 6914886256923453061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_251
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 2175
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737d72454675c9800800000000000000
+      internalID: 620466937090529079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_252
+      rect:
+        serializedVersion: 2
+        x: 3710
+        y: 2177
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4b3c489c3f143a0800000000000000
+      internalID: -6682792325199710996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_253
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 2167
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a39907f134f81f8e0800000000000000
+      internalID: -1661389269069948614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_254
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 2176
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e28d8c7a0bdfa7a0800000000000000
+      internalID: -6363626910365416730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_255
+      rect:
+        serializedVersion: 2
+        x: 3786
+        y: 2168
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf5619ce1a421870800000000000000
+      internalID: 8652059330215305153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_256
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 2166
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8545d2cce114256e0800000000000000
+      internalID: -1850344896365505448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_257
+      rect:
+        serializedVersion: 2
+        x: 3583
+        y: 2157
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b36b20a237e86dd10800000000000000
+      internalID: 2150062497393194555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_258
+      rect:
+        serializedVersion: 2
+        x: 3592
+        y: 2154
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c7a704aaf2a76ca0800000000000000
+      internalID: -6023666779207260223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_259
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 2150
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0db9a9154f620dfa0800000000000000
+      internalID: -5778075491133383728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_260
+      rect:
+        serializedVersion: 2
+        x: 3614
+        y: 2142
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd7d5d68d04ce9a00800000000000000
+      internalID: 765264549075343325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_261
+      rect:
+        serializedVersion: 2
+        x: 3656
+        y: 2159
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c1cda8a9bb8d9b0800000000000000
+      internalID: -5055084309294343061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_262
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 2149
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ef63781831385e40800000000000000
+      internalID: 5645316249907064801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_263
+      rect:
+        serializedVersion: 2
+        x: 3725
+        y: 2157
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58dc3a147e9645670800000000000000
+      internalID: 8526556436478807429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_264
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 2151
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd7c11cc93e01110800000000000000
+      internalID: 1229732960666418620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_265
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 2160
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf666d2e581e8420800000000000000
+      internalID: 2634069624825999322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_266
+      rect:
+        serializedVersion: 2
+        x: 3826
+        y: 2152
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2d285df97f2836e0800000000000000
+      internalID: -1857682645302366933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_267
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 2137
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 941e386a05595e250800000000000000
+      internalID: 5973344654400414025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_268
+      rect:
+        serializedVersion: 2
+        x: 3691
+        y: 2143
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e8dbabb9016675b0800000000000000
+      internalID: -5370998811161536279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_269
+      rect:
+        serializedVersion: 2
+        x: 3710
+        y: 2144
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e88212299751d7f0800000000000000
+      internalID: -589593760995571479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_270
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 2134
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1803944e96be520800000000000000
+      internalID: 2732394028131713527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_271
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 2143
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537b8233c096e29f0800000000000000
+      internalID: -491339808217974987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_272
+      rect:
+        serializedVersion: 2
+        x: 3786
+        y: 2135
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf8ddc8b5844c70a0800000000000000
+      internalID: -6882550789407123205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_273
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 2138
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9f7fb3c4f87625f0800000000000000
+      internalID: -781804492650741858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_274
+      rect:
+        serializedVersion: 2
+        x: 3661
+        y: 2121
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f87f54f5fd50e20800000000000000
+      internalID: 3316302300916977552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_275
+      rect:
+        serializedVersion: 2
+        x: 3684
+        y: 2111
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7933e526cb315fc90800000000000000
+      internalID: -7136776334673562729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_276
+      rect:
+        serializedVersion: 2
+        x: 3725
+        y: 2124
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c45ef38d809f8870800000000000000
+      internalID: 8687321143700247749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_277
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 2118
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6281ecd2799d50930800000000000000
+      internalID: 4108929478377216038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_278
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 2127
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30faab986ea8c84a0800000000000000
+      internalID: -6589739431992054013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_279
+      rect:
+        serializedVersion: 2
+        x: 3826
+        y: 2119
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06199a7ab510ac860800000000000000
+      internalID: 7550849218406617440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_280
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 2105
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c5b8ad3bcd305c0800000000000000
+      internalID: -4250310958283793275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_281
+      rect:
+        serializedVersion: 2
+        x: 3715
+        y: 2106
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708fb0c3346c031e0800000000000000
+      internalID: -2220056624221128697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_282
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 2110
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59977de89420d1550800000000000000
+      internalID: 6133060782500837781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_283
+      rect:
+        serializedVersion: 2
+        x: 3786
+        y: 2102
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04695bd68b0c8ea20800000000000000
+      internalID: 3091933042536977984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_284
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 2105
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14954d10faf292a30800000000000000
+      internalID: 4190933356941433153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_285
+      rect:
+        serializedVersion: 2
+        x: 3716
+        y: 2096
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cafa69efd4ffb97e0800000000000000
+      internalID: -1757530519109193812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_286
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 2086
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64f653eab1880ea0800000000000000
+      internalID: -5906328271618378644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_287
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 2094
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f8954bfc2afae2c0800000000000000
+      internalID: -4401430614700091151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_288
+      rect:
+        serializedVersion: 2
+        x: 3753
+        y: 2080
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d9b930c1e323910800000000000000
+      internalID: 1815581889824267557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_289
+      rect:
+        serializedVersion: 2
+        x: 3826
+        y: 2086
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf34fe68ad463900800000000000000
+      internalID: 663803380895072182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_290
+      rect:
+        serializedVersion: 2
+        x: 3774
+        y: 2072
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216c9c83e72b56a20800000000000000
+      internalID: 3055044177429120530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_291
+      rect:
+        serializedVersion: 2
+        x: 3791
+        y: 2064
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c32f0ae9a6e58080800000000000000
+      internalID: -9185682247501536314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_292
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 2072
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 691806433317dc280800000000000000
+      internalID: -9021430013817224810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_293
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 2056
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4545089e73c93070800000000000000
+      internalID: 8086709554404214095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_294
+      rect:
+        serializedVersion: 2
+        x: 3831
+        y: 2048
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fccee93387e1c8a0800000000000000
+      internalID: -6286489054033818384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_295
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 2034
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c471408581c7c850800000000000000
+      internalID: 6397294574829663433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_296
+      rect:
+        serializedVersion: 2
+        x: 2567
+        y: 1486
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b991853f569493b0800000000000000
+      internalID: -5506611108703528521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_297
+      rect:
+        serializedVersion: 2
+        x: 2625
+        y: 1495
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ceb87bc12f9d0eb0800000000000000
+      internalID: -4751967064309580090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_298
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 1490
+        width: 37
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a014ba28f2ff7d0800000000000000
+      internalID: -2882532998228407652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_299
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 1476
+        width: 39
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8779a9f29fb3450800000000000000
+      internalID: 6069718905664272589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_300
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 1463
+        width: 37
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f8e816c40ab48130800000000000000
+      internalID: 3568181334450432240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_301
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 1472
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a41205a6e11037d0800000000000000
+      internalID: -2940830874364406616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_302
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 1474
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716e4bfd2899594e0800000000000000
+      internalID: -1975504074154121705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_303
+      rect:
+        serializedVersion: 2
+        x: 2630
+        y: 1457
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a87230193c0f5a50800000000000000
+      internalID: 6511937025425438888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_304
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 1452
+        width: 37
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f7a8defa7304a20800000000000000
+      internalID: 3044494576846536513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_305
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 1434
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34a1154843c354b50800000000000000
+      internalID: 6576729027100351043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wipefull_306
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 1436
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84470ab7fc2d0fb40800000000000000
+      internalID: 5472105335829328968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      wipefull_0: 7738765624333045665
+      wipefull_1: -7658052522906155170
+      wipefull_10: -8164763941493084723
+      wipefull_100: 2046318292811807468
+      wipefull_101: -5242278980361466566
+      wipefull_102: -4789023253237879610
+      wipefull_103: 8777519976055193667
+      wipefull_104: 2512734332186393827
+      wipefull_105: -5187717052117946323
+      wipefull_106: 7709841936520116017
+      wipefull_107: -606537473621764230
+      wipefull_108: -6297269159840408227
+      wipefull_109: -5927902563486639730
+      wipefull_11: 8571617826486645525
+      wipefull_110: 8097325865653038354
+      wipefull_111: 1178149131970502639
+      wipefull_112: 6275245831077226373
+      wipefull_113: -2492048530185856672
+      wipefull_114: 2775498825507026388
+      wipefull_115: -4538487455303438043
+      wipefull_116: 6833095381107153341
+      wipefull_117: -1742364717255178089
+      wipefull_118: -6733755737785301656
+      wipefull_119: 7949609224390220418
+      wipefull_12: -5630038761388968060
+      wipefull_120: -5779939855642975528
+      wipefull_121: 5365805595162878911
+      wipefull_122: -6322906286748445118
+      wipefull_123: 734403603810820932
+      wipefull_124: 7712606175390743143
+      wipefull_125: 1645777861305234894
+      wipefull_126: -8952689851883880831
+      wipefull_127: 2635443968053306809
+      wipefull_128: 5024405002030187193
+      wipefull_129: 411477052928871036
+      wipefull_13: 1502534522814765957
+      wipefull_130: 9078971502357542135
+      wipefull_131: 6785460374872942369
+      wipefull_132: -3696884883537379466
+      wipefull_133: 8239347147435001221
+      wipefull_134: -8370037222763947452
+      wipefull_135: -8588342650141559526
+      wipefull_136: 616872187234768048
+      wipefull_137: -8143831857717558078
+      wipefull_138: -8672711379480008588
+      wipefull_139: -2692455437684652191
+      wipefull_14: 1893829692988646124
+      wipefull_140: 7725292512434670564
+      wipefull_141: 8049642844187922544
+      wipefull_142: 9089569521379983802
+      wipefull_143: -641014582033317683
+      wipefull_144: -7663894925648958798
+      wipefull_145: 5174055610253976866
+      wipefull_146: -6312144351719106216
+      wipefull_147: -1216066757080367482
+      wipefull_148: -2582609463398233428
+      wipefull_149: -4358135382754116708
+      wipefull_15: -5910170832400947601
+      wipefull_150: 9006212739381908065
+      wipefull_151: -5971754858727616410
+      wipefull_152: 3483788715508365452
+      wipefull_153: -2364930682273043692
+      wipefull_154: -4608365323407644366
+      wipefull_155: 2132521455053410344
+      wipefull_156: -6180931268458599907
+      wipefull_157: -7590820148498775307
+      wipefull_158: -5773850406279122264
+      wipefull_159: 4440384279697675431
+      wipefull_16: -6742044497226379523
+      wipefull_160: 6228791756040175937
+      wipefull_161: -8755987536710702416
+      wipefull_162: -1976385129981200006
+      wipefull_163: 6334923423620536167
+      wipefull_164: 4067484185960103705
+      wipefull_165: -1647982788006756286
+      wipefull_166: -736876383711482563
+      wipefull_167: 6913109141206368579
+      wipefull_168: 153777311325849462
+      wipefull_169: -181121348250199409
+      wipefull_17: -1039371471830544576
+      wipefull_170: -5674776964719956950
+      wipefull_171: 6700841256163519178
+      wipefull_172: 2982825037012527034
+      wipefull_173: -5988901972103531639
+      wipefull_174: -3500163050678388990
+      wipefull_175: -1146300188978738645
+      wipefull_176: -2092931273602083837
+      wipefull_177: 2604139171548680834
+      wipefull_178: -8923664989589382721
+      wipefull_179: -2197617425343939782
+      wipefull_18: -1548049185330055783
+      wipefull_180: 5587707899779927715
+      wipefull_181: -5500430441467126753
+      wipefull_182: 5240081907861489037
+      wipefull_183: -7203702988395584862
+      wipefull_184: 4236296884236685953
+      wipefull_185: -8104024378305919615
+      wipefull_186: 3486239910403159373
+      wipefull_187: 4152370702534296431
+      wipefull_188: -2082512692003343198
+      wipefull_189: -8746614988568733413
+      wipefull_19: -6180742371201757812
+      wipefull_190: 7950995755762998919
+      wipefull_191: 8723659812468097277
+      wipefull_192: 4517014083161196882
+      wipefull_193: -2930694238280034082
+      wipefull_194: -5505703791210224051
+      wipefull_195: -1591375472904201453
+      wipefull_196: -3013644374619982453
+      wipefull_197: -701152403196451919
+      wipefull_198: -7673779678907080251
+      wipefull_199: -1485795577865003259
+      wipefull_2: -5981558032867705184
+      wipefull_20: -2185040306600027272
+      wipefull_200: 6464489740940993369
+      wipefull_201: -5043114575340738524
+      wipefull_202: 2528898809111388597
+      wipefull_203: 6551634957312686763
+      wipefull_204: 7575463121519595271
+      wipefull_205: -4513321658848737932
+      wipefull_206: -4286178234945492045
+      wipefull_207: 2804346024735947273
+      wipefull_208: 6499905277478750416
+      wipefull_209: -3392955539162725717
+      wipefull_21: -8291941346454230967
+      wipefull_210: -7772155179176431470
+      wipefull_211: 8781722795111678704
+      wipefull_212: 1198611127079214877
+      wipefull_213: -151470853009450794
+      wipefull_214: -9021492357153235072
+      wipefull_215: -6113027347747055102
+      wipefull_216: 7870025550976791585
+      wipefull_217: 831500895381756718
+      wipefull_218: -7277216196350653906
+      wipefull_219: -5618577149645115117
+      wipefull_22: -2207042320560283625
+      wipefull_220: 1602992178295651314
+      wipefull_221: -300992288216929809
+      wipefull_222: -9093084344645639848
+      wipefull_223: -8800155458483545826
+      wipefull_224: -8869767702208353428
+      wipefull_225: 3042546329336002395
+      wipefull_226: 6276234779028541929
+      wipefull_227: -6413696386726494859
+      wipefull_228: 4665756339799909681
+      wipefull_229: 667530957194389241
+      wipefull_23: 4356861893545749243
+      wipefull_230: 1903635189892761878
+      wipefull_231: 1959158559446057512
+      wipefull_232: -6773420259859432623
+      wipefull_233: -3142051676149594172
+      wipefull_234: -2758222958022188100
+      wipefull_235: -533646711707854093
+      wipefull_236: 4483979625095497085
+      wipefull_237: 3363749771848567637
+      wipefull_238: 3422281464268900864
+      wipefull_239: 1687455276792227270
+      wipefull_24: -6478894833541584010
+      wipefull_240: -6222842680975702721
+      wipefull_241: 1063779087231759102
+      wipefull_242: -5457937197743660237
+      wipefull_243: -7653853948661643623
+      wipefull_244: -473890713108916789
+      wipefull_245: 1903083115829855218
+      wipefull_246: 7758521108273468955
+      wipefull_247: 2546012666026686650
+      wipefull_248: -4123782239429186626
+      wipefull_249: 8726981947389639717
+      wipefull_25: -6987892978915297453
+      wipefull_250: 6914886256923453061
+      wipefull_251: 620466937090529079
+      wipefull_252: -6682792325199710996
+      wipefull_253: -1661389269069948614
+      wipefull_254: -6363626910365416730
+      wipefull_255: 8652059330215305153
+      wipefull_256: -1850344896365505448
+      wipefull_257: 2150062497393194555
+      wipefull_258: -6023666779207260223
+      wipefull_259: -5778075491133383728
+      wipefull_26: -5188208899483588242
+      wipefull_260: 765264549075343325
+      wipefull_261: -5055084309294343061
+      wipefull_262: 5645316249907064801
+      wipefull_263: 8526556436478807429
+      wipefull_264: 1229732960666418620
+      wipefull_265: 2634069624825999322
+      wipefull_266: -1857682645302366933
+      wipefull_267: 5973344654400414025
+      wipefull_268: -5370998811161536279
+      wipefull_269: -589593760995571479
+      wipefull_27: -3897057098717882184
+      wipefull_270: 2732394028131713527
+      wipefull_271: -491339808217974987
+      wipefull_272: -6882550789407123205
+      wipefull_273: -781804492650741858
+      wipefull_274: 3316302300916977552
+      wipefull_275: -7136776334673562729
+      wipefull_276: 8687321143700247749
+      wipefull_277: 4108929478377216038
+      wipefull_278: -6589739431992054013
+      wipefull_279: 7550849218406617440
+      wipefull_28: -8865298849103737174
+      wipefull_280: -4250310958283793275
+      wipefull_281: -2220056624221128697
+      wipefull_282: 6133060782500837781
+      wipefull_283: 3091933042536977984
+      wipefull_284: 4190933356941433153
+      wipefull_285: -1757530519109193812
+      wipefull_286: -5906328271618378644
+      wipefull_287: -4401430614700091151
+      wipefull_288: 1815581889824267557
+      wipefull_289: 663803380895072182
+      wipefull_29: 5746870265993156182
+      wipefull_290: 3055044177429120530
+      wipefull_291: -9185682247501536314
+      wipefull_292: -9021430013817224810
+      wipefull_293: 8086709554404214095
+      wipefull_294: -6286489054033818384
+      wipefull_295: 6397294574829663433
+      wipefull_296: -5506611108703528521
+      wipefull_297: -4751967064309580090
+      wipefull_298: -2882532998228407652
+      wipefull_299: 6069718905664272589
+      wipefull_3: -220530466844685138
+      wipefull_30: 4081689093299798589
+      wipefull_300: 3568181334450432240
+      wipefull_301: -2940830874364406616
+      wipefull_302: -1975504074154121705
+      wipefull_303: 6511937025425438888
+      wipefull_304: 3044494576846536513
+      wipefull_305: 6576729027100351043
+      wipefull_306: 5472105335829328968
+      wipefull_31: 3419771146469452165
+      wipefull_32: 5333803306194846423
+      wipefull_33: -5476643672232866096
+      wipefull_34: -3196587598940170941
+      wipefull_35: -4187997933256608121
+      wipefull_36: -4018132202250777196
+      wipefull_37: -2780202882973397619
+      wipefull_38: -8541919727030167048
+      wipefull_39: 4614269341169155944
+      wipefull_4: -2154861235970169369
+      wipefull_40: 2978570269615438758
+      wipefull_41: 8916755331321968089
+      wipefull_42: 786217371511516519
+      wipefull_43: -3221266948178741296
+      wipefull_44: 6246286324099647899
+      wipefull_45: 3729006960396139922
+      wipefull_46: -8604237414689569709
+      wipefull_47: -903914595348118787
+      wipefull_48: -7777564359584610169
+      wipefull_49: 5752735525605674170
+      wipefull_5: 5603518900996002470
+      wipefull_50: -1045258230326921631
+      wipefull_51: 249568898466679996
+      wipefull_52: 4998599099031799477
+      wipefull_53: 6004941367228016937
+      wipefull_54: -2304154163458358994
+      wipefull_55: 669441967126304964
+      wipefull_56: -1813745241865096091
+      wipefull_57: 7098109813460388200
+      wipefull_58: -3470050339521391234
+      wipefull_59: -3743166371113237216
+      wipefull_6: -3573822267367326535
+      wipefull_60: -2666866580560395457
+      wipefull_61: -5655244723833629681
+      wipefull_62: 5190772864219398449
+      wipefull_63: 58935004381525108
+      wipefull_64: -6536795185101967683
+      wipefull_65: 3761870576536795774
+      wipefull_66: 4703101262399759826
+      wipefull_67: 1672388205332676341
+      wipefull_68: 5182473886103702571
+      wipefull_69: 6465191945699310734
+      wipefull_7: 8042451700393622559
+      wipefull_70: -4713989925591108231
+      wipefull_71: 7601966999308169235
+      wipefull_72: -7837263444174597973
+      wipefull_73: -8097039691184920566
+      wipefull_74: -3190317870151029643
+      wipefull_75: -8124813725587280215
+      wipefull_76: -8886605710983351565
+      wipefull_77: 3109177949290157569
+      wipefull_78: -3284928003504452970
+      wipefull_79: 2751697509942381413
+      wipefull_8: -5812116479923861109
+      wipefull_80: 2680038259334454032
+      wipefull_81: 6774874280218955514
+      wipefull_82: -6247436522093017687
+      wipefull_83: -2756587675506565815
+      wipefull_84: 1521309228091793714
+      wipefull_85: -1312929551697852915
+      wipefull_86: -8411461498387489986
+      wipefull_87: -4607223393598061988
+      wipefull_88: 4632712390357919903
+      wipefull_89: 490450744645058788
+      wipefull_9: -7324849496793918816
+      wipefull_90: 701888484249450821
+      wipefull_91: 4472867142772798766
+      wipefull_92: -7438770781079096
+      wipefull_93: 5597184045831793287
+      wipefull_94: 6157021571491810907
+      wipefull_95: -7584939417541654109
+      wipefull_96: 661791438312569715
+      wipefull_97: 7526487948587272147
+      wipefull_98: 6609727219065738399
+      wipefull_99: 5055958709422202597
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

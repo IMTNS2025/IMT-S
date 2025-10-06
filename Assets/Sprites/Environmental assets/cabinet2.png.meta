@@ -1,0 +1,1183 @@
+fileFormatVersion: 2
+guid: 54dfcc7aff986674fb299acafc7d7e86
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6702485266204492627
+    second: cabinet2_0
+  - first:
+      213: -3747011292354065895
+    second: cabinet2_1
+  - first:
+      213: 1622755343334216608
+    second: cabinet2_2
+  - first:
+      213: -2403990365553553609
+    second: cabinet2_3
+  - first:
+      213: 379568379874800942
+    second: cabinet2_4
+  - first:
+      213: 3318618044278012299
+    second: cabinet2_5
+  - first:
+      213: 3364983112379606401
+    second: cabinet2_6
+  - first:
+      213: 8814672215597175885
+    second: cabinet2_7
+  - first:
+      213: -8376840182806514011
+    second: cabinet2_8
+  - first:
+      213: 2500086550030287244
+    second: cabinet2_9
+  - first:
+      213: 2378423265557560067
+    second: cabinet2_10
+  - first:
+      213: -2235196712048280886
+    second: cabinet2_11
+  - first:
+      213: 782711560443170372
+    second: cabinet2_12
+  - first:
+      213: 5908772712896425759
+    second: cabinet2_13
+  - first:
+      213: -6511423265859829071
+    second: cabinet2_14
+  - first:
+      213: 6258919491451258865
+    second: cabinet2_15
+  - first:
+      213: 9092944899955259959
+    second: cabinet2_16
+  - first:
+      213: 4860208844935714173
+    second: cabinet2_17
+  - first:
+      213: 3316167857167084906
+    second: cabinet2_18
+  - first:
+      213: 7769641996995950266
+    second: cabinet2_19
+  - first:
+      213: 2082444240511369338
+    second: cabinet2_20
+  - first:
+      213: 5111252438128530795
+    second: cabinet2_21
+  - first:
+      213: 2503301996457405585
+    second: cabinet2_22
+  - first:
+      213: -722282258572002698
+    second: cabinet2_23
+  - first:
+      213: 5878736429058626730
+    second: cabinet2_24
+  - first:
+      213: 3606566867128807070
+    second: cabinet2_25
+  - first:
+      213: 5741204881723046596
+    second: cabinet2_26
+  - first:
+      213: -8133084805837239214
+    second: cabinet2_27
+  - first:
+      213: 73798745276494640
+    second: cabinet2_28
+  - first:
+      213: 7224365176812798878
+    second: cabinet2_29
+  - first:
+      213: -2982291146465862846
+    second: cabinet2_30
+  - first:
+      213: 858431097285170608
+    second: cabinet2_31
+  - first:
+      213: 5082831956793405771
+    second: cabinet2_32
+  - first:
+      213: 335046534473895551
+    second: cabinet2_33
+  - first:
+      213: 2448381018735801874
+    second: cabinet2_34
+  - first:
+      213: 5268496934558749054
+    second: cabinet2_35
+  - first:
+      213: 4185619702499084296
+    second: cabinet2_36
+  - first:
+      213: 6451243120169235427
+    second: cabinet2_37
+  - first:
+      213: 229764521546745384
+    second: cabinet2_38
+  - first:
+      213: -4782053164183240264
+    second: cabinet2_39
+  - first:
+      213: -2008555766207934073
+    second: cabinet2_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cabinet2_0
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 4007
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 353886c96d2040d50800000000000000
+      internalID: 6702485266204492627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_1
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 191
+        width: 2128
+        height: 3813
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91acbd50511fffbc0800000000000000
+      internalID: -3747011292354065895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_2
+      rect:
+        serializedVersion: 2
+        x: 2977
+        y: 3715
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a39dc4136f258610800000000000000
+      internalID: 1622755343334216608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_3
+      rect:
+        serializedVersion: 2
+        x: 2984
+        y: 3719
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f08b9df7f43aed0800000000000000
+      internalID: -2403990365553553609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_4
+      rect:
+        serializedVersion: 2
+        x: 2992
+        y: 3725
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2578623e6f744500800000000000000
+      internalID: 379568379874800942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_5
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 3706
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89746a47891e0e20800000000000000
+      internalID: 3318618044278012299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_6
+      rect:
+        serializedVersion: 2
+        x: 2902
+        y: 3544
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1852390ff42d2be20800000000000000
+      internalID: 3364983112379606401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_7
+      rect:
+        serializedVersion: 2
+        x: 2909
+        y: 3550
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44dc2e8da1045a70800000000000000
+      internalID: 8814672215597175885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_8
+      rect:
+        serializedVersion: 2
+        x: 2917
+        y: 3526
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a679937c3c7fbb80800000000000000
+      internalID: -8376840182806514011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_9
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 3523
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c818942a87712b220800000000000000
+      internalID: 2500086550030287244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_10
+      rect:
+        serializedVersion: 2
+        x: 2965
+        y: 3514
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30b351dcb5bd10120800000000000000
+      internalID: 2378423265557560067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_11
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 3508
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acabd37de6cfaf0e0800000000000000
+      internalID: -2235196712048280886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_12
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3485
+        width: 52
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e8ec96400ccda00800000000000000
+      internalID: 782711560443170372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_13
+      rect:
+        serializedVersion: 2
+        x: 3004
+        y: 3502
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f66b2f97d200250800000000000000
+      internalID: 5908772712896425759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_14
+      rect:
+        serializedVersion: 2
+        x: 3023
+        y: 3475
+        width: 53
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b20638e907c2a5a0800000000000000
+      internalID: -6511423265859829071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_15
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 3440
+        width: 84
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f788b5cd162cd650800000000000000
+      internalID: 6258919491451258865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_16
+      rect:
+        serializedVersion: 2
+        x: 3123
+        y: 3396
+        width: 146
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a7804c531a03e70800000000000000
+      internalID: 9092944899955259959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_17
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 3295
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d75da98a13ee27340800000000000000
+      internalID: 4860208844935714173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_18
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 3279
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d2306a815650e20800000000000000
+      internalID: 3316167857167084906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_19
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 3276
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab676ee1b3053db60800000000000000
+      internalID: 7769641996995950266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_20
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 3270
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a700d34e00456ec10800000000000000
+      internalID: 2082444240511369338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_21
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 3264
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b65100c0301dee640800000000000000
+      internalID: 5111252438128530795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_22
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 3255
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19cae5817e38db220800000000000000
+      internalID: 2503301996457405585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_23
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 3248
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67abf36dc10f9f5f0800000000000000
+      internalID: -722282258572002698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_24
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 3244
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa41036a2a7759150800000000000000
+      internalID: 5878736429058626730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_25
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 3244
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ee7ed05791d0230800000000000000
+      internalID: 3606566867128807070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_26
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 2341
+        width: 8
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca37d5fb6bdcaf40800000000000000
+      internalID: 5741204881723046596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_27
+      rect:
+        serializedVersion: 2
+        x: 2824
+        y: 1747
+        width: 11
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25cc1f3c57a712f80800000000000000
+      internalID: -8133084805837239214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_28
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 1110
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033331d519f260100800000000000000
+      internalID: 73798745276494640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_29
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 1014
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9301ab1ad9124460800000000000000
+      internalID: 7224365176812798878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_30
+      rect:
+        serializedVersion: 2
+        x: 2918
+        y: 1030
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b1c1ec006cc96d0800000000000000
+      internalID: -2982291146465862846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_31
+      rect:
+        serializedVersion: 2
+        x: 2841
+        y: 981
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b5d4d9e882c9eb00800000000000000
+      internalID: 858431097285170608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_32
+      rect:
+        serializedVersion: 2
+        x: 2861
+        y: 993
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41bca51cb8d98640800000000000000
+      internalID: 5082831956793405771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_33
+      rect:
+        serializedVersion: 2
+        x: 2876
+        y: 1003
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7eca864c0356a400800000000000000
+      internalID: 335046534473895551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_34
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 670
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2167e8080956af120800000000000000
+      internalID: 2448381018735801874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_35
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 657
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e71db9c5c067d1940800000000000000
+      internalID: 5268496934558749054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_36
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 646
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 808855c61fe461a30800000000000000
+      internalID: 4185619702499084296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_37
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 182
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e3be59007b678950800000000000000
+      internalID: 6451243120169235427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_38
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 109
+        width: 48
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82608c07d99403300800000000000000
+      internalID: 229764521546745384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_39
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 129
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b143dbcbfbb2adb0800000000000000
+      internalID: -4782053164183240264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet2_40
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 84
+        width: 47
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7811d932c2d2024e0800000000000000
+      internalID: -2008555766207934073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cabinet2_0: 6702485266204492627
+      cabinet2_1: -3747011292354065895
+      cabinet2_10: 2378423265557560067
+      cabinet2_11: -2235196712048280886
+      cabinet2_12: 782711560443170372
+      cabinet2_13: 5908772712896425759
+      cabinet2_14: -6511423265859829071
+      cabinet2_15: 6258919491451258865
+      cabinet2_16: 9092944899955259959
+      cabinet2_17: 4860208844935714173
+      cabinet2_18: 3316167857167084906
+      cabinet2_19: 7769641996995950266
+      cabinet2_2: 1622755343334216608
+      cabinet2_20: 2082444240511369338
+      cabinet2_21: 5111252438128530795
+      cabinet2_22: 2503301996457405585
+      cabinet2_23: -722282258572002698
+      cabinet2_24: 5878736429058626730
+      cabinet2_25: 3606566867128807070
+      cabinet2_26: 5741204881723046596
+      cabinet2_27: -8133084805837239214
+      cabinet2_28: 73798745276494640
+      cabinet2_29: 7224365176812798878
+      cabinet2_3: -2403990365553553609
+      cabinet2_30: -2982291146465862846
+      cabinet2_31: 858431097285170608
+      cabinet2_32: 5082831956793405771
+      cabinet2_33: 335046534473895551
+      cabinet2_34: 2448381018735801874
+      cabinet2_35: 5268496934558749054
+      cabinet2_36: 4185619702499084296
+      cabinet2_37: 6451243120169235427
+      cabinet2_38: 229764521546745384
+      cabinet2_39: -4782053164183240264
+      cabinet2_4: 379568379874800942
+      cabinet2_40: -2008555766207934073
+      cabinet2_5: 3318618044278012299
+      cabinet2_6: 3364983112379606401
+      cabinet2_7: 8814672215597175885
+      cabinet2_8: -8376840182806514011
+      cabinet2_9: 2500086550030287244
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
