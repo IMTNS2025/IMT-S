@@ -462,8 +462,6 @@ GameObject:
   - component: {fileID: 443170665}
   - component: {fileID: 443170669}
   - component: {fileID: 443170668}
-  - component: {fileID: 443170667}
-  - component: {fileID: 443170666}
   m_Layer: 5
   m_Name: Trashbin
   m_TagString: Untagged
@@ -491,34 +489,6 @@ RectTransform:
   m_AnchoredPosition: {x: 409, y: -406}
   m_SizeDelta: {x: 650, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &443170666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443170664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a603dd322a902134e81f8ae1f00b0059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DropTarget
-  snapPoint: {fileID: 0}
-  isOccupied: 0
-  isTrashbin: 0
-  occupiedByObject: {fileID: 0}
---- !u!114 &443170667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443170664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fbd1dc2e270ee748848296596cf4eda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!114 &443170668
 MonoBehaviour:
   m_ObjectHideFlags: 0

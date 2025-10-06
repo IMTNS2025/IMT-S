@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e9d3a4a55f94240b1700be4766416d, type: 3}
   m_Name: Shoe Cap
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  image: {fileID: -1313459314385903281, guid: fa5f1687674a25c45993e6c178a9eaab, type: 3}
+  image: {fileID: 2800000, guid: be4f66be258faa04ebf8d1d4d28cefdc, type: 3}
   name: 
   orderIndex: 0
   description: 
