@@ -95,12 +95,15 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         if (objectToDrag == null) return;
 
         dragging = true;
+        EventManager.OnItemDragStart?.Invoke(this);
+
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         if (!dragging) return;
         dragging = false;
+        EventManager.OnItemDragEnd?.Invoke(this);
 
         DropTarget previous = null;
         if (targets != null)
@@ -173,5 +176,10 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         }
 
         return closest;
+    }
+
+    public float getSnapDistance()
+    {
+        return snapDist;
     }
 }
