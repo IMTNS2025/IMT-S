@@ -7,10 +7,14 @@ public class DropTarget : MonoBehaviour
     public Transform snapPoint;
 
     [SerializeField] private bool isOccupied = false;
+    [SerializeField] private bool isTrashbin = false;
 
     [SerializeField] private DragAndDrop occupiedByObject = null;
 
     public bool IsOccupied() => isOccupied;
+    
+    public bool IsTrashbin() => isTrashbin;
+
     public DragAndDrop GetObjectOccupied() => occupiedByObject;
 
 

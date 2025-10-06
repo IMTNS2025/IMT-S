@@ -121,11 +121,21 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 
         if (dist < snapDist)
         {
+            if (closestTarget.IsTrashbin())
+            {
+                Destroy(this.gameObject);
+
+                EventManager.OnItemRemovedFromPocket?.Invoke(this);
+                return;
+            }
+
             if (!closestTarget.IsOccupied() || closestTarget.GetObjectOccupied() == this)
             {
                 objectToDrag.position = closestTarget.GetSnapWorldPosition();
                 closestTarget.SetOccupied(true);
                 closestTarget.SetOccupiedByObject(this);
+
+                
 
                 if (previous != null && previous != closestTarget)
                 {
