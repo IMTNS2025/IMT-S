@@ -18,4 +18,7 @@ public static class EventManager
 
     public static UnityEvent<DragAndDrop> OnItemReturnedToPocket = new();
     public static UnityEvent<DragAndDrop> OnItemRemovedFromPocket = new();
+
+    public static UnityEvent<DragAndDrop> OnItemDragStart = new();
+    public static UnityEvent<DragAndDrop> OnItemDragEnd = new();
 }
