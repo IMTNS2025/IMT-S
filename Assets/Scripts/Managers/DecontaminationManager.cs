@@ -19,11 +19,11 @@ public class DecontaminationManager : MonoBehaviour
             if (itemContainers[i].transform.childCount > 0)
             {
                 GameObject item = itemContainers[i].transform.GetChild(0).gameObject;
-                RawImage image = item.GetComponent<RawImage>();
+                Image image = item.GetComponent<Image>();
 
                 if (item != null && image != null)
                 {
-                    image.texture = items[i].image;
+                    image.sprite = items[i].imageOnDragging;
                     image.color = items[i].dirty;
                     DecontaminationInfo decontaminationInfo = item.GetComponent<DecontaminationInfo>();
                     decontaminationInfo.acceptedTypes = items[i].acceptedTypes;
@@ -41,7 +41,7 @@ public class DecontaminationManager : MonoBehaviour
             if (toolContainers[i].transform.childCount > 0)
             {
                 Transform item = toolContainers[i].transform.GetChild(0);
-                item.GetComponent<RawImage>().texture = tools[i].image;
+                item.GetComponent<RawImage>().texture = tools[i].imageOnCharacter;
                 DecontaminationInfo decontaminationInfo = item.GetComponent<DecontaminationInfo>();
                 decontaminationInfo.toolType = tools[i].toolType;
             }

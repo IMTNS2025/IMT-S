@@ -14,9 +14,6 @@ TextureImporter:
   - first:
       213: 4169820533901489132
     second: banana_3
-  - first:
-      213: -6922172938537171652
-    second: banana_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,10 +112,10 @@ TextureImporter:
       name: banana_0
       rect:
         serializedVersion: 2
-        x: 1154
-        y: 1235
-        width: 2630
-        height: 1672
+        x: 43
+        y: 36
+        width: 2134
+        height: 1358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,10 +134,10 @@ TextureImporter:
       name: banana_1
       rect:
         serializedVersion: 2
-        x: 1230
-        y: 2892
+        x: 104
+        y: 1381
         width: 11
-        height: 28
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +156,10 @@ TextureImporter:
       name: banana_2
       rect:
         serializedVersion: 2
-        x: 3757
-        y: 1876
-        width: 10
-        height: 49
+        x: 2178
+        y: 447
+        width: 11
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +178,10 @@ TextureImporter:
       name: banana_3
       rect:
         serializedVersion: 2
-        x: 3786
-        y: 1742
-        width: 12
-        height: 27
+        x: 2170
+        y: 412
+        width: 8
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,28 +192,6 @@ TextureImporter:
       bones: []
       spriteID: ce3f354dead2ed930800000000000000
       internalID: 4169820533901489132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: banana_4
-      rect:
-        serializedVersion: 2
-        x: 3777
-        y: 1698
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c358bac33608fef90800000000000000
-      internalID: -6922172938537171652
       vertices: []
       indices: 
       edges: []
@@ -239,7 +214,6 @@ TextureImporter:
       banana_1: -2087103546444680308
       banana_2: -7298035276004832184
       banana_3: 4169820533901489132
-      banana_4: -6922172938537171652
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

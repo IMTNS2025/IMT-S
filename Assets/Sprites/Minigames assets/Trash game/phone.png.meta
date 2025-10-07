@@ -11,12 +11,6 @@ TextureImporter:
   - first:
       213: 345920178342225779
     second: phone_2
-  - first:
-      213: -1144105141512529592
-    second: phone_3
-  - first:
-      213: 130943331869117335
-    second: phone_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,10 +109,10 @@ TextureImporter:
       name: phone_0
       rect:
         serializedVersion: 2
-        x: 2166
-        y: 926
-        width: 1047
-        height: 2062
+        x: 31
+        y: 25
+        width: 846
+        height: 1674
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,10 +131,10 @@ TextureImporter:
       name: phone_1
       rect:
         serializedVersion: 2
-        x: 3158
-        y: 2916
-        width: 41
-        height: 77
+        x: 835
+        y: 1641
+        width: 31
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +153,10 @@ TextureImporter:
       name: phone_2
       rect:
         serializedVersion: 2
-        x: 3208
-        y: 2372
-        width: 7
-        height: 20
+        x: 28
+        y: 955
+        width: 23
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,50 +167,6 @@ TextureImporter:
       bones: []
       spriteID: 3776ab6c194fcc400800000000000000
       internalID: 345920178342225779
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: phone_3
-      rect:
-        serializedVersion: 2
-        x: 2163
-        y: 2070
-        width: 31
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 849927e7f625f10f0800000000000000
-      internalID: -1144105141512529592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: phone_4
-      rect:
-        serializedVersion: 2
-        x: 2174
-        y: 1851
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 79bc3cd344431d100800000000000000
-      internalID: 130943331869117335
       vertices: []
       indices: 
       edges: []
@@ -238,8 +188,6 @@ TextureImporter:
       phone_0: -7070431899882351391
       phone_1: 6778424840077107658
       phone_2: 345920178342225779
-      phone_3: -1144105141512529592
-      phone_4: 130943331869117335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
