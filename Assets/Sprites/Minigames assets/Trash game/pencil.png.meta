@@ -103,10 +103,10 @@ TextureImporter:
       name: pencil_0
       rect:
         serializedVersion: 2
-        x: 1071
-        y: 1168
-        width: 2730
-        height: 1839
+        x: 130
+        y: 85
+        width: 2216
+        height: 1494
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
