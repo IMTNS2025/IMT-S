@@ -77,6 +77,8 @@ public class DestinationSelector : MonoBehaviour
         if (!IsCellOccupied(cellToCheck)) return;
        
         target.transform.position = grid.GetCellCenterWorld(cellToCheck);
+
+        EventManager.OnEndTargetPathChanged?.Invoke(cellToCheck);
     }
 
     private bool IsCellOccupied(Vector3Int cell)
