@@ -7,15 +7,12 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     [Tooltip("What Transform to move. If not set, uses this GameObject's Transform.")]
     private Transform objectToDrag;
 
-    [Header("Drop Targets")]
-    [Tooltip("Auto find all DropTarget targets in the scene")]
-    [SerializeField] private bool autoFindTargets = true;
-
-    [Tooltip("Leave empty if autoFindTargets == true")]
-    [SerializeField] private DropTarget[] targets;
-
     [SerializeField] private float snapDist = 250f;
 
+    [Header("Drop Targets")]
+    [SerializeField] private bool autoFindTargets = true;
+
+    private IDropTarget[] targets;
     private Vector3 originalPosition;
     private bool dragging;
 
@@ -27,19 +24,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 
     private void Start()
     {
-        if (objectToDrag == null)
-        {
-            Transform objToDrag = null;
-            if (transform.childCount > 0)
-            {
-                objToDrag = transform.GetChild(0);
-            }
-
-            if (objToDrag == null)
-                objectToDrag = transform;
-            else
-                objectToDrag = objToDrag;
-        }
+        objectToDrag = transform.childCount > 0 ? transform.GetChild(0) : transform;
 
         rect = objectToDrag as RectTransform;
         if (rect != null)
@@ -48,19 +33,18 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
             canvasRect = canvas ? (RectTransform)canvas.transform : null;
         }
 
-        AutoFindTargets(); 
-        originalPosition = transform.position;
-
-    }
-
-    private void AutoFindTargets()
-    {
-        if (autoFindTargets == true)
-        {
+        if (autoFindTargets)
             targets = FindObjectsByType<DropTarget>(FindObjectsSortMode.None);
-        }
+
+        originalPosition = transform.position;
     }
 
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (objectToDrag == null) return;
+        dragging = true;
+        EventManager.OnItemDragStart?.Invoke(this);
+    }
 
     public void OnDrag(PointerEventData eventData)
     {
@@ -68,34 +52,28 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 
         if (rect != null && canvas != null)
         {
-            Vector2 localPointerPosition;
-            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, eventData.position, eventData.pressEventCamera, out localPointerPosition))
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, eventData.position, eventData.pressEventCamera, out var localPointerPosition))
             {
                 objectToDrag.position = canvas.transform.TransformPoint(localPointerPosition - pointerToAnchorOffset);
             }
         }
         else
         {
-            Vector3 screenPoint = new Vector3(eventData.position.x, eventData.position.y, Camera.main.WorldToScreenPoint(objectToDrag.position).z);
+            var screenPoint = new Vector3(eventData.position.x, eventData.position.y, Camera.main.WorldToScreenPoint(objectToDrag.position).z);
             objectToDrag.position = Camera.main.ScreenToWorldPoint(screenPoint);
         }
-        var closestTarget = GetClosestTarget(objectToDrag.position, targets);
 
-        float dist = Vector3.Distance(objectToDrag.position, closestTarget.GetSnapWorldPosition());
-
-        if (dist < snapDist)
+#if UNITY_EDITOR
+        var closest = GetClosestTarget(objectToDrag.position);
+        if (closest != null)
         {
-            Debug.DrawLine(objectToDrag.position, closestTarget.GetSnapWorldPosition(), Color.red);
-
+            var snapPos = closest.GetSnapWorldPosition();
+            if ((snapPos - objectToDrag.position).sqrMagnitude < GetSnapRadiusSqr())
+            {
+                Debug.DrawLine(objectToDrag.position, snapPos, Color.red);
+            }
         }
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        if (objectToDrag == null) return;
-
-        dragging = true;
-        EventManager.OnItemDragStart?.Invoke(this);
+#endif
 
     }
 
@@ -103,82 +81,54 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     {
         if (!dragging) return;
         dragging = false;
-        EventManager.OnItemDragEnd?.Invoke(this);
 
-        DropTarget previous = null;
-        if (targets != null)
+        IDropTarget closest = GetClosestTarget(objectToDrag.position);
+        if (closest == null)
         {
-            for (int i = 0; i < targets.Length; i++)
-            {
-                var t = targets[i];
-                if (t != null && t.IsOccupied() && t.GetObjectOccupied() == this)
-                {
-                    previous = t;
-                    break;
-                }
-            }
+            objectToDrag.position = originalPosition;
+            return;
         }
 
-        DropTarget closestTarget = GetClosestTarget(objectToDrag.position, targets);
-        float dist = Vector3.Distance(objectToDrag.position, closestTarget.GetSnapWorldPosition());
+        var snapPos = closest.GetSnapWorldPosition();
+        bool withinSnap = (snapPos - objectToDrag.position).sqrMagnitude <= GetSnapRadiusSqr();
 
-        if (dist < snapDist)
+        if (withinSnap && closest.CanAccept(this))
         {
-            if (closestTarget.IsTrashbin())
-            {
-                Destroy(this.gameObject);
-
-                EventManager.OnItemRemovedFromPocket?.Invoke(this);
-                return;
-            }
-
-            if (!closestTarget.IsOccupied() || closestTarget.GetObjectOccupied() == this)
-            {
-                objectToDrag.position = closestTarget.GetSnapWorldPosition();
-                closestTarget.SetOccupied(true);
-                closestTarget.SetOccupiedByObject(this);
-
-                
-
-                if (previous != null && previous != closestTarget)
-                {
-                    previous.SetOccupied(false);
-                    previous.SetOccupiedByObject(null);
-                }
-                EventManager.OnItemRemovedFromPocket?.Invoke(this);
-                return;
-            }
+            objectToDrag.position = snapPos;
+            closest.ApplyDrop(this);
         }
-
-        objectToDrag.position = originalPosition;
-
-        if (previous != null)
+        else
         {
-            previous.SetOccupied(false);
-            previous.SetOccupiedByObject(null);
-            EventManager.OnItemReturnedToPocket?.Invoke(this);
+            objectToDrag.position = originalPosition;
+            closest.ClearDrop(this);
         }
     }
 
-    private DropTarget GetClosestTarget(Vector3 position, DropTarget[] targets)
+    private float GetSnapRadiusSqr()
+    {
+        if (rect != null && canvas != null && canvas.renderMode != RenderMode.WorldSpace)
+        {
+            float scale = Mathf.Max(1f, canvas.scaleFactor);
+            float r = snapDist / scale;
+            return r * r;
+        }
+        return snapDist * snapDist;
+    }
+
+    private IDropTarget GetClosestTarget(Vector3 position)
     {
         if (targets == null || targets.Length == 0) return null;
 
-        DropTarget closest = null;
-
+        IDropTarget closest = null;
         float closestDistanceSqr = Mathf.Infinity;
 
-        Vector3 p = objectToDrag.position;
-
-        for (int i = 0; i < targets.Length; i++)
+        foreach (var target in targets)
         {
-            var target = targets[i];
             if (target == null) continue;
-
             var snapPos = target.GetSnapWorldPosition();
-            float dSqr = (snapPos - p).sqrMagnitude;
+            float dSqr = (snapPos - position).sqrMagnitude;
 
-            if (dSqr <= closestDistanceSqr)
+            if (dSqr < closestDistanceSqr)
             {
                 closestDistanceSqr = dSqr;
                 closest = target;

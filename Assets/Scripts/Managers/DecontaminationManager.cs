@@ -16,21 +16,35 @@ public class DecontaminationManager : MonoBehaviour
     {
         for (int i = 0; i < itemContainers.Length; i++)
         {
-            GameObject item = itemContainers[i].transform.GetChild(0).gameObject;
-            Image image = item.GetComponent<Image>();
-            image.sprite = items[i].image;
-            image.color = items[i].dirty;
-            DecontaminationInfo decontaminationInfo = item.GetComponent<DecontaminationInfo>();
-            decontaminationInfo.acceptedTypes = items[i].acceptedTypes;
-            decontaminationInfo.clean = items[i].clean;
+            if (itemContainers[i].transform.childCount > 0)
+            {
+                GameObject item = itemContainers[i].transform.GetChild(0).gameObject;
+                RawImage image = item.GetComponent<RawImage>();
+
+                if (item != null && image != null)
+                {
+                    image.texture = items[i].image;
+                    image.color = items[i].dirty;
+                    DecontaminationInfo decontaminationInfo = item.GetComponent<DecontaminationInfo>();
+                    decontaminationInfo.acceptedTypes = items[i].acceptedTypes;
+                    decontaminationInfo.clean = items[i].clean;
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"Item container at index {i} has no child object.");
+            }
         }
 
         for (int i = 0; i < toolContainers.Length; i++)
         {
-            Transform item = toolContainers[i].transform.GetChild(0);
-            item.GetComponent<Image>().sprite = tools[i].image;
-            DecontaminationInfo decontaminationInfo = item.GetComponent<DecontaminationInfo>();
-            decontaminationInfo.toolType = tools[i].toolType;
+            if (toolContainers[i].transform.childCount > 0)
+            {
+                Transform item = toolContainers[i].transform.GetChild(0);
+                item.GetComponent<RawImage>().texture = tools[i].image;
+                DecontaminationInfo decontaminationInfo = item.GetComponent<DecontaminationInfo>();
+                decontaminationInfo.toolType = tools[i].toolType;
+            }
         }
     }
 
@@ -43,7 +57,7 @@ public class DecontaminationManager : MonoBehaviour
             if (decontaminationInfo != null && decontaminationInfo.acceptedTypes.Contains(draggedTool.toolType)
                 && Vector3.Distance(draggedTool.transform.position, workplate.transform.position) <= dragAndDrop.getSnapDistance())
             {
-                dragAndDrop.GetComponentInChildren<Image>().color = decontaminationInfo.clean;
+                dragAndDrop.GetComponentInChildren<RawImage>().color = decontaminationInfo.clean;
             }
         }
     }
@@ -63,5 +77,12 @@ public class DecontaminationManager : MonoBehaviour
         {
             draggedTool = null;
         });
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnItemDragStart.RemoveAllListeners();
+
+        EventManager.OnItemDragEnd.RemoveAllListeners();
     }
 }

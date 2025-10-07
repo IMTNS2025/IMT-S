@@ -1,32 +1,56 @@
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class DropTarget : MonoBehaviour
+public class DropTarget : MonoBehaviour, IDropTarget
 {
     [Tooltip("If set, the draggable will snap to this transform instead of the target's transform.")]
     public Transform snapPoint;
 
-    [SerializeField] private bool isOccupied = false;
-    [SerializeField] private bool isTrashbin = false;
+    [Header("Capacity")]
+    [SerializeField] private bool allowMultiple = false;
 
+    [Header("State (single-capacity only)")]
+    [SerializeField] private bool isOccupied = false;
     [SerializeField] private DragAndDrop occupiedByObject = null;
 
-    public bool IsOccupied() => isOccupied;
-    
+    [Header("Optional behavior")]
+    [SerializeField] private bool isTrashbin = false;
+
     public bool IsTrashbin() => isTrashbin;
-
+    public bool IsOccupied() => isOccupied;
     public DragAndDrop GetObjectOccupied() => occupiedByObject;
-
 
     public Vector3 GetSnapWorldPosition()
     {
-        Transform t = snapPoint != null ? snapPoint : transform;
-        Vector3 pos = t.position;
-        return pos;
+        return snapPoint != null ? snapPoint.position : transform.position;
     }
 
-    public void SetOccupied(bool occupied) => isOccupied = occupied;
+    public bool CanAccept(DragAndDrop dragger)
+    {
+        return isTrashbin || allowMultiple || !isOccupied || occupiedByObject == dragger;
+    }
 
-    public void SetOccupiedByObject(DragAndDrop obj) => occupiedByObject = obj;
+    public void ApplyDrop(DragAndDrop dragger)
+    {
+        if (isTrashbin)
+        {
+            Destroy(dragger?.gameObject);
+            return;
+        }
 
+        if (!allowMultiple)
+        {
+            isOccupied = true;
+            occupiedByObject = dragger;
+        }
+    }
+
+    public void ClearDrop(DragAndDrop dragger)
+    {
+        if (isOccupied && occupiedByObject == dragger)
+        {
+            isOccupied = false;
+            occupiedByObject = null;
+        }
+    }
 }
