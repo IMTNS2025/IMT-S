@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler, IDragHandler
 {
@@ -99,8 +100,14 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 
             if (resizeWithTarget == true)
             {
-                if (objectToDrag.TryGetComponent<RectTransform>(out RectTransform v)) { 
+                if (objectToDrag.TryGetComponent<RectTransform>(out RectTransform v))
+                {
                     v.sizeDelta = closest.GetDropSize();
+
+                    if (objectToDrag.TryGetComponent<RawImage>(out RawImage i))
+                    {
+                        i.color = new Color(i.color.r, i.color.g, i.color.b, 1f);
+                    }
                 }
             }
 
@@ -110,6 +117,10 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         {
             objectToDrag.position = originalPosition;
             closest.ClearDrop(this);
+            if (objectToDrag.TryGetComponent<RawImage>(out RawImage i))
+            {
+                i.color = new Color(i.color.r, i.color.g, i.color.b, 0f);
+            }
         }
     }
 
