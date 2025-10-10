@@ -8,30 +8,29 @@ public class DragDropImageChanger : MonoBehaviour
 
     private void OnEnable()
     {
+        var color = this.GetComponent<RawImage>().color;
+        color = new Color(color.r, color.g, color.b, 0f);
+
         EventManager.OnItemDragStart.AddListener((item) =>
         {
-            DragDropImageChanger info = item.gameObject.GetComponentInChildren<DragDropImageChanger>();
-            info.GetComponent<RawImage>().texture = originalSprite.texture;
+            this.GetComponent<RawImage>().texture = originalSprite.texture;
+            this.GetComponent<RawImage>().color = new Color(color.r, color.g, color.b, 1f);
         });
 
         EventManager.OnItemDragEnd.AddListener((item) =>
         {
-            DragDropImageChanger info = item.gameObject.GetComponentInChildren<DragDropImageChanger>();
-            info.GetComponent<RawImage>().texture = dropSprite.texture;
-
+            this.GetComponent<RawImage>().texture = dropSprite.texture;
         });
     }
     private void OnDisable()
     {
         EventManager.OnItemDragStart.RemoveListener((item) =>
         {
-            DragDropImageChanger info = item.gameObject.GetComponentInChildren<DragDropImageChanger>();
-            info.GetComponent<RawImage>().texture = originalSprite.texture;
+            this.GetComponent<RawImage>().texture = originalSprite.texture;
         });
         EventManager.OnItemDragEnd.RemoveListener((item) =>
         {
-            DragDropImageChanger info = item.gameObject.GetComponentInChildren<DragDropImageChanger>();
-            info.GetComponent<RawImage>().texture = dropSprite.texture;
+            this.GetComponent<RawImage>().texture = dropSprite.texture;
         });
     }
 }
