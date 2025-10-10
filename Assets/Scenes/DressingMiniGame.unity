@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
   autoFindTargets: 1
+  resizeWithTarget: 0
 --- !u!114 &57324253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
   autoFindTargets: 1
+  resizeWithTarget: 1
 --- !u!1 &909478198
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,7 +625,7 @@ RectTransform:
   m_GameObject: {fileID: 909478198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.72307, y: 0.72307, z: 0.72307}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 571526028}
@@ -773,7 +775,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1134264192}
   - component: {fileID: 1134264194}
-  - component: {fileID: 1134264195}
+  - component: {fileID: 1134264196}
+  - component: {fileID: 1134264197}
   m_Layer: 5
   m_Name: Image (FaceMask)
   m_TagString: Untagged
@@ -808,14 +811,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134264191}
   m_CullTransparentMesh: 1
---- !u!114 &1134264195
+--- !u!114 &1134264196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134264191}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -926,6 +929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
   autoFindTargets: 1
+  resizeWithTarget: 0
 --- !u!1 &1394769922
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,6 +971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1627180574}
   - component: {fileID: 1627180576}
+  - component: {fileID: 1627180578}
   - component: {fileID: 1627180577}
   m_Layer: 5
   m_Name: Image (Shoe Cap)
@@ -1009,11 +1014,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627180573}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 276066ed241747540958aa5a794f7f75, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_EditorClassIdentifier: Assembly-CSharp::DragDropImageChanger
+  originalSprite: {fileID: 0}
+  dropSprite: {fileID: 0}
+--- !u!114 &1627180578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627180573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -1022,16 +1041,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &1670742983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,6 +1058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1670742984}
   - component: {fileID: 1670742986}
+  - component: {fileID: 1670742988}
   - component: {fileID: 1670742987}
   m_Layer: 5
   m_Name: Image (HairCap)
@@ -1084,11 +1101,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670742983}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 276066ed241747540958aa5a794f7f75, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_EditorClassIdentifier: Assembly-CSharp::DragDropImageChanger
+  originalSprite: {fileID: -5739240054174027632, guid: 1c161e1121fa2c846bb5600ca2d569be, type: 3}
+  dropSprite: {fileID: 0}
+--- !u!114 &1670742988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670742983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -1097,16 +1128,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &1681034947
 GameObject:
   m_ObjectHideFlags: 0

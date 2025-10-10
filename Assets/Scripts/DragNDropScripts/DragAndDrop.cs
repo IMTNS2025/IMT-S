@@ -11,7 +11,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 
     [Header("Drop Targets")]
     [SerializeField] private bool autoFindTargets = true;
-
+    [SerializeField] private bool resizeWithTarget = false;
     private IDropTarget[] targets;
     private Vector3 originalPosition;
     private bool dragging;
@@ -96,6 +96,15 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         {
             objectToDrag.position = snapPos;
             closest.ApplyDrop(this);
+
+            if (resizeWithTarget == true)
+            {
+                if (objectToDrag.TryGetComponent<RectTransform>(out RectTransform v)) { 
+                    v.sizeDelta = closest.GetDropSize();
+                }
+            }
+
+            EventManager.OnItemDragEnd?.Invoke(this);
         }
         else
         {
