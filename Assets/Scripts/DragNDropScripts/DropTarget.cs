@@ -53,4 +53,9 @@ public class DropTarget : MonoBehaviour, IDropTarget
             occupiedByObject = null;
         }
     }
+
+    public Vector2 GetDropSize()
+    {
+        return GetComponent<RectTransform>()?.sizeDelta ?? Vector2.zero;
+    }
 }
