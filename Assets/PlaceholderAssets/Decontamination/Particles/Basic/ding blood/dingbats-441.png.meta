@@ -1,0 +1,1040 @@
+fileFormatVersion: 2
+guid: d850f1685cfce6342a7161b3b2af2e95
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3769969932136505298
+    second: dingbats-441_0
+  - first:
+      213: -6651647985815486900
+    second: dingbats-441_1
+  - first:
+      213: -4870526701428851614
+    second: dingbats-441_2
+  - first:
+      213: 4618699028289413130
+    second: dingbats-441_3
+  - first:
+      213: 5328618479831264957
+    second: dingbats-441_4
+  - first:
+      213: 4310102275397960325
+    second: dingbats-441_5
+  - first:
+      213: -7011988315709099205
+    second: dingbats-441_6
+  - first:
+      213: 5312859655722764044
+    second: dingbats-441_7
+  - first:
+      213: -3418991533312536182
+    second: dingbats-441_8
+  - first:
+      213: -6567301896491359878
+    second: dingbats-441_9
+  - first:
+      213: -2016908638049389620
+    second: dingbats-441_10
+  - first:
+      213: 4187450713183766040
+    second: dingbats-441_11
+  - first:
+      213: 2209195304450256252
+    second: dingbats-441_12
+  - first:
+      213: 3523133885007019399
+    second: dingbats-441_13
+  - first:
+      213: -1352909020526234485
+    second: dingbats-441_14
+  - first:
+      213: 6274769837331064382
+    second: dingbats-441_15
+  - first:
+      213: -5496373553506055780
+    second: dingbats-441_16
+  - first:
+      213: 5427745550928980716
+    second: dingbats-441_17
+  - first:
+      213: 930699832521902757
+    second: dingbats-441_18
+  - first:
+      213: 5539370339215957782
+    second: dingbats-441_19
+  - first:
+      213: 3437755491020379545
+    second: dingbats-441_20
+  - first:
+      213: 8927147674969262376
+    second: dingbats-441_21
+  - first:
+      213: -7150148355630801155
+    second: dingbats-441_22
+  - first:
+      213: -1650953215541787966
+    second: dingbats-441_23
+  - first:
+      213: 4273958489949855104
+    second: dingbats-441_24
+  - first:
+      213: -568106131921462823
+    second: dingbats-441_25
+  - first:
+      213: -7684064958572136648
+    second: dingbats-441_26
+  - first:
+      213: -1500728332037004434
+    second: dingbats-441_27
+  - first:
+      213: -6394179898163992233
+    second: dingbats-441_28
+  - first:
+      213: 4904049194838574501
+    second: dingbats-441_29
+  - first:
+      213: -1949414628159101703
+    second: dingbats-441_30
+  - first:
+      213: 1866824487327623474
+    second: dingbats-441_31
+  - first:
+      213: -8704005580643790590
+    second: dingbats-441_32
+  - first:
+      213: 4972775502937053406
+    second: dingbats-441_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dingbats-441_0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 497
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df56eaddaf915430800000000000000
+      internalID: 3769969932136505298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_1
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 481
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e768a166990b3a0800000000000000
+      internalID: -6651647985815486900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 497
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26c374c25c9686cb0800000000000000
+      internalID: -4870526701428851614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_3
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 475
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00e1a99b4ae81040800000000000000
+      internalID: 4618699028289413130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_4
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 122
+        width: 306
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbeace1764e03f940800000000000000
+      internalID: 5328618479831264957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_5
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 433
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582c2befe2f80db30800000000000000
+      internalID: 4310102275397960325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_6
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 449
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3338f827c960be90800000000000000
+      internalID: -7011988315709099205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_7
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 439
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c070cd845b11bb940800000000000000
+      internalID: 5312859655722764044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_8
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 449
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8196d6a05d4d80d0800000000000000
+      internalID: -3418991533312536182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_9
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 428
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7122ee58b14cd4a0800000000000000
+      internalID: -6567301896491359878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 442
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc336ac97408204e0800000000000000
+      internalID: -2016908638049389620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_11
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 416
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81646c1dc30dc1a30800000000000000
+      internalID: 4187450713183766040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_12
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 419
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7de731bc63a8ae10800000000000000
+      internalID: 2209195304450256252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_13
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 421
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d3cff1a9fa4e030800000000000000
+      internalID: 3523133885007019399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_14
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 406
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b84bc12f960893de0800000000000000
+      internalID: -1352909020526234485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_15
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 358
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3624710ce5741750800000000000000
+      internalID: 6274769837331064382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_16
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 277
+        width: 83
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c998b66cf55f8b3b0800000000000000
+      internalID: -5496373553506055780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_17
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 269
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cea245632d9335b40800000000000000
+      internalID: 5427745550928980716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_18
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 275
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aacbfd01928aec00800000000000000
+      internalID: 930699832521902757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_19
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 238
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f5d4489fbcfdc40800000000000000
+      internalID: 5539370339215957782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_20
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 197
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9951be2b76c55bf20800000000000000
+      internalID: 3437755491020379545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_21
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 209
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8294ff7238993eb70800000000000000
+      internalID: 8927147674969262376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_22
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 183
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfe584324f195cc90800000000000000
+      internalID: -7150148355630801155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_23
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 184
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c2c7de2cc2a619e0800000000000000
+      internalID: -1650953215541787966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_24
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 175
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08dd93a2a96205b30800000000000000
+      internalID: 4273958489949855104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_25
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 145
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d99914ab7ead18f0800000000000000
+      internalID: -568106131921462823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_26
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 148
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837f741d1a7bc5590800000000000000
+      internalID: -7684064958572136648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_27
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 110
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e63e19088875c2be0800000000000000
+      internalID: -1500728332037004434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_28
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 110
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 759edfba24f4347a0800000000000000
+      internalID: -6394179898163992233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_29
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 115
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a5c46b82ceae0440800000000000000
+      internalID: 4904049194838574501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_30
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 117
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f460a069b942f4e0800000000000000
+      internalID: -1949414628159101703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_31
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 70
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 239e929fafa48e910800000000000000
+      internalID: 1866824487327623474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_32
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 93
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20195ba4a09253780800000000000000
+      internalID: -8704005580643790590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dingbats-441_33
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 79
+        width: 82
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8d35819f8d20540800000000000000
+      internalID: 4972775502937053406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dingbats-441_0: 3769969932136505298
+      dingbats-441_1: -6651647985815486900
+      dingbats-441_10: -2016908638049389620
+      dingbats-441_11: 4187450713183766040
+      dingbats-441_12: 2209195304450256252
+      dingbats-441_13: 3523133885007019399
+      dingbats-441_14: -1352909020526234485
+      dingbats-441_15: 6274769837331064382
+      dingbats-441_16: -5496373553506055780
+      dingbats-441_17: 5427745550928980716
+      dingbats-441_18: 930699832521902757
+      dingbats-441_19: 5539370339215957782
+      dingbats-441_2: -4870526701428851614
+      dingbats-441_20: 3437755491020379545
+      dingbats-441_21: 8927147674969262376
+      dingbats-441_22: -7150148355630801155
+      dingbats-441_23: -1650953215541787966
+      dingbats-441_24: 4273958489949855104
+      dingbats-441_25: -568106131921462823
+      dingbats-441_26: -7684064958572136648
+      dingbats-441_27: -1500728332037004434
+      dingbats-441_28: -6394179898163992233
+      dingbats-441_29: 4904049194838574501
+      dingbats-441_3: 4618699028289413130
+      dingbats-441_30: -1949414628159101703
+      dingbats-441_31: 1866824487327623474
+      dingbats-441_32: -8704005580643790590
+      dingbats-441_33: 4972775502937053406
+      dingbats-441_4: 5328618479831264957
+      dingbats-441_5: 4310102275397960325
+      dingbats-441_6: -7011988315709099205
+      dingbats-441_7: 5312859655722764044
+      dingbats-441_8: -3418991533312536182
+      dingbats-441_9: -6567301896491359878
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
