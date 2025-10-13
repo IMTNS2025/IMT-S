@@ -51,4 +51,17 @@ public class PlayerMovement : MonoBehaviour
             currentPathIndex++;
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        if (path == null || path.Count < 2) return;
+
+        Gizmos.color = Color.cyan;
+        for (int i = 0; i < path.Count - 1; i++)
+        {
+            Gizmos.DrawSphere(path[i], 0.1f);
+            Gizmos.DrawLine(path[i], path[i + 1]);
+        }
+    }
+
 }

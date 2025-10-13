@@ -1,10 +1,20 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class A_Star : MonoBehaviour
+public class Theta_Star : MonoBehaviour
 {
-    private readonly Vector3Int[] directions = { new(-1, 0, 0), new(1, 0, 0), new(0, 1, 0), new(0, -1, 0) };
+    private readonly Vector3Int[] directions = {
+        new(-1, 0, 0),  //left
+        new(1, 0, 0),   //right
+        new(0, 1, 0),   //up
+        new(0, -1, 0),  //down
+        new(-1, 1, 0),  //left up
+        new(1, 1, 0),   //right up
+        new(-1, -1, 0), //left down
+        new(1, -1, 0)   //right down
+    };
 
     [SerializeField] private Grid grid;
     [SerializeField] private Tilemap[] walkableTiles;
@@ -15,12 +25,12 @@ public class A_Star : MonoBehaviour
     [SerializeField] private GameObject pathGameObject;
 
     private List<Vector3> closedList = new();
-    private Vector3Int currentCellPosition;
 
     [Space]
 
     [SerializeField] private bool recalculateOnEndTargetChanged = true;
     [SerializeField] private float recalculationInterval = 0.01f;
+
     private List<GameObject> lastSpawnPathObjects = new();
     private Vector3 _lastStartCell;
     private Vector3 _lastEndCell;
@@ -39,9 +49,12 @@ public class A_Star : MonoBehaviour
         GeneratePath();
     }
 
+    private void OnEnable() => EventManager.OnEndTargetPathChanged.AddListener(SetEndGoal);
+    private void OnDisable() => EventManager.OnEndTargetPathChanged.RemoveListener(SetEndGoal);
+
     private void Update()
     {
-        DynamicPathRecalculation();
+        //DynamicPathRecalculation();
     }
 
     private void DynamicPathRecalculation()
@@ -53,7 +66,7 @@ public class A_Star : MonoBehaviour
 
         var currentStartCell = grid.WorldToCell(playerPosition.position);
         var currentEndCell = grid.WorldToCell(endPosition.position);
-        
+
         if (!IsWalkable(currentStartCell) || !IsWalkable(currentEndCell)) return;
 
         if (currentStartCell != _lastStartCell || currentEndCell != _lastEndCell)
@@ -63,7 +76,7 @@ public class A_Star : MonoBehaviour
 
             foreach (var go in lastSpawnPathObjects)
                 Destroy(go);
-            
+
             lastSpawnPathObjects.Clear();
             closedList.Clear();
             GeneratePath();
@@ -86,7 +99,6 @@ public class A_Star : MonoBehaviour
         }
 
         EventManager.OnPathCalculated?.Invoke(path);
-
 
         if (pathGameObject != null)
         {
@@ -118,15 +130,19 @@ public class A_Star : MonoBehaviour
         var goalCell = grid.WorldToCell(endPosition.position);
 
         List<Vector3Int> openList = new();
+        openList.Clear();
+        openList.Add(startCell);
+
         Dictionary<Vector3Int, Vector3Int> cameFrom = new();
+        cameFrom[startCell] = startCell;
 
         Dictionary<Vector3Int, float> gScore = new() { [startCell] = 0 };
-        Dictionary<Vector3Int, float> fScore = new() { [startCell] = HeuristicCostEstimate(startCell, goalCell) };
-
-        openList.Add(startCell);
+        Dictionary<Vector3Int, float> fScore = new() { [startCell] = EuclideanCostEstimate(startCell, goalCell) };
 
         while (openList.Count > 0)
         {
+            Vector3Int current = default;
+
             float smallestF = float.MaxValue;
 
             foreach (var n in openList)
@@ -136,36 +152,54 @@ public class A_Star : MonoBehaviour
                 if (f < smallestF)
                 {
                     smallestF = f;
-                    currentCellPosition = n;
+                    current = n;
                 }
             }
 
             //If we have a path to the end
-            if (currentCellPosition == goalCell)
-                return ReconstructPath(cameFrom, currentCellPosition);
+            if (current == goalCell)
+                return ReconstructPath(cameFrom, current);
 
             //if we dont have a path to the end
-            openList.Remove(currentCellPosition);
-            closedList.Add(currentCellPosition);
+            openList.Remove(current);
+            closedList.Add(current);
+
+            var parentOfCurrent = cameFrom[current];
 
             //Check neighbors
             for (int i = 0; i < directions.Length; i++)
             {
-                Vector3Int neighborCellPosition = currentCellPosition + directions[i];
-                if (closedList.Contains(neighborCellPosition)) continue;
-                if (!IsWalkable(neighborCellPosition)) continue;
+                Vector3Int neighborCell = current + directions[i];
+
+                if (!IsWalkable(neighborCell) || closedList.Contains(neighborCell)) continue;
 
                 //temp g score
-                float tempGScore = gScore[currentCellPosition] + 1f;
 
-                if (!openList.Contains(neighborCellPosition))
-                    openList.Add(neighborCellPosition);
-                else if (tempGScore >= gScore[neighborCellPosition]) continue;
+                Vector3Int potentialParent;
+                float tempGScore;
 
-                cameFrom[neighborCellPosition] = currentCellPosition;
-                gScore[neighborCellPosition] = tempGScore;
-                fScore[neighborCellPosition] = gScore[neighborCellPosition] + HeuristicCostEstimate(neighborCellPosition, goalCell);
-                openList.Add(neighborCellPosition);
+                if (LineOfSight(grid.CellToWorld(parentOfCurrent), grid.CellToWorld(neighborCell)))
+                {
+                    potentialParent = parentOfCurrent;
+                    tempGScore = gScore[parentOfCurrent] + EuclideanCostEstimate(parentOfCurrent, neighborCell);
+                }
+                else
+                {
+                    potentialParent = current;
+                    tempGScore = gScore[current] + EuclideanCostEstimate(current, neighborCell);
+                }
+
+
+                float neighborGScore =
+                    gScore.TryGetValue(neighborCell, out float gValue) ? gValue : float.MaxValue;
+
+                if (tempGScore < neighborGScore)
+                {
+                    cameFrom[neighborCell] = potentialParent;
+                    gScore[neighborCell] = tempGScore;
+                    fScore[neighborCell] = tempGScore + EuclideanCostEstimate(neighborCell, goalCell);
+                    openList.Add(neighborCell);
+                }
             }
         }
 
@@ -182,16 +216,19 @@ public class A_Star : MonoBehaviour
         var path = new List<Vector3Int> { currentCellPosition };
         while (cameFrom.TryGetValue(currentCellPosition, out var parent))
         {
+            if (parent == currentCellPosition) break; // Prevent infinite loop
             currentCellPosition = parent;
             path.Add(currentCellPosition);
         }
+
         path.Reverse();
         return path;
     }
 
-    private int HeuristicCostEstimate(Vector3Int startCell, Vector3Int endCell)
+    private float EuclideanCostEstimate(Vector3Int startCell, Vector3Int endCell)
     {
-        return Mathf.Abs(startCell.x - endCell.x) + Mathf.Abs(startCell.y - endCell.y);
+        //D = √((x₂ - x₁)² + (y₂ - y₁)²
+        return Mathf.Sqrt(Mathf.Pow((startCell.x - endCell.x), 2) + Mathf.Pow((startCell.y - endCell.y), 2));
     }
 
     private bool IsWalkable(Vector3Int cellPosition)
@@ -200,13 +237,84 @@ public class A_Star : MonoBehaviour
         {
             if (obstacleTilemap == null) continue;
             if (obstacleTilemap.HasTile(cellPosition))
-                return false; // Cell is blocked by an obstacle
+            {
+                return false;
+            }
         }
-        return true; // Cell is walkable and not blocked
+        return true;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (grid == null || obstaclesTiles == null) return;
+
+        Gizmos.color = Color.red;
+
+        foreach (var obstacleTilemap in obstaclesTiles)
+        {
+            if (obstacleTilemap == null) continue;
+
+            BoundsInt bounds = obstacleTilemap.cellBounds;
+            foreach (Vector3Int pos in bounds.allPositionsWithin)
+            {
+                if (obstacleTilemap.HasTile(pos))
+                {
+                    Vector3 worldPos = grid.GetCellCenterWorld(pos);
+                    Gizmos.DrawCube(worldPos, Vector3.one * 0.5f);
+                }
+            }
+        }
     }
 
     public void SetEndGoal(Vector3Int cellPos)
     {
         endPosition.position = grid.GetCellCenterWorld(cellPos);
+        DynamicPathRecalculation();
+    }
+
+    //Bresenham's line algorithm
+    bool LineOfSight(Vector3 start, Vector3 end)
+    {
+        Vector3Int startPos = grid.WorldToCell(start);
+        Vector3Int endPos = grid.WorldToCell(end);
+
+        int x0 = startPos.x;
+        int y0 = startPos.y;
+
+        int x1 = endPos.x;
+        int y1 = endPos.y;
+
+        //dx and dy stands for distance in x and y axis
+        int dx = Mathf.Abs(x1 - x0);
+        int dy = Mathf.Abs(y1 - y0);
+
+        //sx and sy stands for step in x and y axis
+        int sx = (x0 < x1) ? 1 : -1;
+        int sy = (y0 < y1) ? 1 : -1;
+
+        int err = dx - dy;
+
+        while (true)
+        {
+            if (!IsWalkable(new Vector3Int(x0, y0, 0))) return false;
+            if (x0 == x1 && y0 == y1) return true;
+
+            int e2 = err * 2;
+
+            if (e2 > -dy)
+            {
+                err -= dy;
+                x0 += sx;
+
+                if (!IsWalkable(new Vector3Int(x0, y0, 0))) return false;
+            }
+            if (e2 < dx)
+            {
+                err += dx;
+                y0 += sy;
+
+                if (!IsWalkable(new Vector3Int(x0, y0, 0))) return false;
+            }
+        }
     }
 }
