@@ -24,13 +24,8 @@ public class DecontaminationManager : MonoBehaviour
 
                 if (item != null && image != null)
                 {
-<<<<<<< HEAD
-                    image.texture = items[i].image;
                     //image.color = items[i].dirty;
-=======
                     image.sprite = items[i].imageOnDragging;
-                    image.color = items[i].dirty;
->>>>>>> e1c0bf6b8d4297eb559284f738f60bf6707554c0
                     DecontaminationInfo decontaminationInfo = item.GetComponent<DecontaminationInfo>();
                     decontaminationInfo.acceptedTypes = items[i].acceptedTypes;
                     //decontaminationInfo.clean = items[i].clean;
