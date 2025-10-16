@@ -8,6 +8,7 @@ public class DecontaminationManager : MonoBehaviour
     [SerializeField] private GameObject[] itemContainers;
     [SerializeField] private DecontaminationToolSO[] tools;
     [SerializeField] private GameObject[] toolContainers;
+    [SerializeField] private ContaminationTypeSO[] contaminations;
     [SerializeField] private DropTarget workplate;
 
     private DecontaminationInfo draggedTool;
@@ -24,10 +25,16 @@ public class DecontaminationManager : MonoBehaviour
                 if (item != null && image != null)
                 {
                     image.texture = items[i].image;
-                    image.color = items[i].dirty;
+                    //image.color = items[i].dirty;
                     DecontaminationInfo decontaminationInfo = item.GetComponent<DecontaminationInfo>();
                     decontaminationInfo.acceptedTypes = items[i].acceptedTypes;
-                    decontaminationInfo.clean = items[i].clean;
+                    //decontaminationInfo.clean = items[i].clean;
+                    if (contaminations.Length - 1 < i)
+                    {
+                        Debug.LogWarning($"Contamination array does not contain contamination at index {i}.");
+                        continue;
+                    }
+                    contaminations[i].spawnContamination(decontaminationInfo);
                 }
             }
             else
@@ -57,7 +64,7 @@ public class DecontaminationManager : MonoBehaviour
             if (decontaminationInfo != null && decontaminationInfo.acceptedTypes.Contains(draggedTool.toolType)
                 && Vector3.Distance(draggedTool.transform.position, workplate.transform.position) <= dragAndDrop.getSnapDistance())
             {
-                dragAndDrop.GetComponentInChildren<RawImage>().color = decontaminationInfo.clean;
+                //dragAndDrop.GetComponentInChildren<RawImage>().color = decontaminationInfo.clean;
             }
         }
     }
