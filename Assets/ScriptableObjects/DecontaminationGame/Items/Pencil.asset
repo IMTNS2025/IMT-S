@@ -17,5 +17,3 @@ MonoBehaviour:
   orderIndex: 0
   description: 
   acceptedTypes: 01000000
-  dirty: {r: 0.627451, g: 0.32156864, b: 0.1764706, a: 1}
-  clean: {r: 1, g: 1, b: 1, a: 1}

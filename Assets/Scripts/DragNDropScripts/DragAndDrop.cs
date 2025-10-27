@@ -16,6 +16,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     private IDropTarget[] targets;
     private Vector3 originalPosition;
     private bool dragging;
+    private Vector3 lastPosition;
 
     // UI helpers
     private RectTransform rect;
@@ -55,6 +56,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         {
             if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, eventData.position, eventData.pressEventCamera, out var localPointerPosition))
             {
+                lastPosition = objectToDrag.position;
                 objectToDrag.position = canvas.transform.TransformPoint(localPointerPosition - pointerToAnchorOffset);
             }
         }
@@ -161,5 +163,10 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     public float getSnapDistance()
     {
         return snapDist;
+    }
+
+    public Vector3 getLastPosition()
+    {
+        return lastPosition;
     }
 }
