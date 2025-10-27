@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 153580940}
   - component: {fileID: 153580939}
   m_Layer: 5
-  m_Name: Item Container
+  m_Name: Tool Container1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -507,7 +507,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
+  makeInvisible: 0
   autoFindTargets: 1
+  resizeWithTarget: 0
 --- !u!222 &153580940
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -528,7 +530,7 @@ GameObject:
   - component: {fileID: 226519983}
   - component: {fileID: 226519982}
   m_Layer: 5
-  m_Name: Item Container
+  m_Name: Item Container3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -567,7 +569,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
+  makeInvisible: 0
   autoFindTargets: 1
+  resizeWithTarget: 0
 --- !u!222 &226519983
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -588,7 +592,7 @@ GameObject:
   - component: {fileID: 416766071}
   - component: {fileID: 416766070}
   m_Layer: 5
-  m_Name: Item Container
+  m_Name: Item Container2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -627,7 +631,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
+  makeInvisible: 0
   autoFindTargets: 1
+  resizeWithTarget: 0
 --- !u!222 &416766071
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -754,7 +760,7 @@ GameObject:
   - component: {fileID: 688143893}
   - component: {fileID: 688143894}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Tool1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -882,7 +888,7 @@ GameObject:
   - component: {fileID: 779517226}
   - component: {fileID: 779517227}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Item3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1265,7 +1271,7 @@ GameObject:
   - component: {fileID: 1158115941}
   - component: {fileID: 1158115940}
   m_Layer: 5
-  m_Name: Item Container (1)
+  m_Name: Tool Container2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1304,7 +1310,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
+  makeInvisible: 0
   autoFindTargets: 1
+  resizeWithTarget: 0
 --- !u!222 &1158115941
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1325,7 +1333,7 @@ GameObject:
   - component: {fileID: 1194124792}
   - component: {fileID: 1194124791}
   m_Layer: 5
-  m_Name: Item Container (2)
+  m_Name: Tool Container3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1364,7 +1372,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
+  makeInvisible: 0
   autoFindTargets: 1
+  resizeWithTarget: 0
 --- !u!222 &1194124792
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1591,7 +1601,7 @@ GameObject:
   - component: {fileID: 1798368252}
   - component: {fileID: 1798368253}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: Tool3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1812,7 +1822,7 @@ GameObject:
   - component: {fileID: 1986998872}
   - component: {fileID: 1986998873}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: Tool2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1927,6 +1937,52 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!1 &2008747527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2008747529}
+  - component: {fileID: 2008747528}
+  m_Layer: 0
+  m_Name: AlcoholManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2008747528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008747527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6901938f59da4ae4e93fa0f85f21c595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AlcoholManager
+  workplate: {fileID: 1865202822}
+  tickInterval: 1
+--- !u!4 &2008747529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008747527}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2060089038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,7 +1996,7 @@ GameObject:
   - component: {fileID: 2060089042}
   - component: {fileID: 2060089043}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Item2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2027,7 +2083,7 @@ GameObject:
   - component: {fileID: 6272279574780351649}
   - component: {fileID: 2952309027746696626}
   m_Layer: 5
-  m_Name: Item Container
+  m_Name: Item Container1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2066,7 +2122,7 @@ GameObject:
   - component: {fileID: 7589201749866743415}
   - component: {fileID: 7589201749866743416}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Item1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2085,7 +2141,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
+  makeInvisible: 0
   autoFindTargets: 1
+  resizeWithTarget: 0
 --- !u!222 &5194658204844400188
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2170,5 +2228,6 @@ SceneRoots:
   - {fileID: 139839213}
   - {fileID: 89495815}
   - {fileID: 1275756949}
+  - {fileID: 2008747529}
   - {fileID: 804573089}
   - {fileID: 528740458}

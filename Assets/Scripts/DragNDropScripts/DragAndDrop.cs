@@ -9,6 +9,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     private Transform objectToDrag;
 
     [SerializeField] private float snapDist = 250f;
+    [SerializeField] private bool makeInvisible = true;
 
     [Header("Drop Targets")]
     [SerializeField] private bool autoFindTargets = true;
@@ -121,7 +122,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
             closest.ClearDrop(this);
             if (objectToDrag.TryGetComponent<RawImage>(out RawImage i))
             {
-                i.color = new Color(i.color.r, i.color.g, i.color.b, 0f);
+                i.color = new Color(i.color.r, i.color.g, i.color.b, makeInvisible ? 0f : 1f);
             }
         }
     }
