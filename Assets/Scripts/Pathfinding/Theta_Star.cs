@@ -20,6 +20,7 @@ public class Theta_Star : MonoBehaviour
     [SerializeField] private Tilemap[] walkableTiles;
     [SerializeField] private Tilemap[] obstaclesTiles;
 
+    // Legacy single-agent fields (kept for backward compatibility / optional debug)
     [SerializeField] private Transform playerPosition;
     [SerializeField] private Transform endPosition;
     [SerializeField] private GameObject pathGameObject;
@@ -37,24 +38,31 @@ public class Theta_Star : MonoBehaviour
 
     private void Start()
     {
-        if (grid == null || playerPosition == null || endPosition == null)
+        if (grid == null)
         {
-            Debug.LogWarning("A_Star: Missing grid/start/end references.");
+            Debug.LogWarning("Theta_Star: Missing grid reference.");
             return;
         }
 
-        _lastStartCell = grid.WorldToCell(playerPosition.position);
-        _lastEndCell = grid.WorldToCell(endPosition.position);
-
-        GeneratePath();
+        if (playerPosition != null && endPosition != null)
+        {
+            _lastStartCell = grid.WorldToCell(playerPosition.position);
+            _lastEndCell = grid.WorldToCell(endPosition.position);
+            GeneratePath();
+        }
     }
 
-    private void OnEnable() => EventManager.OnEndTargetPathChanged.AddListener(SetEndGoal);
-    private void OnDisable() => EventManager.OnEndTargetPathChanged.RemoveListener(SetEndGoal);
-
-    private void Update()
+    private void OnEnable()
     {
-        //DynamicPathRecalculation();
+        EventManager.OnEndTargetPathChanged.AddListener(SetEndGoal);
+
+        EventManager.OnPathRequested.AddListener(HandlePathRequest);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnEndTargetPathChanged.RemoveListener(SetEndGoal);
+        EventManager.OnPathRequested.RemoveListener(HandlePathRequest);
     }
 
     private void DynamicPathRecalculation()
@@ -87,14 +95,14 @@ public class Theta_Star : MonoBehaviour
     {
         if (grid == null || playerPosition == null || endPosition == null)
         {
-            Debug.LogWarning("A_Star: Missing grid/start/end references.");
+            Debug.LogWarning("Theta_Star: Missing grid/start/end references.");
             return;
         }
 
         var path = FindPathWorld();
         if (path == null)
         {
-            Debug.Log("A_Star: No path found.");
+            Debug.Log("Theta_Star: No path found.");
             return;
         }
 
@@ -123,15 +131,18 @@ public class Theta_Star : MonoBehaviour
 
     public List<Vector3Int> FindPathCells()
     {
-        //h cost from current node to end node
-        //g cost from start to current node
-        //f cost = g + h
         var startCell = grid.WorldToCell(playerPosition.position);
         var goalCell = grid.WorldToCell(endPosition.position);
+        return FindPathCells(startCell, goalCell);
+    }
 
+    public List<Vector3Int> FindPathCells(Vector3Int startCell, Vector3Int goalCell)
+    {
         List<Vector3Int> openList = new();
         openList.Clear();
         openList.Add(startCell);
+
+        var closedSet = new HashSet<Vector3Int>();
 
         Dictionary<Vector3Int, Vector3Int> cameFrom = new();
         cameFrom[startCell] = startCell;
@@ -156,24 +167,19 @@ public class Theta_Star : MonoBehaviour
                 }
             }
 
-            //If we have a path to the end
             if (current == goalCell)
                 return ReconstructPath(cameFrom, current);
 
-            //if we dont have a path to the end
             openList.Remove(current);
-            closedList.Add(current);
+            closedSet.Add(current);
 
             var parentOfCurrent = cameFrom[current];
 
-            //Check neighbors
             for (int i = 0; i < directions.Length; i++)
             {
                 Vector3Int neighborCell = current + directions[i];
 
-                if (!IsWalkable(neighborCell) || closedList.Contains(neighborCell)) continue;
-
-                //temp g score
+                if (!IsWalkable(neighborCell) || closedSet.Contains(neighborCell)) continue;
 
                 Vector3Int potentialParent;
                 float tempGScore;
@@ -189,7 +195,6 @@ public class Theta_Star : MonoBehaviour
                     tempGScore = gScore[current] + EuclideanCostEstimate(current, neighborCell);
                 }
 
-
                 float neighborGScore =
                     gScore.TryGetValue(neighborCell, out float gValue) ? gValue : float.MaxValue;
 
@@ -198,7 +203,8 @@ public class Theta_Star : MonoBehaviour
                     cameFrom[neighborCell] = potentialParent;
                     gScore[neighborCell] = tempGScore;
                     fScore[neighborCell] = tempGScore + EuclideanCostEstimate(neighborCell, goalCell);
-                    openList.Add(neighborCell);
+                    if (!openList.Contains(neighborCell))
+                        openList.Add(neighborCell);
                 }
             }
         }
@@ -208,15 +214,10 @@ public class Theta_Star : MonoBehaviour
 
     private List<Vector3Int> ReconstructPath(Dictionary<Vector3Int, Vector3Int> cameFrom, Vector3Int currentCellPosition)
     {
-        //      path = []
-        //      while current is not null:
-        //      add current to beginning of path
-        //      current = current.parent
-        //    return path
         var path = new List<Vector3Int> { currentCellPosition };
         while (cameFrom.TryGetValue(currentCellPosition, out var parent))
         {
-            if (parent == currentCellPosition) break; // Prevent infinite loop
+            if (parent == currentCellPosition) break;
             currentCellPosition = parent;
             path.Add(currentCellPosition);
         }
@@ -227,7 +228,6 @@ public class Theta_Star : MonoBehaviour
 
     private float EuclideanCostEstimate(Vector3Int startCell, Vector3Int endCell)
     {
-        //D = √((x₂ - x₁)² + (y₂ - y₁)²
         return Mathf.Sqrt(Mathf.Pow((startCell.x - endCell.x), 2) + Mathf.Pow((startCell.y - endCell.y), 2));
     }
 
@@ -268,6 +268,7 @@ public class Theta_Star : MonoBehaviour
 
     public void SetEndGoal(Vector3Int cellPos)
     {
+        if (endPosition == null || grid == null) return;
         endPosition.position = grid.GetCellCenterWorld(cellPos);
         DynamicPathRecalculation();
     }
@@ -284,11 +285,9 @@ public class Theta_Star : MonoBehaviour
         int x1 = endPos.x;
         int y1 = endPos.y;
 
-        //dx and dy stands for distance in x and y axis
         int dx = Mathf.Abs(x1 - x0);
         int dy = Mathf.Abs(y1 - y0);
 
-        //sx and sy stands for step in x and y axis
         int sx = (x0 < x1) ? 1 : -1;
         int sy = (y0 < y1) ? 1 : -1;
 
@@ -314,6 +313,41 @@ public class Theta_Star : MonoBehaviour
                 y0 += sy;
 
                 if (!IsWalkable(new Vector3Int(x0, y0, 0))) return false;
+            }
+        }
+    }
+
+    private void HandlePathRequest(Transform requester, Vector3Int endCell)
+    {
+        if (grid == null || requester == null) return;
+
+        var startCell = grid.WorldToCell(requester.position);
+
+        if (!IsWalkable(startCell) || !IsWalkable(endCell))
+        {
+            EventManager.OnPathCalculatedFor?.Invoke(requester, null);
+            return;
+        }
+
+        var cells = FindPathCells(startCell, endCell);
+        if (cells == null)
+        {
+            EventManager.OnPathCalculatedFor?.Invoke(requester, null);
+            return;
+        }
+
+        var path = new List<Vector3>(cells.Count);
+        foreach (var c in cells)
+            path.Add(grid.GetCellCenterWorld(c));
+
+        EventManager.OnPathCalculatedFor?.Invoke(requester, path);
+
+        if (pathGameObject != null)
+        {
+            foreach (var p in path)
+            {
+                var go = Instantiate(pathGameObject, p, Quaternion.identity);
+                lastSpawnPathObjects.Add(go);
             }
         }
     }
