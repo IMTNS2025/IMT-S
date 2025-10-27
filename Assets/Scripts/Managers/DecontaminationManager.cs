@@ -9,9 +9,6 @@ public class DecontaminationManager : MonoBehaviour
     [SerializeField] private DecontaminationToolSO[] tools;
     [SerializeField] private GameObject[] toolContainers;
     [SerializeField] private ContaminationTypeSO[] contaminations;
-    [SerializeField] private DropTarget workplate;
-
-    private DecontaminationInfo draggedTool;
 
     void Start()
     {
@@ -53,43 +50,5 @@ public class DecontaminationManager : MonoBehaviour
                 decontaminationInfo.toolType = tools[i].toolType;
             }
         }
-    }
-
-    private void Update()
-    {
-        if (draggedTool != null && workplate.IsOccupied())
-        {
-            DragAndDrop dragAndDrop = workplate.GetObjectOccupied();
-            DecontaminationInfo decontaminationInfo = dragAndDrop.GetComponentInChildren<DecontaminationInfo>();
-            if (decontaminationInfo != null && decontaminationInfo.acceptedTypes.Contains(draggedTool.toolType)
-                && Vector3.Distance(draggedTool.transform.position, workplate.transform.position) <= dragAndDrop.getSnapDistance())
-            {
-                //dragAndDrop.GetComponentInChildren<RawImage>().color = decontaminationInfo.clean;
-            }
-        }
-    }
-
-    private void OnEnable()
-    {
-        EventManager.OnItemDragStart.AddListener((item) =>
-        {
-            DecontaminationInfo decontaminationInfo = item.gameObject.GetComponentInChildren<DecontaminationInfo>();
-            if (decontaminationInfo != null)
-            {
-                draggedTool = decontaminationInfo;
-            }
-        });
-
-        EventManager.OnItemDragEnd.AddListener((item) =>
-        {
-            draggedTool = null;
-        });
-    }
-
-    private void OnDisable()
-    {
-        EventManager.OnItemDragStart.RemoveAllListeners();
-
-        EventManager.OnItemDragEnd.RemoveAllListeners();
     }
 }

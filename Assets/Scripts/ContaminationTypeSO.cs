@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.PlayerSettings;
 
 [CreateAssetMenu(fileName = "ContaminationTypeSO", menuName = "Scriptable Objects/ContaminationTypeSO")]
 public class ContaminationTypeSO : ScriptableObject
@@ -9,8 +11,6 @@ public class ContaminationTypeSO : ScriptableObject
     public int amountMax;
     public Color colorMin;
     public Color colorMax;
-    public float intensityMin;
-    public float intensityMax;
     public float scaleMin;
     public float scaleMax;
     public bool visible;
@@ -20,23 +20,20 @@ public class ContaminationTypeSO : ScriptableObject
     public void spawnContamination(DecontaminationInfo decontaminationInfo)
     {
         int amount = Random.Range(amountMin, amountMax);
-        decontaminationInfo.contaminationSpots = new ContaminationSpot[amount];
+        decontaminationInfo.contaminationSpots = new List<ContaminationSpot>(amount);
 
         for (int i = 0; i < amount; i++)
         {
             GetRandomValues(out Color color, out float intensity, out Texture2D texture, out float scale);
 
-            Vector2 pos = CreateSetGameObject(decontaminationInfo, i, color, texture, scale);
-            if (pos == Vector2.zero) continue;
-
-            decontaminationInfo.contaminationSpots[i] = new ContaminationSpot(pos, texture, intensity, visible);
+            CreateSetGameObject(decontaminationInfo, i, color, texture, scale, intensity);
         }
     }
 
     private void GetRandomValues(out Color color, out float intensity, out Texture2D texture, out float scale)
     {
-        intensity = Random.Range(intensityMin, intensityMax);
-        color = Color.Lerp(colorMin, colorMax, (intensity - intensityMin) / (intensityMax - intensityMin));
+        intensity = Random.Range(colorMin.a, colorMax.a);
+        color = Color.Lerp(colorMin, colorMax, intensity);
         if(textures.Length == 0)
         {
             Debug.LogWarning($"Contamination type {name} does not contain textures.");
@@ -49,7 +46,7 @@ public class ContaminationTypeSO : ScriptableObject
         scale = Random.Range(scaleMin, scaleMax);
     }
 
-    private Vector2 CreateSetGameObject(DecontaminationInfo decontaminationInfo, int i, Color color, Texture2D texture, float scale)
+    private void CreateSetGameObject(DecontaminationInfo decontaminationInfo, int i, Color color, Texture2D texture, float scale, float intensity)
     {
         RectTransform containerRectTransform = decontaminationInfo.GetComponent<RectTransform>();
         Texture2D containerTexture = decontaminationInfo.GetComponent<RawImage>().texture as Texture2D;
@@ -97,11 +94,10 @@ public class ContaminationTypeSO : ScriptableObject
             rt.localPosition = new Vector3(localX, localY, 0f);
             rt.localEulerAngles = new Vector3(0f, 0f, Random.Range(0f, 360f));
 
-            return rt.localPosition;
-            
+            decontaminationInfo.contaminationSpots.Insert(i, new ContaminationSpot(rt.localPosition, image, intensity, visible));
+            return;
         }
 
         Debug.LogWarning("No visible Pixel found after maxAttempts");
-        return Vector2.zero;
     }
 }

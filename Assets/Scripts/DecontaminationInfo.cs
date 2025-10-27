@@ -1,24 +1,26 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DecontaminationInfo : MonoBehaviour
 {
     public ToolTypes[] acceptedTypes;
     public ToolTypes toolType;
-    public ContaminationSpot[] contaminationSpots;
+    public List<ContaminationSpot> contaminationSpots;
 }
 
 [System.Serializable]
 public struct ContaminationSpot
 {
     public bool visible;
-    public Vector2 pos;
-    public Texture2D texture;
+    public Vector3 pos;
+    public RawImage image;
     public float intensity;
 
-    public ContaminationSpot(Vector2 pos, Texture2D texture, float intensity, bool visible)
+    public ContaminationSpot(Vector3 pos, RawImage image, float intensity, bool visible)
     {
         this.pos = pos;
-        this.texture = texture;
+        this.image = image;
         this.intensity = intensity;
         this.visible = visible;
     }

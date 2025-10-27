@@ -8,6 +8,7 @@ public class DecontaminationToolSO : ItemSO
 
 public enum ToolTypes
 {
+    Null,
     Wipes,
     Bag,
     Bleach,
