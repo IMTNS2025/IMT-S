@@ -11,4 +11,6 @@ public interface IDropTarget
     void ApplyDrop(DragAndDrop dragger);
 
     void ClearDrop(DragAndDrop dragger);
+
+    Vector2 GetDropSize();
 }

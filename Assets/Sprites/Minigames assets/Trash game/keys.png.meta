@@ -103,10 +103,10 @@ TextureImporter:
       name: keys_0
       rect:
         serializedVersion: 2
-        x: 1900
-        y: 1824
-        width: 811
-        height: 1037
+        x: 57
+        y: 31
+        width: 661
+        height: 844
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

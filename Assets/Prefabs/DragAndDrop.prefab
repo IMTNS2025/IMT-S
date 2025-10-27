@@ -85,7 +85,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2584802105246651593}
   - component: {fileID: 8827352792925777021}
-  - component: {fileID: 5953366213801612097}
   - component: {fileID: 392418969125483886}
   m_Layer: 5
   m_Name: DragAndDrop
@@ -122,36 +121,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3086712422674389918}
   m_CullTransparentMesh: 1
---- !u!114 &5953366213801612097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3086712422674389918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &392418969125483886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,4 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12b4d4c4e130c7468f14bb0f16f4a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
-  snapDistance: 300
+  snapDist: 250
+  autoFindTargets: 1
