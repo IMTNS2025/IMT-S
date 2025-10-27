@@ -17,12 +17,12 @@ public class DecontaminationManager : MonoBehaviour
             if (itemContainers[i].transform.childCount > 0)
             {
                 GameObject item = itemContainers[i].transform.GetChild(0).gameObject;
-                Image image = item.GetComponent<Image>();
+                RawImage image = item.GetComponent<RawImage>();
 
                 if (item != null && image != null)
                 {
                     //image.color = items[i].dirty;
-                    image.sprite = items[i].imageOnDragging;
+                    image.texture = items[i].imageOnCharacter;
                     DecontaminationInfo decontaminationInfo = item.GetComponent<DecontaminationInfo>();
                     decontaminationInfo.acceptedTypes = items[i].acceptedTypes;
                     //decontaminationInfo.clean = items[i].clean;

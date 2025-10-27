@@ -14,6 +14,7 @@ public class WipingManager : MonoBehaviour
     [SerializeField] private DropTarget workplate;
     private DecontaminationInfo draggedTool;
     private Vector2 lastDirection;
+
     private void Update()
     {
         UseWipes();
@@ -21,12 +22,7 @@ public class WipingManager : MonoBehaviour
 
     private void UseWipes()
     {
-        if (!workplate.IsOccupied() || draggedTool == null || draggedTool.toolType != ToolTypes.Wipes) return;
-
-        //Debug.Log("workplate.IsOccupied(): " + workplate.IsOccupied());
-        //Debug.Log("draggedTool: " + draggedTool);
-        //Debug.Log("draggedTool.gameObject.name: " + draggedTool?.gameObject?.name);
-        //Debug.Log("draggedTool.toolType: " + draggedTool?.toolType);
+        if (workplate == null || !workplate.IsOccupied() || draggedTool == null || draggedTool.toolType != ToolTypes.Wipes) return;
 
         DragAndDrop occupiedItemDaD = workplate.GetObjectOccupied();
         DecontaminationInfo occupiedItemDI = occupiedItemDaD.GetComponentInChildren<DecontaminationInfo>();

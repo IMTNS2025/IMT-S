@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4807bd92cd0b65145b0f5ded2bafd91e, type: 3}
   m_Name: Tablet
   m_EditorClassIdentifier: Assembly-CSharp::DecontaminationItemSO
-  image: {fileID: 2800000, guid: e445c35ceb32b6d4cbea932a18dfea6e, type: 3}
+  imageOnCharacter: {fileID: 2800000, guid: f839d88137b8d6c4089ee4a821a2cea8, type: 3}
+  imageOnDragging: {fileID: 6604339808490387203, guid: f839d88137b8d6c4089ee4a821a2cea8, type: 3}
   name: Tablet
   orderIndex: 0
   description: 
-  acceptedTypes: 01000000
+  acceptedTypes: 0100000003000000
