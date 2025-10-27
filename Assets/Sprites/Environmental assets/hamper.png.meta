@@ -1,0 +1,2587 @@
+fileFormatVersion: 2
+guid: 79fefd15baca25047a4e1690dcdd2ebb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -341557813318242702
+    second: hamper_0
+  - first:
+      213: -4547674711805662790
+    second: hamper_1
+  - first:
+      213: 2179962012738043638
+    second: hamper_2
+  - first:
+      213: 653860625201399295
+    second: hamper_3
+  - first:
+      213: -575965869203474634
+    second: hamper_4
+  - first:
+      213: -49584738333709629
+    second: hamper_5
+  - first:
+      213: -4011050362983302874
+    second: hamper_6
+  - first:
+      213: -5543426402990155697
+    second: hamper_7
+  - first:
+      213: 5269894963417634594
+    second: hamper_8
+  - first:
+      213: 6605713648598743574
+    second: hamper_9
+  - first:
+      213: 3477469862915242875
+    second: hamper_10
+  - first:
+      213: -4477257789566209499
+    second: hamper_11
+  - first:
+      213: -2965487112438080030
+    second: hamper_12
+  - first:
+      213: 4543309003208693704
+    second: hamper_13
+  - first:
+      213: 939954224011722137
+    second: hamper_14
+  - first:
+      213: -8995165071144619003
+    second: hamper_15
+  - first:
+      213: 253765294479511767
+    second: hamper_16
+  - first:
+      213: 2902298507822727283
+    second: hamper_17
+  - first:
+      213: -458296826807680551
+    second: hamper_18
+  - first:
+      213: -6792330323977607446
+    second: hamper_19
+  - first:
+      213: 7286492731591268384
+    second: hamper_20
+  - first:
+      213: -3708788217985059712
+    second: hamper_21
+  - first:
+      213: -7045751756578519333
+    second: hamper_22
+  - first:
+      213: -5199966200831170983
+    second: hamper_23
+  - first:
+      213: 2447852346156362571
+    second: hamper_24
+  - first:
+      213: 2973288747739533525
+    second: hamper_25
+  - first:
+      213: 8103768583843454849
+    second: hamper_26
+  - first:
+      213: -3826292214524993579
+    second: hamper_27
+  - first:
+      213: 6165681766778845692
+    second: hamper_28
+  - first:
+      213: -446200564286358467
+    second: hamper_29
+  - first:
+      213: -6241790288235398317
+    second: hamper_30
+  - first:
+      213: -2811873118188565726
+    second: hamper_31
+  - first:
+      213: 1004953849808985107
+    second: hamper_32
+  - first:
+      213: -4317610162944078074
+    second: hamper_33
+  - first:
+      213: -5210555865415905675
+    second: hamper_34
+  - first:
+      213: 8380327990265847127
+    second: hamper_35
+  - first:
+      213: 738348492143290466
+    second: hamper_36
+  - first:
+      213: 6277629635592352659
+    second: hamper_37
+  - first:
+      213: -1728831467225954773
+    second: hamper_38
+  - first:
+      213: 1712845676436502975
+    second: hamper_39
+  - first:
+      213: -2455824684610333491
+    second: hamper_40
+  - first:
+      213: -8518589616968458496
+    second: hamper_41
+  - first:
+      213: -5754729743255511149
+    second: hamper_42
+  - first:
+      213: 7925097068315254463
+    second: hamper_43
+  - first:
+      213: -5461056157325343722
+    second: hamper_44
+  - first:
+      213: -4887193906637612974
+    second: hamper_45
+  - first:
+      213: -3459529002375447396
+    second: hamper_46
+  - first:
+      213: -3886261089881186975
+    second: hamper_47
+  - first:
+      213: 2933609759173624815
+    second: hamper_48
+  - first:
+      213: 1787263119123716577
+    second: hamper_49
+  - first:
+      213: -1882708834059140041
+    second: hamper_50
+  - first:
+      213: -2914890692845413542
+    second: hamper_51
+  - first:
+      213: -6146404103757685543
+    second: hamper_52
+  - first:
+      213: 2930438720182472925
+    second: hamper_53
+  - first:
+      213: 668631205035567428
+    second: hamper_54
+  - first:
+      213: -3951806220625749434
+    second: hamper_55
+  - first:
+      213: -5038837241508226924
+    second: hamper_56
+  - first:
+      213: -834117396279126181
+    second: hamper_57
+  - first:
+      213: 8108308340558689639
+    second: hamper_58
+  - first:
+      213: 910025492962143551
+    second: hamper_59
+  - first:
+      213: 8539172713865190757
+    second: hamper_60
+  - first:
+      213: -4169144158989836716
+    second: hamper_61
+  - first:
+      213: -8683843132589084450
+    second: hamper_62
+  - first:
+      213: 4123345164074705663
+    second: hamper_63
+  - first:
+      213: -5657706662390696519
+    second: hamper_64
+  - first:
+      213: -5695009627474924590
+    second: hamper_65
+  - first:
+      213: -2880331487614123965
+    second: hamper_66
+  - first:
+      213: -8871363968074812814
+    second: hamper_67
+  - first:
+      213: 792614156113199906
+    second: hamper_68
+  - first:
+      213: -6032498151020293593
+    second: hamper_69
+  - first:
+      213: -947755180326180240
+    second: hamper_70
+  - first:
+      213: -5693802433693578093
+    second: hamper_71
+  - first:
+      213: 6512952002866765149
+    second: hamper_72
+  - first:
+      213: -7875441832298856355
+    second: hamper_73
+  - first:
+      213: -2620388745102684853
+    second: hamper_74
+  - first:
+      213: -7695357856522960722
+    second: hamper_75
+  - first:
+      213: 8928270775896846693
+    second: hamper_76
+  - first:
+      213: 6453269325562821424
+    second: hamper_77
+  - first:
+      213: -2120224290444403480
+    second: hamper_78
+  - first:
+      213: -6261879221122518089
+    second: hamper_79
+  - first:
+      213: -648828951795217466
+    second: hamper_80
+  - first:
+      213: 2997272627200358497
+    second: hamper_81
+  - first:
+      213: 8112414889255383350
+    second: hamper_82
+  - first:
+      213: 3476403899435037886
+    second: hamper_83
+  - first:
+      213: -7944628674518617231
+    second: hamper_84
+  - first:
+      213: -7577395188343117947
+    second: hamper_85
+  - first:
+      213: 948578199839388130
+    second: hamper_86
+  - first:
+      213: 6818009041228590021
+    second: hamper_87
+  - first:
+      213: -444124395838928552
+    second: hamper_88
+  - first:
+      213: 3814292330462698787
+    second: hamper_89
+  - first:
+      213: -5484387153615708758
+    second: hamper_90
+  - first:
+      213: -5360887410774213515
+    second: hamper_91
+  - first:
+      213: -1278090194355848735
+    second: hamper_92
+  - first:
+      213: 3511285294266867501
+    second: hamper_93
+  - first:
+      213: -8954549917274067921
+    second: hamper_94
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hamper_0
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 93
+        width: 2687
+        height: 3955
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e28ea7afa824bf0800000000000000
+      internalID: -341557813318242702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_1
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 4007
+        width: 57
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9ebc8b1f963e0c0800000000000000
+      internalID: -4547674711805662790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_2
+      rect:
+        serializedVersion: 2
+        x: 2775
+        y: 3993
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6feb81196e7c04e10800000000000000
+      internalID: 2179962012738043638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_3
+      rect:
+        serializedVersion: 2
+        x: 3743
+        y: 3589
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff58eb936caf21900800000000000000
+      internalID: 653860625201399295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_4
+      rect:
+        serializedVersion: 2
+        x: 3734
+        y: 3441
+        width: 157
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637b063f712c108f0800000000000000
+      internalID: -575965869203474634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_5
+      rect:
+        serializedVersion: 2
+        x: 3893
+        y: 3442
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3caa65571f6df4ff0800000000000000
+      internalID: -49584738333709629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_6
+      rect:
+        serializedVersion: 2
+        x: 3939
+        y: 3424
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 629bd2242f2e558c0800000000000000
+      internalID: -4011050362983302874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_7
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 3074
+        width: 192
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f48104b8e0bc113b0800000000000000
+      internalID: -5543426402990155697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_8
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 3064
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227d0225c8d622940800000000000000
+      internalID: 5269894963417634594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_9
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 2894
+        width: 41
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61a7da890953cab50800000000000000
+      internalID: 6605713648598743574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_10
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 2544
+        width: 26
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b70387a64724030800000000000000
+      internalID: 3477469862915242875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_11
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 2838
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5223e0d03c59dd1c0800000000000000
+      internalID: -4477257789566209499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_12
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 2795
+        width: 8
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed112dde2978d6d0800000000000000
+      internalID: -2965487112438080030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_13
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 2674
+        width: 10
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c7961987731d0f30800000000000000
+      internalID: 4543309003208693704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_14
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 2594
+        width: 13
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99db85bf2636b0d00800000000000000
+      internalID: 939954224011722137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_15
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 2544
+        width: 23
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5047c66b601ca2380800000000000000
+      internalID: -8995165071144619003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_16
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 2624
+        width: 8
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d016c9d03e858300800000000000000
+      internalID: 253765294479511767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_17
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 2650
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3708be6ad19074820800000000000000
+      internalID: 2902298507822727283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_18
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 2646
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d18074d67dc3a9f0800000000000000
+      internalID: -458296826807680551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_19
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 2517
+        width: 15
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae66332ce8bccb1a0800000000000000
+      internalID: -6792330323977607446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_20
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 2636
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02896fca882de1560800000000000000
+      internalID: 7286492731591268384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_21
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 2579
+        width: 10
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084b8d704ccb78cc0800000000000000
+      internalID: -3708788217985059712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_22
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 2271
+        width: 12
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd68d8d7b16783e90800000000000000
+      internalID: -7045751756578519333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_23
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 2448
+        width: 10
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956ab6b7a4206d7b0800000000000000
+      internalID: -5199966200831170983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_24
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 2292
+        width: 13
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ba1435db488f120800000000000000
+      internalID: 2447852346156362571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_25
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 2382
+        width: 9
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d05ea7ec5e334920800000000000000
+      internalID: 2973288747739533525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_26
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 2371
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f95f5679e567070800000000000000
+      internalID: 8103768583843454849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_27
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 2290
+        width: 8
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df1562e08746eac0800000000000000
+      internalID: -3826292214524993579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_28
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 2318
+        width: 12
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9b4f256e6e09550800000000000000
+      internalID: 6165681766778845692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_29
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 2286
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3cf12b63f6cec9f0800000000000000
+      internalID: -446200564286358467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_30
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 2287
+        width: 6
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bfe33adc4b069a0800000000000000
+      internalID: -6241790288235398317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_31
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 2013
+        width: 11
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22b86e40c483af8d0800000000000000
+      internalID: -2811873118188565726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_32
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 2100
+        width: 6
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c9681b33052fd00800000000000000
+      internalID: 1004953849808985107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_33
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 2172
+        width: 19
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60f0a17be64c414c0800000000000000
+      internalID: -4317610162944078074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_34
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 2057
+        width: 8
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e8e8f0c0360b7b0800000000000000
+      internalID: -5210555865415905675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_35
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1844
+        width: 21
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d1f0108e7ec4470800000000000000
+      internalID: 8380327990265847127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_36
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1748
+        width: 8
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26865aaaa042f3a00800000000000000
+      internalID: 738348492143290466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_37
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1809
+        width: 30
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39372fca4ee9e1750800000000000000
+      internalID: 6277629635592352659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_38
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 1720
+        width: 24
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b26ca77b0f4f108e0800000000000000
+      internalID: -1728831467225954773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_39
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1778
+        width: 11
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9bf03511045c710800000000000000
+      internalID: 1712845676436502975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_40
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 1729
+        width: 11
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc45a2bf5782bedd0800000000000000
+      internalID: -2455824684610333491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_41
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 1813
+        width: 11
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f934570e3e7c980800000000000000
+      internalID: -8518589616968458496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_42
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1718
+        width: 11
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39f51e2d9c71320b0800000000000000
+      internalID: -5754729743255511149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_43
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 1663
+        width: 21
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe9b6f6bc99bfd60800000000000000
+      internalID: 7925097068315254463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_44
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 1577
+        width: 11
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614c92cdb5e6634b0800000000000000
+      internalID: -5461056157325343722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_45
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1521
+        width: 21
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 258596e09033d2cb0800000000000000
+      internalID: -4887193906637612974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_46
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 1435
+        width: 18
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9cff33a3b84dffc0800000000000000
+      internalID: -3459529002375447396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_47
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 1521
+        width: 13
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d9539012a311ac0800000000000000
+      internalID: -3886261089881186975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_48
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1351
+        width: 15
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe3c925788646b820800000000000000
+      internalID: 2933609759173624815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_49
+      rect:
+        serializedVersion: 2
+        x: 3718
+        y: 1508
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e996876652adc810800000000000000
+      internalID: 1787263119123716577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_50
+      rect:
+        serializedVersion: 2
+        x: 4276
+        y: 1512
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7344a6a5a464fd5e0800000000000000
+      internalID: -1882708834059140041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_51
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1366
+        width: 12
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b5bddcb5a3c87d0800000000000000
+      internalID: -2914890692845413542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_52
+      rect:
+        serializedVersion: 2
+        x: 3719
+        y: 1492
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc158d580693baa0800000000000000
+      internalID: -6146404103757685543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_53
+      rect:
+        serializedVersion: 2
+        x: 4190
+        y: 1456
+        width: 70
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd0d6886d720ba820800000000000000
+      internalID: 2930438720182472925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_54
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1301
+        width: 11
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449e2e5d984774900800000000000000
+      internalID: 668631205035567428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_55
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1251
+        width: 33
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a5c6e0e2d5829c0800000000000000
+      internalID: -3951806220625749434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_56
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 1244
+        width: 17
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49894eac934721ab0800000000000000
+      internalID: -5038837241508226924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_57
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1128
+        width: 19
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b571fcdb5ae9c64f0800000000000000
+      internalID: -834117396279126181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_58
+      rect:
+        serializedVersion: 2
+        x: 3955
+        y: 1301
+        width: 99
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7657650e97f768070800000000000000
+      internalID: 8108308340558689639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_59
+      rect:
+        serializedVersion: 2
+        x: 4063
+        y: 1379
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3dee844d5f01ac00800000000000000
+      internalID: 910025492962143551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_60
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1331
+        width: 6
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d94ad375c318670800000000000000
+      internalID: 8539172713865190757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_61
+      rect:
+        serializedVersion: 2
+        x: 3718
+        y: 1204
+        width: 17
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e140af9793426c0800000000000000
+      internalID: -4169144158989836716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_62
+      rect:
+        serializedVersion: 2
+        x: 3913
+        y: 1273
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0ffcc0eaacc7780800000000000000
+      internalID: -8683843132589084450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_63
+      rect:
+        serializedVersion: 2
+        x: 3939
+        y: 1291
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff26ffe8490193930800000000000000
+      internalID: 4123345164074705663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_64
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 1212
+        width: 9
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b577d034c9cb71b0800000000000000
+      internalID: -5657706662390696519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_65
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1173
+        width: 13
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db6de1dae247f0b0800000000000000
+      internalID: -5695009627474924590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_66
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 1266
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 340436dc5c10708d0800000000000000
+      internalID: -2880331487614123965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_67
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 1249
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27273b9397592e480800000000000000
+      internalID: -8871363968074812814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_68
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 1217
+        width: 7
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223c213206eeffa00800000000000000
+      internalID: 792614156113199906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_69
+      rect:
+        serializedVersion: 2
+        x: 3796
+        y: 1198
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7221c38a4e2484ca0800000000000000
+      internalID: -6032498151020293593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_70
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 1186
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a2f965fa5e8d2f0800000000000000
+      internalID: -947755180326180240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_71
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 1153
+        width: 6
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c80768adc8bf0b0800000000000000
+      internalID: -5693802433693578093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_72
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1046
+        width: 11
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5dda0ae657a26a50800000000000000
+      internalID: 6512952002866765149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_73
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1063
+        width: 12
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d504390216fc4b290800000000000000
+      internalID: -7875441832298856355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_74
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 1124
+        width: 7
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d09bad15282abd0800000000000000
+      internalID: -2620388745102684853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_75
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 1060
+        width: 14
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0007e1dc8943590800000000000000
+      internalID: -7695357856522960722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_76
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1108
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56135d777f697eb70800000000000000
+      internalID: 8928270775896846693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_77
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1088
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03bb81eb24e9e8950800000000000000
+      internalID: 6453269325562821424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_78
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 979
+        width: 9
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec18e3cd337392e0800000000000000
+      internalID: -2120224290444403480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_79
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 994
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3b79676065919a0800000000000000
+      internalID: -6261879221122518089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_80
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 937
+        width: 19
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cbc1488185eef6f0800000000000000
+      internalID: -648828951795217466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_81
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 935
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168774ff293789920800000000000000
+      internalID: 2997272627200358497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_82
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 759
+        width: 10
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63138a04c56159070800000000000000
+      internalID: 8112414889255383350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_83
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 780
+        width: 8
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4bb918deaae3030800000000000000
+      internalID: 3476403899435037886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_84
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 663
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1737fee10520fb190800000000000000
+      internalID: -7944628674518617231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_85
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 582
+        width: 12
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587ed04193fa7d690800000000000000
+      internalID: -7577395188343117947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_86
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 582
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e13b13d8d60a2d00800000000000000
+      internalID: 948578199839388130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_87
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 337
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cbe4d1891f6e9e50800000000000000
+      internalID: 6818009041228590021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_88
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 281
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8598fed073726d9f0800000000000000
+      internalID: -444124395838928552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_89
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 274
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32dd9b26aa61fe430800000000000000
+      internalID: 3814292330462698787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_90
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 213
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad150af0fa83e3b0800000000000000
+      internalID: -5484387153615708758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_91
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 76
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c70f79d4d4a95b0800000000000000
+      internalID: -5360887410774213515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_92
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 64
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e972866dbf434ee0800000000000000
+      internalID: -1278090194355848735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_93
+      rect:
+        serializedVersion: 2
+        x: 2206
+        y: 55
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f54dd1f579ab030800000000000000
+      internalID: 3511285294266867501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamper_94
+      rect:
+        serializedVersion: 2
+        x: 2225
+        y: 46
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c20612b4c0bb380800000000000000
+      internalID: -8954549917274067921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      hamper_0: -341557813318242702
+      hamper_1: -4547674711805662790
+      hamper_10: 3477469862915242875
+      hamper_11: -4477257789566209499
+      hamper_12: -2965487112438080030
+      hamper_13: 4543309003208693704
+      hamper_14: 939954224011722137
+      hamper_15: -8995165071144619003
+      hamper_16: 253765294479511767
+      hamper_17: 2902298507822727283
+      hamper_18: -458296826807680551
+      hamper_19: -6792330323977607446
+      hamper_2: 2179962012738043638
+      hamper_20: 7286492731591268384
+      hamper_21: -3708788217985059712
+      hamper_22: -7045751756578519333
+      hamper_23: -5199966200831170983
+      hamper_24: 2447852346156362571
+      hamper_25: 2973288747739533525
+      hamper_26: 8103768583843454849
+      hamper_27: -3826292214524993579
+      hamper_28: 6165681766778845692
+      hamper_29: -446200564286358467
+      hamper_3: 653860625201399295
+      hamper_30: -6241790288235398317
+      hamper_31: -2811873118188565726
+      hamper_32: 1004953849808985107
+      hamper_33: -4317610162944078074
+      hamper_34: -5210555865415905675
+      hamper_35: 8380327990265847127
+      hamper_36: 738348492143290466
+      hamper_37: 6277629635592352659
+      hamper_38: -1728831467225954773
+      hamper_39: 1712845676436502975
+      hamper_4: -575965869203474634
+      hamper_40: -2455824684610333491
+      hamper_41: -8518589616968458496
+      hamper_42: -5754729743255511149
+      hamper_43: 7925097068315254463
+      hamper_44: -5461056157325343722
+      hamper_45: -4887193906637612974
+      hamper_46: -3459529002375447396
+      hamper_47: -3886261089881186975
+      hamper_48: 2933609759173624815
+      hamper_49: 1787263119123716577
+      hamper_5: -49584738333709629
+      hamper_50: -1882708834059140041
+      hamper_51: -2914890692845413542
+      hamper_52: -6146404103757685543
+      hamper_53: 2930438720182472925
+      hamper_54: 668631205035567428
+      hamper_55: -3951806220625749434
+      hamper_56: -5038837241508226924
+      hamper_57: -834117396279126181
+      hamper_58: 8108308340558689639
+      hamper_59: 910025492962143551
+      hamper_6: -4011050362983302874
+      hamper_60: 8539172713865190757
+      hamper_61: -4169144158989836716
+      hamper_62: -8683843132589084450
+      hamper_63: 4123345164074705663
+      hamper_64: -5657706662390696519
+      hamper_65: -5695009627474924590
+      hamper_66: -2880331487614123965
+      hamper_67: -8871363968074812814
+      hamper_68: 792614156113199906
+      hamper_69: -6032498151020293593
+      hamper_7: -5543426402990155697
+      hamper_70: -947755180326180240
+      hamper_71: -5693802433693578093
+      hamper_72: 6512952002866765149
+      hamper_73: -7875441832298856355
+      hamper_74: -2620388745102684853
+      hamper_75: -7695357856522960722
+      hamper_76: 8928270775896846693
+      hamper_77: 6453269325562821424
+      hamper_78: -2120224290444403480
+      hamper_79: -6261879221122518089
+      hamper_8: 5269894963417634594
+      hamper_80: -648828951795217466
+      hamper_81: 2997272627200358497
+      hamper_82: 8112414889255383350
+      hamper_83: 3476403899435037886
+      hamper_84: -7944628674518617231
+      hamper_85: -7577395188343117947
+      hamper_86: 948578199839388130
+      hamper_87: 6818009041228590021
+      hamper_88: -444124395838928552
+      hamper_89: 3814292330462698787
+      hamper_9: 6605713648598743574
+      hamper_90: -5484387153615708758
+      hamper_91: -5360887410774213515
+      hamper_92: -1278090194355848735
+      hamper_93: 3511285294266867501
+      hamper_94: -8954549917274067921
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
