@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.PlayerSettings;
 
 [CreateAssetMenu(fileName = "ContaminationTypeSO", menuName = "Scriptable Objects/ContaminationTypeSO")]
 public class ContaminationTypeSO : ScriptableObject
@@ -14,6 +13,7 @@ public class ContaminationTypeSO : ScriptableObject
     public float scaleMin;
     public float scaleMax;
     public bool visible;
+    public bool needsAlcohol;
 
     private int maxAttempts = 100;
 
@@ -94,7 +94,7 @@ public class ContaminationTypeSO : ScriptableObject
             rt.localPosition = new Vector3(localX, localY, 0f);
             rt.localEulerAngles = new Vector3(0f, 0f, Random.Range(0f, 360f));
 
-            decontaminationInfo.contaminationSpots.Insert(i, new ContaminationSpot(rt.localPosition, image, intensity, visible));
+            decontaminationInfo.contaminationSpots.Insert(i, new ContaminationSpot(rt.localPosition, image, intensity, visible, needsAlcohol));
             return;
         }
 
