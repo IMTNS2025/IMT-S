@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 8899592b9dc6b014396322995be06b49
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7020539832062662474
+    second: bags dispenser_0
+  - first:
+      213: 2675210229080824147
+    second: bags dispenser_1
+  - first:
+      213: -5483598003225676656
+    second: bags dispenser_2
+  - first:
+      213: -3628325092752316830
+    second: bags dispenser_3
+  - first:
+      213: 1596401561558284526
+    second: bags dispenser_4
+  - first:
+      213: 1246768211421060246
+    second: bags dispenser_5
+  - first:
+      213: -5187200311399590799
+    second: bags dispenser_6
+  - first:
+      213: -5228990626884201995
+    second: bags dispenser_7
+  - first:
+      213: 6841152629889681684
+    second: bags dispenser_8
+  - first:
+      213: 574986357898940250
+    second: bags dispenser_9
+  - first:
+      213: -1351149723065289237
+    second: bags dispenser_10
+  - first:
+      213: -4786361505801178361
+    second: bags dispenser_11
+  - first:
+      213: 8747921199914941825
+    second: bags dispenser_12
+  - first:
+      213: -7638504234225310585
+    second: bags dispenser_13
+  - first:
+      213: -4378135215520489106
+    second: bags dispenser_14
+  - first:
+      213: 8016245688672658916
+    second: bags dispenser_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bags dispenser_0
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 703
+        width: 1744
+        height: 2163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a475395e7c7fd6160800000000000000
+      internalID: 7020539832062662474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_1
+      rect:
+        serializedVersion: 2
+        x: 3355
+        y: 2653
+        width: 149
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3599adb8781402520800000000000000
+      internalID: 2675210229080824147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_2
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 1920
+        width: 73
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09431be5ba856e3b0800000000000000
+      internalID: -5483598003225676656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_3
+      rect:
+        serializedVersion: 2
+        x: 3790
+        y: 1971
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 266acd44d8995adc0800000000000000
+      internalID: -3628325092752316830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_4
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 1866
+        width: 48
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee87f8b13ce872610800000000000000
+      internalID: 1596401561558284526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_5
+      rect:
+        serializedVersion: 2
+        x: 3677
+        y: 1895
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c500725196d4110800000000000000
+      internalID: 1246768211421060246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_6
+      rect:
+        serializedVersion: 2
+        x: 3436
+        y: 1741
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1745b3cbccc5308b0800000000000000
+      internalID: -5187200311399590799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_7
+      rect:
+        serializedVersion: 2
+        x: 3459
+        y: 1755
+        width: 167
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f158beaab4ee67b0800000000000000
+      internalID: -5228990626884201995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_8
+      rect:
+        serializedVersion: 2
+        x: 3398
+        y: 1716
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419cdc62218a0fe50800000000000000
+      internalID: 6841152629889681684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_9
+      rect:
+        serializedVersion: 2
+        x: 3419
+        y: 1728
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f034dcb03caf700800000000000000
+      internalID: 574986357898940250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_10
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1691
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be5735e4c70cf3de0800000000000000
+      internalID: -1351149723065289237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_11
+      rect:
+        serializedVersion: 2
+        x: 3372
+        y: 1699
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703fd18d19d639db0800000000000000
+      internalID: -4786361505801178361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_12
+      rect:
+        serializedVersion: 2
+        x: 3333
+        y: 1675
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18df90c9bfbd66970800000000000000
+      internalID: 8747921199914941825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_13
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 1678
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784eea79ed49ef590800000000000000
+      internalID: -7638504234225310585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_14
+      rect:
+        serializedVersion: 2
+        x: 3290
+        y: 1642
+        width: 37
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61e544c73dbd33c0800000000000000
+      internalID: -4378135215520489106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bags dispenser_15
+      rect:
+        serializedVersion: 2
+        x: 3326
+        y: 1669
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e527916bfc6f3f60800000000000000
+      internalID: 8016245688672658916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bags dispenser_0: 7020539832062662474
+      bags dispenser_1: 2675210229080824147
+      bags dispenser_10: -1351149723065289237
+      bags dispenser_11: -4786361505801178361
+      bags dispenser_12: 8747921199914941825
+      bags dispenser_13: -7638504234225310585
+      bags dispenser_14: -4378135215520489106
+      bags dispenser_15: 8016245688672658916
+      bags dispenser_2: -5483598003225676656
+      bags dispenser_3: -3628325092752316830
+      bags dispenser_4: 1596401561558284526
+      bags dispenser_5: 1246768211421060246
+      bags dispenser_6: -5187200311399590799
+      bags dispenser_7: -5228990626884201995
+      bags dispenser_8: 6841152629889681684
+      bags dispenser_9: 574986357898940250
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
