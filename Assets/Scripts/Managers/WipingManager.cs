@@ -1,4 +1,3 @@
-using System.Linq;
 using UnityEngine;
 
 public class WipingManager : MonoBehaviour
@@ -27,7 +26,7 @@ public class WipingManager : MonoBehaviour
         DragAndDrop occupiedItemDaD = workplate.GetObjectOccupied();
         DecontaminationInfo occupiedItemDI = occupiedItemDaD.GetComponentInChildren<DecontaminationInfo>();
 
-        if (occupiedItemDI == null || !occupiedItemDI.acceptedTypes.Contains(draggedTool.toolType)
+        if (occupiedItemDI == null
         || Vector3.Distance(draggedTool.transform.position, workplate.transform.position) > occupiedItemDaD.getSnapDistance()
         || occupiedItemDI.contaminationSpots.Count == 0) return;
 
@@ -42,6 +41,8 @@ public class WipingManager : MonoBehaviour
         for (int i = occupiedItemDI.contaminationSpots.Count - 1; i >= 0; i--)
         {
             ContaminationSpot contaminationSpot = occupiedItemDI.contaminationSpots[i];
+
+            if (contaminationSpot.needsAlcohol && !contaminationSpot.isSoaked) continue;
 
             float distToSpot = Vector3.Distance(occupiedItemDI.transform.TransformPoint(contaminationSpot.pos), draggedTool.transform.position);
 

@@ -11,5 +11,5 @@ public enum ToolTypes
     Null,
     Wipes,
     Bag,
-    Bleach,
+    Alcohol,
 };
