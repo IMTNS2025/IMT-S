@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class NPCBehavior : MonoBehaviour
 {
@@ -11,30 +12,115 @@ public class NPCBehavior : MonoBehaviour
         Working
     }
 
-    public NPCState currentState = NPCState.Idle;
+    private readonly Vector3Int[] directions = {
+        new(-1, 0, 0),  //left
+        new(1, 0, 0),   //right
+        new(0, 1, 0),   //up
+        new(0, -1, 0),  //down
+    };
+
+    public int PowerIndex => npcPower;
+    public Tilemap obstacles;
+    [SerializeField] private NPCState currentState = NPCState.Idle;
+
     [SerializeField] private Grid grid;
     [SerializeField] private List<Transform> workStationPositions;
     [SerializeField] private float walkingSpeed;
+    [SerializeField] private float repathCooldown = 0.25f;
+
+    [SerializeField] private int npcPower;
+
     private List<Vector3> path = new();
 
     private Coroutine movementCoroutine;
     private int currentPathIndex = 0;
-    public Vector3 currentPosition;
+
+    public bool isYielding;
 
     private void OnEnable()
     {
-        // Subscribe to per-owner path results only
         EventManager.OnPathCalculatedFor.AddListener(OnPathCalculatedForOwner);
+        DynamicObstacles.AddOrUpdateObstacle(transform, grid.WorldToCell(transform.position));
     }
 
     private void OnDisable()
     {
         EventManager.OnPathCalculatedFor.RemoveListener(OnPathCalculatedForOwner);
+        DynamicObstacles.RemoveObstacle(transform);
     }
 
     private void Start()
     {
         RequestPath();
+        FindObstacleTilemaps(grid.transform);
+    }
+
+    void FindObstacleTilemaps(Transform grid)
+    {
+        if (grid == null) return;
+
+        string targetLayer = "ObstacleTiles";
+        int targetLayerIndex = LayerMask.NameToLayer(targetLayer);
+
+        foreach (Transform child in grid)
+        {
+            Tilemap map = child.GetComponent<Tilemap>();
+            if (map != null && map.gameObject.layer == targetLayerIndex)
+            {
+                obstacles = map;
+                break;
+            }
+        }
+    }
+
+    private void Update()
+    {
+        var currentCell = grid.WorldToCell(transform.position);
+        bool isCellChanged = currentCell != DynamicObstacles.GetAllObstacles()[this.transform];
+        DynamicObstacles.AddOrUpdateObstacle(this.transform, grid.WorldToCell(transform.position));
+
+        Detect();
+    }
+
+    void Detect()
+    {
+        var pos = grid.WorldToCell(transform.position);
+        for (int i = 0; i < directions.Length; i++)
+        {
+            var r = pos + directions[i];
+            if (!IsCellOccupiedByOther(r)) continue;
+            Debug.Log($"detected npc at {r}");
+            var n = DynamicObstacles.GetOwnerAtPosition(r);
+            if (n == null) continue;
+
+            if (n.TryGetComponent<NPCBehavior>(out NPCBehavior other))
+            {
+                Debug.Log($"npc {other}");
+
+                if (this.PowerIndex <= other.PowerIndex)
+                {
+                    isYielding = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    private bool IsCellFree(Vector3Int neighbourCell)
+    {
+        if (obstacles == null) return false;
+        if (obstacles.HasTile(neighbourCell) || DynamicObstacles.IsPositionOccupied(neighbourCell)) return true;
+        return false;
+    }
+
+    private bool IsCellOccupiedByOther(Vector3Int neighbourCell)
+    {
+        foreach (var kv in DynamicObstacles.GetAllObstacles())
+        {
+            if (kv.Key == this.transform) continue;
+            if (kv.Value == neighbourCell) return true;
+        }
+        return false;
     }
 
     private void RequestPath()
@@ -45,11 +131,9 @@ public class NPCBehavior : MonoBehaviour
             Vector3Int pos = Vector3Int.FloorToInt(workStationPositions[randomIndex].position);
             var v = grid.WorldToCell((Vector3)pos);
 
-            // Per-owner path request: tag with this NPC's transform
             EventManager.OnPathRequested?.Invoke(transform, v);
 
             currentState = NPCState.Walking;
-            currentPosition = v;
         }
     }
 
@@ -71,7 +155,6 @@ public class NPCBehavior : MonoBehaviour
         }
     }
 
-    // Receives only paths intended for this NPC instance
     private void OnPathCalculatedForOwner(Transform owner, List<Vector3> newPath)
     {
         if (owner != transform) return;
@@ -105,7 +188,16 @@ public class NPCBehavior : MonoBehaviour
     private void OnDrawGizmos()
     {
         if (path == null || path.Count < 2) return;
-
+        Gizmos.color = Color.yellow;
+        foreach (var pos in DynamicObstacles.GetAllObstacles().Values)
+        {
+            for (int i = 0; i < directions.Length; i++)
+            {
+                var r = pos + directions[i];
+                Vector3 worldPos = grid.GetCellCenterWorld(r);
+                Gizmos.DrawCube(worldPos, Vector3.one * 0.5f);
+            }
+        }
         Gizmos.color = Color.cyan;
         for (int i = 0; i < path.Count - 1; i++)
         {
@@ -119,8 +211,19 @@ public class NPCBehavior : MonoBehaviour
         while (currentPathIndex < path.Count)
         {
             Vector3 target = path[currentPathIndex];
+
+            // If yielding, wait here until Detect() clears it
+            while (isYielding)
+                yield return null;
+
             while (Vector3.Distance(transform.position, target) > 0.1f)
             {
+                if (isYielding)
+                {
+                    yield return null;
+                    continue;
+                }
+
                 transform.position = Vector3.MoveTowards(transform.position, target, walkingSpeed * Time.deltaTime);
                 yield return null;
             }

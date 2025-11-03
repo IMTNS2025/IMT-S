@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -249,7 +248,6 @@ public class Theta_Star : MonoBehaviour
         if (grid == null || obstaclesTiles == null) return;
 
         Gizmos.color = Color.red;
-
         foreach (var obstacleTilemap in obstaclesTiles)
         {
             if (obstacleTilemap == null) continue;
