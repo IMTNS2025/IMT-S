@@ -34,6 +34,11 @@ public class ContaminationTypeSO : ScriptableObject
     {
         intensity = Random.Range(colorMin.a, colorMax.a);
         color = Color.Lerp(colorMin, colorMax, intensity);
+        if(!visible)
+        {
+            color.a = 0;
+        }
+
         if(textures.Length == 0)
         {
             Debug.LogWarning($"Contamination type {name} does not contain textures.");
@@ -94,7 +99,8 @@ public class ContaminationTypeSO : ScriptableObject
             rt.localPosition = new Vector3(localX, localY, 0f);
             rt.localEulerAngles = new Vector3(0f, 0f, Random.Range(0f, 360f));
 
-            decontaminationInfo.contaminationSpots.Insert(i, new ContaminationSpot(rt.localPosition, image, intensity, visible, needsAlcohol));
+            ContaminationSpot contaminationSpot = new (rt.localPosition, image, intensity, visible, needsAlcohol);
+            decontaminationInfo.contaminationSpots.Insert(i, contaminationSpot);
             return;
         }
 

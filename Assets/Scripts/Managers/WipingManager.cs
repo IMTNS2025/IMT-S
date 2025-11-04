@@ -49,9 +49,11 @@ public class WipingManager : MonoBehaviour
             if (distToSpot > wipeBrushRadius) continue;
 
             contaminationSpot.intensity -= wipeStrength;
-            Color color = contaminationSpot.image.color;
-            color.a = contaminationSpot.intensity;
-            contaminationSpot.image.color = color;
+            if (contaminationSpot.visible) {
+                Color color = contaminationSpot.image.color;
+                color.a = contaminationSpot.intensity;
+                contaminationSpot.image.color = color;
+            }
             occupiedItemDI.contaminationSpots[i] = contaminationSpot;
 
             if (contaminationSpot.intensity > wipeLowerThrashhold) continue;

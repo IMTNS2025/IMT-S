@@ -12,4 +12,5 @@ public enum ToolTypes
     Wipes,
     Bag,
     Alcohol,
+    Lamp,
 };
