@@ -11,6 +11,14 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     [SerializeField] private float snapDist = 250f;
     [SerializeField] private bool makeInvisible = true;
 
+    [Header("Scaling")]
+    [Tooltip("Scaling factor while the item is in the container (not dragged, not on the workplate).")]
+    [SerializeField] private float scaleContainer = 1f;
+    [Tooltip("Scaling factor while the item is being dragged.")]
+    [SerializeField] private float scaleDragged = 0.75f;
+    [Tooltip("Scaling factor when the item is placed on the workplate.")]
+    [SerializeField] private float scaleWorkplate = 1.25f;
+
     [Header("Drop Targets")]
     [SerializeField] private bool autoFindTargets = true;
     [SerializeField] private bool resizeWithTarget = false;
@@ -18,6 +26,10 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     private Vector3 originalPosition;
     private bool dragging;
     private Vector3 lastPosition;
+
+    // Scaling / state
+    private Vector3 initialLocalScale;
+    private IDropTarget currentTarget;
 
     // UI helpers
     private RectTransform rect;
@@ -40,12 +52,22 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
             targets = FindObjectsByType<DropTarget>(FindObjectsSortMode.None);
 
         originalPosition = transform.position;
+
+        // Cache initial local scale and apply container scale
+        if (objectToDrag != null)
+            initialLocalScale = objectToDrag.localScale;
+        else
+            initialLocalScale = transform.localScale;
+
+        currentTarget = null;
+        ApplyScaleForState();
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         if (objectToDrag == null) return;
         dragging = true;
+        ApplyScaleForState();
         EventManager.OnItemDragStart?.Invoke(this);
     }
 
@@ -90,6 +112,8 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         if (closest == null)
         {
             objectToDrag.position = originalPosition;
+            currentTarget = null;
+            ApplyScaleForState();
             return;
         }
 
@@ -100,6 +124,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         {
             objectToDrag.position = snapPos;
             closest.ApplyDrop(this);
+            currentTarget = closest;
 
             if (resizeWithTarget == true)
             {
@@ -115,15 +140,20 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
             }
 
             EventManager.OnItemDragEnd?.Invoke(this);
+            ApplyScaleForState();
         }
         else
         {
             objectToDrag.position = originalPosition;
             closest.ClearDrop(this);
+            currentTarget = null;
+
             if (objectToDrag.TryGetComponent<RawImage>(out RawImage i))
             {
                 i.color = new Color(i.color.r, i.color.g, i.color.b, makeInvisible ? 0f : 1f);
             }
+
+            ApplyScaleForState();
         }
     }
 
@@ -169,5 +199,36 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     public Vector3 getLastPosition()
     {
         return lastPosition;
+    }
+
+    // -------------------
+    // Scaling helper methods
+    // -------------------
+    private void ApplyScaleForState()
+    {
+        if (objectToDrag == null) return;
+
+        if (dragging)
+            SetObjectScale(scaleDragged);
+        else if (currentTarget != null)
+            SetObjectScale(scaleWorkplate);
+        else
+            SetObjectScale(scaleContainer);
+    }
+
+    private void SetObjectScale(float scale)
+    {
+        if (objectToDrag == null) return;
+        objectToDrag.localScale = initialLocalScale * scale;
+    }
+
+    /// <summary>
+    /// Used when a DropTarget clears/removes the item and needs to notify the dragger.
+    /// Can be optionally called by a DropTarget.
+    /// </summary>
+    public void OnClearedFromDrop()
+    {
+        currentTarget = null;
+        ApplyScaleForState();
     }
 }
