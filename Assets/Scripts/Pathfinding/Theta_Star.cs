@@ -5,6 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class Theta_Star : MonoBehaviour
 {
+    public static Theta_Star Instance { get; private set; }
+
     private readonly Vector3Int[] directions = {
         new(-1, 0, 0),  //left
         new(1, 0, 0),   //right
@@ -38,6 +40,10 @@ public class Theta_Star : MonoBehaviour
 
     private void Start()
     {
+        if (Instance == null)
+            Instance = this;
+        else Destroy(gameObject);
+
         if (grid == null)
         {
             Debug.LogWarning("Theta_Star: Missing grid reference.");
@@ -63,6 +69,19 @@ public class Theta_Star : MonoBehaviour
     {
         EventManager.OnEndTargetPathChanged.RemoveListener(SetEndGoal);
         EventManager.OnPathRequested.RemoveListener(HandlePathRequest);
+    }
+    
+    public bool IsWalkable(Vector3Int cellPosition)
+    {
+        foreach (var obstacleTilemap in obstaclesTiles)
+        {
+            if (obstacleTilemap == null) continue;
+            if (obstacleTilemap.HasTile(cellPosition))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     private void DynamicPathRecalculation()
@@ -230,20 +249,7 @@ public class Theta_Star : MonoBehaviour
     {
         return Mathf.Sqrt(Mathf.Pow((startCell.x - endCell.x), 2) + Mathf.Pow((startCell.y - endCell.y), 2));
     }
-
-    private bool IsWalkable(Vector3Int cellPosition)
-    {
-        foreach (var obstacleTilemap in obstaclesTiles)
-        {
-            if (obstacleTilemap == null) continue;
-            if (obstacleTilemap.HasTile(cellPosition))
-            {
-                return false;
-            }
-        }
-        return true;
-    }
-
+   
     private void OnDrawGizmos()
     {
         if (grid == null || obstaclesTiles == null) return;
