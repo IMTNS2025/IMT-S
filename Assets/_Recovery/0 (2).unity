@@ -1378,13 +1378,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b09de2cb8b7bed4f893893a9ad4146f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  obstacles: {fileID: 0}
   currentState: 0
   grid: {fileID: 764041491}
   workStationPositions:
   - {fileID: 2143397411}
   walkingSpeed: 2
+  repathCooldown: 0.25
   npcPower: 1
-  obstacles: {fileID: 0}
+  isYielding: 0
 --- !u!114 &775860135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1503,13 +1505,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b09de2cb8b7bed4f893893a9ad4146f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  obstacles: {fileID: 0}
   currentState: 0
   grid: {fileID: 764041491}
   workStationPositions:
   - {fileID: 1510680021}
   walkingSpeed: 2
+  repathCooldown: 0.25
   npcPower: 0
-  obstacles: {fileID: 0}
+  isYielding: 0
 --- !u!114 &829200076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1705,7 +1709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1400293374
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1773,7 +1777,7 @@ Transform:
   m_GameObject: {fileID: 1400293373}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.92, y: -0.56, z: 0}
+  m_LocalPosition: {x: -4.02, y: -0.43, z: 0}
   m_LocalScale: {x: 0.1447, y: 0.1371, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1805,6 +1809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b09de2cb8b7bed4f893893a9ad4146f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  obstacles: {fileID: 0}
   currentState: 0
   grid: {fileID: 764041491}
   workStationPositions:
@@ -1812,8 +1817,9 @@ MonoBehaviour:
   - {fileID: 1091257274}
   - {fileID: 2143397411}
   walkingSpeed: 2
+  repathCooldown: 0.25
   npcPower: 3
-  obstacles: {fileID: 0}
+  isYielding: 0
 --- !u!1 &1510680020
 GameObject:
   m_ObjectHideFlags: 0

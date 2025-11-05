@@ -776,7 +776,6 @@ GameObject:
   - component: {fileID: 1134264192}
   - component: {fileID: 1134264194}
   - component: {fileID: 1134264196}
-  - component: {fileID: 1134264197}
   m_Layer: 5
   m_Name: Image (FaceMask)
   m_TagString: Untagged
