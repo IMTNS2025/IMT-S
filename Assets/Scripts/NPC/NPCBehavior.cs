@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class NPCBehavior : MonoBehaviour
 {
@@ -46,13 +47,14 @@ public class NPCBehavior : MonoBehaviour
 
     private void OnEnable()
     {
-        // Subscribe to per-owner path results only
         EventManager.OnPathCalculatedFor.AddListener(OnPathCalculatedForOwner);
+        DynamicObstacles.AddOrUpdateObstacle(transform, grid.WorldToCell(transform.position));
     }
 
     private void OnDisable()
     {
         EventManager.OnPathCalculatedFor.RemoveListener(OnPathCalculatedForOwner);
+        DynamicObstacles.RemoveObstacle(transform);
     }
 
     private void Start()
@@ -216,7 +218,6 @@ public class NPCBehavior : MonoBehaviour
             currentDestinationCell = v;
             EventManager.OnPathRequested?.Invoke(transform, v);
             currentState = NPCState.Walking;
-            currentPosition = v;
         }
     }
 
@@ -238,7 +239,6 @@ public class NPCBehavior : MonoBehaviour
         }
     }
 
-    // Receives only paths intended for this NPC instance
     private void OnPathCalculatedForOwner(Transform owner, List<Vector3> newPath)
     {
         if (owner != transform) return;
