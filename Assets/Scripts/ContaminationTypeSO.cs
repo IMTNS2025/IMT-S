@@ -15,18 +15,32 @@ public class ContaminationTypeSO : ScriptableObject
     public bool visible;
     public bool needsAlcohol;
 
-    private int maxAttempts = 100;
+    private int maxAttempts = 50;
 
     public void spawnContamination(DecontaminationInfo decontaminationInfo)
     {
         int amount = Random.Range(amountMin, amountMax);
         decontaminationInfo.contaminationSpots = new List<ContaminationSpot>(amount);
 
+        RectTransform containerRectTransform = decontaminationInfo.GetComponent<RectTransform>();
+        Texture2D containerTexture = decontaminationInfo.GetComponent<RawImage>().texture as Texture2D;
+
+        int texWidth = containerTexture.width;
+        int texHeight = containerTexture.height;
+        bool[,] alphaMask = new bool[texWidth, texHeight];
+        for (int x = 0; x < texWidth; x++)
+        {
+            for (int y = 0; y < texHeight; y++)
+            {
+                alphaMask[x, y] = containerTexture.GetPixel(x, y).a > 0f;
+            }
+        }
+
         for (int i = 0; i < amount; i++)
         {
             GetRandomValues(out Color color, out float intensity, out Texture2D texture, out float scale);
 
-            CreateSetGameObject(decontaminationInfo, i, color, texture, scale, intensity);
+            CreateSetGameObject(containerRectTransform, decontaminationInfo, texWidth, texHeight, alphaMask, i, color, texture, scale, intensity);
         }
     }
 
@@ -51,22 +65,9 @@ public class ContaminationTypeSO : ScriptableObject
         scale = Random.Range(scaleMin, scaleMax);
     }
 
-    private void CreateSetGameObject(DecontaminationInfo decontaminationInfo, int i, Color color, Texture2D texture, float scale, float intensity)
+    private void CreateSetGameObject(RectTransform containerRectTransform, DecontaminationInfo decontaminationInfo, int texWidth, int texHeight, bool[,] alphaMask,
+        int i, Color color, Texture2D texture, float scale, float intensity)
     {
-        RectTransform containerRectTransform = decontaminationInfo.GetComponent<RectTransform>();
-        Texture2D containerTexture = decontaminationInfo.GetComponent<RawImage>().texture as Texture2D;
-
-        int texWidth = containerTexture.width;
-        int texHeight = containerTexture.height;
-        bool[,] alphaMask = new bool[texWidth, texHeight];
-        for (int x = 0; x < texWidth; x++)
-        {
-            for (int y = 0; y < texHeight; y++)
-            {
-                alphaMask[x, y] = containerTexture.GetPixel(x, y).a > 0f;
-            }
-        }
-
         Rect containerRect = containerRectTransform.rect;
         float halfWidth = scale * 0.5f;
         float halfHeight = scale * 0.5f;

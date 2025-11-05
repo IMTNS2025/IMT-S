@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e47cf045fd7534c8b58cb31b94b1a8, type: 3}
+  m_Name: Invisible
+  m_EditorClassIdentifier: Assembly-CSharp::ContaminationTypeSO
+  textures:
+  - {fileID: 2800000, guid: 02801ffab98ecb746808578fea3c7270, type: 3}
+  - {fileID: 2800000, guid: 204ca5c8edd86f74a90ef8e4c28cbd04, type: 3}
+  - {fileID: 2800000, guid: 50c9f2c012652b44491254a670557ddf, type: 3}
+  - {fileID: 2800000, guid: 80e392bc25436e04a9179a6230af4961, type: 3}
+  - {fileID: 2800000, guid: 96682cbf1e7684841a72348de7b849d7, type: 3}
+  - {fileID: 2800000, guid: 5280023dd6b8aa148b1231c058601809, type: 3}
+  - {fileID: 2800000, guid: d850f1685cfce6342a7161b3b2af2e95, type: 3}
+  amountMin: 5
+  amountMax: 5
+  colorMin: {r: 0.5924529, g: 0.55921996, b: 0.53097194, a: 0.4509804}
+  colorMax: {r: 0.335849, g: 0.335849, b: 0.335849, a: 0.9019608}
+  scaleMin: 15
+  scaleMax: 30
+  visible: 0
+  needsAlcohol: 1

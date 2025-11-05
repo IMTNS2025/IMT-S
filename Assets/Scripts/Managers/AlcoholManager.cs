@@ -36,7 +36,7 @@ public class AlcoholManager : MonoBehaviour
         DragAndDrop occupiedItemDaD = workplate.GetObjectOccupied();
         DecontaminationInfo occupiedItemDI = occupiedItemDaD.GetComponentInChildren<DecontaminationInfo>();
 
-        if (occupiedItemDI == null
+        if (occupiedItemDI == null || occupiedItemDaD == null
         || Vector3.Distance(draggedTool.transform.position, workplate.transform.position) > occupiedItemDaD.getSnapDistance()
         || occupiedItemDI.contaminationSpots.Count == 0)
         {
