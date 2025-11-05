@@ -40,12 +40,14 @@ public class UVManager : MonoBehaviour
             {
                 ContaminationSpot contaminationSpot = occupiedItemDI.contaminationSpots[i];
 
+                if (contaminationSpot.visible) continue;
+
                 Vector3 spotWorldPos = occupiedItemDI.transform.TransformPoint(contaminationSpot.pos);
                 float distToSpot = Vector3.Distance(spotWorldPos, uvLight.transform.position);
 
                 // Calculate alpha:
                 // - dist >= outer -> alpha = 0
-                // - dist <= inner  -> alpha = contaminationSpot.intensity
+                // - dist <= inner -> alpha = contaminationSpot.intensity
                 // - between -> linear interpolation from 0 (at outer) to intensity (at inner)
                 float alpha = 0f;
 
@@ -67,6 +69,7 @@ public class UVManager : MonoBehaviour
                 Color color = contaminationSpot.image.color;
                 color.a = alpha;
                 contaminationSpot.image.color = color;
+                occupiedItemDI.contaminationSpots[i] = contaminationSpot;
             }
         }
         else
@@ -89,6 +92,30 @@ public class UVManager : MonoBehaviour
         EventManager.OnItemDragEnd.AddListener((item) =>
         {
             draggedTool = null;
+            if (workplate == null || !workplate.IsOccupied())
+            {
+                return;
+            }
+
+            DragAndDrop occupiedItemDaD = workplate.GetObjectOccupied();
+            DecontaminationInfo occupiedItemDI = occupiedItemDaD.GetComponentInChildren<DecontaminationInfo>();
+
+            if (occupiedItemDI == null || occupiedItemDI.contaminationSpots.Count == 0)
+            {
+                return;
+            }
+
+            for (int i = occupiedItemDI.contaminationSpots.Count - 1; i >= 0; i--)
+            {
+                ContaminationSpot contaminationSpot = occupiedItemDI.contaminationSpots[i];
+
+                if(contaminationSpot.visible) continue;
+
+                Color color = contaminationSpot.image.color;
+                color.a = 0;
+                contaminationSpot.image.color = color;
+                occupiedItemDI.contaminationSpots[i] = contaminationSpot;
+            }
         });
     }
 

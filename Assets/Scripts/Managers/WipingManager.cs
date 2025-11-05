@@ -19,18 +19,20 @@ public class WipingManager : MonoBehaviour
         UseWipes();
     }
 
-    private void UseWipes()
+    private void UseWipes() 
     {
         if (workplate == null || !workplate.IsOccupied() || draggedTool == null || draggedTool.toolType != ToolTypes.Wipes) return;
 
         DragAndDrop occupiedItemDaD = workplate.GetObjectOccupied();
         DecontaminationInfo occupiedItemDI = occupiedItemDaD.GetComponentInChildren<DecontaminationInfo>();
 
-        if (occupiedItemDI == null
+        if (occupiedItemDI == null || occupiedItemDaD == null
         || Vector3.Distance(draggedTool.transform.position, workplate.transform.position) > occupiedItemDaD.getSnapDistance()
         || occupiedItemDI.contaminationSpots.Count == 0) return;
 
         DragAndDrop draggedToolDaD = draggedTool.GetComponentInParent<DragAndDrop>();
+
+        if (draggedToolDaD == null) return;
 
         Vector2 currentDirection = (draggedTool.transform.position - draggedToolDaD.getLastPosition()).normalized;
         float dirChange = Vector2.Dot(currentDirection, lastDirection); // 1 = same direction, -1 = opposite
