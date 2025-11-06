@@ -171,12 +171,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
-  makeInvisible: 1
+  makeInvisible: 0
   scaleContainer: 1
   scaleDragged: 0.75
-  scaleWorkplate: 1.25
+  scaleWorkplate: 1
   autoFindTargets: 1
-  resizeWithTarget: 0
+  resizeWithTarget: 1
 --- !u!114 &57324253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,12 +267,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
-  makeInvisible: 1
+  makeInvisible: 0
   scaleContainer: 1
   scaleDragged: 0.75
-  scaleWorkplate: 1.25
+  scaleWorkplate: 1
   autoFindTargets: 1
-  resizeWithTarget: 0
+  resizeWithTarget: 1
 --- !u!114 &68127572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,10 +639,10 @@ RectTransform:
   - {fileID: 1134264192}
   m_Father: {fileID: 934373717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -295.57202, y: 111.91}
-  m_SizeDelta: {x: -699.72986, y: -224.40997}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -791.572, y: 111.91}
+  m_SizeDelta: {x: 292.27014, y: 587.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858760539
 MonoBehaviour:
@@ -695,10 +695,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
-  makeInvisible: 1
+  makeInvisible: 0
   scaleContainer: 1
   scaleDragged: 0.75
-  scaleWorkplate: 1.25
+  scaleWorkplate: 1
   autoFindTargets: 1
   resizeWithTarget: 1
 --- !u!1 &909478198
@@ -883,7 +883,7 @@ GameObject:
   - component: {fileID: 1021458179}
   - component: {fileID: 1021458178}
   m_Layer: 5
-  m_Name: Image (HairCap)
+  m_Name: Image (Hood)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -906,7 +906,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 890, y: 224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1021458178
 MonoBehaviour:
@@ -942,7 +942,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: d9df23afd3abb4e478b397a438167421, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -991,8 +991,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0008316, y: 0.0024872}
-  m_SizeDelta: {x: 415.11, y: 856.82}
+  m_AnchoredPosition: {x: 33.9938, y: 0.0021}
+  m_SizeDelta: {x: 367.4865, y: 580.184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1134264194
 CanvasRenderer:
@@ -1015,14 +1015,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 2087bf07b3578fc48b3e03f07378782b, type: 3}
+  m_Texture: {fileID: 2800000, guid: e411c571ce8ca7c48836acecdcc43266, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1119,12 +1119,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
-  makeInvisible: 1
+  makeInvisible: 0
   scaleContainer: 1
   scaleDragged: 0.75
-  scaleWorkplate: 1.25
+  scaleWorkplate: 1
   autoFindTargets: 1
-  resizeWithTarget: 0
+  resizeWithTarget: 1
 --- !u!1 &1394769922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,8 +1191,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0.2733, y: 0.0004}
+  m_SizeDelta: {x: 367.4865, y: 580.184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1627180576
 CanvasRenderer:
@@ -1236,7 +1236,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: be4f66be258faa04ebf8d1d4d28cefdc, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1256,7 +1256,7 @@ GameObject:
   - component: {fileID: 1670742988}
   - component: {fileID: 1670742987}
   m_Layer: 5
-  m_Name: Image (HairCap)
+  m_Name: Image (Glasses)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1278,8 +1278,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -33.99292, y: 0.0004}
+  m_SizeDelta: {x: 367.4865, y: 580.184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1670742986
 CanvasRenderer:
@@ -1323,7 +1323,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 3dd7901ffbd550144b89d8257b5bc8b3, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
