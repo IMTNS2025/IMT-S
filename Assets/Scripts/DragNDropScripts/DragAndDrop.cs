@@ -135,6 +135,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
                     if (objectToDrag.TryGetComponent<RawImage>(out RawImage i))
                     {
                         i.color = new Color(i.color.r, i.color.g, i.color.b, 1f);
+                        EventManager.OnDragSuccessed?.Invoke();
                     }
                 }
             }
@@ -152,6 +153,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
             {
                 i.color = new Color(i.color.r, i.color.g, i.color.b, makeInvisible ? 0f : 1f);
             }
+            EventManager.OnDragFailed?.Invoke();
 
             EventManager.OnItemDragEnd?.Invoke(this);
             ApplyScaleForState();
@@ -178,7 +180,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 
         foreach (var target in targets)
         {
-            if (target == null) continue;   
+            if (target == null) continue;
             var snapPos = target.GetSnapWorldPosition();
             float dSqr = (snapPos - position).sqrMagnitude;
 
