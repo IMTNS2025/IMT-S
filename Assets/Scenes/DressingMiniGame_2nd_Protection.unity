@@ -689,7 +689,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858760537}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c12b4d4c4e130c7468f14bb0f16f4a89, type: 3}
   m_Name: 
@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDropImageChanger
   originalSprite: {fileID: -806543533398779463, guid: a89d0619ecb273b488d0a11f5bf6a2d0, type: 3}
   dropSprite: {fileID: -1507181923799153687, guid: e411c571ce8ca7c48836acecdcc43266, type: 3}
-  myDrag: {fileID: 0}
+  myDrag: {fileID: 858760541}
 --- !u!1 &1243267485
 GameObject:
   m_ObjectHideFlags: 0
