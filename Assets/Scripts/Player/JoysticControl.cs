@@ -1,14 +1,15 @@
-using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class JoysticControl : MonoBehaviour
+public class JoysticControl : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     [SerializeField] private InputActionAsset inputActionAsset;
 
     [SerializeField] private Image outerCircle;
     [SerializeField] private Image innerCircle;
+    [SerializeField] private Button slowButton;
 
     private Vector3 outerCircleCenter;
     private Vector3 innerCircleCenter;
@@ -25,6 +26,22 @@ public class JoysticControl : MonoBehaviour
         innerCircle.rectTransform.position = outerCircleCenter;
     }
 
+    #region Joystic Control
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        innerCircle.rectTransform.position = outerCircleCenter;
+        EventManager.OnMovementDragStarted?.Invoke(Vector3.zero);
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        innerCircle.transform.position = eventData.position;
+
+        Vector3 dir = (innerCircleCenter - outerCircleCenter).normalized;
+
+        EventManager.OnMovementDragStarted?.Invoke(dir);
+    }
+
     private void GetCenters()
     {
         RectTransform rtOuter = outerCircle.rectTransform;
@@ -34,20 +51,46 @@ public class JoysticControl : MonoBehaviour
         innerCircleCenter = rtInner.TransformPoint(rtInner.rect.center);
     }
 
-    // World-space radius accounting for Transform scale
     private static float GetRadiusWorld(RectTransform rt)
     {
         float w = rt.rect.width * rt.lossyScale.x;
         float h = rt.rect.height * rt.lossyScale.y;
         return 0.5f * Mathf.Min(w, h);
     }
+    private void PositionWithinRadius()
+    {
+        if (outerCircle == null || innerCircle == null) return;
 
-    // Wrapper used by clamping and gizmos
+        RectTransform rtOuter = outerCircle.rectTransform;
+        RectTransform rtInner = innerCircle.rectTransform;
+
+        Vector3 outerCenter = rtOuter.TransformPoint(rtOuter.rect.center);
+        Vector3 innerCenter = rtInner.TransformPoint(rtInner.rect.center);
+
+        float radius = GetRadius();
+
+        Vector3 delta = innerCenter - outerCenter;
+        float dist = delta.magnitude;
+
+        if (dist > radius && dist > 0f)
+        {
+            Vector3 clampedCenter = outerCenter + delta.normalized * radius;
+            Vector3 move = clampedCenter - innerCenter;
+
+            rtInner.position += move;
+            innerCenter = clampedCenter;
+        }
+
+        outerCircleCenter = outerCenter;
+        innerCircleCenter = innerCenter;
+    }
+
     private float GetRadius()
     {
         if (outerCircle == null) return 0f;
         return GetRadiusWorld(outerCircle.rectTransform);
     }
+    #endregion
 
     private void OnDrawGizmos()
     {
@@ -101,38 +144,5 @@ public class JoysticControl : MonoBehaviour
         // Example: use OuterRadiusPixels to clamp inner knob movement in UI space.
         // Vector2 delta = (Vector2)pointerPos - (Vector2)outerCircleCenter;
         // Vector2 clamped = Vector2.ClampMagnitude(delta, OuterRadiusPixels);
-    }
-
-    private void OnMoveCanceled(InputAction.CallbackContext context)
-    {
-        throw new NotImplementedException();
-    }
-
-    private void PositionWithinRadius()
-    {
-        if (outerCircle == null || innerCircle == null) return;
-
-        RectTransform rtOuter = outerCircle.rectTransform;
-        RectTransform rtInner = innerCircle.rectTransform;
-
-        Vector3 outerCenter = rtOuter.TransformPoint(rtOuter.rect.center);
-        Vector3 innerCenter = rtInner.TransformPoint(rtInner.rect.center);
-
-        float radius = GetRadius();
-
-        Vector3 delta = innerCenter - outerCenter;
-        float dist = delta.magnitude;
-
-        if (dist > radius && dist > 0f)
-        {
-            Vector3 clampedCenter = outerCenter + delta.normalized * radius;
-            Vector3 move = clampedCenter - innerCenter;
-
-            rtInner.position += move;
-            innerCenter = clampedCenter;
-        }
-
-        outerCircleCenter = outerCenter;
-        innerCircleCenter = innerCenter;
     }
 }
