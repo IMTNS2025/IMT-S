@@ -2,10 +2,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DecontaminationInfo : MonoBehaviour
+public class DecontaminationItemInfo : MonoBehaviour
 {
-    public ToolTypes toolType;
-    public List<ContaminationSpot> contaminationSpots;
+    public List<ContaminationSpot> contaminationSpots;  //[HideInInspector] 
+    public int maxBagLevels;  //[HideInInspector]  
+    public int currentBagLevels = 0;  //[HideInInspector] 
 }
 
 [System.Serializable]

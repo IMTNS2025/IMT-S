@@ -15,7 +15,7 @@ public class ClothingManager : MonoBehaviour
             if (containers[i].transform.childCount > 0)
             {
                 Transform item = containers[i].transform.GetChild(0);
-                item.GetComponent<Image>().sprite = itemSOs[i].imageOnDragging;
+                item.GetComponent<Image>().sprite = itemSOs[i].imageDrag;
             }
         }
     }

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4807bd92cd0b65145b0f5ded2bafd91e, type: 3}
   m_Name: Pencil
   m_EditorClassIdentifier: Assembly-CSharp::DecontaminationItemSO
-  imageOnCharacter: {fileID: 2800000, guid: 04290f24c718e134890a4b85074dfe12, type: 3}
-  imageOnDragging: {fileID: -6418337541015408120, guid: 04290f24c718e134890a4b85074dfe12, type: 3}
+  originalImage: {fileID: -6418337541015408120, guid: 04290f24c718e134890a4b85074dfe12, type: 3}
+  imageDrag: {fileID: -6418337541015408120, guid: 04290f24c718e134890a4b85074dfe12, type: 3}
+  imageDrop: {fileID: -6418337541015408120, guid: 04290f24c718e134890a4b85074dfe12, type: 3}
   name: Pencil
   orderIndex: 0
   description: 
-  acceptedTypes: 0100000003000000

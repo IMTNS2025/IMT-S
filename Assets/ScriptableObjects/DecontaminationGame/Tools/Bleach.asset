@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39084874d6e9d7d4bab6e13494658a99, type: 3}
   m_Name: Bleach
   m_EditorClassIdentifier: Assembly-CSharp::DecontaminationToolSO
-  imageOnCharacter: {fileID: 2800000, guid: 02487b67324c1a9489470e691be219af, type: 3}
-  imageOnDragging: {fileID: 1105156385598886207, guid: 02487b67324c1a9489470e691be219af, type: 3}
+  originalImage: {fileID: 3045376680712830681, guid: 2e1837b1c50dc5f42a47d21ea3ac4e63, type: 3}
+  imageDrag: {fileID: 3045376680712830681, guid: 2e1837b1c50dc5f42a47d21ea3ac4e63, type: 3}
+  imageDrop: {fileID: 3045376680712830681, guid: 2e1837b1c50dc5f42a47d21ea3ac4e63, type: 3}
   name: 
   orderIndex: 0
   description: 

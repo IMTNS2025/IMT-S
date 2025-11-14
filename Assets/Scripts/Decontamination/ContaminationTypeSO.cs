@@ -17,13 +17,13 @@ public class ContaminationTypeSO : ScriptableObject
 
     private int maxAttempts = 50;
 
-    public void spawnContamination(DecontaminationInfo decontaminationInfo)
+    public void spawnContamination(DecontaminationItemInfo decontaminationItemInfo)
     {
         int amount = Random.Range(amountMin, amountMax);
-        decontaminationInfo.contaminationSpots = new List<ContaminationSpot>(amount);
+        decontaminationItemInfo.contaminationSpots = new List<ContaminationSpot>(amount);
 
-        RectTransform containerRectTransform = decontaminationInfo.GetComponent<RectTransform>();
-        Texture2D containerTexture = decontaminationInfo.GetComponent<RawImage>().texture as Texture2D;
+        RectTransform containerRectTransform = decontaminationItemInfo.GetComponent<RectTransform>();
+        Texture2D containerTexture = decontaminationItemInfo.GetComponent<RawImage>().texture as Texture2D;
 
         int texWidth = containerTexture.width;
         int texHeight = containerTexture.height;
@@ -40,7 +40,7 @@ public class ContaminationTypeSO : ScriptableObject
         {
             GetRandomValues(out Color color, out float intensity, out Texture2D texture, out float scale);
 
-            CreateSetGameObject(containerRectTransform, decontaminationInfo, texWidth, texHeight, alphaMask, i, color, texture, scale, intensity);
+            CreateSetGameObject(containerRectTransform, decontaminationItemInfo, texWidth, texHeight, alphaMask, i, color, texture, scale, intensity);
         }
     }
 
@@ -65,7 +65,7 @@ public class ContaminationTypeSO : ScriptableObject
         scale = Random.Range(scaleMin, scaleMax);
     }
 
-    private void CreateSetGameObject(RectTransform containerRectTransform, DecontaminationInfo decontaminationInfo, int texWidth, int texHeight, bool[,] alphaMask,
+    private void CreateSetGameObject(RectTransform containerRectTransform, DecontaminationItemInfo decontaminationInfo, int texWidth, int texHeight, bool[,] alphaMask,
         int i, Color color, Texture2D texture, float scale, float intensity)
     {
         Rect containerRect = containerRectTransform.rect;
@@ -75,7 +75,7 @@ public class ContaminationTypeSO : ScriptableObject
         {
             int texX = Random.Range(0, texWidth);
             int texY = Random.Range(0, texHeight);
-
+            
             if (!alphaMask[texX, texY])
                 continue;
 

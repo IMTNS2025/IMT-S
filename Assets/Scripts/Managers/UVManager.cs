@@ -6,7 +6,7 @@ public class UVManager : MonoBehaviour
     [SerializeField] private DropTarget workplate;
     [SerializeField] private Light2D uvLight;
 
-    private DecontaminationInfo draggedTool;
+    private DecontaminationToolInfo draggedToolInfo;
 
     private void Update()
     {
@@ -15,7 +15,7 @@ public class UVManager : MonoBehaviour
 
     private void UseLamp()
     {
-        if (draggedTool != null && draggedTool.toolType == ToolTypes.Lamp)
+        if (draggedToolInfo != null && draggedToolInfo.toolType == ToolTypes.Lamp)
         {
             uvLight.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, uvLight.transform.position.z);
             uvLight.enabled = true;
@@ -25,10 +25,10 @@ public class UVManager : MonoBehaviour
                 return;
             }
 
-            DragAndDrop occupiedItemDaD = workplate.GetObjectOccupied();
-            DecontaminationInfo occupiedItemDI = occupiedItemDaD.GetComponentInChildren<DecontaminationInfo>();
+            DragAndDrop occupiedItemDragDrop = workplate.GetObjectOccupied();
+            DecontaminationItemInfo occupiedItemInfo = occupiedItemDragDrop.GetComponentInChildren<DecontaminationItemInfo>();
 
-            if (occupiedItemDI == null || occupiedItemDI.contaminationSpots.Count == 0)
+            if (occupiedItemInfo == null || occupiedItemInfo.contaminationSpots.Count == 0)
             {
                 return;
             }
@@ -36,13 +36,13 @@ public class UVManager : MonoBehaviour
             float outer = uvLight.pointLightOuterRadius;
             float inner = uvLight.pointLightInnerRadius;
 
-            for (int i = occupiedItemDI.contaminationSpots.Count - 1; i >= 0; i--)
+            for (int i = occupiedItemInfo.contaminationSpots.Count - 1; i >= 0; i--)
             {
-                ContaminationSpot contaminationSpot = occupiedItemDI.contaminationSpots[i];
+                ContaminationSpot contaminationSpot = occupiedItemInfo.contaminationSpots[i];
 
                 if (contaminationSpot.visible) continue;
 
-                Vector3 spotWorldPos = occupiedItemDI.transform.TransformPoint(contaminationSpot.pos);
+                Vector3 spotWorldPos = occupiedItemInfo.transform.TransformPoint(contaminationSpot.pos);
                 float distToSpot = Vector3.Distance(spotWorldPos, uvLight.transform.position);
 
                 // Calculate alpha:
@@ -69,7 +69,7 @@ public class UVManager : MonoBehaviour
                 Color color = contaminationSpot.image.color;
                 color.a = alpha;
                 contaminationSpot.image.color = color;
-                occupiedItemDI.contaminationSpots[i] = contaminationSpot;
+                occupiedItemInfo.contaminationSpots[i] = contaminationSpot;
             }
         }
         else
@@ -82,39 +82,39 @@ public class UVManager : MonoBehaviour
     {
         EventManager.OnItemDragStart.AddListener((item) =>
         {
-            DecontaminationInfo decontaminationInfo = item.gameObject.GetComponentInChildren<DecontaminationInfo>();
-            if (decontaminationInfo != null)
+            DecontaminationToolInfo decontaminationToolInfo = item.gameObject.GetComponentInChildren<DecontaminationToolInfo>();
+            if (decontaminationToolInfo != null)
             {
-                draggedTool = decontaminationInfo;
+                draggedToolInfo = decontaminationToolInfo;
             }
         });
 
         EventManager.OnItemDragEnd.AddListener((item) =>
         {
-            draggedTool = null;
+            draggedToolInfo = null;
             if (workplate == null || !workplate.IsOccupied())
             {
                 return;
             }
 
-            DragAndDrop occupiedItemDaD = workplate.GetObjectOccupied();
-            DecontaminationInfo occupiedItemDI = occupiedItemDaD.GetComponentInChildren<DecontaminationInfo>();
+            DragAndDrop occupiedItemDragDrop = workplate.GetObjectOccupied();
+            DecontaminationItemInfo occupiedItemInfo = occupiedItemDragDrop.GetComponentInChildren<DecontaminationItemInfo>();
 
-            if (occupiedItemDI == null || occupiedItemDI.contaminationSpots.Count == 0)
+            if (occupiedItemInfo == null || occupiedItemInfo.contaminationSpots.Count == 0)
             {
                 return;
             }
 
-            for (int i = occupiedItemDI.contaminationSpots.Count - 1; i >= 0; i--)
+            for (int i = occupiedItemInfo.contaminationSpots.Count - 1; i >= 0; i--)
             {
-                ContaminationSpot contaminationSpot = occupiedItemDI.contaminationSpots[i];
+                ContaminationSpot contaminationSpot = occupiedItemInfo.contaminationSpots[i];
 
                 if(contaminationSpot.visible) continue;
 
                 Color color = contaminationSpot.image.color;
                 color.a = 0;
                 contaminationSpot.image.color = color;
-                occupiedItemDI.contaminationSpots[i] = contaminationSpot;
+                occupiedItemInfo.contaminationSpots[i] = contaminationSpot;
             }
         });
     }

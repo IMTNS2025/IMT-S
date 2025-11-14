@@ -107,6 +107,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     {
         if (!dragging) return;
         dragging = false;
+        EventManager.OnItemBeforeDragEnd?.Invoke(this);
 
         IDropTarget closest = GetClosestTarget(objectToDrag.position);
         if (closest == null)
@@ -120,7 +121,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         var snapPos = closest.GetSnapWorldPosition();
         bool withinSnap = (snapPos - objectToDrag.position).sqrMagnitude <= GetSnapRadiusSqr();
 
-        if (withinSnap && closest.CanAccept(this))
+        if (withinSnap && closest.CanAccept(this) && !objectToDrag.GetComponent<DecontaminationToolInfo>())
         {
             objectToDrag.position = snapPos;
             closest.ApplyDrop(this);
