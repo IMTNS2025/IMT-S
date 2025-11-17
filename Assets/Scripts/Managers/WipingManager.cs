@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WipingManager : MonoBehaviour
 {
@@ -11,8 +12,25 @@ public class WipingManager : MonoBehaviour
     [Tooltip("Threshhold when the dirt dissapears. Since the dirt becomes more transparent, it becomes hard to see.")]
     [SerializeField] private float wipeLowerThrashhold = 0.1f;
     [SerializeField] private DropTarget workplate;
-    private DecontaminationInfo draggedTool;
+    private DecontaminationToolInfo draggedToolInfo;
     private Vector2 lastDirection;
+    private GameObject wipesDispenserPlaceholder;
+
+    private void StartUseWipes()
+    {
+        wipesDispenserPlaceholder = new GameObject("BagDispenser", typeof(RectTransform));
+        wipesDispenserPlaceholder.transform.SetParent(draggedToolInfo.transform.parent, false);
+        RectTransform rt = wipesDispenserPlaceholder.GetComponent<RectTransform>();
+        rt.sizeDelta = new Vector2(draggedToolInfo.widthOriginal, draggedToolInfo.heightOriginal);
+        RawImage ri = wipesDispenserPlaceholder.AddComponent<RawImage>();
+        ri.raycastTarget = false;
+
+        // Assign texture from the sprite (if available)
+        ri.texture = draggedToolInfo.imageOriginal.texture;
+        ri.color = Color.white;
+
+        draggedToolInfo.GetComponent<RawImage>().texture = draggedToolInfo.imageDrag.texture;
+    }
 
     private void Update()
     {
@@ -21,32 +39,32 @@ public class WipingManager : MonoBehaviour
 
     private void UseWipes() 
     {
-        if (workplate == null || !workplate.IsOccupied() || draggedTool == null || draggedTool.toolType != ToolTypes.Wipes) return;
+        if (workplate == null || !workplate.IsOccupied() || draggedToolInfo == null || draggedToolInfo.toolType != ToolTypes.Wipes) return;
 
-        DragAndDrop occupiedItemDaD = workplate.GetObjectOccupied();
-        DecontaminationInfo occupiedItemDI = occupiedItemDaD.GetComponentInChildren<DecontaminationInfo>();
+        DragAndDrop occupiedItemDragDrop = workplate.GetObjectOccupied();
+        DecontaminationItemInfo occupiedItemInfo = occupiedItemDragDrop.GetComponentInChildren<DecontaminationItemInfo>();
 
-        if (occupiedItemDI == null || occupiedItemDaD == null
-        || Vector3.Distance(draggedTool.transform.position, workplate.transform.position) > occupiedItemDaD.getSnapDistance()
-        || occupiedItemDI.contaminationSpots.Count == 0) return;
+        if (occupiedItemInfo == null || occupiedItemDragDrop == null
+        || Vector3.Distance(draggedToolInfo.transform.position, workplate.transform.position) > occupiedItemDragDrop.getSnapDistance()
+        || occupiedItemInfo.contaminationSpots.Count == 0 || occupiedItemInfo.currentBagLevels > 0) return;
 
-        DragAndDrop draggedToolDaD = draggedTool.GetComponentInParent<DragAndDrop>();
+        DragAndDrop draggedToolDragDrop = draggedToolInfo.GetComponentInParent<DragAndDrop>();
 
-        if (draggedToolDaD == null) return;
+        if (draggedToolDragDrop == null) return;
 
-        Vector2 currentDirection = (draggedTool.transform.position - draggedToolDaD.getLastPosition()).normalized;
+        Vector2 currentDirection = (draggedToolInfo.transform.position - draggedToolDragDrop.getLastPosition()).normalized;
         float dirChange = Vector2.Dot(currentDirection, lastDirection); // 1 = same direction, -1 = opposite
         lastDirection = currentDirection;
 
         if (dirChange >= (1f - wipeSensitivity)) return; // movement reversed enough
 
-        for (int i = occupiedItemDI.contaminationSpots.Count - 1; i >= 0; i--)
+        for (int i = occupiedItemInfo.contaminationSpots.Count - 1; i >= 0; i--)
         {
-            ContaminationSpot contaminationSpot = occupiedItemDI.contaminationSpots[i];
+            ContaminationSpot contaminationSpot = occupiedItemInfo.contaminationSpots[i];
 
             if (contaminationSpot.needsAlcohol && !contaminationSpot.isSoaked) continue;
 
-            float distToSpot = Vector3.Distance(occupiedItemDI.transform.TransformPoint(contaminationSpot.pos), draggedTool.transform.position);
+            float distToSpot = Vector3.Distance(occupiedItemInfo.transform.TransformPoint(contaminationSpot.pos), draggedToolInfo.transform.position);
 
             if (distToSpot > wipeBrushRadius) continue;
 
@@ -56,12 +74,12 @@ public class WipingManager : MonoBehaviour
                 color.a = contaminationSpot.intensity;
                 contaminationSpot.image.color = color;
             }
-            occupiedItemDI.contaminationSpots[i] = contaminationSpot;
+            occupiedItemInfo.contaminationSpots[i] = contaminationSpot;
 
             if (contaminationSpot.intensity > wipeLowerThrashhold) continue;
 
-            Destroy(occupiedItemDI.contaminationSpots[i].image.gameObject);
-            occupiedItemDI.contaminationSpots.RemoveAt(i);
+            Destroy(occupiedItemInfo.contaminationSpots[i].image.gameObject);
+            occupiedItemInfo.contaminationSpots.RemoveAt(i);
         }
     }
 
@@ -69,16 +87,18 @@ public class WipingManager : MonoBehaviour
     {
         EventManager.OnItemDragStart.AddListener((item) =>
         {
-            DecontaminationInfo decontaminationInfo = item.gameObject.GetComponentInChildren<DecontaminationInfo>();
-            if (decontaminationInfo != null)
-            {
-                draggedTool = decontaminationInfo;
-            }
+            DecontaminationToolInfo decontaminationToolInfo = item.gameObject.GetComponentInChildren<DecontaminationToolInfo>();
+            if (decontaminationToolInfo == null || decontaminationToolInfo.toolType != ToolTypes.Wipes) return;
+            draggedToolInfo = decontaminationToolInfo;
+            StartUseWipes();
         });
 
         EventManager.OnItemDragEnd.AddListener((item) =>
         {
-            draggedTool = null;
+            if (draggedToolInfo == null || draggedToolInfo.toolType != ToolTypes.Wipes) return;
+            draggedToolInfo.GetComponent<RawImage>().texture = draggedToolInfo.imageOriginal.texture;
+            draggedToolInfo = null;
+            Destroy(wipesDispenserPlaceholder);
         });
     }
 

@@ -13,7 +13,7 @@ public class AlcoholManager : MonoBehaviour
     [SerializeField] private float tickInterval = 1f; // Time between ticks in seconds
     [SerializeField] private DropTarget workplate;
 
-    private DecontaminationInfo draggedTool;
+    private DecontaminationToolInfo draggedToolInfo;
     private Coroutine alcoholCoroutine;
 
     private void Update()
@@ -23,7 +23,7 @@ public class AlcoholManager : MonoBehaviour
 
     private void UseAlcohol()
     {
-        if (workplate == null || !workplate.IsOccupied() || draggedTool == null || draggedTool.toolType != ToolTypes.Alcohol)
+        if (workplate == null || !workplate.IsOccupied() || draggedToolInfo == null || draggedToolInfo.toolType != ToolTypes.Alcohol)
         {
             if (alcoholCoroutine != null)
             {
@@ -33,12 +33,12 @@ public class AlcoholManager : MonoBehaviour
             return;
         }
 
-        DragAndDrop occupiedItemDaD = workplate.GetObjectOccupied();
-        DecontaminationInfo occupiedItemDI = occupiedItemDaD.GetComponentInChildren<DecontaminationInfo>();
+        DragAndDrop occupiedItemDragDrop = workplate.GetObjectOccupied();
+        DecontaminationItemInfo occupiedItemInfo = occupiedItemDragDrop.GetComponentInChildren<DecontaminationItemInfo>();
 
-        if (occupiedItemDI == null || occupiedItemDaD == null
-        || Vector3.Distance(draggedTool.transform.position, workplate.transform.position) > occupiedItemDaD.getSnapDistance()
-        || occupiedItemDI.contaminationSpots.Count == 0)
+        if (occupiedItemInfo == null || occupiedItemDragDrop == null
+        || Vector3.Distance(draggedToolInfo.transform.position, workplate.transform.position) > occupiedItemDragDrop.getSnapDistance()
+        || occupiedItemInfo.contaminationSpots.Count == 0 || occupiedItemInfo.currentBagLevels > 0)
         {
             if (alcoholCoroutine != null)
             {
@@ -51,27 +51,27 @@ public class AlcoholManager : MonoBehaviour
         // Start coroutine if it's not already running
         if (alcoholCoroutine == null)
         {
-            alcoholCoroutine = StartCoroutine(AlcoholTick(occupiedItemDI));
+            alcoholCoroutine = StartCoroutine(AlcoholTick(occupiedItemInfo));
         }
     }
 
-    private IEnumerator AlcoholTick(DecontaminationInfo targetItem)
+    private IEnumerator AlcoholTick(DecontaminationItemInfo occupiedItemInfo)
     {
         while (true)
         {
-            for (int i = targetItem.contaminationSpots.Count - 1; i >= 0; i--)
+            for (int i = occupiedItemInfo.contaminationSpots.Count - 1; i >= 0; i--)
             {
-                ContaminationSpot contaminationSpot = targetItem.contaminationSpots[i];
+                ContaminationSpot contaminationSpot = occupiedItemInfo.contaminationSpots[i];
 
-                float distToSpot = Vector3.Distance(targetItem.transform.TransformPoint(contaminationSpot.pos), draggedTool.transform.position);
+                float distToSpot = Vector3.Distance(occupiedItemInfo.transform.TransformPoint(contaminationSpot.pos), draggedToolInfo.transform.position);
 
                 if (distToSpot > splashRadius || contaminationSpot.isSoaked) continue;
 
                 contaminationSpot.isSoaked = true;
-                targetItem.contaminationSpots[i] = contaminationSpot;
+                occupiedItemInfo.contaminationSpots[i] = contaminationSpot;
 
                 GameObject go = new("AlcoholSplash" + (i + 1), typeof(CanvasRenderer), typeof(RawImage));
-                go.transform.SetParent(targetItem.transform, false);
+                go.transform.SetParent(occupiedItemInfo.transform, false);
 
                 float intensity = Random.Range(colorMin.a, colorMax.a);
                 Color color = Color.Lerp(colorMin, colorMax, intensity);
@@ -87,7 +87,7 @@ public class AlcoholManager : MonoBehaviour
                 rt.localPosition = contaminationSpot.pos;
                 rt.localEulerAngles = new Vector3(0f, 0f, Random.Range(0f, 360f));
 
-                targetItem.contaminationSpots.Add(new ContaminationSpot
+                occupiedItemInfo.contaminationSpots.Add(new ContaminationSpot
                 {
                     pos = contaminationSpot.pos,
                     image = image,
@@ -106,10 +106,10 @@ public class AlcoholManager : MonoBehaviour
     {
         EventManager.OnItemDragStart.AddListener((item) =>
         {
-            DecontaminationInfo decontaminationInfo = item.gameObject.GetComponentInChildren<DecontaminationInfo>();
-            if (decontaminationInfo != null)
+            DecontaminationToolInfo decontaminationToolInfo = item.gameObject.GetComponentInChildren<DecontaminationToolInfo>();
+            if (decontaminationToolInfo != null)
             {
-                draggedTool = decontaminationInfo;
+                draggedToolInfo = decontaminationToolInfo;
             }
         });
 
@@ -120,7 +120,7 @@ public class AlcoholManager : MonoBehaviour
                 StopCoroutine(alcoholCoroutine);
                 alcoholCoroutine = null;
             }
-            draggedTool = null;
+            draggedToolInfo = null;
         });
     }
 

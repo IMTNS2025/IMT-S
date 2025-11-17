@@ -15,6 +15,7 @@ public static class EventManager
 
     public static UnityEvent<DragAndDrop> OnItemDragStart = new();
     public static UnityEvent<DragAndDrop> OnItemDragEnd = new();
+    public static UnityEvent<DragAndDrop> OnItemBeforeDragEnd = new();
 
     public static UnityEvent OnDragSuccessed = new();
     public static UnityEvent OnDragFailed = new();
