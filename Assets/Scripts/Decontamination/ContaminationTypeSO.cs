@@ -48,12 +48,12 @@ public class ContaminationTypeSO : ScriptableObject
     {
         intensity = Random.Range(colorMin.a, colorMax.a);
         color = Color.Lerp(colorMin, colorMax, intensity);
-        if(!visible)
+        if (!visible)
         {
             color.a = 0;
         }
 
-        if(textures.Length == 0)
+        if (textures.Length == 0)
         {
             Debug.LogWarning($"Contamination type {name} does not contain textures.");
             intensity = 0;
@@ -69,18 +69,28 @@ public class ContaminationTypeSO : ScriptableObject
         int i, Color color, Texture2D texture, float scale, float intensity)
     {
         Rect containerRect = containerRectTransform.rect;
-        float halfWidth = scale * 0.5f;
-        float halfHeight = scale * 0.5f;
+
+        // compute normalized UV and normalized scale relative to texture size
         for (int attempt = 0; attempt < maxAttempts; attempt++)
         {
             int texX = Random.Range(0, texWidth);
             int texY = Random.Range(0, texHeight);
-            
+
             if (!alphaMask[texX, texY])
                 continue;
 
-            float u = (float)texX / texWidth;
-            float v = (float)texY / texHeight;
+            float u = (float)texX / texWidth; // 0..1
+            float v = (float)texY / texHeight; // 0..1
+
+            // normalized scales relative to texture dimensions (keeps spot proportional when parent resizes)
+            float relW = scale / (float)texWidth;
+            float relH = scale / (float)texHeight;
+
+            // compute actual parent-space size and half extents to clamp placement
+            float actualW = Mathf.Max(1f, relW * containerRect.width);
+            float actualH = Mathf.Max(1f, relH * containerRect.height);
+            float halfWidth = actualW * 0.5f;
+            float halfHeight = actualH * 0.5f;
 
             float localX = containerRect.x + u * containerRect.width;
             float localY = containerRect.y + v * containerRect.height;
@@ -94,14 +104,23 @@ public class ContaminationTypeSO : ScriptableObject
             RawImage image = go.GetComponent<RawImage>();
             image.texture = texture;
             image.color = color;
+            image.raycastTarget = false;
 
             RectTransform rt = go.GetComponent<RectTransform>();
-            rt.sizeDelta = new Vector2(scale, scale);
+            // initial size / position based on current parent rect
+            rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, actualW);
+            rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, actualH);
             rt.localPosition = new Vector3(localX, localY, 0f);
             rt.localEulerAngles = new Vector3(0f, 0f, Random.Range(0f, 360f));
 
-            ContaminationSpot contaminationSpot = new (rt.localPosition, image, intensity, visible, needsAlcohol);
+            // insert spot record (pos will be kept in sync by the controller)
+            ContaminationSpot contaminationSpot = new(rt.localPosition, image, intensity, visible, needsAlcohol);
             decontaminationInfo.contaminationSpots.Insert(i, contaminationSpot);
+
+            // attach controller that will keep position/size consistent if parent resizes
+            var controller = go.AddComponent<ContaminationSpotController>();
+            controller.Init(decontaminationInfo, image, u, v, relW, relH);
+
             return;
         }
 

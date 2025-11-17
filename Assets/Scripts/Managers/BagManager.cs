@@ -5,15 +5,18 @@ public class BagManager : MonoBehaviour
 {
     [SerializeField] private DropTarget workplate;
 
+    //TODOALEX apply scaling to bag as well
     private DecontaminationToolInfo draggedToolInfo;
     private GameObject bagDispenserPlaceholder;
+    private float firstBagSize = 0.75f;
+    private float bagMulitplier = 0.25f;
 
     private void StartUseBag()
     {
         bagDispenserPlaceholder = new GameObject("BagDispenser", typeof(RectTransform));
         bagDispenserPlaceholder.transform.SetParent(draggedToolInfo.transform.parent, false);
         RectTransform rt = bagDispenserPlaceholder.GetComponent<RectTransform>();
-        rt.sizeDelta = new Vector2(draggedToolInfo.widthOriginal, draggedToolInfo.heightOriginal);
+        rt.sizeDelta = draggedToolInfo.originalSize * draggedToolInfo.scaleContainer;
         RawImage ri = bagDispenserPlaceholder.AddComponent<RawImage>();
         ri.raycastTarget = false;
 
@@ -94,9 +97,7 @@ public class BagManager : MonoBehaviour
 
         // Base multiplier ensures the overlay at least covers the parent (1.0f).
         // Each existing overlay increases the multiplier so newer overlays are larger.
-        const float baseMultiplier = 1.75f;
-        const float stepPerOverlay = 0.5f;
-        float multiplier = baseMultiplier + (existingCount * stepPerOverlay);
+        float multiplier = (1 + firstBagSize) + (existingCount * bagMulitplier);
 
         if (overlayRt != null)
         {

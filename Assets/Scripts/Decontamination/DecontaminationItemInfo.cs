@@ -4,28 +4,12 @@ using UnityEngine.UI;
 
 public class DecontaminationItemInfo : MonoBehaviour
 {
-    public List<ContaminationSpot> contaminationSpots;  //[HideInInspector] 
-    public int maxBagLevels;  //[HideInInspector]  
-    public int currentBagLevels = 0;  //[HideInInspector] 
-}
-
-[System.Serializable]
-public struct ContaminationSpot
-{
-    public bool visible;
-    public bool needsAlcohol;
-    public bool isSoaked;
-    public Vector3 pos;
-    public RawImage image;
-    public float intensity;
-
-    public ContaminationSpot(Vector3 pos, RawImage image, float intensity, bool visible, bool needsAlcohol)
-    {
-        this.pos = pos;
-        this.image = image;
-        this.intensity = intensity;
-        this.visible = visible;
-        this.isSoaked = false;
-        this.needsAlcohol = needsAlcohol;
-    }
+    //TODOALEX save instance of SO on object instead of this?
+    [HideInInspector] public List<ContaminationSpot> contaminationSpots; //[HideInInspector] 
+    [HideInInspector] public int maxBagLevels;
+    [HideInInspector] public int currentBagLevels = 0;
+    [HideInInspector] public Vector2 originalSize;
+    [HideInInspector] public float scaleContainer = 1f;
+    [HideInInspector] public float scaleDragged = 0.75f;
+    [HideInInspector] public float scaleWorkplate = 1.25f;
 }

@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DecontaminationItemSO
   originalImage: {fileID: 6604339808490387203, guid: f839d88137b8d6c4089ee4a821a2cea8, type: 3}
   imageDrag: {fileID: 6604339808490387203, guid: f839d88137b8d6c4089ee4a821a2cea8, type: 3}
-  imageDrop: {fileID: 6604339808490387203, guid: f839d88137b8d6c4089ee4a821a2cea8, type: 3}
   name: Tablet
   orderIndex: 0
   description: 
+  maxBagLevels: 2
+  scaleContainer: 0.1
+  scaleDragged: 0.15
+  scaleWorkplate: 0.3

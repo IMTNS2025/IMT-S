@@ -21,7 +21,7 @@ public class WipingManager : MonoBehaviour
         wipesDispenserPlaceholder = new GameObject("BagDispenser", typeof(RectTransform));
         wipesDispenserPlaceholder.transform.SetParent(draggedToolInfo.transform.parent, false);
         RectTransform rt = wipesDispenserPlaceholder.GetComponent<RectTransform>();
-        rt.sizeDelta = new Vector2(draggedToolInfo.widthOriginal, draggedToolInfo.heightOriginal);
+        rt.sizeDelta = draggedToolInfo.originalSize * draggedToolInfo.scaleContainer;
         RawImage ri = wipesDispenserPlaceholder.AddComponent<RawImage>();
         ri.raycastTarget = false;
 

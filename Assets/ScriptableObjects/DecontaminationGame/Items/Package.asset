@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DecontaminationItemSO
   originalImage: {fileID: 3888744220071322272, guid: 0aabf419cdab9ad4382e9a4c6ee4d9aa, type: 3}
   imageDrag: {fileID: 3888744220071322272, guid: 0aabf419cdab9ad4382e9a4c6ee4d9aa, type: 3}
-  imageDrop: {fileID: 3888744220071322272, guid: 0aabf419cdab9ad4382e9a4c6ee4d9aa, type: 3}
   name: Package
   orderIndex: 0
   description: 
+  maxBagLevels: 2
+  scaleContainer: 0.1
+  scaleDragged: 0.15
+  scaleWorkplate: 0.3
