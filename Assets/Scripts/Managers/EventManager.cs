@@ -19,4 +19,8 @@ public static class EventManager
 
     public static UnityEvent OnDragSuccessed = new();
     public static UnityEvent OnDragFailed = new();
+
+    public static UnityEvent<Vector2> OnMovementDragStarted = new();
+
+    public static UnityEvent OnSlowModeChanged = new();
 }
