@@ -9,7 +9,6 @@ public class JoysticControl : MonoBehaviour, IDragHandler, IEndDragHandler
 
     [SerializeField] private Image outerCircle;
     [SerializeField] private Image innerCircle;
-    [SerializeField] private Button slowButton;
 
     private Vector3 outerCircleCenter;
     private Vector3 innerCircleCenter;

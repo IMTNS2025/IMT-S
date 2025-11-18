@@ -55,6 +55,7 @@ public class Theta_Star : MonoBehaviour
             _lastEndCell = grid.WorldToCell(endPosition.position);
             GeneratePath();
         }
+        else return;
     }
 
     private void OnEnable()
@@ -69,7 +70,7 @@ public class Theta_Star : MonoBehaviour
         EventManager.OnEndTargetPathChanged.RemoveListener(SetEndGoal);
         EventManager.OnPathRequested.RemoveListener(HandlePathRequest);
     }
-    
+
     public bool IsWalkable(Vector3Int cellPosition)
     {
         foreach (var obstacleTilemap in obstaclesTiles)
@@ -248,7 +249,7 @@ public class Theta_Star : MonoBehaviour
     {
         return Mathf.Sqrt(Mathf.Pow((startCell.x - endCell.x), 2) + Mathf.Pow((startCell.y - endCell.y), 2));
     }
-   
+
     private void OnDrawGizmos()
     {
         if (grid == null || obstaclesTiles == null) return;
