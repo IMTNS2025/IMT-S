@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: b3d5562492ab63c4baaa7a53c42ab66c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1660221261228312489
+    second: BOOTIE FULL BLUE 1_0
+  - first:
+      213: -3000715581482293296
+    second: BOOTIE FULL BLUE 1_1
+  - first:
+      213: 8184549077954295017
+    second: BOOTIE FULL BLUE 1_2
+  - first:
+      213: -3022434032030649369
+    second: BOOTIE FULL BLUE 1_3
+  - first:
+      213: -1662392765933706029
+    second: BOOTIE FULL BLUE 1_4
+  - first:
+      213: -4776441293544945180
+    second: BOOTIE FULL BLUE 1_5
+  - first:
+      213: -332451770024821799
+    second: BOOTIE FULL BLUE 1_6
+  - first:
+      213: 4361221568928469229
+    second: BOOTIE FULL BLUE 1_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BOOTIE FULL BLUE 1_0
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 230
+        width: 674
+        height: 1203
+      alignment: 9
+      pivot: {x: 0.6797892, y: 0.5216954}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7801cd07a4a0710800000000000000
+      internalID: 1660221261228312489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOTIE FULL BLUE 1_1
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 234
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d7a4cdb3115b56d0800000000000000
+      internalID: -3000715581482293296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOTIE FULL BLUE 1_2
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 283
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e47736d50c559170800000000000000
+      internalID: 8184549077954295017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOTIE FULL BLUE 1_3
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 294
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3f2cbe2482e06d0800000000000000
+      internalID: -3022434032030649369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOTIE FULL BLUE 1_4
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 303
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4a75d469efde8e0800000000000000
+      internalID: -1662392765933706029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOTIE FULL BLUE 1_5
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 213
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e90fbf33fba6bdb0800000000000000
+      internalID: -4776441293544945180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOTIE FULL BLUE 1_6
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 90
+        width: 65
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9db78b660e4e26bf0800000000000000
+      internalID: -332451770024821799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOTIE FULL BLUE 1_7
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 26
+        width: 6
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de0d0c209eb268c30800000000000000
+      internalID: 4361221568928469229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0e6ef4a62c3a86944b6ebd22d8251595
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BOOTIE FULL BLUE 1_0: 1660221261228312489
+      BOOTIE FULL BLUE 1_1: -3000715581482293296
+      BOOTIE FULL BLUE 1_2: 8184549077954295017
+      BOOTIE FULL BLUE 1_3: -3022434032030649369
+      BOOTIE FULL BLUE 1_4: -1662392765933706029
+      BOOTIE FULL BLUE 1_5: -4776441293544945180
+      BOOTIE FULL BLUE 1_6: -332451770024821799
+      BOOTIE FULL BLUE 1_7: 4361221568928469229
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
