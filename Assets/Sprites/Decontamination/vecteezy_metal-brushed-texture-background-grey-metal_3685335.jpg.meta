@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: 1f3584670ee638341a6ce855a529561d
+guid: 2f27f2d4a2a273345a6ff81d8321dcf4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1522007253227374302
-    second: BENCH more shoes v3_0
+      213: 7643936562811588672
+    second: vecteezy_metal-brushed-texture-background-grey-metal_3685335_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
-    mipMapMode: 1
+    mipMapMode: 0
     enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
-    borderMipMap: 1
-    mipMapsPreserveCoverage: 1
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
     alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
@@ -37,8 +37,8 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 2
-    aniso: 6
+    filterMode: 1
+    aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 700
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BENCH more shoes v3_0
+      name: vecteezy_metal-brushed-texture-background-grey-metal_3685335_0
       rect:
         serializedVersion: 2
-        x: 121
-        y: 280
-        width: 1184
-        height: 1079
-      alignment: 9
-      pivot: {x: 0.13942531, y: 0.30303225}
+        x: 0
+        y: 0
+        width: 1920
+        height: 709
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22970d5977eb0eae0800000000000000
-      internalID: -1522007253227374302
+      spriteID: 0405108fdc7b41a60800000000000000
+      internalID: 7643936562811588672
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d4ac159266f7c004093eae2d1286c833
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BENCH more shoes v3_0: -1522007253227374302
+      vecteezy_metal-brushed-texture-background-grey-metal_3685335_0: 7643936562811588672
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
