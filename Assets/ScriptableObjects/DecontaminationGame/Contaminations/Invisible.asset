@@ -24,7 +24,7 @@ MonoBehaviour:
   amountMax: 5
   colorMin: {r: 0.5924529, g: 0.55921996, b: 0.53097194, a: 0.4509804}
   colorMax: {r: 0.335849, g: 0.335849, b: 0.335849, a: 0.9019608}
-  scaleMin: 30
-  scaleMax: 60
+  scaleMin: 100
+  scaleMax: 200
   visible: 0
   needsAlcohol: 1
