@@ -1673,7 +1673,8 @@ MonoBehaviour:
   - {fileID: 1091257274}
   - {fileID: 2143397411}
   walkingSpeed: 5
-  currentPosition: {x: 0, y: 0, z: 0}
+  npcPower: 0
+  obstacles: {fileID: 0}
 --- !u!114 &775860135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,7 +1800,8 @@ MonoBehaviour:
   - {fileID: 1091257274}
   - {fileID: 2143397411}
   walkingSpeed: 5
-  currentPosition: {x: 0, y: 0, z: 0}
+  npcPower: 0
+  obstacles: {fileID: 0}
 --- !u!114 &829200076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2552,7 +2554,8 @@ MonoBehaviour:
   - {fileID: 1091257274}
   - {fileID: 2143397411}
   walkingSpeed: 5
-  currentPosition: {x: 0, y: 0, z: 0}
+  npcPower: 0
+  obstacles: {fileID: 0}
 --- !u!1 &1510680020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,8 +2857,8 @@ Tilemap:
   - first: {x: 4, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2908,22 +2911,26 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 0509f07481d9bd14584cf1ee00c226f0, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 2d94e649c6f848747bc38077b787a7f9, type: 2}
+    m_Data: {fileID: 11400000, guid: 02c6da77795b6f949913f506c0564d1d, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 30e7d360c258bf64fbd89d6992a0fff3, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: ef5806cdf90d6b44f9a23e6758746ddf, type: 2}
+    m_Data: {fileID: 11400000, guid: 1902a3441bddf6e458abebefabbcfbe6, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
-    m_Data: {fileID: -7478242884584552136, guid: e170dd904951b1f49b9f27461e5f47c5, type: 3}
+    m_Data: {fileID: -9171275570408560227, guid: e5e9d40874e559945b049de2d25f2315, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -5296619191116037678, guid: 541ad01206423be4d979a02f1c1e558b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 7940828859608321537, guid: 680d57fa55ecd5e4098fa5decc866631, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1414013803592107397, guid: 62173447cab88bb4fad4b0a14a126080, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 5449031571613876157, guid: ff2394bdb1000d14781e6c67ca825419, type: 3}
+    m_Data: {fileID: -9040846239947968, guid: 88600a0927598c346b614897c7ec81d5, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 3
     m_Data:
@@ -3090,7 +3097,7 @@ Transform:
   m_GameObject: {fileID: 2121810973}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
