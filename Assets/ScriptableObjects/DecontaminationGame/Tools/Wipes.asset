@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Wipes
   m_EditorClassIdentifier: Assembly-CSharp::DecontaminationToolSO
   originalImage: {fileID: 4728366697945279166, guid: 36f8ba8028d34cd498a914e6050edfb2, type: 3}
-  imageDrag: {fileID: 5722668142467494987, guid: fda3f57d5dd60014ebf7ef38ac8d377c, type: 3}
-  imageDrop: {fileID: 5722668142467494987, guid: fda3f57d5dd60014ebf7ef38ac8d377c, type: 3}
+  imageDrag: {fileID: 3220579656756393912, guid: b1214a567171aba4eb285c55dec2c0f3, type: 3}
   name: 
   orderIndex: 0
   description: 
