@@ -8,6 +8,7 @@ public class DragDropImageChanger : MonoBehaviour
 
     [SerializeField] private DragAndDrop myDrag;
 
+    private bool alreadyPlaced;
     private RawImage image;
     private bool isMyDragActive;
 
@@ -20,12 +21,21 @@ public class DragDropImageChanger : MonoBehaviour
         }
     }
 
+
     private void OnEnable()
     {
         References();
 
         var c = image.color;
-        image.color = new Color(c.r, c.g, c.b, 0f);
+        if (!alreadyPlaced)
+        {
+            image.color = new Color(c.r, c.g, c.b, 0f);
+        }
+        else
+        {
+            image.color = new Color(c.r, c.g, c.b, 1f);
+
+        }
 
         EventManager.OnItemDragStart.AddListener((item) =>
         {
@@ -53,6 +63,7 @@ public class DragDropImageChanger : MonoBehaviour
             if (!isMyDragActive) return;
             if (dropSprite != null)
                 image.texture = dropSprite.texture;
+            alreadyPlaced = true;
         });
 
         EventManager.OnDragFailed.AddListener(() =>
@@ -60,6 +71,8 @@ public class DragDropImageChanger : MonoBehaviour
             if (!isMyDragActive) return;
             var col = image.color;
             image.color = new Color(col.r, col.g, col.b, 0f);
+
+            alreadyPlaced = false;
         });
     }
 
@@ -72,8 +85,12 @@ public class DragDropImageChanger : MonoBehaviour
         ErrorHandler(image, nameof(image));
     }
 
+
     private void OnDisable()
     {
+        var c = image.color;
+        image.color = new Color(c.r, c.g, c.b, 1f);
+
         // Follow the same pattern you use elsewhere
         EventManager.OnItemDragStart.RemoveAllListeners();
         EventManager.OnItemDragEnd.RemoveAllListeners();
