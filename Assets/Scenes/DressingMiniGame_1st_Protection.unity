@@ -172,9 +172,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
   makeInvisible: 1
-  scaleContainer: 1
-  scaleDragged: 0.75
-  scaleWorkplate: 1
   autoFindTargets: 1
   resizeWithTarget: 1
 --- !u!114 &57324253
@@ -268,9 +265,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
   makeInvisible: 0
-  scaleContainer: 1
-  scaleDragged: 0.75
-  scaleWorkplate: 1
   autoFindTargets: 1
   resizeWithTarget: 1
 --- !u!114 &68127572
@@ -323,6 +317,7 @@ GameObject:
   - component: {fileID: 139839212}
   - component: {fileID: 139839211}
   - component: {fileID: 139839214}
+  - component: {fileID: 139839215}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -448,6 +443,19 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &139839215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139839210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778383d36c95d4740897a564237d3c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveWardrobe
+  sceneIndexToLoad: 0
 --- !u!1 &263225848
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,8 +617,9 @@ GameObject:
   - component: {fileID: 490690814}
   - component: {fileID: 490690816}
   - component: {fileID: 490690815}
+  - component: {fileID: 490690817}
   m_Layer: 5
-  m_Name: Image
+  m_Name: X_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -673,6 +682,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490690813}
   m_CullTransparentMesh: 1
+--- !u!114 &490690817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490690813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 490690815}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 139839215}
+        m_TargetAssemblyTypeName: InteractiveWardrobe, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &494412469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,9 +1101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
   makeInvisible: 1
-  scaleContainer: 1
-  scaleDragged: 0.75
-  scaleWorkplate: 1
   autoFindTargets: 1
   resizeWithTarget: 1
 --- !u!1 &909478198
@@ -1613,9 +1675,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   snapDist: 250
   makeInvisible: 1
-  scaleContainer: 1
-  scaleDragged: 0.75
-  scaleWorkplate: 1
   autoFindTargets: 1
   resizeWithTarget: 1
 --- !u!1 &1394769922

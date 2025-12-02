@@ -147,6 +147,11 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
             EventManager.OnItemDragEnd?.Invoke(this);
         }
     }
+    private void OnDisable()
+    {
+      //  objectToDrag.position = originalPosition;
+     //   currentTarget = null;
+    }
 
     private float GetSnapRadiusSqr()
     {
