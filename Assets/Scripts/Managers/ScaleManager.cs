@@ -38,6 +38,7 @@ public class ScaleManager : MonoBehaviour
     {
         if (objectToDrag == null || objectToDragItemInfo == null) return;
         objectToDrag.sizeDelta = objectToDragItemInfo.originalSize * objectToDragItemInfo.scaleWorkplate;
+        CheckScaleBag(objectToDragItemInfo.scaleWorkplate);
     }
 
     private void ToolInfoDragSucceeded()
@@ -50,6 +51,7 @@ public class ScaleManager : MonoBehaviour
     {
         if (objectToDrag == null || objectToDragItemInfo == null) return;
         objectToDrag.sizeDelta = objectToDragItemInfo.originalSize * objectToDragItemInfo.scaleContainer;
+        CheckScaleBag(objectToDragItemInfo.scaleContainer);
     }
 
     private void ToolInfoDragFailed()
@@ -64,8 +66,19 @@ public class ScaleManager : MonoBehaviour
         objectToDragItemInfo = item.GetComponentInChildren<DecontaminationItemInfo>();
         if (objectToDragItemInfo == null || objectToDrag == null) return;
         objectToDrag.sizeDelta = objectToDragItemInfo.originalSize * objectToDragItemInfo.scaleDragged;
+        CheckScaleBag(objectToDragItemInfo.scaleDragged);
     }
-    
+
+    private void CheckScaleBag(float scale)
+    {
+        for (int i = 1; i <= objectToDragItemInfo.currentBagLevels; i++)
+        {
+            float multiplier = 1 + objectToDragItemInfo.firstBagSizeMulitplier + (i * objectToDragItemInfo.otherBagsSizeMulitplier);
+            RectTransform rectTransformChild = objectToDragItemInfo.transform.GetChild(objectToDragItemInfo.transform.childCount - i).GetComponent<RectTransform>();
+            rectTransformChild.sizeDelta = objectToDragItemInfo.originalSize * scale * multiplier;
+        }
+    }
+
     private void ToolInfoDragStart(DragAndDrop item)
     {
         objectToDrag = item.GetComponent<RectTransform>();

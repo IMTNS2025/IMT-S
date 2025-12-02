@@ -5,11 +5,8 @@ public class BagManager : MonoBehaviour
 {
     [SerializeField] private DropTarget workplate;
 
-    //TODOALEX apply scaling to bag as well
     private DecontaminationToolInfo draggedToolInfo;
     private GameObject bagDispenserPlaceholder;
-    private float firstBagSize = 0.75f;
-    private float bagMulitplier = 0.25f;
 
     private void StartUseBag()
     {
@@ -97,7 +94,8 @@ public class BagManager : MonoBehaviour
 
         // Base multiplier ensures the overlay at least covers the parent (1.0f).
         // Each existing overlay increases the multiplier so newer overlays are larger.
-        float multiplier = (1 + firstBagSize) + (existingCount * bagMulitplier);
+        //float multiplier = (1 + firstBagSize) + (existingCount * bagMulitplier);
+        float multiplier = 1 + occupiedItemInfo.firstBagSizeMulitplier + (existingCount * occupiedItemInfo.otherBagsSizeMulitplier);
 
         if (overlayRt != null)
         {
