@@ -21,6 +21,7 @@ public class AirflowSimSettingsAuthoring : MonoBehaviour
                 nearPressureMultiplier = pAuthoring.airflowSimSettingsSO.nearPressureMultiplier,
                 gravity = pAuthoring.airflowSimSettingsSO.gravity,
                 collisionDampening = pAuthoring.airflowSimSettingsSO.collisionDampening,
+                viscosityStrength = pAuthoring.airflowSimSettingsSO.viscosityStrength,
                 boundsSize = pAuthoring.airflowSimSettingsSO.boundsSize,
                 particleCol = pAuthoring.airflowSimSettingsSO.particleCol,
                 negativePressureCol = pAuthoring.airflowSimSettingsSO.negativePressureCol,
@@ -41,6 +42,7 @@ public struct AirflowSimSettings : IComponentData
     public float nearPressureMultiplier;
     public float gravity;
     public float collisionDampening;
+    public float viscosityStrength;
     public float2 boundsSize;
 
     public Color particleCol;

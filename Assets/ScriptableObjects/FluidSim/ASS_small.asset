@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13aeed33dc939a439c3fb67f8b6f25c, type: 3}
+  m_Name: ASS_small
+  m_EditorClassIdentifier: Assembly-CSharp::AirflowSimSettingsSO
+  smoothingRadius: 0.3
+  targetDensity: 1
+  pressureMultiplier: 0.00005
+  nearPressureMultiplier: 0.00005
+  gravity: -9.81
+  collisionDampening: 0.8
+  viscosityStrength: 50
+  boundsSize: {x: 16, y: 8}
+  particleCol: {r: 0, g: 0, b: 0, a: 0}
+  negativePressureCol: {r: 0, g: 0.51234436, b: 1, a: 0}
+  positivePressureCol: {r: 1, g: 0, b: 0, a: 0}
+  zeroPressureCol: {r: 1, g: 1, b: 1, a: 0}

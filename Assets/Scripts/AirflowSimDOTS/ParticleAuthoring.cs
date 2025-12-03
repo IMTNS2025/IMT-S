@@ -15,6 +15,7 @@ public class ParticleAuthoring : MonoBehaviour
                 density = 0f,
                 densityNear = 0f,
                 predictedPosition = float2.zero,
+                velocity = float2.zero,
             });
         }
     }
@@ -27,5 +28,6 @@ public struct Particle : IComponentData
     public float density;
     public float densityNear;
     public float2 predictedPosition;
+    public float2 velocity;
 
 }

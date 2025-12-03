@@ -2,7 +2,6 @@ using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
-using Unity.Physics;
 using Unity.Transforms;
 
 partial struct ParticleSpawnSystem : ISystem
@@ -50,10 +49,6 @@ partial struct ParticleSpawnSystem : ISystem
                     Position = new float3(position.x, position.y, 0),
                     Scale = 1f,
                     Rotation = quaternion.identity,
-                });
-                pSystemState.EntityManager.SetComponentData(entity, new PhysicsVelocity
-                {
-                    Linear = new float3(velocity.x, velocity.y, 0),
                 });
                 pSystemState.EntityManager.SetComponentData(entity, new Particle
                 {

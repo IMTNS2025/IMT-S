@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9054d632d19cd6469f7b3b7b975a7ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AirflowSimSettingsAuthoring
-  airflowSimSettingsSO: {fileID: 11400000, guid: 45544fa4e9b853f4d82b62346c734859, type: 2}
+  airflowSimSettingsSO: {fileID: 11400000, guid: f791e7b4806a6c84e8227e30c3b7017b, type: 2}
 --- !u!114 &98380038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48945f91550ffa45a04d70bb80d0cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParticleSpawnSettingsAuthoring
-  particleSpawnSettingsSO: {fileID: 11400000, guid: e30360c7237c76f42b70b9a9b0d97e7e, type: 2}
+  particleSpawnSettingsSO: {fileID: 11400000, guid: d0f356ecc347bac42a38b8b7eeb201a7, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
