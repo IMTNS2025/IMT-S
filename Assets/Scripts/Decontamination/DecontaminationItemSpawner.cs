@@ -65,6 +65,8 @@ public class DecontaminationItemSpawner : MonoBehaviour
                 decontaminationInfo.scaleDragged = items[i].scaleDragged;
                 decontaminationInfo.scaleWorkplate = items[i].scaleWorkplate;
                 decontaminationInfo.originalSize = new Vector2(image.texture.width, image.texture.height);
+                decontaminationInfo.firstBagSizeMulitplier = items[i].firstBagSizeMulitplier;
+                decontaminationInfo.otherBagsSizeMulitplier = items[i].otherBagsSizeMulitplier;
 
                 itemRect.sizeDelta = decontaminationInfo.originalSize * decontaminationInfo.scaleContainer;
                   

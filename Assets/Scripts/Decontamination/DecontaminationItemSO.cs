@@ -12,4 +12,7 @@ public class DecontaminationItemSO : ItemSO
     public float scaleDragged = 0.2f;
     [Tooltip("Scaling factor when the item is placed on the workplate.")]
     public float scaleWorkplate = 0.4f;
+
+    public float firstBagSizeMulitplier = 0.75f;
+    public float otherBagsSizeMulitplier = 0.25f;
 }

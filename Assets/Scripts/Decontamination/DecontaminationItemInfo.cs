@@ -11,5 +11,7 @@ public class DecontaminationItemInfo : MonoBehaviour
     [HideInInspector] public Vector2 originalSize;
     [HideInInspector] public float scaleContainer = 1f;
     [HideInInspector] public float scaleDragged = 0.75f;
-    [HideInInspector] public float scaleWorkplate = 1.25f;
+    [HideInInspector] public float scaleWorkplate;
+    [HideInInspector] public float firstBagSizeMulitplier;
+    [HideInInspector] public float otherBagsSizeMulitplier;
 }
