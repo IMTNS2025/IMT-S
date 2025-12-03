@@ -71,11 +71,35 @@ public class ScaleManager : MonoBehaviour
 
     private void CheckScaleBag(float scale)
     {
-        for (int i = 1; i <= objectToDragItemInfo.currentBagLevels; i++)
+        if (objectToDragItemInfo == null || objectToDrag == null) return;
+
+        int levels = objectToDragItemInfo.currentBagLevels;
+        if (levels <= 0) return;
+
+        int childCount = objectToDragItemInfo.transform.childCount;
+        if (childCount < levels) return;
+
+        // Calculate the start index of the bag children (assumes the bag children are the last `levels` children)
+        int startIndex = childCount - levels;
+
+        // Iterate from innermost (smallest) to outermost (largest)
+        for (int j = 0; j < levels; j++)
         {
-            float multiplier = 1 + objectToDragItemInfo.firstBagSizeMulitplier + (i * objectToDragItemInfo.otherBagsSizeMulitplier);
-            RectTransform rectTransformChild = objectToDragItemInfo.transform.GetChild(objectToDragItemInfo.transform.childCount - i).GetComponent<RectTransform>();
-            rectTransformChild.sizeDelta = objectToDragItemInfo.originalSize * scale * multiplier;
+            int childIndex = startIndex + j;
+            var child = objectToDragItemInfo.transform.GetChild(childIndex);
+            if (child == null) continue;
+
+            RectTransform rectTransformChild = child.GetComponent<RectTransform>();
+            if (rectTransformChild == null) continue;
+
+            // Multiplier increases for outer bags so inner bag is smaller
+            float multiplier = 1 + objectToDragItemInfo.firstBagSizeMulitplier + (j * objectToDragItemInfo.otherBagsSizeMulitplier);
+
+            // Keep bag size relative to the parent item's current size
+            rectTransformChild.sizeDelta = objectToDrag.sizeDelta * multiplier;
+
+            // Ensure correct draw order: innermost (j=0) should be behind outermost (higher j)
+            rectTransformChild.SetSiblingIndex(childIndex);
         }
     }
 
