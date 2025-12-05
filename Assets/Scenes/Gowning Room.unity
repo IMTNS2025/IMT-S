@@ -1699,7 +1699,7 @@ Camera:
   far clip plane: 1000
   field of view: 23.7
   orthographic: 1
-  orthographic size: 1.8
+  orthographic size: 5.29
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2110,20 +2110,44 @@ PrefabInstance:
       value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1927279576238624191, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.66757
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927279576238624191, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.66757
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927279576238624191, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.66757
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927279576238624191, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -200
+      value: -87
       objectReference: {fileID: 0}
     - target: {fileID: 1927279576238624191, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 200
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374325339201228600, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.43426
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374325339201228600, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.43426
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374325339201228600, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.43426
       objectReference: {fileID: 0}
     - target: {fileID: 2374325339201228600, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 120
+      value: -72
       objectReference: {fileID: 0}
     - target: {fileID: 2374325339201228600, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 120
+      value: -4.4622
       objectReference: {fileID: 0}
     - target: {fileID: 5168534401586742170, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
       propertyPath: m_Type
