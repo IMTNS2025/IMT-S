@@ -21,7 +21,6 @@ public class Theta_Star : MonoBehaviour
     [SerializeField] private Tilemap[] walkableTiles;
     [SerializeField] private Tilemap[] obstaclesTiles;
 
-    // Legacy single-agent fields (kept for backward compatibility / optional debug)
     [SerializeField] private Transform playerPosition;
     [SerializeField] private Transform endPosition;
     [SerializeField] private GameObject pathGameObject;
@@ -203,7 +202,7 @@ public class Theta_Star : MonoBehaviour
                 Vector3Int potentialParent;
                 float tempGScore;
 
-                if (LineOfSight(grid.CellToWorld(parentOfCurrent), grid.CellToWorld(neighborCell)))
+                if (LineOfSight(parentOfCurrent, neighborCell))
                 {
                     potentialParent = parentOfCurrent;
                     tempGScore = gScore[parentOfCurrent] + EuclideanCostEstimate(parentOfCurrent, neighborCell);
@@ -279,45 +278,44 @@ public class Theta_Star : MonoBehaviour
     }
 
     //Bresenham's line algorithm
-    bool LineOfSight(Vector3 start, Vector3 end)
+    bool LineOfSight(Vector3Int start, Vector3Int end)
     {
-        Vector3Int startPos = grid.WorldToCell(start);
-        Vector3Int endPos = grid.WorldToCell(end);
+        Vector3Int startPos = start;
+        Vector3Int endPos = end;
 
-        int x0 = startPos.x;
-        int y0 = startPos.y;
+        int currentX = startPos.x;
+        int currentY = startPos.y;
 
-        int x1 = endPos.x;
-        int y1 = endPos.y;
+        int targetX = endPos.x;
+        int targetY = endPos.y;
 
-        int dx = Mathf.Abs(x1 - x0);
-        int dy = Mathf.Abs(y1 - y0);
+        int deltaX = Mathf.Abs(targetX - currentX); // 2 - 0 = 2
+        int deltaY = Mathf.Abs(targetY - currentY); // 1 - 0 = 1
 
-        int sx = (x0 < x1) ? 1 : -1;
-        int sy = (y0 < y1) ? 1 : -1;
+        int stepX = (currentX < targetX) ? 1 : -1;  // 0 < 2 = 1
+        int stepY = (currentY < targetY) ? 1 : -1;  // 0 < 1 = 1
 
-        int err = dx - dy;
+        int error = deltaX - deltaY; // 2 - 1 = 1
 
         while (true)
         {
-            if (!IsWalkable(new Vector3Int(x0, y0, 0))) return false;
-            if (x0 == x1 && y0 == y1) return true;
+            if (!IsWalkable(new Vector3Int(currentX, currentY, 0))) return false;
+            if (currentX == targetX && currentY == targetY) return true;
 
-            int e2 = err * 2;
+            int doubledError = error * 2; // 1 * 2 = 2
 
-            if (e2 > -dy)
+            int maxVerticalDepth = -deltaY;
+            int maxHorizontalDepth = deltaX;
+
+            if (doubledError > maxVerticalDepth) // 2 > -1
             {
-                err -= dy;
-                x0 += sx;
-
-                if (!IsWalkable(new Vector3Int(x0, y0, 0))) return false;
+                error -= deltaY; // 1 - 1 = 0
+                currentX += stepX; // 0 + 1 = 1
             }
-            if (e2 < dx)
+            if (doubledError < maxHorizontalDepth) // 0 < 2
             {
-                err += dx;
-                y0 += sy;
-
-                if (!IsWalkable(new Vector3Int(x0, y0, 0))) return false;
+                error += deltaX; // 0 + 2 = 2
+                currentY += stepY; // 0 + 1 = 1
             }
         }
     }
