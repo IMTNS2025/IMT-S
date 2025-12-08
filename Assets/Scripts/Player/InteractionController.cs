@@ -8,6 +8,7 @@ public class InteractionController : MonoBehaviour
     private bool isInteracting = false;
     private UnityAction cachedInteraction;
     private IInteractable currentInteractable;
+    [SerializeField] private GameObject currentInteractableObject;
 
     private void Update()
     {
@@ -25,7 +26,20 @@ public class InteractionController : MonoBehaviour
         if (collision.TryGetComponent(out IInteractable i))
         {
             currentInteractable = i;
-            cachedInteraction = () => currentInteractable.Interact();
+            currentInteractableObject = collision.gameObject;
+
+            cachedInteraction = () =>
+            {
+                if (currentInteractable != null && currentInteractableObject != null)
+                {
+                    currentInteractable.Interact();
+                }
+                else
+                {
+                    ClearCurrentInteraction();
+                }
+            };
+
             interactionButton.onClick.AddListener(cachedInteraction);
             isInteracting = true;
         }
@@ -35,10 +49,25 @@ public class InteractionController : MonoBehaviour
     {
         if (collision.TryGetComponent(out IInteractable i) && i == currentInteractable)
         {
-            interactionButton.onClick.RemoveListener(cachedInteraction);
-            cachedInteraction = null;
-            currentInteractable = null;
-            isInteracting = false;
+            ClearCurrentInteraction();
         }
+    }
+
+    private void ClearCurrentInteraction()
+    {
+        if (interactionButton != null && cachedInteraction != null)
+        {
+            interactionButton.onClick.RemoveListener(cachedInteraction);
+        }
+
+        cachedInteraction = null;
+        currentInteractable = null;
+        currentInteractableObject = null;
+        isInteracting = false;
+    }
+
+    private void OnDestroy()
+    {
+        ClearCurrentInteraction();
     }
 }

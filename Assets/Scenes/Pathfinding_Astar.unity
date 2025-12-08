@@ -202,8 +202,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Theta_Star
   grid: {fileID: 764041491}
-  walkableTiles: []
-  obstaclesTiles: []
+  walkableTiles:
+  - {fileID: 395748731}
+  obstaclesTiles:
+  - {fileID: 2121810974}
   playerPosition: {fileID: 1400293375}
   endPosition: {fileID: 1510680021}
   pathGameObject: {fileID: 2124449124}

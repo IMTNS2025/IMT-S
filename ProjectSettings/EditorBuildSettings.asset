@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Gowning Room.unity
-    guid: 827d016223155dd478169fd72a358f0f
+    path: Assets/Scenes/Working Scenes/NewGowning.unity
+    guid: 81420136c9f7b834b93379b35cb87f40
   - enabled: 1
-    path: Assets/Scenes/DressingMiniGame_1st_Protection.unity
+    path: Assets/Scenes/Working Scenes/DressingMiniGame_1st_Protection.unity
     guid: 35adeb234179c5046afecb1c0fc2fe27
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
