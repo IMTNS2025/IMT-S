@@ -4,7 +4,16 @@ using UnityEngine.Tilemaps;
 
 public class A_Star : MonoBehaviour
 {
-    private readonly Vector3Int[] directions = { new(-1, 0, 0), new(1, 0, 0), new(0, 1, 0), new(0, -1, 0) };
+    private readonly Vector3Int[] directions = {
+        new(-1, 0, 0),  //left
+        new(1, 0, 0),   //right
+        new(0, 1, 0),   //up
+        new(0, -1, 0),  //down
+        new(-1, 1, 0),  //left up
+        new(1, 1, 0),   //right up
+        new(-1, -1, 0), //left down
+        new(1, -1, 0)   //right down
+    };
 
     [SerializeField] private Grid grid;
     [SerializeField] private Tilemap[] walkableTiles;
