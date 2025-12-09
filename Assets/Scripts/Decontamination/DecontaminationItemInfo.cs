@@ -14,4 +14,5 @@ public class DecontaminationItemInfo : MonoBehaviour
     [HideInInspector] public float scaleWorkplate;
     [HideInInspector] public float firstBagSizeMulitplier;
     [HideInInspector] public float otherBagsSizeMulitplier;
+    [HideInInspector] public string itemName;
 }

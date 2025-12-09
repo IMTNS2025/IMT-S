@@ -23,4 +23,6 @@ public static class EventManager
     public static UnityEvent<Vector2> OnMovementDragStarted = new();
 
     public static UnityEvent OnSlowModeChanged = new();
+
+    public static UnityEvent OnBeforeSceneExit = new();
 }

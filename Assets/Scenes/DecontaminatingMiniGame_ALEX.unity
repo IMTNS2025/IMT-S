@@ -220,6 +220,7 @@ MonoBehaviour:
   scaleWorkplate: 1.25
   firstBagSizeMulitplier: 0
   otherBagsSizeMulitplier: 0
+  itemName: 
 --- !u!222 &45395772
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -408,6 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 618b02c679c30b141ad3c89fd05ef532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DecontaminationManager
+  decontaminationPerformanceManager: {fileID: 2050165026}
   items:
   - {fileID: 11400000, guid: 51120e9928f6e8542a769303b25c6a46, type: 2}
   - {fileID: 11400000, guid: 3c3f763f29152684289c20c02eb62ab2, type: 2}
@@ -874,6 +876,7 @@ MonoBehaviour:
   scaleWorkplate: 1.25
   firstBagSizeMulitplier: 0
   otherBagsSizeMulitplier: 0
+  itemName: 
 --- !u!222 &516535526
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1196,6 +1199,7 @@ MonoBehaviour:
   scaleWorkplate: 1.25
   firstBagSizeMulitplier: 0
   otherBagsSizeMulitplier: 0
+  itemName: 
 --- !u!222 &625906476
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1541,6 +1545,7 @@ MonoBehaviour:
   scaleWorkplate: 1.25
   firstBagSizeMulitplier: 0
   otherBagsSizeMulitplier: 0
+  itemName: 
 --- !u!114 &779517227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1653,6 +1658,50 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804573086}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &833593972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833593975}
+  - component: {fileID: 833593974}
+  m_Layer: 0
+  m_Name: PerformanceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &833593974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833593972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42120189bee6afa49853d34bbfe66aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!4 &833593975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833593972}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1931,6 +1980,7 @@ MonoBehaviour:
   scaleWorkplate: 1.25
   firstBagSizeMulitplier: 0
   otherBagsSizeMulitplier: 0
+  itemName: 
 --- !u!222 &938352594
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2567,6 +2617,7 @@ MonoBehaviour:
   scaleWorkplate: 1.25
   firstBagSizeMulitplier: 0
   otherBagsSizeMulitplier: 0
+  itemName: 
 --- !u!222 &1334726495
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2813,6 +2864,7 @@ MonoBehaviour:
   scaleWorkplate: 1.25
   firstBagSizeMulitplier: 0
   otherBagsSizeMulitplier: 0
+  itemName: 
 --- !u!222 &1658681197
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3335,7 +3387,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1970202038}
   - component: {fileID: 1970202037}
-  - component: {fileID: 1970202039}
   m_Layer: 0
   m_Name: ScaleManager
   m_TagString: Untagged
@@ -3370,18 +3421,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1970202039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970202036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e435bbfb56297e64eacfc247652a8c3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BringToFrontOnDrag
 --- !u!1 &1973092528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3718,10 +3757,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 9f0ea92ef8f39064580dc0334b3e0b0b, type: 3}
   colorMin: {r: 0.5149519, g: 0.9924528, b: 0.965167, a: 0.5019608}
   colorMax: {r: 0.12783901, g: 0.5018867, b: 0.47609037, a: 0.8}
-  scaleMin: 15
+  scaleMin: 25
   scaleMax: 30
-  splashRadius: 50
-  tickInterval: 1
+  splashRadius: 100
+  tickInterval: 0.2
   workplate: {fileID: 1865202822}
 --- !u!4 &2008747529
 Transform:
@@ -3730,6 +3769,51 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008747527}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2050165025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2050165027}
+  - component: {fileID: 2050165026}
+  m_Layer: 0
+  m_Name: DecontaminationPerformanceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2050165026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050165025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7cb8809cbd2af4fbf90c3ea04295f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  decontaminationItems: []
+--- !u!4 &2050165027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050165025}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -3806,6 +3890,7 @@ MonoBehaviour:
   scaleWorkplate: 1.25
   firstBagSizeMulitplier: 0
   otherBagsSizeMulitplier: 0
+  itemName: 
 --- !u!114 &2060089043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3977,6 +4062,7 @@ MonoBehaviour:
   scaleWorkplate: 1.25
   firstBagSizeMulitplier: 0
   otherBagsSizeMulitplier: 0
+  itemName: 
 --- !u!114 &7589201749866743416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4028,6 +4114,8 @@ SceneRoots:
   - {fileID: 2008747529}
   - {fileID: 906194367}
   - {fileID: 1970202038}
+  - {fileID: 833593975}
+  - {fileID: 2050165027}
   - {fileID: 730238298}
   - {fileID: 804573089}
   - {fileID: 528740458}
