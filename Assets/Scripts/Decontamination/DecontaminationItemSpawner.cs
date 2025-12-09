@@ -3,7 +3,8 @@ using UnityEngine.UI;
 
 public class DecontaminationItemSpawner : MonoBehaviour
 {
-    //TODOALEX add random offsetö
+    //TODOALEX add random offset
+    [SerializeField] private DecontaminationPerformanceManager decontaminationPerformanceManager;
     [SerializeField] private DecontaminationItemSO[] items;
     [SerializeField] private GameObject[] itemContainers;
     [SerializeField] private DecontaminationToolSO[] tools;
@@ -67,6 +68,7 @@ public class DecontaminationItemSpawner : MonoBehaviour
                 decontaminationInfo.originalSize = new Vector2(image.texture.width, image.texture.height);
                 decontaminationInfo.firstBagSizeMulitplier = items[i].firstBagSizeMulitplier;
                 decontaminationInfo.otherBagsSizeMulitplier = items[i].otherBagsSizeMulitplier;
+                decontaminationInfo.itemName = items[i].name;
 
                 itemRect.sizeDelta = decontaminationInfo.originalSize * decontaminationInfo.scaleContainer;
                   
@@ -75,7 +77,9 @@ public class DecontaminationItemSpawner : MonoBehaviour
                     Debug.LogWarning($"ContaminationItem array does not contain contamination at index {i}.");
                     continue;
                 }
-                contaminations[i].spawnContamination(decontaminationInfo);                
+                contaminations[i].spawnContamination(decontaminationInfo);
+
+                decontaminationPerformanceManager.RegisterDecontaminationItem(decontaminationInfo);
             }
             else
             {

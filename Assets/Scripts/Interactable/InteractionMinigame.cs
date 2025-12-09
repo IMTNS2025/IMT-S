@@ -33,6 +33,7 @@ public class InteractionMinigame : MonoBehaviour, IInteractable
         }
 
         _isTransitioning = true;
+        EventManager.OnBeforeSceneExit.Invoke();
 
         var targetScene = SceneManager.GetSceneByBuildIndex(minigameSceneIndexToLoad);
         if (!targetScene.IsValid() || !targetScene.isLoaded)
