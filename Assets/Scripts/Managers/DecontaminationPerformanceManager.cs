@@ -16,6 +16,8 @@ public class DecontaminationPerformanceManager : MonoBehaviour
 
     private void RecordPerformance ()
     {
+        if (PerformanceManager.Instance == null) return;
+
         decontaminationPerformance = new()
         {
             itemInfos = new Dictionary<string, string>()
