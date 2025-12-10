@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Working Scenes/DressingMiniGame_1st_Protection.unity
     guid: 35adeb234179c5046afecb1c0fc2fe27
+  - enabled: 1
+    path: Assets/Scenes/DecontaminatingMiniGame_DAVID.unity
+    guid: 5be909d667f6a2348b907c4299a12021
+  - enabled: 1
+    path: Assets/Scenes/LockerMiniGame_DAVID.unity
+    guid: 8e0e0884f44f61c47bcc4ac04433d8f0
+  - enabled: 1
+    path: Assets/Scenes/Working Scenes/NewGowning.unity
+    guid: 81420136c9f7b834b93379b35cb87f40
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
