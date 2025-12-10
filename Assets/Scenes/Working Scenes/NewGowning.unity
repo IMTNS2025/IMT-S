@@ -3705,6 +3705,7 @@ PrefabInstance:
     - target: {fileID: 1927279576238624191, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 258
+<<<<<<< HEAD:Assets/Scenes/Working Scenes/NewGowning.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1927279576238624191, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -3733,6 +3734,8 @@ PrefabInstance:
     - target: {fileID: 2374325339201228600, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+=======
+>>>>>>> origin/Kris3.0:Assets/Scenes/NewGowning.unity
       objectReference: {fileID: 0}
     - target: {fileID: 2374325339201228600, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
       propertyPath: m_LocalScale.x
@@ -3753,6 +3756,26 @@ PrefabInstance:
     - target: {fileID: 2374325339201228600, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143680363130839807, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.7467346
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143680363130839807, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.7467346
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143680363130839807, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.7467346
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143680363130839807, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3210.9998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143680363130839807, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1555
       objectReference: {fileID: 0}
     - target: {fileID: 4143680363130839807, guid: c947ed522b6a18a40b310ce3fde6a04e, type: 3}
       propertyPath: m_LocalScale.x
