@@ -23,6 +23,6 @@ public class PlayerController : MonoBehaviour
     private void PlayerMove(Vector2 dir)
     {
         rb.linearVelocity = dir * speed;
-        Debug.Log(dir);
+        //Debug.Log(dir);
     }
 }

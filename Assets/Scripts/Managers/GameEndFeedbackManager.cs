@@ -16,17 +16,34 @@ public class GameEndFeedbackManager : MonoBehaviour
         canvas.enabled = true;
         string text = "";
 
-        if (PerformanceManager.Instance.decontaminationPerformance.wasRecorded)
+        //if (FeedbackSingleton.Instance.decontaminationPerformance?.wasRecorded)
+        //{
+        //    text += "Decontamination Performance:\n";
+        //    text += FeedbackSingleton.Instance.decontaminationPerformance.totalItems + " total items.\n";
+        //    text += FeedbackSingleton.Instance.decontaminationPerformance.cleanedItems + " cleaned items.\n";
+        //    foreach (var kvp in FeedbackSingleton.Instance.decontaminationPerformance.itemInfos)
+        //    {
+        //        text += kvp.Key + ": " + kvp.Value + "\n";
+        //    }
+        //}
+
+        //if (FeedbackSingleton.Instance.lockerPerformance?.Count > 0)
+        //{
+        //    text += "Locker Performance:\n";
+        //    foreach (var kvp in FeedbackSingleton.Instance.lockerPerformance)
+        //    {
+        //        text += kvp.Key + ": " + kvp.Value + "\n";
+        //    }
+        //}
+
+        if (FeedbackSingleton.Instance.firstLayerProtectionPerformance?.Count > 0)
         {
-            text += "Decontamination Performance:\n";
-            text += PerformanceManager.Instance.decontaminationPerformance.totalItems + " total items.\n";
-            text += PerformanceManager.Instance.decontaminationPerformance.cleanedItems + " cleaned items.\n";
-            foreach (var kvp in PerformanceManager.Instance.decontaminationPerformance.itemInfos)
+            text += "First Protection Layer Performance:\n";
+            foreach (var kvp in FeedbackSingleton.Instance.firstLayerProtectionPerformance)
             {
-                text += kvp.Key + ": " + kvp.Value + "\n";
+                text += kvp.Value + "\n";
             }
         }
-
 
         textMeshProUGUI.SetText(text);
     }

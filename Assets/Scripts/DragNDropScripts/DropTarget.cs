@@ -15,9 +15,12 @@ public class DropTarget : MonoBehaviour, IDropTarget
 
     [Header("Optional behavior")]
     [SerializeField] private bool isTrashbin = false;
+    [SerializeField] private bool isLocker = false;
 
     public bool IsTrashbin() => isTrashbin;
+
     public bool IsOccupied() => isOccupied;
+
     public DragAndDrop GetObjectOccupied() => occupiedByObject;
 
     public Vector3 GetSnapWorldPosition()
@@ -32,9 +35,15 @@ public class DropTarget : MonoBehaviour, IDropTarget
 
     public void ApplyDrop(DragAndDrop dragger)
     {
-        if (isTrashbin)
+        if(isLocker && dragger != null && dragger.gameObject != null)
         {
-            Destroy(dragger?.gameObject);
+            EventManager.OnItemPutInLocker?.Invoke(dragger.gameObject);
+        }
+
+        if (isTrashbin && dragger != null && dragger.gameObject != null)
+        {
+            EventManager.OnItemTrashed?.Invoke(dragger.gameObject);
+            Destroy(dragger.gameObject);
             return;
         }
 

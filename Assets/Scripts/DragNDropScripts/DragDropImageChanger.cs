@@ -58,7 +58,7 @@ public class DragDropImageChanger : MonoBehaviour
             isMyDragActive = false;
         });
 
-        EventManager.OnDragSuccessed.AddListener(() =>
+        EventManager.OnDragSuccessed.AddListener(gameObject =>
         {
             if (!isMyDragActive) return;
             if (dropSprite != null)
@@ -66,7 +66,7 @@ public class DragDropImageChanger : MonoBehaviour
             alreadyPlaced = true;
         });
 
-        EventManager.OnDragFailed.AddListener(() =>
+        EventManager.OnDragFailed.AddListener(gameObject =>
         {
             if (!isMyDragActive) return;
             var col = image.color;

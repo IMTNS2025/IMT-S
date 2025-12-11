@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class DecontaminationItemSpawner : MonoBehaviour
 {
     //TODOALEX add random offset
-    [SerializeField] private DecontaminationPerformanceManager decontaminationPerformanceManager;
+    [SerializeField] private DecontaminationFeedbackManager decontaminationPerformanceManager;
     [SerializeField] private DecontaminationItemSO[] items;
     [SerializeField] private GameObject[] itemContainers;
     [SerializeField] private DecontaminationToolSO[] tools;

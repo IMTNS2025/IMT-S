@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DecontaminationPerformanceManager : MonoBehaviour
+public class DecontaminationFeedbackManager : MonoBehaviour
 {
     public List<DecontaminationItemInfo> decontaminationItems = new ();
     public DecontaminationPerformance decontaminationPerformance;
@@ -16,7 +16,7 @@ public class DecontaminationPerformanceManager : MonoBehaviour
 
     private void RecordPerformance ()
     {
-        if (PerformanceManager.Instance == null) return;
+        if (FeedbackSingleton.Instance == null) return;
 
         decontaminationPerformance = new()
         {
@@ -49,7 +49,7 @@ public class DecontaminationPerformanceManager : MonoBehaviour
 
         //Debug.Log("Decontamination performance recorded: " + decontaminationPerformance.cleanedItems + " out of " + decontaminationPerformance.totalItems + " items cleaned.");
         decontaminationPerformance.wasRecorded = true;
-        PerformanceManager.Instance.decontaminationPerformance = decontaminationPerformance;
+        FeedbackSingleton.Instance.decontaminationPerformance = decontaminationPerformance;
     }
 
     private void OnEnable()

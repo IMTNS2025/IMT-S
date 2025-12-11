@@ -94,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3086712422674389918, guid: 0d07555b76a60904b9918f86536e16ff, type: 3}
       propertyPath: m_Name
-      value: Item Prefab (PocketTrash)
+      value: Item Prefab (Pen)
       objectReference: {fileID: 0}
     - target: {fileID: 4960945174668164778, guid: 0d07555b76a60904b9918f86536e16ff, type: 3}
       propertyPath: m_SizeDelta.x
@@ -132,6 +132,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3086712422674389918, guid: 0d07555b76a60904b9918f86536e16ff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3354249040960224999}
+    - targetCorrespondingSourceObject: {fileID: 3086712422674389918, guid: 0d07555b76a60904b9918f86536e16ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2320545949226842683}
   m_SourcePrefab: {fileID: 100100000, guid: 0d07555b76a60904b9918f86536e16ff, type: 3}
 --- !u!1 &2482864529750567080 stripped
 GameObject:
@@ -158,7 +161,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8845486959717928886, guid: 80006e47f109c134cb5d96fe06f2490f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c56105f079fe1e4f99a16dcb4b33667, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -168,3 +171,16 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2320545949226842683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2482864529750567080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c8531986e47d749add9eb5b6a689ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoesToLockerSpot
+  goesToLockerSpotType: 2

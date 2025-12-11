@@ -10,6 +10,11 @@ public class PocketsSysten : MonoBehaviour
 
     [SerializeField] private List<GameObject> itemInPocket;
 
+    public List<GameObject> getItemInPocket()
+    {
+        return itemInPocket;
+    }
+
     private void OnEnable()
     {
         EventManager.OnItemReturnedToPocket.AddListener((item) =>
@@ -46,6 +51,7 @@ public class PocketsSysten : MonoBehaviour
             );
 
             var go = Instantiate(itemsInPocket[i], randomPosition, Quaternion.identity, transform);
+            go.name = itemsInPocket[i].name;
             itemInPocket.Add(go.gameObject);
         }
     }
