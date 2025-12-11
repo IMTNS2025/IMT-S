@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 778383d36c95d4740897a564237d3c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveWardrobe
-  minigameSceneIndexToLoad: 0
+  minigameSceneIndexToLoad: 1
 --- !u!1 &263225848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,6 +1193,7 @@ MonoBehaviour:
   isOccupied: 0
   occupiedByObject: {fileID: 0}
   isTrashbin: 0
+  isLocker: 0
 --- !u!1 &934373716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,8 +1285,9 @@ GameObject:
   - component: {fileID: 1021458180}
   - component: {fileID: 1021458179}
   - component: {fileID: 1021458178}
+  - component: {fileID: 1021458181}
   m_Layer: 5
-  m_Name: Image (Hood)
+  m_Name: Hood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1360,6 +1362,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021458176}
   m_CullTransparentMesh: 1
+--- !u!114 &1021458181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021458176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd17ef419e0cfb41aa15a5b75e1cf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PutInOrder
+  order: 1
 --- !u!1 &1133377708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,8 +1523,9 @@ GameObject:
   - component: {fileID: 1134264194}
   - component: {fileID: 1134264196}
   - component: {fileID: 1134264197}
+  - component: {fileID: 1134264198}
   m_Layer: 5
-  m_Name: Image (FaceMask)
+  m_Name: Face Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1584,6 +1600,19 @@ MonoBehaviour:
   originalSprite: {fileID: -8125405405361563741, guid: 4daa36ae14e6f3842afabe7b4858837f, type: 3}
   dropSprite: {fileID: -1507181923799153687, guid: e411c571ce8ca7c48836acecdcc43266, type: 3}
   myDrag: {fileID: 0}
+--- !u!114 &1134264198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134264191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd17ef419e0cfb41aa15a5b75e1cf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PutInOrder
+  order: 2
 --- !u!1 &1243267485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,7 +1706,7 @@ MonoBehaviour:
   makeInvisible: 1
   autoFindTargets: 1
   resizeWithTarget: 1
---- !u!1 &1394769922
+--- !u!1 &1585252564
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1685,23 +1714,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1394769923}
-  m_Layer: 5
-  m_Name: Item Container
+  - component: {fileID: 1585252567}
+  - component: {fileID: 1585252566}
+  - component: {fileID: 1585252565}
+  m_Layer: 0
+  m_Name: FeedbackManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1394769923
+--- !u!114 &1585252565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585252564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2212d85200f19b4f9b9b1994939741f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  itemContainer: {fileID: 934373717}
+--- !u!114 &1585252566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585252564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42120189bee6afa49853d34bbfe66aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FeedbackSingleton
+--- !u!4 &1585252567
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394769922}
+  m_GameObject: {fileID: 1585252564}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1720,8 +1776,9 @@ GameObject:
   - component: {fileID: 1627180576}
   - component: {fileID: 1627180578}
   - component: {fileID: 1627180577}
+  - component: {fileID: 1627180579}
   m_Layer: 5
-  m_Name: Image (Shoe Cap)
+  m_Name: Shoe Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1796,6 +1853,19 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &1627180579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627180573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd17ef419e0cfb41aa15a5b75e1cf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PutInOrder
+  order: 3
 --- !u!1 &1670742983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,8 +1878,9 @@ GameObject:
   - component: {fileID: 1670742986}
   - component: {fileID: 1670742988}
   - component: {fileID: 1670742987}
+  - component: {fileID: 1670742989}
   m_Layer: 5
-  m_Name: Image (Glasses)
+  m_Name: Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1884,6 +1955,19 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &1670742989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670742983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd17ef419e0cfb41aa15a5b75e1cf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  order: 4
 --- !u!1 &1681034947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,7 +2128,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1394769923}
+  - {fileID: 1585252567}
   - {fileID: 139839213}
   - {fileID: 2023311519}
   - {fileID: 1681034951}

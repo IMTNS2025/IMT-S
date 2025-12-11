@@ -21,13 +21,13 @@ public class ScaleManager : MonoBehaviour
             objectToDragItemInfo = null;
         });
 
-        EventManager.OnDragSuccessed.AddListener(() =>
+        EventManager.OnDragSuccessed.AddListener(gameObject =>
         {
             ItemInfoDragSucceeded();
             ToolInfoDragSucceeded();
         });
 
-        EventManager.OnDragFailed.AddListener(() =>
+        EventManager.OnDragFailed.AddListener(gameObject =>
         {
             ItemInfoDragFailed();
             ToolInfoDragFailed();

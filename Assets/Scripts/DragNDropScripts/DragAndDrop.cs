@@ -128,7 +128,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
                     }
                 }
             }
-            EventManager.OnDragSuccessed?.Invoke(); // If it breaks, move this three lines up lol (stan approved this)
+            EventManager.OnDragSuccessed?.Invoke(objectToDrag.gameObject); // If it breaks, move this three lines up lol (stan approved this)
 
             EventManager.OnItemDragEnd?.Invoke(this);
         }
@@ -142,7 +142,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
             {
                 i.color = new Color(i.color.r, i.color.g, i.color.b, makeInvisible ? 0f : 1f);
             }
-            EventManager.OnDragFailed?.Invoke();
+            EventManager.OnDragFailed?.Invoke(objectToDrag.gameObject);
 
             EventManager.OnItemDragEnd?.Invoke(this);
         }

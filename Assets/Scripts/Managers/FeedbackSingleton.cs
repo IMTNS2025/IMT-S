@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PerformanceManager : MonoBehaviour
+public class FeedbackSingleton : MonoBehaviour
 {
-    public static PerformanceManager Instance;
+    public static FeedbackSingleton Instance;
 
     public DecontaminationPerformance decontaminationPerformance;
+    public Dictionary<string, string> lockerPerformance;
+    public Dictionary<string, string> firstLayerProtectionPerformance;
 
     void Awake()
     {

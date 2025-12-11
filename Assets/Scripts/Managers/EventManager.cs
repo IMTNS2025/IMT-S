@@ -17,12 +17,16 @@ public static class EventManager
     public static UnityEvent<DragAndDrop> OnItemDragEnd = new();
     public static UnityEvent<DragAndDrop> OnItemBeforeDragEnd = new();
 
-    public static UnityEvent OnDragSuccessed = new();
-    public static UnityEvent OnDragFailed = new();
+    public static UnityEvent<GameObject> OnDragSuccessed = new();
+    public static UnityEvent<GameObject> OnDragFailed = new();
 
     public static UnityEvent<Vector2> OnMovementDragStarted = new();
 
     public static UnityEvent OnSlowModeChanged = new();
 
     public static UnityEvent OnBeforeSceneExit = new();
+
+    public static UnityEvent<GameObject> OnItemTrashed = new();
+    public static UnityEvent<GameObject> OnItemPutInLocker = new();
+
 }

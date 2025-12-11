@@ -633,7 +633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6760568227553310839, guid: 86326b0b4ab88bf448297ac926cd52fc, type: 3}
       propertyPath: minigameSceneIndexToLoad
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7610578577331460672, guid: 86326b0b4ab88bf448297ac926cd52fc, type: 3}
       propertyPath: m_Name
@@ -2642,7 +2642,7 @@ MonoBehaviour:
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
+  m_LightOrder: 1
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
@@ -6826,7 +6826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6760568227553310839, guid: 86326b0b4ab88bf448297ac926cd52fc, type: 3}
       propertyPath: minigameSceneIndexToLoad
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7610578577331460672, guid: 86326b0b4ab88bf448297ac926cd52fc, type: 3}
       propertyPath: m_Name
@@ -7174,7 +7174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6760568227553310839, guid: 86326b0b4ab88bf448297ac926cd52fc, type: 3}
       propertyPath: minigameSceneIndexToLoad
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7610578577331460672, guid: 86326b0b4ab88bf448297ac926cd52fc, type: 3}
       propertyPath: m_Name
