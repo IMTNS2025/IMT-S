@@ -34,7 +34,9 @@ public partial struct AirflowSimCalculationSystem : ISystem
     [BurstCompile]
     public void OnUpdate(ref SystemState pSystemState)
     {
-        Init(ref pSystemState);      
+        Init(ref pSystemState);
+
+        InteractionInput input = SystemAPI.GetSingleton<InteractionInput>();
 
         AirflowSimCalculationJob airflowSimCalculationJob = new()
         {
@@ -48,6 +50,7 @@ public partial struct AirflowSimCalculationSystem : ISystem
             spikyPow2DerivativeScalingFactor = spikyPow2DerivativeScalingFactor,
             spikyPow3DerivativeScalingFactor = spikyPow3DerivativeScalingFactor,
             poly6ScalingFactor = poly6ScalingFactor,
+            input = input,
         };
         pSystemState.Dependency = airflowSimCalculationJob.ScheduleParallel(pSystemState.Dependency);
     }

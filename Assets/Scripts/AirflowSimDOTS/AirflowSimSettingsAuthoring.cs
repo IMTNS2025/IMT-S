@@ -23,10 +23,8 @@ public class AirflowSimSettingsAuthoring : MonoBehaviour
                 collisionDampening = pAuthoring.airflowSimSettingsSO.collisionDampening,
                 viscosityStrength = pAuthoring.airflowSimSettingsSO.viscosityStrength,
                 boundsSize = pAuthoring.airflowSimSettingsSO.boundsSize,
-                particleCol = pAuthoring.airflowSimSettingsSO.particleCol,
-                negativePressureCol = pAuthoring.airflowSimSettingsSO.negativePressureCol,
-                positivePressureCol = pAuthoring.airflowSimSettingsSO.positivePressureCol,
-                zeroPressureCol = pAuthoring.airflowSimSettingsSO.zeroPressureCol,
+                interactionInputStrength = pAuthoring.airflowSimSettingsSO.interactionInputStrength,
+                interactionInputRadius = pAuthoring.airflowSimSettingsSO.interactionInputRadius
             });
         }
     }
@@ -44,9 +42,6 @@ public struct AirflowSimSettings : IComponentData
     public float collisionDampening;
     public float viscosityStrength;
     public float2 boundsSize;
-
-    public Color particleCol;
-    public Color negativePressureCol;
-    public Color positivePressureCol;
-    public Color zeroPressureCol;
+    public float interactionInputStrength;
+    public float interactionInputRadius;
 }

@@ -3,8 +3,8 @@ using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
+using Unity.Rendering;
 using Unity.Transforms;
-using UnityEngine.UIElements;
 
 [BurstCompile]
 public partial struct AirflowSimCalculationJob : IJobEntity
@@ -19,6 +19,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     [ReadOnly] public float spikyPow2DerivativeScalingFactor;
     [ReadOnly] public float spikyPow3DerivativeScalingFactor;
     [ReadOnly] public float poly6ScalingFactor;
+    [ReadOnly] public InteractionInput input;
 
     // local temporaries are now computed per-loop inside helper functions
     private float2 offsetToNeighbor;
@@ -26,7 +27,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     private float dstToNeighbor;
 
     [BurstCompile]
-    public void Execute(ref Particle pParticleA, ref LocalTransform pLocalTransformA)
+    public void Execute(ref Particle pParticleA, ref LocalTransform pLocalTransformA, ref URPMaterialPropertyBaseColor color)
     {
         // Phase 0: Calcualte predicted position
         pParticleA.velocity += ExternalForces(pLocalTransformA.Position, pParticleA.velocity) * deltaTime;
@@ -56,6 +57,9 @@ public partial struct AirflowSimCalculationJob : IJobEntity
 
         // Phase 5: Run collision handling (update velocity and position via Particle.velocity)
         HandleCollisions(ref pLocalTransformA, ref pParticleA);
+
+        // Maps particle speed to a blue (slow) -> red (fast) gradient.
+        ApplySpeedColor(ref color, pParticleA.velocity);
     }
 
     // Compute summed density and near-density for particle A from all neighbors
@@ -330,24 +334,44 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         float2 gravityAccel = new (0, airflowSimSettings.gravity);
 
         // Input interactions modify gravity
-        //if (interactionInputStrength != 0)
-        //{
-        //    float2 inputPointOffset = interactionInputPoint - pos;
-        //    float sqrDst = dot(inputPointOffset, inputPointOffset);
-        //    if (sqrDst < interactionInputRadius * interactionInputRadius)
-        //    {
-        //        float dst = sqrt(sqrDst);
-        //        float edgeT = (dst / interactionInputRadius);
-        //        float centreT = 1 - edgeT;
-        //        float2 dirToCentre = inputPointOffset / dst;
+        if (airflowSimSettings.interactionInputStrength != 0 && input.active)
+        {
+            float2 inputPointOffset = input.point - new float2(pos.x, pos.y);
+            float sqrDst = math.dot(inputPointOffset, inputPointOffset);
+            if (sqrDst < airflowSimSettings.interactionInputRadius * airflowSimSettings.interactionInputRadius)
+            {
+                float dst = math.sqrt(sqrDst);
+                float edgeT = (dst / airflowSimSettings.interactionInputRadius);
+                float centreT = 1 - edgeT;
+                float2 dirToCentre = inputPointOffset / dst;
 
-        //        float gravityWeight = 1 - (centreT * saturate(interactionInputStrength / 10));
-        //        float2 accel = gravityAccel * gravityWeight + dirToCentre * centreT * interactionInputStrength;
-        //        accel -= velocity * centreT;
-        //        return accel;
-        //    }
-        //}
+                float gravityWeight = 1 - (centreT * math.saturate(airflowSimSettings.interactionInputStrength / 10));
+                float2 accel = gravityAccel * gravityWeight + dirToCentre * centreT * airflowSimSettings.interactionInputStrength;
+                accel -= velocity * centreT;
+                return accel;
+            }
+        }
 
         return gravityAccel;
+    }
+
+    // Compute speed
+    private void ApplySpeedColor(ref URPMaterialPropertyBaseColor color, float2 velocity)
+    {
+        // Compute speed
+        float speed = math.length(velocity);
+
+        // Choose a max speed at which color is fully red
+        const float maxSpeed = 1f; // tune for your simulation
+        float t = math.saturate(speed / maxSpeed);
+
+        // Blue (slow) and Red (fast)
+        float3 slowColor = new float3(0f, 0f, 1f); // blue
+        float3 fastColor = new float3(1f, 0f, 0f); // red
+
+        float3 rgb = math.lerp(slowColor, fastColor, t);
+
+        // If URPMaterialPropertyBaseColor stores color in .Value (float4), set it here.
+        color.Value = new float4(rgb, 1f);
     }
 }

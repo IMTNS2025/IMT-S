@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13aeed33dc939a439c3fb67f8b6f25c, type: 3}
   m_Name: ASS_default
   m_EditorClassIdentifier: Assembly-CSharp::AirflowSimSettingsSO
-  smoothingRadius: 1
+  smoothingRadius: 2
   targetDensity: 20
   pressureMultiplier: 0.1
   nearPressureMultiplier: 0.05
@@ -20,7 +20,5 @@ MonoBehaviour:
   collisionDampening: 0.9
   viscosityStrength: 0.001
   boundsSize: {x: 16, y: 8}
-  particleCol: {r: 0, g: 0, b: 0, a: 0}
-  negativePressureCol: {r: 0, g: 0, b: 0, a: 0}
-  positivePressureCol: {r: 0, g: 0, b: 0, a: 0}
-  zeroPressureCol: {r: 0, g: 0, b: 0, a: 0}
+  interactionInputStrength: 30
+  interactionInputRadius: 0.5
