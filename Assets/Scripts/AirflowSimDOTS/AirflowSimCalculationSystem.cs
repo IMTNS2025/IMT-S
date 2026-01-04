@@ -36,7 +36,7 @@ public partial struct AirflowSimCalculationSystem : ISystem
 
         InteractionInput input = SystemAPI.GetSingleton<InteractionInput>();
 
-        AirflowSimCalculationJob airflowSimCalculationJob = new AirflowSimCalculationJob
+        AirflowSimCalculationJob airflowSimCalculationJob = new ()
         {
             allParticles = query.ToComponentDataArray<Particle>(Allocator.TempJob),
             allParticleLTs = query.ToComponentDataArray<LocalTransform>(Allocator.TempJob),

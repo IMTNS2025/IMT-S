@@ -12,6 +12,11 @@ public class AirflowSimSettingsAuthoring : MonoBehaviour
         public override void Bake(AirflowSimSettingsAuthoring pAuthoring)
         {
             Entity entity = GetEntity(TransformUsageFlags.None);
+            
+            // Convert Unity Color to float3
+            Color slowColor = pAuthoring.airflowSimSettingsSO.slowParticleColor;
+            Color fastColor = pAuthoring.airflowSimSettingsSO.fastParticleColor;
+            
             AddComponent(entity, new AirflowSimSettings
             {
                 smoothingRadius = pAuthoring.airflowSimSettingsSO.smoothingRadius,
@@ -24,7 +29,18 @@ public class AirflowSimSettingsAuthoring : MonoBehaviour
                 viscosityStrength = pAuthoring.airflowSimSettingsSO.viscosityStrength,
                 boundsSize = pAuthoring.airflowSimSettingsSO.boundsSize,
                 interactionInputStrength = pAuthoring.airflowSimSettingsSO.interactionInputStrength,
-                interactionInputRadius = pAuthoring.airflowSimSettingsSO.interactionInputRadius
+                interactionInputRadius = pAuthoring.airflowSimSettingsSO.interactionInputRadius,
+                maxParticleSpeed = pAuthoring.airflowSimSettingsSO.maxParticleSpeed,
+                colorGradientMaxSpeed = pAuthoring.airflowSimSettingsSO.colorGradientMaxSpeed,
+                slowParticleColor = new float3(slowColor.r, slowColor.g, slowColor.b),
+                fastParticleColor = new float3(fastColor.r, fastColor.g, fastColor.b),
+                predictionFactor = pAuthoring.airflowSimSettingsSO.predictionFactor,
+                movementThreshold = pAuthoring.airflowSimSettingsSO.movementThreshold,
+                velocityLogScale = pAuthoring.airflowSimSettingsSO.velocityLogScale,
+                speedDampingFactor = pAuthoring.airflowSimSettingsSO.speedDampingFactor,
+                wakeForceMultiplier = pAuthoring.airflowSimSettingsSO.wakeForceMultiplier,
+                obstacleDampingFactor = pAuthoring.airflowSimSettingsSO.obstacleDampingFactor,
+                collisionPushEpsilon = pAuthoring.airflowSimSettingsSO.collisionPushEpsilon
             });
         }
     }
@@ -44,4 +60,15 @@ public struct AirflowSimSettings : IComponentData
     public float2 boundsSize;
     public float interactionInputStrength;
     public float interactionInputRadius;
+    public float maxParticleSpeed;
+    public float colorGradientMaxSpeed;
+    public float3 slowParticleColor;
+    public float3 fastParticleColor;
+    public float predictionFactor;
+    public float movementThreshold;
+    public float velocityLogScale;
+    public float speedDampingFactor;
+    public float wakeForceMultiplier;
+    public float obstacleDampingFactor;
+    public float collisionPushEpsilon;
 }

@@ -28,7 +28,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         // Phase 0: predicted position (external forces)
         float2 pos2 = new float2(pLocalTransformA.Position.x, pLocalTransformA.Position.y);
         pParticleA.velocity += ExternalForces(pLocalTransformA.Position, pParticleA.velocity) * deltaTime;
-        const float predictionFactor = 1f / 120f;
+        float predictionFactor = airflowSimSettings.predictionFactor;
         float2 predictedPos = pos2 + pParticleA.velocity * predictionFactor;
         pParticleA.predictedPosition = predictedPos;
 
@@ -105,6 +105,15 @@ public partial struct AirflowSimCalculationJob : IJobEntity
 
         float2 viscosityVel = airflowSimSettings.viscosityStrength * totalViscosityForce;
         pParticleA.velocity += viscosityVel * deltaTime;
+
+        // Clamp maximum velocity to prevent unrealistic speeds
+        float maxSpeed = airflowSimSettings.maxParticleSpeed;
+        float speedSq = math.lengthsq(pParticleA.velocity);
+        if (speedSq > maxSpeed * maxSpeed)
+        {
+            float speed = math.sqrt(speedSq);
+            pParticleA.velocity = pParticleA.velocity * (maxSpeed / speed);
+        }
 
         // Integrate position
         pos2 += pParticleA.velocity * deltaTime;
@@ -214,7 +223,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
 
         if (collidedX || collidedY)
         {
-            const float eps = 1e-4f;
+            float eps = airflowSimSettings.collisionPushEpsilon;
             float pushX = collidedX ? math.sign(clampedRel.x) * eps : 0f;
             float pushY = collidedY ? math.sign(clampedRel.y) * eps : 0f;
 
@@ -240,39 +249,99 @@ public partial struct AirflowSimCalculationJob : IJobEntity
             return gravityAccel;
         }
 
-        float2 inputPointOffset = input.point - new float2(pos.x, pos.y);
-        float sqrDst = math.dot(inputPointOffset, inputPointOffset);
+        float2 particlePos = new float2(pos.x, pos.y);
         float interactionRadius = airflowSimSettings.interactionInputRadius;
         float sqrInteractionRadius = interactionRadius * interactionRadius;
 
+        // Calculate distance to the line segment from previousPoint to point
+        float2 lineStart = input.previousPoint;
+        float2 lineEnd = input.point;
+        float2 lineDir = lineEnd - lineStart;
+        float lineLength = math.length(lineDir);
+        
+        float2 closestPoint;
+        float dst;
+        float2 toParticle = particlePos - lineStart;
+        
+        // If the input moved significantly between frames, use line segment distance
+        float movementThreshold = airflowSimSettings.movementThreshold;
+        if (lineLength > movementThreshold)
+        {
+            // Project particle position onto the line segment
+            float t = math.clamp(math.dot(toParticle, lineDir) / (lineLength * lineLength), 0f, 1f);
+            closestPoint = lineStart + lineDir * t;
+            dst = math.distance(particlePos, closestPoint);
+        }
+        else
+        {
+            // If barely moved, use simple point distance
+            closestPoint = input.point;
+            dst = math.distance(particlePos, closestPoint);
+        }
+
+        float sqrDst = dst * dst;
         if (sqrDst >= sqrInteractionRadius)
         {
             return gravityAccel;
         }
 
-        float dst = math.sqrt(sqrDst);
         float edgeT = dst / interactionRadius;
         float centreT = 1f - edgeT;
 
+        // Direction AWAY from obstacle (repulsion instead of attraction)
         float invDst = dst > 0f ? math.rcp(dst) : 0f;
-        float2 dirToCentre = dst > 0f ? inputPointOffset * invDst : new float2(0f, 1f);
+        float2 dirAwayFromObstacle = dst > 0f ? (particlePos - closestPoint) * invDst : new float2(0f, 1f);
 
-        float strengthNorm = interactionStrength * 0.1f;
-        float gravityWeight = 1f - (centreT * math.saturate(strengthNorm));
-        float2 accel = gravityAccel * gravityWeight + dirToCentre * centreT * interactionStrength;
-        accel -= velocity * centreT;
+        // Use logarithmic scaling for velocity influence
+        float inputSpeed = math.length(input.velocity);
+        float velocityLogScale = airflowSimSettings.velocityLogScale;
+        float velocityMultiplier = 1f + math.log(1f + inputSpeed * velocityLogScale);
+        
+        float effectiveStrength = interactionStrength * velocityMultiplier;
+        
+        // Use cubic falloff for sharper obstacle boundary
+        float repulsionForce = effectiveStrength * centreT * centreT * centreT;
+        float2 repulsionAccel = dirAwayFromObstacle * repulsionForce;
+        
+        // Add wake effect - particles inherit some velocity from moving obstacle
+        float currentSpeed = math.length(velocity);
+        float speedDampingFactor = airflowSimSettings.speedDampingFactor;
+        float speedDamping = math.saturate(1f - currentSpeed * speedDampingFactor);
+        
+        // Reduced wake force for faster settling
+        float2 wakeForce = float2.zero;
+        if (lineLength > movementThreshold)
+        {
+            float2 obstacleDirection = math.normalize(lineDir);
+            float dotProduct = math.dot(toParticle, obstacleDirection);
+            if (dotProduct > 0f)
+            {
+                float wakeFalloff = math.saturate(dotProduct / lineLength);
+                float wakeMultiplier = airflowSimSettings.wakeForceMultiplier;
+                wakeForce = input.velocity * centreT * wakeMultiplier * speedDamping * wakeFalloff;
+            }
+        }
+        
+        float2 accel = gravityAccel 
+                     + repulsionAccel
+                     + wakeForce;
+        
+        // Reduced velocity damping to allow faster recovery
+        float obstacleDamping = airflowSimSettings.obstacleDampingFactor;
+        accel -= velocity * centreT * obstacleDamping;
+        
         return accel;
     }
 
     private void ApplySpeedColor(ref URPMaterialPropertyBaseColor color, float2 velocity)
     {
         float speedSqr = math.lengthsq(velocity);
-        const float maxSpeed = 1f;
-        float invMaxSpeed = 1f / maxSpeed;
+        float colorMaxSpeed = airflowSimSettings.colorGradientMaxSpeed;
+        float invMaxSpeed = 1f / math.max(colorMaxSpeed, 0.001f); // Avoid division by zero
         float t = math.saturate(math.sqrt(speedSqr) * invMaxSpeed);
 
-        float3 slowColor = new float3(0f, 0f, 1f);
-        float3 fastColor = new float3(1f, 0f, 0f);
+        float3 slowColor = airflowSimSettings.slowParticleColor;
+        float3 fastColor = airflowSimSettings.fastParticleColor;
         float3 rgb = math.lerp(slowColor, fastColor, t);
 
         color.Value = new float4(rgb, 1f);

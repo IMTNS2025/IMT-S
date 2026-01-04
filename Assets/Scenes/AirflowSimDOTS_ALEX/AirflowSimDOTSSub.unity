@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9054d632d19cd6469f7b3b7b975a7ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AirflowSimSettingsAuthoring
-  airflowSimSettingsSO: {fileID: 11400000, guid: f791e7b4806a6c84e8227e30c3b7017b, type: 2}
+  airflowSimSettingsSO: {fileID: 11400000, guid: 3f70445bf27c326449c5b6306e89c016, type: 2}
 --- !u!114 &98380038
 MonoBehaviour:
   m_ObjectHideFlags: 0

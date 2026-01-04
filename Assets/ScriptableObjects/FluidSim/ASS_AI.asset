@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13aeed33dc939a439c3fb67f8b6f25c, type: 3}
-  m_Name: ASS_default
+  m_Name: ASS_AI
   m_EditorClassIdentifier: Assembly-CSharp::AirflowSimSettingsSO
   smoothingRadius: 1
-  targetDensity: 20
-  pressureMultiplier: 0.2
-  nearPressureMultiplier: 0.1
+  targetDensity: 40
+  pressureMultiplier: 2
+  nearPressureMultiplier: 1
   gravity: 0
-  collisionDampening: 0.95
-  viscosityStrength: 0.01
+  collisionDampening: 0.85
+  viscosityStrength: 0.004
   boundsSize: {x: 16, y: 8}
-  interactionInputStrength: 30
-  interactionInputRadius: 0.3
-  maxParticleSpeed: 10
+  interactionInputStrength: 25
+  interactionInputRadius: 0.5
+  maxParticleSpeed: 30
   colorGradientMaxSpeed: 2
-  slowParticleColor: {r: 0, g: 0, b: 1, a: 1}
-  fastParticleColor: {r: 1, g: 0, b: 0, a: 1}
-  predictionFactor: 0.00833
+  slowParticleColor: {r: 0.5, g: 0.7, b: 1, a: 1}
+  fastParticleColor: {r: 1, g: 0.3, b: 0, a: 1}
+  predictionFactor: 0.09
   movementThreshold: 0.001
-  velocityLogScale: 0.5
+  velocityLogScale: 0.3
   speedDampingFactor: 0.3
-  wakeForceMultiplier: 0.1
-  obstacleDampingFactor: 0.8
+  wakeForceMultiplier: 0
+  obstacleDampingFactor: 0
   collisionPushEpsilon: 0.0001
