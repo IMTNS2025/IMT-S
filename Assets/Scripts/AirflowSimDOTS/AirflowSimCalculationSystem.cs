@@ -4,7 +4,6 @@ using Unity.Physics;
 using Unity.Collections;
 using Unity.Burst;
 using Unity.Mathematics;
-using System.Diagnostics;
 
 [BurstCompile]
 public partial struct AirflowSimCalculationSystem : ISystem
@@ -25,8 +24,7 @@ public partial struct AirflowSimCalculationSystem : ISystem
         pSystemState.RequireForUpdate<Particle>();
         doOnce = true;
 
-        EntityQueryBuilder entityQueryDesc = new(Allocator.Temp);
-        entityQueryDesc.WithAll<LocalTransform, Particle>();
+        EntityQueryBuilder entityQueryDesc = new EntityQueryBuilder(Allocator.Temp).WithAll<LocalTransform, Particle>();
         query = pSystemState.GetEntityQuery(entityQueryDesc);
         entityQueryDesc.Dispose();
     }
@@ -38,7 +36,7 @@ public partial struct AirflowSimCalculationSystem : ISystem
 
         InteractionInput input = SystemAPI.GetSingleton<InteractionInput>();
 
-        AirflowSimCalculationJob airflowSimCalculationJob = new()
+        AirflowSimCalculationJob airflowSimCalculationJob = new AirflowSimCalculationJob
         {
             allParticles = query.ToComponentDataArray<Particle>(Allocator.TempJob),
             allParticleLTs = query.ToComponentDataArray<LocalTransform>(Allocator.TempJob),
@@ -57,54 +55,50 @@ public partial struct AirflowSimCalculationSystem : ISystem
 
     private void Init(ref SystemState pSystemState)
     {
-        if (doOnce)
+        if (!doOnce)
+            return;
+
+        airflowSimSettings = SystemAPI.GetSingleton<AirflowSimSettings>();
+
+        float r = airflowSimSettings.smoothingRadius;
+        float r2 = r * r;
+        float r4 = r2 * r2;
+        float r5 = r4 * r;
+        float r8 = r4 * r4;
+
+        float invPi = 1f / math.PI;
+        spikyPow2ScalingFactor = 6f * invPi / r4;
+        spikyPow3ScalingFactor = 10f * invPi / r5;
+
+        spikyPow2DerivativeScalingFactor = 12f * invPi / r4;
+        spikyPow3DerivativeScalingFactor = 30f * invPi / r5;
+
+        poly6ScalingFactor = 4f * invPi / r8;
+
+        var entities = query.ToEntityArray(Allocator.Temp);
+        var particles = query.ToComponentDataArray<Particle>(Allocator.Temp);
+        var localtransforms = query.ToComponentDataArray<LocalTransform>(Allocator.Temp);
+        float radius = airflowSimSettings.smoothingRadius;
+
+        for (int i = 0; i < particles.Length; i++)
         {
-            airflowSimSettings = SystemAPI.GetSingleton<AirflowSimSettings>();
+            float density = radius * radius * spikyPow2ScalingFactor;
+            float nearDensity = radius * radius * radius * spikyPow3ScalingFactor;
 
-            spikyPow2ScalingFactor = 6 / (math.PI * math.pow(airflowSimSettings.smoothingRadius, 4));
-            spikyPow3ScalingFactor = 10 / (math.PI * math.pow(airflowSimSettings.smoothingRadius, 5));
+            Particle p = particles[i];
+            p.density = density;
+            p.densityNear = nearDensity;
+            p.predictedPosition = new float2(localtransforms[i].Position.x, localtransforms[i].Position.y);
+            p.velocity = float2.zero;
 
-            spikyPow2DerivativeScalingFactor = 12 / (math.pow(airflowSimSettings.smoothingRadius, 4) * math.PI);
-            spikyPow3DerivativeScalingFactor = 30 / (math.pow(airflowSimSettings.smoothingRadius, 5) * math.PI);
-
-            poly6ScalingFactor = 4 / (math.PI * math.pow(airflowSimSettings.smoothingRadius, 8));
-
-            // Initialize density fields for all particles (self-contribution using kernels at dst = 0)
-            // This ensures particles have sensible starting density values before the job runs.
-            var entities = query.ToEntityArray(Allocator.Temp);
-            var particles = query.ToComponentDataArray<Particle>(Allocator.Temp);
-            var localtransforms = query.ToComponentDataArray<LocalTransform>(Allocator.Temp);
-            for (int i = 0; i < particles.Length; i++)
-            {
-                // self-distance = 0
-                float dst = 0f;
-                float radius = airflowSimSettings.smoothingRadius;
-
-                float density = 0f;
-                float nearDensity = 0f;
-
-                if (dst < radius)
-                {
-                    float v = radius - dst; // == radius
-                    density = v * v * spikyPow2ScalingFactor;
-                    nearDensity = v * v * v * spikyPow3ScalingFactor;
-                }
-
-                Particle p = particles[i];
-                p.density = density;
-                p.densityNear = nearDensity;
-                p.predictedPosition = new float2(localtransforms[i].Position.x, localtransforms[i].Position.y);
-                p.velocity = float2.zero;
-
-                // write back
-                pSystemState.EntityManager.SetComponentData(entities[i], p);
-            }
-            entities.Dispose();
-            particles.Dispose();
-            localtransforms.Dispose();
-
-            doOnce = false;
+            pSystemState.EntityManager.SetComponentData(entities[i], p);
         }
+
+        entities.Dispose();
+        particles.Dispose();
+        localtransforms.Dispose();
+
+        doOnce = false;
     }
 }
 

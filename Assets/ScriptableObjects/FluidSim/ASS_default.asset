@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13aeed33dc939a439c3fb67f8b6f25c, type: 3}
   m_Name: ASS_default
   m_EditorClassIdentifier: Assembly-CSharp::AirflowSimSettingsSO
-  smoothingRadius: 2
+  smoothingRadius: 1
   targetDensity: 20
   pressureMultiplier: 0.1
   nearPressureMultiplier: 0.05
   gravity: 0
   collisionDampening: 0.9
-  viscosityStrength: 0.001
+  viscosityStrength: 0.005
   boundsSize: {x: 16, y: 8}
-  interactionInputStrength: 30
+  interactionInputStrength: 10
   interactionInputRadius: 0.5
