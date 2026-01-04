@@ -9,8 +9,9 @@ using Unity.Transforms;
 [BurstCompile]
 public partial struct AirflowSimCalculationJob : IJobEntity
 {
-    [DeallocateOnJobCompletion][ReadOnly] public NativeArray<Particle> allParticles;
-    [DeallocateOnJobCompletion][ReadOnly] public NativeArray<LocalTransform> allParticleLTs;
+    [ReadOnly] public NativeArray<Particle> allParticles;
+    [ReadOnly] public NativeArray<LocalTransform> allParticleLTs;
+    [ReadOnly] public NativeParallelMultiHashMap<int, int> spatialHashMap;
 
     [ReadOnly] public CollisionWorld collisionWorld;
     [ReadOnly] public AirflowSimSettings airflowSimSettings;
@@ -21,6 +22,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     [ReadOnly] public float spikyPow3DerivativeScalingFactor;
     [ReadOnly] public float poly6ScalingFactor;
     [ReadOnly] public InteractionInput input;
+    [ReadOnly] public float cellSize;
 
     [BurstCompile]
     public void Execute(ref Particle pParticleA, ref LocalTransform pLocalTransformA, ref URPMaterialPropertyBaseColor color)
@@ -51,48 +53,67 @@ public partial struct AirflowSimCalculationJob : IJobEntity
 
         const float kEpsilon = 1e-6f;
 
-        for (int i = 0; i < allParticles.Length; i++)
+        // Get the cell for this particle's predicted position
+        int2 centerCell = GetCell(predictedPos);
+
+        // Iterate through neighboring cells (3x3 grid around center cell)
+        for (int dx = -1; dx <= 1; dx++)
         {
-            Particle pB = allParticles[i];
-            if (pB.id == pParticleA.id)
-                continue;
+            for (int dy = -1; dy <= 1; dy++)
+            {
+                int2 neighborCell = new int2(centerCell.x + dx, centerCell.y + dy);
+                int hash = HashCell(neighborCell);
 
-            LocalTransform ltB = allParticleLTs[i];
-            float2 bPos2 = new float2(ltB.Position.x, ltB.Position.y);
-            float2 offset = bPos2 - predictedPos;
-            float sqrDst = math.dot(offset, offset);
-            if (sqrDst > sqrRadius)
-                continue;
+                // Iterate through all particles in this cell
+                if (spatialHashMap.TryGetFirstValue(hash, out int neighborIndex, out var iterator))
+                {
+                    do
+                    {
+                        Particle pB = allParticles[neighborIndex];
+                        if (pB.id == pParticleA.id)
+                            continue;
 
-            float dst = math.sqrt(sqrDst);
+                        LocalTransform ltB = allParticleLTs[neighborIndex];
+                        float2 bPos2 = new float2(ltB.Position.x, ltB.Position.y);
+                        float2 bPredictedPos = bPos2 + pB.velocity * predictionFactor;
+                        float2 offset = bPredictedPos - predictedPos;
+                        float sqrDst = math.dot(offset, offset);
+                        if (sqrDst > sqrRadius)
+                            continue;
 
-            // Densities
-            float k2 = SpikyKernelPow2(dst, radius);
-            float k3 = SpikyKernelPow3(dst, radius);
-            totalDensity += k2;
-            totalNearDensity += k3;
+                        float dst = math.sqrt(sqrDst);
 
-            // Pressure forces
-            float neighbourDensity = pB.density;
-            float neighbourNearDensity = pB.densityNear;
-            float neighbourPressure = PressureFromDensity(neighbourDensity);
-            float neighbourNearPressure = NearPressureFromDensity(neighbourNearDensity);
+                        // Densities
+                        float k2 = SpikyKernelPow2(dst, radius);
+                        float k3 = SpikyKernelPow3(dst, radius);
+                        totalDensity += k2;
+                        totalNearDensity += k3;
 
-            float sharedPressure = (basePressureA + neighbourPressure) * 0.5f;
-            float sharedNearPressure = (baseNearPressureA + neighbourNearPressure) * 0.5f;
+                        // Pressure forces
+                        float neighbourDensity = pB.density;
+                        float neighbourNearDensity = pB.densityNear;
+                        float neighbourPressure = PressureFromDensity(neighbourDensity);
+                        float neighbourNearPressure = NearPressureFromDensity(neighbourNearDensity);
 
-            float denomDensity = math.max(neighbourDensity, kEpsilon);
-            float denomNearDensity = math.max(neighbourNearDensity, kEpsilon);
+                        float sharedPressure = (basePressureA + neighbourPressure) * 0.5f;
+                        float sharedNearPressure = (baseNearPressureA + neighbourNearPressure) * 0.5f;
 
-            float invDst = dst > 0f ? math.rcp(dst) : 0f;
-            float2 dirToNeighbour = dst > 0f ? offset * invDst : new float2(0f, 1f);
+                        float denomDensity = math.max(neighbourDensity, kEpsilon);
+                        float denomNearDensity = math.max(neighbourNearDensity, kEpsilon);
 
-            totalPressureForce += dirToNeighbour * DerivativeSpikyPow2(dst, radius) * sharedPressure / denomDensity;
-            totalPressureForce += dirToNeighbour * DerivativeSpikyPow3(dst, radius) * sharedNearPressure / denomNearDensity;
+                        float invDst = dst > 0f ? math.rcp(dst) : 0f;
+                        float2 dirToNeighbour = dst > 0f ? offset * invDst : new float2(0f, 1f);
 
-            // Viscosity
-            float2 neighbourVelocity = pB.velocity;
-            totalViscosityForce += (neighbourVelocity - pParticleA.velocity) * SmoothingKernelPoly6(dst, radius);
+                        totalPressureForce += dirToNeighbour * DerivativeSpikyPow2(dst, radius) * sharedPressure / denomDensity;
+                        totalPressureForce += dirToNeighbour * DerivativeSpikyPow3(dst, radius) * sharedNearPressure / denomNearDensity;
+
+                        // Viscosity
+                        float2 neighbourVelocity = pB.velocity;
+                        totalViscosityForce += (neighbourVelocity - pParticleA.velocity) * SmoothingKernelPoly6(dst, radius);
+
+                    } while (spatialHashMap.TryGetNextValue(out neighborIndex, ref iterator));
+                }
+            }
         }
 
         // Apply accumulated effects
@@ -125,6 +146,23 @@ public partial struct AirflowSimCalculationJob : IJobEntity
 
         // Color
         ApplySpeedColor(ref color, pParticleA.velocity);
+    }
+
+    private int2 GetCell(float2 position)
+    {
+        return new int2(
+            (int)math.floor(position.x / cellSize),
+            (int)math.floor(position.y / cellSize)
+        );
+    }
+
+    private int HashCell(int2 cell)
+    {
+        // Use prime number hash for better distribution
+        // Same constants as BuildSpatialHashMapJob for consistency
+        const int p1 = 73856093;
+        const int p2 = 19349663;
+        return (cell.x * p1) ^ (cell.y * p2);
     }
 
     private float SpikyKernelPow2(float dst, float radius)

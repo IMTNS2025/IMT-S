@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48945f91550ffa45a04d70bb80d0cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParticleSpawnSettingsAuthoring
-  particleSpawnSettingsSO: {fileID: 11400000, guid: d0f356ecc347bac42a38b8b7eeb201a7, type: 2}
+  particleSpawnSettingsSO: {fileID: 11400000, guid: fa32807920525f14d99f46c643f95d3e, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

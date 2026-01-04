@@ -4,6 +4,7 @@ using Unity.Physics;
 using Unity.Collections;
 using Unity.Burst;
 using Unity.Mathematics;
+using Unity.Jobs;
 
 [BurstCompile]
 public partial struct AirflowSimCalculationSystem : ISystem
@@ -11,7 +12,7 @@ public partial struct AirflowSimCalculationSystem : ISystem
     private EntityQuery query;
     private AirflowSimSettings airflowSimSettings;
     private float spikyPow2ScalingFactor;
-    private float spikyPow3ScalingFactor; 
+    private float spikyPow3ScalingFactor;
     private float spikyPow2DerivativeScalingFactor;
     private float spikyPow3DerivativeScalingFactor;
     private float poly6ScalingFactor;
@@ -36,10 +37,38 @@ public partial struct AirflowSimCalculationSystem : ISystem
 
         InteractionInput input = SystemAPI.GetSingleton<InteractionInput>();
 
-        AirflowSimCalculationJob airflowSimCalculationJob = new ()
+        // Get particle data for spatial hash map construction
+        NativeArray<Particle> allParticles = query.ToComponentDataArray<Particle>(Allocator.TempJob);
+        NativeArray<LocalTransform> allParticleLTs = query.ToComponentDataArray<LocalTransform>(Allocator.TempJob);
+
+        int particleCount = allParticles.Length;
+        float cellSize = airflowSimSettings.smoothingRadius;
+
+        // Create spatial hash map with capacity for expected number of entries
+        // Using TempJob allocator for job lifetime
+        NativeParallelMultiHashMap<int, int> spatialHashMap = new NativeParallelMultiHashMap<int, int>(
+            particleCount * 4, // Account for particles potentially in multiple cells (border cases)
+            Allocator.TempJob
+        );
+
+        // Schedule job to build spatial hash map
+        BuildSpatialHashMapJob buildHashMapJob = new BuildSpatialHashMapJob
         {
-            allParticles = query.ToComponentDataArray<Particle>(Allocator.TempJob),
-            allParticleLTs = query.ToComponentDataArray<LocalTransform>(Allocator.TempJob),
+            particles = allParticles,
+            particleLTs = allParticleLTs,
+            spatialHashMap = spatialHashMap.AsParallelWriter(),
+            cellSize = cellSize,
+            predictionFactor = airflowSimSettings.predictionFactor
+        };
+
+        JobHandle buildHashMapHandle = buildHashMapJob.Schedule(particleCount, 64, pSystemState.Dependency);
+
+        // Schedule the main calculation job after hash map is built
+        AirflowSimCalculationJob airflowSimCalculationJob = new()
+        {
+            allParticles = allParticles,
+            allParticleLTs = allParticleLTs,
+            spatialHashMap = spatialHashMap,
             collisionWorld = SystemAPI.GetSingleton<PhysicsWorldSingleton>().PhysicsWorld.CollisionWorld,
             airflowSimSettings = airflowSimSettings,
             deltaTime = SystemAPI.Time.DeltaTime,
@@ -49,8 +78,23 @@ public partial struct AirflowSimCalculationSystem : ISystem
             spikyPow3DerivativeScalingFactor = spikyPow3DerivativeScalingFactor,
             poly6ScalingFactor = poly6ScalingFactor,
             input = input,
+            cellSize = cellSize
         };
-        pSystemState.Dependency = airflowSimCalculationJob.ScheduleParallel(pSystemState.Dependency);
+
+        JobHandle calculationHandle = airflowSimCalculationJob.ScheduleParallel(buildHashMapHandle);
+
+        // Use the built-in Dispose(JobHandle) method for proper deferred disposal
+        // This schedules the disposal to occur after the calculation job completes
+        JobHandle disposeParticlesHandle = allParticles.Dispose(calculationHandle);
+        JobHandle disposeTransformsHandle = allParticleLTs.Dispose(calculationHandle);
+        JobHandle disposeHashMapHandle = spatialHashMap.Dispose(calculationHandle);
+
+        // Combine all dispose handles into the final dependency
+        pSystemState.Dependency = JobHandle.CombineDependencies(
+            disposeParticlesHandle,
+            disposeTransformsHandle,
+            disposeHashMapHandle
+        );
     }
 
     private void Init(ref SystemState pSystemState)
@@ -99,6 +143,51 @@ public partial struct AirflowSimCalculationSystem : ISystem
         localtransforms.Dispose();
 
         doOnce = false;
+    }
+}
+
+/// <summary>
+/// Job to build the spatial hash map from particle positions.
+/// Uses predicted positions for consistency with neighbor lookups.
+/// </summary>
+[BurstCompile]
+public struct BuildSpatialHashMapJob : IJobParallelFor
+{
+    [ReadOnly] public NativeArray<Particle> particles;
+    [ReadOnly] public NativeArray<LocalTransform> particleLTs;
+    public NativeParallelMultiHashMap<int, int>.ParallelWriter spatialHashMap;
+    public float cellSize;
+    public float predictionFactor;
+
+    public void Execute(int index)
+    {
+        // Calculate predicted position for this particle
+        float2 pos = new float2(particleLTs[index].Position.x, particleLTs[index].Position.y);
+        float2 predictedPos = pos + particles[index].velocity * predictionFactor;
+
+        // Calculate cell coordinates
+        int2 cell = GetCell(predictedPos);
+
+        // Hash the cell and add this particle index to the map
+        int hash = HashCell(cell);
+        spatialHashMap.Add(hash, index);
+    }
+
+    private int2 GetCell(float2 position)
+    {
+        return new int2(
+            (int)math.floor(position.x / cellSize),
+            (int)math.floor(position.y / cellSize)
+        );
+    }
+
+    private int HashCell(int2 cell)
+    {
+        // Use prime number hash for better distribution
+        // Constants chosen to minimize collisions for typical 2D grids
+        const int p1 = 73856093;
+        const int p2 = 19349663;
+        return (cell.x * p1) ^ (cell.y * p2);
     }
 }
 

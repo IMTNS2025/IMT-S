@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13aeed33dc939a439c3fb67f8b6f25c, type: 3}
   m_Name: ASS_AI
   m_EditorClassIdentifier: Assembly-CSharp::AirflowSimSettingsSO
-  smoothingRadius: 1
+  smoothingRadius: 0.5
   targetDensity: 40
   pressureMultiplier: 2
   nearPressureMultiplier: 1
