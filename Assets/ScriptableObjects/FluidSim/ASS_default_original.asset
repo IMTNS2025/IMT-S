@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13aeed33dc939a439c3fb67f8b6f25c, type: 3}
-  m_Name: ASS_default 1
+  m_Name: ASS_default_original
   m_EditorClassIdentifier: Assembly-CSharp::AirflowSimSettingsSO
   smoothingRadius: 2
   targetDensity: 20

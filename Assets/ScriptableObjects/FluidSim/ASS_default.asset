@@ -18,7 +18,7 @@ MonoBehaviour:
   nearPressureMultiplier: 0.05
   gravity: 0
   collisionDampening: 0.9
-  viscosityStrength: 0.005
+  viscosityStrength: 0.02
   boundsSize: {x: 16, y: 8}
   interactionInputStrength: 10
   interactionInputRadius: 0.5
