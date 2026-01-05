@@ -289,63 +289,40 @@ public partial struct AirflowSimCalculationJob : IJobEntity
 
         float2 particlePos = new float2(pos.x, pos.y);
         float obstacleRadius = airflowSimSettings.interactionInputRadius;
+        float2 obstaclePos = input.lineEnd; // Current obstacle position
 
-        // The obstacle sweeps from lineStart to lineEnd
-        float2 lineStart = input.lineStart;
-        float2 lineEnd = input.lineEnd;
-        float2 sweepVec = lineEnd - lineStart;
-        float sweepLenSq = math.dot(sweepVec, sweepVec);
-        float sweepLen = math.sqrt(sweepLenSq);
-
-        // Find closest point on the swept path
-        float t = 0f;
-        if (sweepLenSq > 0.0001f)
-        {
-            t = math.saturate(math.dot(particlePos - lineStart, sweepVec) / sweepLenSq);
-        }
-        float2 closestPoint = lineStart + sweepVec * t;
-
-        // Vector from obstacle to particle
-        float2 toParticle = particlePos - closestPoint;
+        // Simple distance from current obstacle position
+        float2 toParticle = particlePos - obstaclePos;
         float dist = math.length(toParticle);
 
-        // Outside influence radius - no interaction
-        if (dist >= obstacleRadius * 1.5f)
+        // Influence radius
+        float influenceRadius = obstacleRadius * 2.5f;
+
+        // Outside influence - no effect
+        if (dist > influenceRadius)
             return gravityAccel;
 
-        // Radial direction (away from obstacle center)
-        float2 radialDir;
-        if (dist > 1e-5f)
-        {
-            radialDir = toParticle / dist;
-        }
-        else
-        {
-            // Particle at center - push in sweep direction or default
-            if (sweepLen > 0.01f)
-            {
-                radialDir = sweepVec / sweepLen;
-            }
-            else
-            {
-                radialDir = new float2(0f, 1f);
-            }
-        }
+        // Direction from obstacle to particle
+        float2 radialDir = (dist > 1e-5f) ? (toParticle / dist) : new float2(0f, 1f);
 
         float2 totalAccel = float2.zero;
+        float dt = math.max(deltaTime, 1e-5f);
         float baseStrength = airflowSimSettings.interactionInputStrength;
-        float dt = math.max(deltaTime, 0.0001f);
 
-        // === HARD BOUNDARY ENFORCEMENT ===
+        // Normalized distance (0 at center, 1 at influence edge)
+        float normalizedDist = dist / influenceRadius;
+        float proximity = 1f - normalizedDist;
+        proximity = proximity * proximity; // Quadratic falloff
+
+        // === PHASE 1: HARD BOUNDARY - Push particles out of the obstacle ===
         if (dist < obstacleRadius)
         {
             float penetration = obstacleRadius - dist;
-            
-            // Strong push outward - scales with penetration depth
+            // Strong push outward
             float pushStrength = (penetration / obstacleRadius) * baseStrength * 3f;
             totalAccel += radialDir * pushStrength;
-            
-            // Cancel velocity component moving into obstacle
+
+            // Cancel velocity into obstacle
             float velInward = -math.dot(velocity, radialDir);
             if (velInward > 0f)
             {
@@ -353,45 +330,50 @@ public partial struct AirflowSimCalculationJob : IJobEntity
             }
         }
 
-        // === MOVING OBSTACLE DYNAMICS ===
-        if (sweepLen > 0.01f && input.deltaTime > 0.0001f)
+        // === PHASE 2: MOVING OBSTACLE - Push particles in movement direction ===
+        float2 obstacleVel = input.velocity;
+        float obstacleSpeed = math.length(obstacleVel);
+
+        if (obstacleSpeed > 0.5f)
         {
-            float2 moveDir = sweepVec / sweepLen;
-            float obstacleSpeed = sweepLen / input.deltaTime;
-            
-            // Only apply dynamics to particles inside or very close to the obstacle
-            if (dist < obstacleRadius * 1.2f)
+            float2 moveDir = obstacleVel / obstacleSpeed;
+
+            // Clamp speed using maxObstacleSpeed for stability
+            float maxSpeed = airflowSimSettings.maxObstacleSpeed;
+            float clampedSpeed = math.min(obstacleSpeed, maxSpeed);
+            float speedFactor = clampedSpeed / maxSpeed;
+
+            // How much is this particle in the direction of movement?
+            // dotProduct > 0 means particle is ahead, < 0 means behind
+            float dotProduct = math.dot(radialDir, moveDir);
+
+            // FORWARD PUSH: All particles get pushed in movement direction
+            // Stronger for particles ahead, weaker for particles behind
+            float forwardFactor = math.saturate(0.5f + dotProduct * 0.5f); // 0 to 1, with 0.5 at perpendicular
+            float forwardStrength = proximity * forwardFactor * speedFactor * baseStrength * 1.5f;
+            totalAccel += moveDir * forwardStrength;
+
+            // RADIAL PUSH: Push particles outward (around the obstacle)
+            // Stronger for particles perpendicular to movement
+            float perpFactor = 1f - math.abs(dotProduct); // Strongest when perpendicular
+            float radialStrength = proximity * perpFactor * speedFactor * baseStrength * 0.8f;
+            totalAccel += radialDir * radialStrength;
+
+            // EXTRA FORWARD PUSH for particles directly ahead
+            if (dotProduct > 0.5f) // Particle is in front
             {
-                float proximity = 1f - math.saturate((dist - obstacleRadius * 0.5f) / (obstacleRadius * 0.7f));
-                
-                // frontDot: negative = particle is in front, positive = behind
-                float frontDot = math.dot(radialDir, moveDir);
-                
-                // Particles in front get pushed in the movement direction
-                if (frontDot < 0f)
-                {
-                    float frontness = -frontDot;
-                    
-                    // Forward push proportional to obstacle speed
-                    float forwardPush = proximity * frontness * obstacleSpeed * baseStrength * 0.1f;
-                    totalAccel += moveDir * forwardPush;
-                }
-                
-                // Tangential flow for side particles
-                float sideness = 1f - math.abs(frontDot);
-                if (sideness > 0.3f)
-                {
-                    float2 tangent = moveDir - radialDir * frontDot;
-                    float tangentLen = math.length(tangent);
-                    
-                    if (tangentLen > 0.01f)
-                    {
-                        tangent /= tangentLen;
-                        float tangentStrength = proximity * sideness * obstacleSpeed * baseStrength * 0.05f;
-                        totalAccel += tangent * tangentStrength;
-                    }
-                }
+                float aheadBonus = (dotProduct - 0.5f) * 2f; // 0 to 1 for particles ahead
+                float bonusStrength = proximity * aheadBonus * speedFactor * baseStrength * 2f;
+                totalAccel += moveDir * bonusStrength;
             }
+        }
+
+        // Clamp acceleration
+        float maxAccel = baseStrength * 5f;
+        float accelMag = math.length(totalAccel);
+        if (accelMag > maxAccel)
+        {
+            totalAccel *= maxAccel / accelMag;
         }
 
         return gravityAccel + totalAccel;

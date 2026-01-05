@@ -29,6 +29,7 @@ public partial class InteractionInputSystem : SystemBase
     protected override void OnCreate()
     {
         RequireForUpdate<InteractionInput>();
+        RequireForUpdate<AirflowSimSettings>();
     }
 
     protected override void OnStartRunning()
@@ -75,31 +76,52 @@ public partial class InteractionInputSystem : SystemBase
         float2 currentPoint = new float2(worldPos.x, worldPos.y);
 
         float dt = SystemAPI.Time.DeltaTime;
+        
+        // Get max obstacle speed from settings
+        AirflowSimSettings settings = SystemAPI.GetSingleton<AirflowSimSettings>();
+        float maxObstacleSpeed = settings.maxObstacleSpeed;
+        
         float2 velocity = float2.zero;
         float speed = 0f;
+        float2 clampedCurrentPoint = currentPoint;
         
         // Calculate obstacle velocity from movement between frames
         if (wasActiveLastFrame && dt > 0f)
         {
             float2 delta = currentPoint - previousPoint;
-            velocity = delta / dt;
-            speed = math.length(velocity);
+            float deltaLength = math.length(delta);
+            float rawSpeed = deltaLength / dt;
+            
+            // Clamp the obstacle speed - if moving too fast, only move in that direction up to max speed
+            if (rawSpeed > maxObstacleSpeed && deltaLength > 0f)
+            {
+                float2 direction = delta / deltaLength;
+                float clampedDelta = maxObstacleSpeed * dt;
+                clampedCurrentPoint = previousPoint + direction * clampedDelta;
+                velocity = direction * maxObstacleSpeed;
+                speed = maxObstacleSpeed;
+            }
+            else
+            {
+                velocity = delta / dt;
+                speed = rawSpeed;
+            }
         }
 
         // Obstacle is always active at current position when input is pressed
         // For continuous collision, we pass the swept path from previous to current position
         InteractionInput newInput = new InteractionInput
         {
-            position = currentPoint,
+            position = clampedCurrentPoint,
             velocity = velocity,
             speed = speed,
-            lineStart = wasActiveLastFrame ? previousPoint : currentPoint,
-            lineEnd = currentPoint,
+            lineStart = wasActiveLastFrame ? previousPoint : clampedCurrentPoint,
+            lineEnd = clampedCurrentPoint,
             deltaTime = dt,
             isActive = true
         };
 
-        previousPoint = currentPoint;
+        previousPoint = clampedCurrentPoint;
         wasActiveLastFrame = true;
 
         SystemAPI.SetSingleton(newInput);

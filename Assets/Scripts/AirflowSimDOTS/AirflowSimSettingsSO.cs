@@ -39,6 +39,9 @@ public class AirflowSimSettingsSO : ScriptableObject
     [Tooltip("Lower values create gentler disturbances. Recommended: 30-60 for air")]
     public float interactionInputStrength = 45f;
     public float interactionInputRadius = 2f;
+    
+    [Tooltip("Maximum speed the obstacle can move (units/second). Higher input speeds are clamped to this value.")]
+    public float maxObstacleSpeed = 10f;
 
     [Header("Particle Behavior")]
     [Tooltip("Maximum velocity a particle can have (units/second)")]
