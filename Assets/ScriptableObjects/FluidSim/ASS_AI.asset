@@ -20,10 +20,10 @@ MonoBehaviour:
   collisionDampening: 0.85
   viscosityStrength: 0.006
   boundsSize: {x: 16, y: 8}
-  interactionInputStrength: 5
+  interactionInputStrength: 20
   interactionInputRadius: 0.5
   maxParticleSpeed: 1000
-  colorGradientMaxSpeed: 1
+  colorGradientMaxSpeed: 2
   slowParticleColor: {r: 0.5, g: 0.7, b: 1, a: 1}
   fastParticleColor: {r: 1, g: 0.3, b: 0, a: 1}
   predictionFactor: 0.09

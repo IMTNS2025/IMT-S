@@ -21,6 +21,11 @@ public partial class InteractionInputSystem : SystemBase
     private float2 previousPoint;
     private bool wasActiveLastFrame;
     
+    /// <summary>
+    /// When true, this system will skip its update and let the SimulatedInputController control the input.
+    /// </summary>
+    public static bool UseSimulatedInput { get; set; }
+    
     protected override void OnCreate()
     {
         RequireForUpdate<InteractionInput>();
@@ -33,6 +38,13 @@ public partial class InteractionInputSystem : SystemBase
 
     protected override void OnUpdate()
     {
+        // Skip update if simulated input is active - the SimulatedInputController handles input
+        if (UseSimulatedInput)
+        {
+            wasActiveLastFrame = false;
+            return;
+        }
+
         if (mainCamera == null)
         {
             mainCamera = Camera.main;

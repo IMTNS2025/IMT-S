@@ -16,5 +16,5 @@ MonoBehaviour:
   particleCount: 16128
   initialVelocity: {x: 0, y: 0}
   spawnCenter: {x: 0, y: 0}
-  spawnSize: {x: 15, y: 7.5}
+  spawnSize: {x: 16, y: 8}
   jitterStrength: 0.025

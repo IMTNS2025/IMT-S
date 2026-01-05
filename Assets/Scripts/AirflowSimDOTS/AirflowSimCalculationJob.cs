@@ -309,8 +309,8 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         float2 toParticle = particlePos - closestPoint;
         float dist = math.length(toParticle);
 
-        // Outside influence radius
-        if (dist >= obstacleRadius)
+        // Outside influence radius - no interaction
+        if (dist >= obstacleRadius * 1.5f)
             return gravityAccel;
 
         // Radial direction (away from obstacle center)
@@ -332,31 +332,25 @@ public partial struct AirflowSimCalculationJob : IJobEntity
             }
         }
 
-        float2 totalForce = float2.zero;
+        float2 totalAccel = float2.zero;
         float baseStrength = airflowSimSettings.interactionInputStrength;
         float dt = math.max(deltaTime, 0.0001f);
 
-        // === SOLID BOUNDARY - VELOCITY REJECTION ===
-        // Calculate how much the particle is inside the obstacle
-        float overlap = obstacleRadius - dist;
-        float normalizedOverlap = overlap / obstacleRadius; // 0 at edge, 1 at center
-        
-        // Calculate the velocity needed to push the particle to the boundary
-        // This creates a hard constraint - particles cannot stay inside
-        float pushOutSpeed = overlap / dt; // Speed needed to exit in one frame
-        
-        // Apply as acceleration (will be multiplied by dt in Execute, giving us the velocity)
-        // Scale by normalizedOverlap^2 for smoother edge, stronger center
-        float boundaryAccel = pushOutSpeed * normalizedOverlap * baseStrength * 0.1f;
-        totalForce += radialDir * boundaryAccel;
-
-        // Also reject velocity component pointing into the obstacle
-        float velIntoObstacle = -math.dot(velocity, radialDir);
-        if (velIntoObstacle > 0f)
+        // === HARD BOUNDARY ENFORCEMENT ===
+        if (dist < obstacleRadius)
         {
-            // Particle is moving into obstacle - reflect/reject this velocity
-            float rejectAccel = velIntoObstacle / dt * normalizedOverlap;
-            totalForce += radialDir * rejectAccel;
+            float penetration = obstacleRadius - dist;
+            
+            // Strong push outward - scales with penetration depth
+            float pushStrength = (penetration / obstacleRadius) * baseStrength * 3f;
+            totalAccel += radialDir * pushStrength;
+            
+            // Cancel velocity component moving into obstacle
+            float velInward = -math.dot(velocity, radialDir);
+            if (velInward > 0f)
+            {
+                totalAccel += radialDir * velInward / dt;
+            }
         }
 
         // === MOVING OBSTACLE DYNAMICS ===
@@ -365,36 +359,42 @@ public partial struct AirflowSimCalculationJob : IJobEntity
             float2 moveDir = sweepVec / sweepLen;
             float obstacleSpeed = sweepLen / input.deltaTime;
             
-            // frontDot: negative = particle is in front, positive = behind
-            float frontDot = math.dot(radialDir, moveDir);
-            
-            // Particles in front get pushed in the movement direction
-            if (frontDot < 0f)
+            // Only apply dynamics to particles inside or very close to the obstacle
+            if (dist < obstacleRadius * 1.2f)
             {
-                float frontness = -frontDot;
+                float proximity = 1f - math.saturate((dist - obstacleRadius * 0.5f) / (obstacleRadius * 0.7f));
                 
-                // Forward push proportional to obstacle speed
-                float forwardPush = normalizedOverlap * frontness * obstacleSpeed;
-                totalForce += moveDir * forwardPush / dt;
-            }
-            
-            // Tangential flow for side particles
-            float sideness = 1f - math.abs(frontDot);
-            if (sideness > 0.3f)
-            {
-                float2 tangent = moveDir - radialDir * frontDot;
-                float tangentLen = math.length(tangent);
+                // frontDot: negative = particle is in front, positive = behind
+                float frontDot = math.dot(radialDir, moveDir);
                 
-                if (tangentLen > 0.01f)
+                // Particles in front get pushed in the movement direction
+                if (frontDot < 0f)
                 {
-                    tangent /= tangentLen;
-                    float tangentStrength = normalizedOverlap * sideness * obstacleSpeed * 0.3f;
-                    totalForce += tangent * tangentStrength / dt;
+                    float frontness = -frontDot;
+                    
+                    // Forward push proportional to obstacle speed
+                    float forwardPush = proximity * frontness * obstacleSpeed * baseStrength * 0.1f;
+                    totalAccel += moveDir * forwardPush;
+                }
+                
+                // Tangential flow for side particles
+                float sideness = 1f - math.abs(frontDot);
+                if (sideness > 0.3f)
+                {
+                    float2 tangent = moveDir - radialDir * frontDot;
+                    float tangentLen = math.length(tangent);
+                    
+                    if (tangentLen > 0.01f)
+                    {
+                        tangent /= tangentLen;
+                        float tangentStrength = proximity * sideness * obstacleSpeed * baseStrength * 0.05f;
+                        totalAccel += tangent * tangentStrength;
+                    }
                 }
             }
         }
 
-        return gravityAccel + totalForce;
+        return gravityAccel + totalAccel;
     }
 
     private void ApplySpeedColor(ref URPMaterialPropertyBaseColor color, float2 velocity)
