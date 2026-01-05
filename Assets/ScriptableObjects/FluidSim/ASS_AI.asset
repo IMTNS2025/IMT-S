@@ -13,18 +13,17 @@ MonoBehaviour:
   m_Name: ASS_AI
   m_EditorClassIdentifier: Assembly-CSharp::AirflowSimSettingsSO
   smoothingRadius: 0.5
-  targetDensity: 40
+  targetDensity: 35
   pressureMultiplier: 2
   nearPressureMultiplier: 1
   gravity: 0
   collisionDampening: 0.85
-  viscosityStrength: 0.006
+  viscosityStrength: 0.005
   boundsSize: {x: 16, y: 8}
   interactionInputStrength: 40
-  interactionInputRadius: 0.3
-  maxObstacleSpeed: 10
-  maxParticleSpeed: 1000
-  colorGradientMaxSpeed: 2
+  interactionInputRadius: 0.4
+  maxObstacleSpeed: 5
+  colorGradientMaxSpeed: 5
   slowParticleColor: {r: 0.5, g: 0.7, b: 1, a: 1}
   fastParticleColor: {r: 1, g: 0.3, b: 0, a: 1}
   predictionFactor: 0.09

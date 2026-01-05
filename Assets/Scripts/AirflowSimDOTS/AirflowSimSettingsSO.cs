@@ -43,9 +43,6 @@ public class AirflowSimSettingsSO : ScriptableObject
     [Tooltip("Maximum speed the obstacle can move (units/second). Higher input speeds are clamped to this value.")]
     public float maxObstacleSpeed = 10f;
 
-    [Header("Particle Behavior")]
-    [Tooltip("Maximum velocity a particle can have (units/second)")]
-    public float maxParticleSpeed = 15f;
 
     [Header("Visualization")]
     [Tooltip("Speed at which particles show the 'fast' color (should be lower than max speed)")]
@@ -61,5 +58,5 @@ public class AirflowSimSettingsSO : ScriptableObject
     [Header("Simulation Advanced")]
     [Tooltip("Prediction time factor for position prediction (1/120 = ~0.0083)")]
     [Range(0.001f, 0.1f)]
-    public float predictionFactor = 0.00833f; // 1f / 120f
+    [HideInInspector] public float predictionFactor = 0.00833f; // 1f / 120f
 }

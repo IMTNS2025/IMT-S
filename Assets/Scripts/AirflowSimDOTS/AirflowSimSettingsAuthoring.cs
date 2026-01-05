@@ -31,7 +31,6 @@ public class AirflowSimSettingsAuthoring : MonoBehaviour
                 interactionInputStrength = pAuthoring.airflowSimSettingsSO.interactionInputStrength,
                 interactionInputRadius = pAuthoring.airflowSimSettingsSO.interactionInputRadius,
                 maxObstacleSpeed = pAuthoring.airflowSimSettingsSO.maxObstacleSpeed,
-                maxParticleSpeed = pAuthoring.airflowSimSettingsSO.maxParticleSpeed,
                 colorGradientMaxSpeed = pAuthoring.airflowSimSettingsSO.colorGradientMaxSpeed,
                 slowParticleColor = new float3(slowColor.r, slowColor.g, slowColor.b),
                 fastParticleColor = new float3(fastColor.r, fastColor.g, fastColor.b),
@@ -56,7 +55,6 @@ public struct AirflowSimSettings : IComponentData
     public float interactionInputStrength;
     public float interactionInputRadius;
     public float maxObstacleSpeed;
-    public float maxParticleSpeed;
     public float colorGradientMaxSpeed;
     public float3 slowParticleColor;
     public float3 fastParticleColor;

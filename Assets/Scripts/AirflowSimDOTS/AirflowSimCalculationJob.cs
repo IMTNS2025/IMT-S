@@ -5,6 +5,7 @@ using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Rendering;
 using Unity.Transforms;
+using System.Runtime.CompilerServices;
 
 [BurstCompile]
 public partial struct AirflowSimCalculationJob : IJobEntity
@@ -25,7 +26,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     [ReadOnly] public float cellSize;
 
     [BurstCompile]
-    public void Execute(ref Particle pParticleA, ref LocalTransform pLocalTransformA, ref URPMaterialPropertyBaseColor color)
+    public void Execute(ref Particle pParticleA, ref LocalTransform pLocalTransformA, ref URPMaterialPropertyBaseColor color, [EntityIndexInQuery] int entityIndexInQuery)
     {
         // Phase 0: predicted position (external forces)
         float2 pos2 = new float2(pLocalTransformA.Position.x, pLocalTransformA.Position.y);
@@ -56,65 +57,17 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         // Get the cell for this particle's predicted position
         int2 centerCell = GetCell(predictedPos);
 
-        // Iterate through neighboring cells (3x3 grid around center cell)
-        for (int dx = -1; dx <= 1; dx++)
-        {
-            for (int dy = -1; dy <= 1; dy++)
-            {
-                int2 neighborCell = new int2(centerCell.x + dx, centerCell.y + dy);
-                int hash = HashCell(neighborCell);
-
-                // Iterate through all particles in this cell
-                if (spatialHashMap.TryGetFirstValue(hash, out int neighborIndex, out var iterator))
-                {
-                    do
-                    {
-                        Particle pB = allParticles[neighborIndex];
-                        if (pB.id == pParticleA.id)
-                            continue;
-
-                        LocalTransform ltB = allParticleLTs[neighborIndex];
-                        float2 bPos2 = new float2(ltB.Position.x, ltB.Position.y);
-                        float2 bPredictedPos = bPos2 + pB.velocity * predictionFactor;
-                        float2 offset = bPredictedPos - predictedPos;
-                        float sqrDst = math.dot(offset, offset);
-                        if (sqrDst > sqrRadius)
-                            continue;
-
-                        float dst = math.sqrt(sqrDst);
-
-                        // Densities
-                        float k2 = SpikyKernelPow2(dst, radius);
-                        float k3 = SpikyKernelPow3(dst, radius);
-                        totalDensity += k2;
-                        totalNearDensity += k3;
-
-                        // Pressure forces
-                        float neighbourDensity = pB.density;
-                        float neighbourNearDensity = pB.densityNear;
-                        float neighbourPressure = PressureFromDensity(neighbourDensity);
-                        float neighbourNearPressure = NearPressureFromDensity(neighbourNearDensity);
-
-                        float sharedPressure = (basePressureA + neighbourPressure) * 0.5f;
-                        float sharedNearPressure = (baseNearPressureA + neighbourNearPressure) * 0.5f;
-
-                        float denomDensity = math.max(neighbourDensity, kEpsilon);
-                        float denomNearDensity = math.max(neighbourNearDensity, kEpsilon);
-
-                        float invDst = dst > 0f ? math.rcp(dst) : 0f;
-                        float2 dirToNeighbour = dst > 0f ? offset * invDst : new float2(0f, 1f);
-
-                        totalPressureForce += dirToNeighbour * DerivativeSpikyPow2(dst, radius) * sharedPressure / denomDensity;
-                        totalPressureForce += dirToNeighbour * DerivativeSpikyPow3(dst, radius) * sharedNearPressure / denomNearDensity;
-
-                        // Viscosity
-                        float2 neighbourVelocity = pB.velocity;
-                        totalViscosityForce += (neighbourVelocity - pParticleA.velocity) * SmoothingKernelPoly6(dst, radius);
-
-                    } while (spatialHashMap.TryGetNextValue(out neighborIndex, ref iterator));
-                }
-            }
-        }
+        // Manually unroll 3x3 neighbor cell iteration for better performance
+        // This eliminates loop overhead for a small, fixed iteration count
+        ProcessNeighborCell(centerCell + new int2(-1, -1), predictedPos, predictionFactor, radius, sqrRadius, kEpsilon, basePressureA, baseNearPressureA, ref totalDensity, ref totalNearDensity, ref totalPressureForce, ref totalViscosityForce, entityIndexInQuery, pParticleA.velocity);
+        ProcessNeighborCell(centerCell + new int2(-1,  0), predictedPos, predictionFactor, radius, sqrRadius, kEpsilon, basePressureA, baseNearPressureA, ref totalDensity, ref totalNearDensity, ref totalPressureForce, ref totalViscosityForce, entityIndexInQuery, pParticleA.velocity);
+        ProcessNeighborCell(centerCell + new int2(-1,  1), predictedPos, predictionFactor, radius, sqrRadius, kEpsilon, basePressureA, baseNearPressureA, ref totalDensity, ref totalNearDensity, ref totalPressureForce, ref totalViscosityForce, entityIndexInQuery, pParticleA.velocity);
+        ProcessNeighborCell(centerCell + new int2( 0, -1), predictedPos, predictionFactor, radius, sqrRadius, kEpsilon, basePressureA, baseNearPressureA, ref totalDensity, ref totalNearDensity, ref totalPressureForce, ref totalViscosityForce, entityIndexInQuery, pParticleA.velocity);
+        ProcessNeighborCell(centerCell + new int2( 0,  0), predictedPos, predictionFactor, radius, sqrRadius, kEpsilon, basePressureA, baseNearPressureA, ref totalDensity, ref totalNearDensity, ref totalPressureForce, ref totalViscosityForce, entityIndexInQuery, pParticleA.velocity);
+        ProcessNeighborCell(centerCell + new int2( 0,  1), predictedPos, predictionFactor, radius, sqrRadius, kEpsilon, basePressureA, baseNearPressureA, ref totalDensity, ref totalNearDensity, ref totalPressureForce, ref totalViscosityForce, entityIndexInQuery, pParticleA.velocity);
+        ProcessNeighborCell(centerCell + new int2( 1, -1), predictedPos, predictionFactor, radius, sqrRadius, kEpsilon, basePressureA, baseNearPressureA, ref totalDensity, ref totalNearDensity, ref totalPressureForce, ref totalViscosityForce, entityIndexInQuery, pParticleA.velocity);
+        ProcessNeighborCell(centerCell + new int2( 1,  0), predictedPos, predictionFactor, radius, sqrRadius, kEpsilon, basePressureA, baseNearPressureA, ref totalDensity, ref totalNearDensity, ref totalPressureForce, ref totalViscosityForce, entityIndexInQuery, pParticleA.velocity);
+        ProcessNeighborCell(centerCell + new int2( 1,  1), predictedPos, predictionFactor, radius, sqrRadius, kEpsilon, basePressureA, baseNearPressureA, ref totalDensity, ref totalNearDensity, ref totalPressureForce, ref totalViscosityForce, entityIndexInQuery, pParticleA.velocity);
 
         // Apply accumulated effects
         pParticleA.density = totalDensity;
@@ -126,15 +79,6 @@ public partial struct AirflowSimCalculationJob : IJobEntity
 
         float2 viscosityVel = airflowSimSettings.viscosityStrength * totalViscosityForce;
         pParticleA.velocity += viscosityVel * deltaTime;
-
-        // Clamp maximum velocity to prevent unrealistic speeds
-        float maxSpeed = airflowSimSettings.maxParticleSpeed;
-        float speedSq = math.lengthsq(pParticleA.velocity);
-        if (speedSq > maxSpeed * maxSpeed)
-        {
-            float speed = math.sqrt(speedSq);
-            pParticleA.velocity = pParticleA.velocity * (maxSpeed / speed);
-        }
 
         // Integrate position
         pos2 += pParticleA.velocity * deltaTime;
@@ -148,6 +92,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         ApplySpeedColor(ref color, pParticleA.velocity);
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private int2 GetCell(float2 position)
     {
         return new int2(
@@ -156,6 +101,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         );
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private int HashCell(int2 cell)
     {
         // Use prime number hash with addition to avoid XOR symmetry issues
@@ -168,6 +114,66 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         return ((cell.x * p1) + (cell.y * p2) + offset);
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    private void ProcessNeighborCell(int2 neighborCell, float2 predictedPos, float predictionFactor, float radius, float sqrRadius, 
+        float kEpsilon, float basePressureA, float baseNearPressureA, 
+        ref float totalDensity, ref float totalNearDensity, ref float2 totalPressureForce, ref float2 totalViscosityForce, 
+        int entityIndexInQuery, float2 particleVelocity)
+    {
+        int hash = HashCell(neighborCell);
+
+        if (spatialHashMap.TryGetFirstValue(hash, out int neighborIndex, out var iterator))
+        {
+            do
+            {
+                // Skip self-interaction using entity index
+                if (neighborIndex == entityIndexInQuery)
+                    continue;
+
+                Particle pB = allParticles[neighborIndex];
+                LocalTransform ltB = allParticleLTs[neighborIndex];
+                float2 bPos2 = new float2(ltB.Position.x, ltB.Position.y);
+                float2 bPredictedPos = bPos2 + pB.velocity * predictionFactor;
+                float2 offset = bPredictedPos - predictedPos;
+                float sqrDst = math.dot(offset, offset);
+                if (sqrDst > sqrRadius)
+                    continue;
+
+                float dst = math.sqrt(sqrDst);
+
+                // Densities
+                float k2 = SpikyKernelPow2(dst, radius);
+                float k3 = SpikyKernelPow3(dst, radius);
+                totalDensity += k2;
+                totalNearDensity += k3;
+
+                // Pressure forces
+                float neighbourDensity = pB.density;
+                float neighbourNearDensity = pB.densityNear;
+                float neighbourPressure = PressureFromDensity(neighbourDensity);
+                float neighbourNearPressure = NearPressureFromDensity(neighbourNearDensity);
+
+                float sharedPressure = (basePressureA + neighbourPressure) * 0.5f;
+                float sharedNearPressure = (baseNearPressureA + neighbourNearPressure) * 0.5f;
+
+                // Use reciprocal to avoid division
+                float invDenomDensity = math.rcp(math.max(neighbourDensity, kEpsilon));
+                float invDenomNearDensity = math.rcp(math.max(neighbourNearDensity, kEpsilon));
+
+                float invDst = dst > 0f ? math.rcp(dst) : 0f;
+                float2 dirToNeighbour = dst > 0f ? offset * invDst : new float2(0f, 1f);
+
+                totalPressureForce += dirToNeighbour * DerivativeSpikyPow2(dst, radius) * sharedPressure * invDenomDensity;
+                totalPressureForce += dirToNeighbour * DerivativeSpikyPow3(dst, radius) * sharedNearPressure * invDenomNearDensity;
+
+                // Viscosity
+                totalViscosityForce += (pB.velocity - particleVelocity) * SmoothingKernelPoly6(dst, radius);
+
+            } while (spatialHashMap.TryGetNextValue(out neighborIndex, ref iterator));
+        }
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private float SpikyKernelPow2(float dst, float radius)
     {
         if (dst < radius)
@@ -178,6 +184,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         return 0f;
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private float SpikyKernelPow3(float dst, float radius)
     {
         if (dst < radius)
@@ -188,6 +195,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         return 0f;
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private float DerivativeSpikyPow2(float dst, float radius)
     {
         if (dst <= radius)
@@ -198,6 +206,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         return 0f;
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private float DerivativeSpikyPow3(float dst, float radius)
     {
         if (dst <= radius)
@@ -208,16 +217,19 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         return 0f;
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private float PressureFromDensity(float density)
     {
         return (density - airflowSimSettings.targetDensity) * airflowSimSettings.pressureMultiplier;
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private float NearPressureFromDensity(float nearDensity)
     {
         return airflowSimSettings.nearPressureMultiplier * nearDensity;
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private float SmoothingKernelPoly6(float dst, float radius)
     {
         if (dst < radius)
@@ -280,111 +292,116 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         }
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private float2 ExternalForces(float3 pos, float2 velocity)
     {
         float2 gravityAccel = new float2(0f, airflowSimSettings.gravity);
 
+        // Early exit if no interaction
         if (!input.isActive)
             return gravityAccel;
 
         float2 particlePos = new float2(pos.x, pos.y);
         float obstacleRadius = airflowSimSettings.interactionInputRadius;
-        float2 obstaclePos = input.lineEnd; // Current obstacle position
+        float2 obstaclePos = input.lineEnd;
 
         // Simple distance from current obstacle position
         float2 toParticle = particlePos - obstaclePos;
-        float dist = math.length(toParticle);
+        float sqrDist = math.dot(toParticle, toParticle);
 
         // Influence radius
         float influenceRadius = obstacleRadius * 2.5f;
+        float sqrInfluenceRadius = influenceRadius * influenceRadius;
 
-        // Outside influence - no effect
-        if (dist > influenceRadius)
+        // Early exit if outside influence
+        if (sqrDist > sqrInfluenceRadius)
             return gravityAccel;
 
+        float dist = math.sqrt(sqrDist);
+        float invDist = dist > 1e-5f ? math.rcp(dist) : 0f;
+        
         // Direction from obstacle to particle
-        float2 radialDir = (dist > 1e-5f) ? (toParticle / dist) : new float2(0f, 1f);
+        float2 radialDir = math.select(new float2(0f, 1f), toParticle * invDist, dist > 1e-5f);
 
         float2 totalAccel = float2.zero;
         float dt = math.max(deltaTime, 1e-5f);
         float baseStrength = airflowSimSettings.interactionInputStrength;
 
         // Normalized distance (0 at center, 1 at influence edge)
-        float normalizedDist = dist / influenceRadius;
+        float normalizedDist = dist * math.rcp(influenceRadius);
         float proximity = 1f - normalizedDist;
         proximity = proximity * proximity; // Quadratic falloff
 
         // === PHASE 1: HARD BOUNDARY - Push particles out of the obstacle ===
-        if (dist < obstacleRadius)
+        bool isInsideObstacle = dist < obstacleRadius;
+        if (isInsideObstacle)
         {
             float penetration = obstacleRadius - dist;
+            float invObstacleRadius = math.rcp(obstacleRadius);
             // Strong push outward
-            float pushStrength = (penetration / obstacleRadius) * baseStrength * 3f;
+            float pushStrength = (penetration * invObstacleRadius) * baseStrength * 3f;
             totalAccel += radialDir * pushStrength;
 
             // Cancel velocity into obstacle
             float velInward = -math.dot(velocity, radialDir);
-            if (velInward > 0f)
-            {
-                totalAccel += radialDir * velInward / dt;
-            }
+            totalAccel += radialDir * math.max(velInward * math.rcp(dt), 0f);
         }
 
         // === PHASE 2: MOVING OBSTACLE - Push particles in movement direction ===
         float2 obstacleVel = input.velocity;
-        float obstacleSpeed = math.length(obstacleVel);
+        float obstacleSpeedSq = math.lengthsq(obstacleVel);
 
-        if (obstacleSpeed > 0.5f)
+        if (obstacleSpeedSq > 0.25f) // 0.5^2 = 0.25
         {
-            float2 moveDir = obstacleVel / obstacleSpeed;
+            float obstacleSpeed = math.sqrt(obstacleSpeedSq);
+            float2 moveDir = obstacleVel * math.rcp(obstacleSpeed);
 
             // Clamp speed using maxObstacleSpeed for stability
             float maxSpeed = airflowSimSettings.maxObstacleSpeed;
             float clampedSpeed = math.min(obstacleSpeed, maxSpeed);
-            float speedFactor = clampedSpeed / maxSpeed;
+            float speedFactor = clampedSpeed * math.rcp(maxSpeed);
 
             // How much is this particle in the direction of movement?
-            // dotProduct > 0 means particle is ahead, < 0 means behind
             float dotProduct = math.dot(radialDir, moveDir);
 
             // FORWARD PUSH: All particles get pushed in movement direction
-            // Stronger for particles ahead, weaker for particles behind
-            float forwardFactor = math.saturate(0.5f + dotProduct * 0.5f); // 0 to 1, with 0.5 at perpendicular
+            float forwardFactor = math.saturate(0.5f + dotProduct * 0.5f);
             float forwardStrength = proximity * forwardFactor * speedFactor * baseStrength * 1.5f;
             totalAccel += moveDir * forwardStrength;
 
             // RADIAL PUSH: Push particles outward (around the obstacle)
-            // Stronger for particles perpendicular to movement
-            float perpFactor = 1f - math.abs(dotProduct); // Strongest when perpendicular
+            float perpFactor = 1f - math.abs(dotProduct);
             float radialStrength = proximity * perpFactor * speedFactor * baseStrength * 0.8f;
             totalAccel += radialDir * radialStrength;
 
             // EXTRA FORWARD PUSH for particles directly ahead
-            if (dotProduct > 0.5f) // Particle is in front
-            {
-                float aheadBonus = (dotProduct - 0.5f) * 2f; // 0 to 1 for particles ahead
-                float bonusStrength = proximity * aheadBonus * speedFactor * baseStrength * 2f;
-                totalAccel += moveDir * bonusStrength;
-            }
+            float aheadBonus = math.max(dotProduct - 0.5f, 0f) * 2f;
+            float bonusStrength = proximity * aheadBonus * speedFactor * baseStrength * 2f;
+            totalAccel += moveDir * bonusStrength;
         }
 
-        // Clamp acceleration
+        // Clamp acceleration using rsqrt for efficiency
         float maxAccel = baseStrength * 5f;
-        float accelMag = math.length(totalAccel);
-        if (accelMag > maxAccel)
+        float accelMagSq = math.lengthsq(totalAccel);
+        float maxAccelSq = maxAccel * maxAccel;
+        
+        if (accelMagSq > maxAccelSq)
         {
-            totalAccel *= maxAccel / accelMag;
+            float invAccelMag = math.rsqrt(accelMagSq);
+            totalAccel *= maxAccel * invAccelMag;
         }
 
         return gravityAccel + totalAccel;
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private void ApplySpeedColor(ref URPMaterialPropertyBaseColor color, float2 velocity)
     {
         float speedSqr = math.lengthsq(velocity);
         float colorMaxSpeed = airflowSimSettings.colorGradientMaxSpeed;
-        float invMaxSpeed = 1f / math.max(colorMaxSpeed, 0.001f); // Avoid division by zero
-        float t = math.saturate(math.sqrt(speedSqr) * invMaxSpeed);
+        float colorMaxSpeedSqr = colorMaxSpeed * colorMaxSpeed;
+        // Avoid sqrt by working with squared values
+        float t = math.saturate(math.sqrt(speedSqr / math.max(colorMaxSpeedSqr, 0.001f)));
 
         float3 slowColor = airflowSimSettings.slowParticleColor;
         float3 fastColor = airflowSimSettings.fastParticleColor;

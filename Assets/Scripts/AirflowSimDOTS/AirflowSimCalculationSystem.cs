@@ -47,13 +47,14 @@ public partial struct AirflowSimCalculationSystem : ISystem
         float cellSize = airflowSimSettings.smoothingRadius;
 
         // Create spatial hash map with capacity for expected number of entries
-        // Using TempJob allocator for job lifetime
+        // Each particle occupies exactly one cell, so we allocate for particleCount
         NativeParallelMultiHashMap<int, int> spatialHashMap = new NativeParallelMultiHashMap<int, int>(
-            particleCount * 4, // Account for particles potentially in multiple cells (border cases)
+            particleCount,
             Allocator.TempJob
         );
 
         // Schedule job to build spatial hash map
+        // Optimized batch size for better cache utilization
         BuildSpatialHashMapJob buildHashMapJob = new BuildSpatialHashMapJob
         {
             particles = allParticles,
@@ -63,7 +64,7 @@ public partial struct AirflowSimCalculationSystem : ISystem
             predictionFactor = airflowSimSettings.predictionFactor
         };
 
-        JobHandle buildHashMapHandle = buildHashMapJob.Schedule(particleCount, 64, pSystemState.Dependency);
+        JobHandle buildHashMapHandle = buildHashMapJob.Schedule(particleCount, 128, pSystemState.Dependency);
 
         // Schedule the main calculation job after hash map is built
         AirflowSimCalculationJob airflowSimCalculationJob = new()
