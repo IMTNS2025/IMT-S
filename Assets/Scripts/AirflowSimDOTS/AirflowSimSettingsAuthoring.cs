@@ -35,12 +35,6 @@ public class AirflowSimSettingsAuthoring : MonoBehaviour
                 slowParticleColor = new float3(slowColor.r, slowColor.g, slowColor.b),
                 fastParticleColor = new float3(fastColor.r, fastColor.g, fastColor.b),
                 predictionFactor = pAuthoring.airflowSimSettingsSO.predictionFactor,
-                movementThreshold = pAuthoring.airflowSimSettingsSO.movementThreshold,
-                velocityLogScale = pAuthoring.airflowSimSettingsSO.velocityLogScale,
-                speedDampingFactor = pAuthoring.airflowSimSettingsSO.speedDampingFactor,
-                wakeForceMultiplier = pAuthoring.airflowSimSettingsSO.wakeForceMultiplier,
-                obstacleDampingFactor = pAuthoring.airflowSimSettingsSO.obstacleDampingFactor,
-                collisionPushEpsilon = pAuthoring.airflowSimSettingsSO.collisionPushEpsilon
             });
         }
     }
@@ -65,10 +59,4 @@ public struct AirflowSimSettings : IComponentData
     public float3 slowParticleColor;
     public float3 fastParticleColor;
     public float predictionFactor;
-    public float movementThreshold;
-    public float velocityLogScale;
-    public float speedDampingFactor;
-    public float wakeForceMultiplier;
-    public float obstacleDampingFactor;
-    public float collisionPushEpsilon;
 }

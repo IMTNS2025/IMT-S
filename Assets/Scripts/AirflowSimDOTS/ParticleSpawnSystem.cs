@@ -12,7 +12,7 @@ partial struct ParticleSpawnSystem : ISystem
         pSystemState.RequireForUpdate<ParticleSpawnSettings>();
     }
 
-    //[BurstCompile]
+    [BurstCompile]
     public void OnUpdate(ref SystemState pSystemState)
     {
         RefRW<ParticleSpawnSettings> pss = SystemAPI.GetSingletonRW<ParticleSpawnSettings>();
@@ -61,15 +61,5 @@ partial struct ParticleSpawnSystem : ISystem
 
         pss.ValueRW.doSpawn = false;
         instiatedEntities.Dispose();
-
-        //float deltaTime = 1 / 60f;
-        //SystemAPI.Time.fixedDeltaTime = deltaTime; 
-
-    }
-
-    [BurstCompile]
-    public void OnDestroy(ref SystemState pSystemState)
-    {
-        
     }
 }

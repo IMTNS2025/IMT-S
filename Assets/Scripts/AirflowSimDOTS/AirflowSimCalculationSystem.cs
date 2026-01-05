@@ -7,6 +7,7 @@ using Unity.Mathematics;
 using Unity.Jobs;
 
 [BurstCompile]
+[UpdateAfter(typeof(InteractionInputSystem))]
 public partial struct AirflowSimCalculationSystem : ISystem
 {
     private EntityQuery query;
@@ -23,6 +24,7 @@ public partial struct AirflowSimCalculationSystem : ISystem
     {
         pSystemState.RequireForUpdate<AirflowSimSettings>();
         pSystemState.RequireForUpdate<Particle>();
+        pSystemState.RequireForUpdate<InteractionInput>();
         doOnce = true;
 
         EntityQueryBuilder entityQueryDesc = new EntityQueryBuilder(Allocator.Temp).WithAll<LocalTransform, Particle>();
@@ -183,11 +185,13 @@ public struct BuildSpatialHashMapJob : IJobParallelFor
 
     private int HashCell(int2 cell)
     {
-        // Use prime number hash for better distribution
-        // Constants chosen to minimize collisions for typical 2D grids
+        // Use prime number hash with addition to avoid XOR symmetry issues
+        // Adding a large prime offset prevents (0,0) from hashing to 0
+        // and reduces collisions for symmetric cell coordinates
         const int p1 = 73856093;
         const int p2 = 19349663;
-        return (cell.x * p1) ^ (cell.y * p2);
+        const int offset = 83492791;
+        return ((cell.x * p1) + (cell.y * p2) + offset);
     }
 }
 

@@ -4,171 +4,103 @@ using Unity.Mathematics;
 
 public class InteractionInputAuthoring : MonoBehaviour
 {
-    [Header("Input Settings")]
-    [Tooltip("Multiplier for velocity-based disturbance (higher = more impact from fast movement)")]
-    [Range(0.1f, 10f)]
-    public float velocityInfluenceMultiplier = 0.8f; // Reduced from 2f
-    
-    [Tooltip("Smoothing factor for velocity (0 = no smoothing, higher = smoother)")]
-    [Range(0f, 0.95f)]
-    public float velocitySmoothing = 0.85f; // Increased from 0.7f
+    private class Baker : Baker<InteractionInputAuthoring>
+    {
+        public override void Bake(InteractionInputAuthoring authoring)
+        {
+            Entity entity = GetEntity(TransformUsageFlags.None);
+            AddComponent(entity, new InteractionInput());
+        }
+    }
+}
 
-    [Tooltip("Maximum input velocity (units/second) - clamps extremely fast movements")]
-    [Range(5f, 100f)]
-    public float maxInputVelocity = 30f;
-
-    private Entity cachedEntity = Entity.Null;
-    private EntityManager entityManager;
+[UpdateInGroup(typeof(InitializationSystemGroup))]
+public partial class InteractionInputSystem : SystemBase
+{
     private Camera mainCamera;
-    private float cachedCameraZ;
-    private float cachedZToPlane;
-    
-    // Track previous position and velocity for delta calculation
     private float2 previousPoint;
-    private float2 smoothedVelocity;
     private bool wasActiveLastFrame;
-
-    void OnEnable()
+    
+    protected override void OnCreate()
     {
-        var world = World.DefaultGameObjectInjectionWorld;
-        if (world == null)
-            return;
+        RequireForUpdate<InteractionInput>();
+    }
 
-        entityManager = world.EntityManager;
-
+    protected override void OnStartRunning()
+    {
         mainCamera = Camera.main;
-        if (mainCamera != null)
-        {
-            cachedCameraZ = mainCamera.transform.position.z;
-            cachedZToPlane = -cachedCameraZ;
-        }
-
-        var query = entityManager.CreateEntityQuery(ComponentType.ReadOnly<InteractionInput>());
-        if (query.IsEmpty)
-        {
-            cachedEntity = entityManager.CreateEntity(typeof(InteractionInput));
-            entityManager.SetComponentData(cachedEntity, new InteractionInput 
-            { 
-                point = float2.zero,
-                previousPoint = float2.zero,
-                velocity = float2.zero,
-                active = false 
-            });
-        }
-        else
-        {
-            cachedEntity = query.GetSingletonEntity();
-        }
-        query.Dispose();
-        
-        // Initialize tracking variables
-        previousPoint = float2.zero;
-        smoothedVelocity = float2.zero;
-        wasActiveLastFrame = false;
     }
 
-    void Update()
+    protected override void OnUpdate()
     {
-        if (entityManager == null || cachedEntity == Entity.Null || mainCamera == null)
-            return;
-
-        bool active = false;
-        Vector3 screenPos = Vector3.zero;
-
-        // Check touch input first
-        if (Input.touchCount > 0)
+        if (mainCamera == null)
         {
-            Touch touch = Input.GetTouch(0);
-            TouchPhase phase = touch.phase;
-            active = phase <= TouchPhase.Stationary;
-
-            if (active)
+            mainCamera = Camera.main;
+            if (mainCamera == null)
             {
-                screenPos = touch.position;
-            }
-        }
-        // Fallback to mouse input
-        else
-        {
-            active = Input.GetMouseButton(0);
-            if (active)
-            {
-                screenPos = Input.mousePosition;
+                SystemAPI.SetSingleton(new InteractionInput());
+                return;
             }
         }
 
-        if (active)
+        bool inputPressed = Input.touchCount > 0
+            ? Input.GetTouch(0).phase <= TouchPhase.Stationary
+            : Input.GetMouseButton(0);
+
+        if (!inputPressed)
         {
-            Vector3 worldPos = mainCamera.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, cachedZToPlane));
-            float2 currentPoint = new float2(worldPos.x, worldPos.y);
-            
-            // Calculate velocity
-            float2 instantVelocity = float2.zero;
-            if (wasActiveLastFrame)
-            {
-                float deltaTime = Time.deltaTime;
-                if (deltaTime > 0.0001f) // Avoid division by near-zero
-                {
-                    instantVelocity = (currentPoint - previousPoint) / deltaTime;
-                    
-                    // Clamp instant velocity to prevent extreme spikes
-                    float instantSpeed = math.length(instantVelocity);
-                    if (instantSpeed > maxInputVelocity)
-                    {
-                        instantVelocity = math.normalize(instantVelocity) * maxInputVelocity;
-                    }
-                }
-            }
-            
-            // Apply smoothing to velocity for more stable interaction
-            smoothedVelocity = math.lerp(instantVelocity, smoothedVelocity, velocitySmoothing);
-            
-            // Clamp smoothed velocity as well (safety measure)
-            float smoothedSpeed = math.length(smoothedVelocity);
-            if (smoothedSpeed > maxInputVelocity)
-            {
-                smoothedVelocity = math.normalize(smoothedVelocity) * maxInputVelocity;
-            }
-            
-            // Store the position from the last frame for path calculation
-            float2 storedPreviousPoint = wasActiveLastFrame ? previousPoint : currentPoint;
-            
-            entityManager.SetComponentData(cachedEntity, new InteractionInput
-            {
-                point = currentPoint,
-                previousPoint = storedPreviousPoint,
-                velocity = smoothedVelocity * velocityInfluenceMultiplier,
-                active = true
-            });
-            
-            previousPoint = currentPoint;
-            wasActiveLastFrame = true;
-        }
-        else
-        {
-            entityManager.SetComponentData(cachedEntity, new InteractionInput
-            {
-                point = float2.zero,
-                previousPoint = float2.zero,
-                velocity = float2.zero,
-                active = false
-            });
-            
-            smoothedVelocity = float2.zero;
             wasActiveLastFrame = false;
+            SystemAPI.SetSingleton(new InteractionInput());
+            return;
         }
-    }
 
-    void OnDisable()
-    {
-        mainCamera = null;
+        Vector3 screenPos = Input.touchCount > 0
+            ? (Vector3)Input.GetTouch(0).position
+            : Input.mousePosition;
+
+        float zDist = -mainCamera.transform.position.z;
+        Vector3 worldPos = mainCamera.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, zDist));
+        float2 currentPoint = new float2(worldPos.x, worldPos.y);
+
+        float dt = SystemAPI.Time.DeltaTime;
+        float2 velocity = float2.zero;
+        float speed = 0f;
+        
+        // Calculate obstacle velocity from movement between frames
+        if (wasActiveLastFrame && dt > 0f)
+        {
+            float2 delta = currentPoint - previousPoint;
+            velocity = delta / dt;
+            speed = math.length(velocity);
+        }
+
+        // Obstacle is always active at current position when input is pressed
+        // For continuous collision, we pass the swept path from previous to current position
+        InteractionInput newInput = new InteractionInput
+        {
+            position = currentPoint,
+            velocity = velocity,
+            speed = speed,
+            lineStart = wasActiveLastFrame ? previousPoint : currentPoint,
+            lineEnd = currentPoint,
+            deltaTime = dt,
+            isActive = true
+        };
+
+        previousPoint = currentPoint;
+        wasActiveLastFrame = true;
+
+        SystemAPI.SetSingleton(newInput);
     }
 }
 
 public struct InteractionInput : IComponentData
 {
-    public float2 point;
-    public float2 previousPoint;
-    public float2 velocity;
-    public bool active;
+    public float2 position;      // Current obstacle position
+    public float2 velocity;      // Obstacle velocity (units per second)
+    public float speed;          // Cached speed magnitude
+    public float2 lineStart;     // Previous frame position (for swept collision)
+    public float2 lineEnd;       // Current frame position (for swept collision)
+    public float deltaTime;      // Frame delta time for interpolation
+    public bool isActive;
 }

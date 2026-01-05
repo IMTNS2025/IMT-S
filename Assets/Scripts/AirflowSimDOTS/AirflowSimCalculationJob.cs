@@ -158,11 +158,14 @@ public partial struct AirflowSimCalculationJob : IJobEntity
 
     private int HashCell(int2 cell)
     {
-        // Use prime number hash for better distribution
+        // Use prime number hash with addition to avoid XOR symmetry issues
+        // Adding a large prime offset prevents (0,0) from hashing to 0
+        // and reduces collisions for symmetric cell coordinates
         // Same constants as BuildSpatialHashMapJob for consistency
         const int p1 = 73856093;
         const int p2 = 19349663;
-        return (cell.x * p1) ^ (cell.y * p2);
+        const int offset = 83492791;
+        return ((cell.x * p1) + (cell.y * p2) + offset);
     }
 
     private float SpikyKernelPow2(float dst, float radius)
@@ -261,7 +264,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
 
         if (collidedX || collidedY)
         {
-            float eps = airflowSimSettings.collisionPushEpsilon;
+            float eps = 0.00001f;
             float pushX = collidedX ? math.sign(clampedRel.x) * eps : 0f;
             float pushY = collidedY ? math.sign(clampedRel.y) * eps : 0f;
 
@@ -281,94 +284,117 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     {
         float2 gravityAccel = new float2(0f, airflowSimSettings.gravity);
 
-        float interactionStrength = airflowSimSettings.interactionInputStrength;
-        if (!input.active || interactionStrength == 0f)
-        {
+        if (!input.isActive)
             return gravityAccel;
-        }
 
         float2 particlePos = new float2(pos.x, pos.y);
-        float interactionRadius = airflowSimSettings.interactionInputRadius;
-        float sqrInteractionRadius = interactionRadius * interactionRadius;
+        float obstacleRadius = airflowSimSettings.interactionInputRadius;
 
-        // Calculate distance to the line segment from previousPoint to point
-        float2 lineStart = input.previousPoint;
-        float2 lineEnd = input.point;
-        float2 lineDir = lineEnd - lineStart;
-        float lineLength = math.length(lineDir);
-        
-        float2 closestPoint;
-        float dst;
-        float2 toParticle = particlePos - lineStart;
-        
-        // If the input moved significantly between frames, use line segment distance
-        float movementThreshold = airflowSimSettings.movementThreshold;
-        if (lineLength > movementThreshold)
+        // The obstacle sweeps from lineStart to lineEnd
+        float2 lineStart = input.lineStart;
+        float2 lineEnd = input.lineEnd;
+        float2 sweepVec = lineEnd - lineStart;
+        float sweepLenSq = math.dot(sweepVec, sweepVec);
+        float sweepLen = math.sqrt(sweepLenSq);
+
+        // Find closest point on the swept path
+        float t = 0f;
+        if (sweepLenSq > 0.0001f)
         {
-            // Project particle position onto the line segment
-            float t = math.clamp(math.dot(toParticle, lineDir) / (lineLength * lineLength), 0f, 1f);
-            closestPoint = lineStart + lineDir * t;
-            dst = math.distance(particlePos, closestPoint);
+            t = math.saturate(math.dot(particlePos - lineStart, sweepVec) / sweepLenSq);
+        }
+        float2 closestPoint = lineStart + sweepVec * t;
+
+        // Vector from obstacle to particle
+        float2 toParticle = particlePos - closestPoint;
+        float dist = math.length(toParticle);
+
+        // Outside influence radius
+        if (dist >= obstacleRadius)
+            return gravityAccel;
+
+        // Radial direction (away from obstacle center)
+        float2 radialDir;
+        if (dist > 1e-5f)
+        {
+            radialDir = toParticle / dist;
         }
         else
         {
-            // If barely moved, use simple point distance
-            closestPoint = input.point;
-            dst = math.distance(particlePos, closestPoint);
-        }
-
-        float sqrDst = dst * dst;
-        if (sqrDst >= sqrInteractionRadius)
-        {
-            return gravityAccel;
-        }
-
-        float edgeT = dst / interactionRadius;
-        float centreT = 1f - edgeT;
-
-        // Direction AWAY from obstacle (repulsion instead of attraction)
-        float invDst = dst > 0f ? math.rcp(dst) : 0f;
-        float2 dirAwayFromObstacle = dst > 0f ? (particlePos - closestPoint) * invDst : new float2(0f, 1f);
-
-        // Use logarithmic scaling for velocity influence
-        float inputSpeed = math.length(input.velocity);
-        float velocityLogScale = airflowSimSettings.velocityLogScale;
-        float velocityMultiplier = 1f + math.log(1f + inputSpeed * velocityLogScale);
-        
-        float effectiveStrength = interactionStrength * velocityMultiplier;
-        
-        // Use cubic falloff for sharper obstacle boundary
-        float repulsionForce = effectiveStrength * centreT * centreT * centreT;
-        float2 repulsionAccel = dirAwayFromObstacle * repulsionForce;
-        
-        // Add wake effect - particles inherit some velocity from moving obstacle
-        float currentSpeed = math.length(velocity);
-        float speedDampingFactor = airflowSimSettings.speedDampingFactor;
-        float speedDamping = math.saturate(1f - currentSpeed * speedDampingFactor);
-        
-        // Reduced wake force for faster settling
-        float2 wakeForce = float2.zero;
-        if (lineLength > movementThreshold)
-        {
-            float2 obstacleDirection = math.normalize(lineDir);
-            float dotProduct = math.dot(toParticle, obstacleDirection);
-            if (dotProduct > 0f)
+            // Particle at center - push in sweep direction or default
+            if (sweepLen > 0.01f)
             {
-                float wakeFalloff = math.saturate(dotProduct / lineLength);
-                float wakeMultiplier = airflowSimSettings.wakeForceMultiplier;
-                wakeForce = input.velocity * centreT * wakeMultiplier * speedDamping * wakeFalloff;
+                radialDir = sweepVec / sweepLen;
+            }
+            else
+            {
+                radialDir = new float2(0f, 1f);
             }
         }
+
+        float2 totalForce = float2.zero;
+        float baseStrength = airflowSimSettings.interactionInputStrength;
+        float dt = math.max(deltaTime, 0.0001f);
+
+        // === SOLID BOUNDARY - VELOCITY REJECTION ===
+        // Calculate how much the particle is inside the obstacle
+        float overlap = obstacleRadius - dist;
+        float normalizedOverlap = overlap / obstacleRadius; // 0 at edge, 1 at center
         
-        float2 accel = gravityAccel 
-                     + repulsionAccel
-                     + wakeForce;
+        // Calculate the velocity needed to push the particle to the boundary
+        // This creates a hard constraint - particles cannot stay inside
+        float pushOutSpeed = overlap / dt; // Speed needed to exit in one frame
         
-        // Reduced velocity damping to allow faster recovery
-        float obstacleDamping = airflowSimSettings.obstacleDampingFactor;
-        accel -= velocity * centreT * obstacleDamping;
-        
-        return accel;
+        // Apply as acceleration (will be multiplied by dt in Execute, giving us the velocity)
+        // Scale by normalizedOverlap^2 for smoother edge, stronger center
+        float boundaryAccel = pushOutSpeed * normalizedOverlap * baseStrength * 0.1f;
+        totalForce += radialDir * boundaryAccel;
+
+        // Also reject velocity component pointing into the obstacle
+        float velIntoObstacle = -math.dot(velocity, radialDir);
+        if (velIntoObstacle > 0f)
+        {
+            // Particle is moving into obstacle - reflect/reject this velocity
+            float rejectAccel = velIntoObstacle / dt * normalizedOverlap;
+            totalForce += radialDir * rejectAccel;
+        }
+
+        // === MOVING OBSTACLE DYNAMICS ===
+        if (sweepLen > 0.01f && input.deltaTime > 0.0001f)
+        {
+            float2 moveDir = sweepVec / sweepLen;
+            float obstacleSpeed = sweepLen / input.deltaTime;
+            
+            // frontDot: negative = particle is in front, positive = behind
+            float frontDot = math.dot(radialDir, moveDir);
+            
+            // Particles in front get pushed in the movement direction
+            if (frontDot < 0f)
+            {
+                float frontness = -frontDot;
+                
+                // Forward push proportional to obstacle speed
+                float forwardPush = normalizedOverlap * frontness * obstacleSpeed;
+                totalForce += moveDir * forwardPush / dt;
+            }
+            
+            // Tangential flow for side particles
+            float sideness = 1f - math.abs(frontDot);
+            if (sideness > 0.3f)
+            {
+                float2 tangent = moveDir - radialDir * frontDot;
+                float tangentLen = math.length(tangent);
+                
+                if (tangentLen > 0.01f)
+                {
+                    tangent /= tangentLen;
+                    float tangentStrength = normalizedOverlap * sideness * obstacleSpeed * 0.3f;
+                    totalForce += tangent * tangentStrength / dt;
+                }
+            }
+        }
+
+        return gravityAccel + totalForce;
     }
 
     private void ApplySpeedColor(ref URPMaterialPropertyBaseColor color, float2 velocity)

@@ -59,29 +59,4 @@ public class AirflowSimSettingsSO : ScriptableObject
     [Tooltip("Prediction time factor for position prediction (1/120 = ~0.0083)")]
     [Range(0.001f, 0.1f)]
     public float predictionFactor = 0.00833f; // 1f / 120f
-    
-    [Tooltip("Minimum threshold for line segment movement detection")]
-    [Range(0.0001f, 0.01f)]
-    public float movementThreshold = 0.001f;
-    
-    [Tooltip("Velocity logarithmic scaling factor for input influence")]
-    [Range(0.1f, 2f)]
-    public float velocityLogScale = 0.5f;
-    
-    [Tooltip("Speed damping factor for already-fast particles")]
-    [Range(0f, 1f)]
-    public float speedDampingFactor = 0.3f;
-    
-    [Tooltip("Wake force multiplier behind moving obstacle. Lower = faster settling")]
-    [Range(0f, 0.5f)]
-    public float wakeForceMultiplier = 0.05f; // Reduced from 0.1f for much faster settling
-    
-    [Tooltip("Velocity damping near obstacle. Lower = faster recovery")]
-    [Range(0f, 3f)]
-    public float obstacleDampingFactor = 0.5f; // Reduced from 0.8f for faster recovery
-
-    [Header("Collision Advanced")]
-    [Tooltip("Small push distance when particle collides with boundary")]
-    [Range(0.00001f, 0.001f)]
-    public float collisionPushEpsilon = 0.0001f; // 1e-4f
 }
