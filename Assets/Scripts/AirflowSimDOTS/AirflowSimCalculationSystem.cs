@@ -18,6 +18,7 @@ public partial struct AirflowSimCalculationSystem : ISystem
     private float spikyPow3DerivativeScalingFactor;
     private float poly6ScalingFactor;
     private bool doOnce;
+    private int lastKnownParticleCount;
 
     [BurstCompile]
     public void OnCreate(ref SystemState pSystemState)
@@ -26,6 +27,7 @@ public partial struct AirflowSimCalculationSystem : ISystem
         pSystemState.RequireForUpdate<Particle>();
         pSystemState.RequireForUpdate<InteractionInput>();
         doOnce = true;
+        lastKnownParticleCount = 0;
 
         EntityQueryBuilder entityQueryDesc = new EntityQueryBuilder(Allocator.Temp).WithAll<LocalTransform, Particle>();
         query = pSystemState.GetEntityQuery(entityQueryDesc);
@@ -35,6 +37,15 @@ public partial struct AirflowSimCalculationSystem : ISystem
     [BurstCompile]
     public void OnUpdate(ref SystemState pSystemState)
     {
+        // Check if particle count changed (indicates reload happened)
+        int currentParticleCount = query.CalculateEntityCount();
+        if (currentParticleCount != lastKnownParticleCount)
+        {
+            // Particles were added or removed, need to reinitialize
+            doOnce = true;
+            lastKnownParticleCount = currentParticleCount;
+        }
+
         Init(ref pSystemState);
 
         InteractionInput input = SystemAPI.GetSingleton<InteractionInput>();
@@ -145,6 +156,9 @@ public partial struct AirflowSimCalculationSystem : ISystem
         particles.Dispose();
         localtransforms.Dispose();
 
+        // Update tracked count after initialization
+        lastKnownParticleCount = query.CalculateEntityCount();
+        
         doOnce = false;
     }
 }

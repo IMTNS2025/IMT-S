@@ -4,12 +4,17 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
+[UpdateInGroup(typeof(InitializationSystemGroup))]
+[UpdateAfter(typeof(ParticleReloadSystem))]
 partial struct ParticleSpawnSystem : ISystem
 {
+    private uint randomSeed;
+    
     [BurstCompile]
     public void OnCreate(ref SystemState pSystemState)
     {
         pSystemState.RequireForUpdate<ParticleSpawnSettings>();
+        randomSeed = 42; // Will be updated on first spawn
     }
 
     [BurstCompile]
@@ -18,14 +23,16 @@ partial struct ParticleSpawnSystem : ISystem
         RefRW<ParticleSpawnSettings> pss = SystemAPI.GetSingletonRW<ParticleSpawnSettings>();
         if (!pss.ValueRO.doSpawn) return;
 
-        Random rng = new(42);
+        // Update random seed to ensure variety between spawns
+        randomSeed = randomSeed * 1664525u + 1013904223u; // Linear congruential generator
+        Random rng = new Random(randomSeed);
 
         float2 s = pss.ValueRO.spawnSize;
         int numX = (int)math.ceil(math.sqrt(s.x / s.y * pss.ValueRO.particleCount + (s.x - s.y) * (s.x - s.y) / (4 * s.y * s.y)) - (s.x - s.y) / (2 * s.y));
         int numY = (int)math.ceil(pss.ValueRO.particleCount / (float)numX);
         int i = 0;
 
-        NativeArray<Entity> instiatedEntities = pSystemState.EntityManager.Instantiate(pss.ValueRO.particlePrefab, pss.ValueRO.particleCount, Allocator.Temp);
+        NativeArray<Entity> instantiatedEntities = pSystemState.EntityManager.Instantiate(pss.ValueRO.particlePrefab, pss.ValueRO.particleCount, Allocator.Temp);
 
 
         for (int y = 0; y < numY; y++)
@@ -33,13 +40,13 @@ partial struct ParticleSpawnSystem : ISystem
             for (int x = 0; x < numX; x++)
             {
                 if (i >= pss.ValueRO.particleCount) break;
-                Entity entity = instiatedEntities[i];
+                Entity entity = instantiatedEntities[i];
 
                 float tx = numX <= 1 ? 0.5f : x / (numX - 1f);
                 float ty = numY <= 1 ? 0.5f : y / (numY - 1f);
 
-                float angle = rng.NextFloat() * 3.14f * 2;
-                float2 dir = new(math.cos(angle), math.sin(angle));
+                float angle = rng.NextFloat() * 3.14159265f * 2f;
+                float2 dir = new float2(math.cos(angle), math.sin(angle));
                 float2 jitter = (rng.NextFloat() - 0.5f) * pss.ValueRO.jitterStrength * dir;
                 float2 position = new float2((tx - 0.5f) * pss.ValueRO.spawnSize.x, (ty - 0.5f) * pss.ValueRO.spawnSize.y) + jitter + pss.ValueRO.spawnCenter;
                 float2 velocity = pss.ValueRO.initialVelocity;
@@ -50,9 +57,16 @@ partial struct ParticleSpawnSystem : ISystem
                     Scale = 1f,
                     Rotation = quaternion.identity,
                 });
+                
+                // Initialize all Particle component fields to ensure clean state
+                // Set density values to small non-zero values to prevent division by zero
                 pSystemState.EntityManager.SetComponentData(entity, new Particle
                 {
                     id = i,
+                    velocity = velocity,
+                    density = 1f, // Start with non-zero density to prevent instability
+                    densityNear = 1f, // Start with non-zero near density
+                    predictedPosition = position
                 });
 
                 i++;
@@ -60,6 +74,6 @@ partial struct ParticleSpawnSystem : ISystem
         }
 
         pss.ValueRW.doSpawn = false;
-        instiatedEntities.Dispose();
+        instantiatedEntities.Dispose();
     }
 }
