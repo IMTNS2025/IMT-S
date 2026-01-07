@@ -15,6 +15,8 @@ public class FPSLog : MonoBehaviour
     [Header("Menu Event Logging")]
     [SerializeField] private MainMenuController mainMenuController;
     [SerializeField] private InGameMenuController inGameMenuController;
+    [Header("Particle Manager Reference")]
+    [SerializeField] private ParticleManager particleManager;
 
     [Header("Log Viewing (iOS)")]
     [SerializeField] private Button viewLogButton;
@@ -81,6 +83,16 @@ public class FPSLog : MonoBehaviour
             inGameMenuController = FindObjectOfType<InGameMenuController>();
         }
 
+        // Auto-find particle manager if not assigned
+        if (particleManager == null)
+        {
+            particleManager = FindObjectOfType<ParticleManager>();
+            if (particleManager == null)
+            {
+                Debug.LogWarning("[FPSLog] ParticleManager not found in scene!");
+            }
+        }
+
         // Subscribe to menu events
         SubscribeToMenuEvents();
 
@@ -94,6 +106,12 @@ public class FPSLog : MonoBehaviour
             fps = cumulativeFps / iterations;
             iterations = 0;
             cumulativeFps = 0;
+
+            // Update current particle count from ParticleManager if available
+            if (particleManager != null)
+            {
+                numberOfParticles = particleManager.CurrentParticleCount;
+            }
 
             textFieldFps.SetText("FPS: " + fps);
             if (doLog) SaveLogToTxt();
@@ -116,13 +134,13 @@ public class FPSLog : MonoBehaviour
             var startButton = FindButtonInController(mainMenuController, "startButton");
             if (startButton != null)
             {
-                startButton.onClick.AddListener(() => LogEvent("Menu: Start Button Clicked"));
+                startButton.onClick.AddListener(() => LogEvent($"Menu: Start Button Clicked (Particles: {GetParticleCountForLog()})"));
             }
 
             var freeModeButton = FindButtonInController(mainMenuController, "freeModeButton");
             if (freeModeButton != null)
             {
-                freeModeButton.onClick.AddListener(() => LogEvent("Menu: Free Mode Button Clicked"));
+                freeModeButton.onClick.AddListener(() => LogEvent($"Menu: Free Mode Button Clicked (Particles: {GetParticleCountForLog()})"));
             }
 
             var quitButton = FindButtonInController(mainMenuController, "quitButton");
@@ -223,6 +241,14 @@ public class FPSLog : MonoBehaviour
         {
             Debug.LogError($"[FPSLog] Error logging event: {ex.Message}");
         }
+    }
+
+    private string GetParticleCountForLog()
+    {
+        if (particleManager != null)
+            return particleManager.CurrentParticleCount.ToString();
+
+        return "unknown";
     }
 
     private void OnViewLogButtonClicked()
