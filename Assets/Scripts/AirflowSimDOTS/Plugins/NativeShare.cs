@@ -9,7 +9,7 @@ public class NativeShare
 {
     private string subject = "";
     private string text = "";
-    private List<string> files = new List<string>();
+    private readonly List<string> files = new ();
 
     public NativeShare SetSubject(string subject)
     {

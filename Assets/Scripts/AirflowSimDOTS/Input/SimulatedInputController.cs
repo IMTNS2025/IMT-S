@@ -208,11 +208,11 @@ public class SimulatedInputController : MonoBehaviour
         float speed = segment.speed;
         float duration = distance / speed;
 
-        float deltaProgress = (Time.deltaTime / duration);
+        float deltaProgress = Time.deltaTime / duration;
         segmentProgress += deltaProgress;
 
         // Move in current direction
-        float2 direction = new float2(math.cos(currentAngle), math.sin(currentAngle));
+        float2 direction = new (math.cos(currentAngle), math.sin(currentAngle));
         float moveDistance = speed * Time.deltaTime;
         currentPosition += direction * moveDistance;
 
@@ -252,7 +252,7 @@ public class SimulatedInputController : MonoBehaviour
         
         // Move in the average direction between start and end angles (matching gizmo)
         float avgAngle = (startFrameAngle + endFrameAngle) * 0.5f;
-        float2 moveDir = new float2(math.cos(avgAngle), math.sin(avgAngle));
+        float2 moveDir = new (math.cos(avgAngle), math.sin(avgAngle));
         float stepDist = totalDistance * actualDeltaProgress;
         
         currentPosition += moveDir * stepDist;
@@ -338,7 +338,7 @@ public class SimulatedInputController : MonoBehaviour
             Gizmos.DrawWireSphere(new Vector3(currentPosition.x, currentPosition.y, 0f), 0.5f);
 
             // Draw direction
-            float2 dir = new float2(math.cos(currentAngle), math.sin(currentAngle));
+            float2 dir = new (math.cos(currentAngle), math.sin(currentAngle));
             Gizmos.DrawLine(
                 new Vector3(currentPosition.x, currentPosition.y, 0f),
                 new Vector3(currentPosition.x + dir.x, currentPosition.y + dir.y, 0f)
@@ -360,7 +360,7 @@ public class SimulatedInputController : MonoBehaviour
 
         Gizmos.color = pathColor;
 
-        float2 pos = new float2(startPos.x, startPos.y);
+        float2 pos = new (startPos.x, startPos.y);
         float angle = math.radians(startAng);
 
         // Draw start point
@@ -371,7 +371,7 @@ public class SimulatedInputController : MonoBehaviour
             switch (segment.type)
             {
                 case SimulatedInputPatternSO.PatternSegment.SegmentType.Straight:
-                    float2 dir = new float2(math.cos(angle), math.sin(angle));
+                    float2 dir = new (math.cos(angle), math.sin(angle));
                     float2 endPos = pos + dir * segment.value;
 
                     Gizmos.DrawLine(
@@ -404,7 +404,7 @@ public class SimulatedInputController : MonoBehaviour
                         
                         // Move in the average direction between steps
                         float avgAngle = (anglePrev + angleCurr) * 0.5f;
-                        float2 moveDir = new float2(math.cos(avgAngle), math.sin(avgAngle));
+                        float2 moveDir = new (math.cos(avgAngle), math.sin(avgAngle));
                         float stepDist = totalDistance / steps;
                         
                         float2 nextPos = pos + moveDir * stepDist;

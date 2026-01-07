@@ -5,19 +5,19 @@ using Unity.Entities;
 /// MonoBehaviour bridge to communicate with the ECS ParticleReloadSystem.
 /// Provides methods to reload particles and update particle count from UI.
 /// </summary>
-public class ParticleManager : MonoBehaviour
+public class ParticleReloadController : MonoBehaviour
 {
-    private static ParticleManager instance;
-    public static ParticleManager Instance => instance;
+    private static ParticleReloadController instance;
+    public static ParticleReloadController Instance => instance;
 
     [Header("Particle Count Settings")]
-    [SerializeField] private int minParticleCount = 100;
-    [SerializeField] private int maxParticleCount = 2000;
-    [SerializeField] private int defaultParticleCount = 400;
-    [SerializeField] private int particleCountStep = 50;
+    [SerializeField] private int minParticleCount = 2000;
+    [SerializeField] private int maxParticleCount = 32000;
+    [SerializeField] private int defaultParticleCount = 20000;
+    [SerializeField] private int particleCountStep = 500;
 
     [Header("Reload Settings")]
-    [SerializeField] private bool reloadOnPlay = false;
+    [SerializeField] private bool reloadOnPlay = true;
 
     private int currentParticleCount;
 
@@ -88,7 +88,7 @@ public class ParticleManager : MonoBehaviour
         Entity reloadEntity = reloadQuery.GetSingletonEntity();
         
         // Set the reload request
-        ParticleReloadRequest reloadRequest = new ParticleReloadRequest
+        ParticleReloadRequest reloadRequest = new ()
         {
             shouldReload = true,
             newParticleCount = currentParticleCount

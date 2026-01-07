@@ -42,14 +42,14 @@ public class SimulatedInputPatternSO : ScriptableObject
 
     [Header("Starting Configuration")]
     [Tooltip("Starting position in world space")]
-    public Vector2 startPosition = new Vector2(-5f, 0f);
+    public Vector2 startPosition = new (-5f, 0f);
 
     [Tooltip("Starting direction (0 = right, 90 = up, 180 = left, 270 = down)")]
     public float startAngle = 0f;
 
     [Header("Pattern Segments")]
     [Tooltip("List of pattern segments to execute in order")]
-    public List<PatternSegment> segments = new List<PatternSegment>();
+    public List<PatternSegment> segments = new ();
 
     [Header("Pattern Settings")]
     [Tooltip("Loop the pattern when finished")]

@@ -6,7 +6,7 @@ using System;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class FPSLog : MonoBehaviour
+public class LogController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textFieldFps;
     [SerializeField] private float interval = 0.5f;
@@ -16,7 +16,7 @@ public class FPSLog : MonoBehaviour
     [SerializeField] private MainMenuController mainMenuController;
     [SerializeField] private InGameMenuController inGameMenuController;
     [Header("Particle Manager Reference")]
-    [SerializeField] private ParticleManager particleManager;
+    [SerializeField] private ParticleReloadController particleManager;
 
     [Header("Log Viewing (iOS)")]
     [SerializeField] private Button viewLogButton;
@@ -75,18 +75,18 @@ public class FPSLog : MonoBehaviour
         // Auto-find menu controllers if not assigned
         if (mainMenuController == null)
         {
-            mainMenuController = FindObjectOfType<MainMenuController>();
+            mainMenuController = FindFirstObjectByType<MainMenuController>();
         }
 
         if (inGameMenuController == null)
         {
-            inGameMenuController = FindObjectOfType<InGameMenuController>();
+            inGameMenuController = FindFirstObjectByType<InGameMenuController>();
         }
 
         // Auto-find particle manager if not assigned
         if (particleManager == null)
         {
-            particleManager = FindObjectOfType<ParticleManager>();
+            particleManager = FindFirstObjectByType<ParticleReloadController>();
             if (particleManager == null)
             {
                 Debug.LogWarning("[FPSLog] ParticleManager not found in scene!");
@@ -306,7 +306,7 @@ public class FPSLog : MonoBehaviour
         }
 
         // Use iOS native sharing
-        NativeShare shareSheet = new NativeShare();
+        NativeShare shareSheet = new ();
         shareSheet.AddFile(pathFilename);
         shareSheet.SetSubject("FPS Log - " + SceneManager.GetActiveScene().name);
         shareSheet.SetText("FPS and event log from " + Application.productName);

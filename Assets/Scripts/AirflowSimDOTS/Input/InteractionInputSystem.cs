@@ -2,30 +2,18 @@ using UnityEngine;
 using Unity.Entities;
 using Unity.Mathematics;
 
-public class InteractionInputAuthoring : MonoBehaviour
-{
-    private class Baker : Baker<InteractionInputAuthoring>
-    {
-        public override void Bake(InteractionInputAuthoring authoring)
-        {
-            Entity entity = GetEntity(TransformUsageFlags.None);
-            AddComponent(entity, new InteractionInput());
-        }
-    }
-}
-
 [UpdateInGroup(typeof(InitializationSystemGroup))]
 public partial class InteractionInputSystem : SystemBase
 {
     private Camera mainCamera;
     private float2 previousPoint;
     private bool wasActiveLastFrame;
-    
+
     /// <summary>
     /// When true, this system will skip its update and let the SimulatedInputController control the input.
     /// </summary>
     public static bool UseSimulatedInput { get; set; }
-    
+
     protected override void OnCreate()
     {
         RequireForUpdate<InteractionInput>();
@@ -73,25 +61,25 @@ public partial class InteractionInputSystem : SystemBase
 
         float zDist = -mainCamera.transform.position.z;
         Vector3 worldPos = mainCamera.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, zDist));
-        float2 currentPoint = new float2(worldPos.x, worldPos.y);
+        float2 currentPoint = new(worldPos.x, worldPos.y);
 
         float dt = SystemAPI.Time.DeltaTime;
-        
+
         // Get max obstacle speed from settings
         AirflowSimSettings settings = SystemAPI.GetSingleton<AirflowSimSettings>();
         float maxObstacleSpeed = settings.maxObstacleSpeed;
-        
+
         float2 velocity = float2.zero;
         float speed = 0f;
         float2 clampedCurrentPoint = currentPoint;
-        
+
         // Calculate obstacle velocity from movement between frames
         if (wasActiveLastFrame && dt > 0f)
         {
             float2 delta = currentPoint - previousPoint;
             float deltaLength = math.length(delta);
             float rawSpeed = deltaLength / dt;
-            
+
             // Clamp the obstacle speed - if moving too fast, only move in that direction up to max speed
             if (rawSpeed > maxObstacleSpeed && deltaLength > 0f)
             {
@@ -126,15 +114,4 @@ public partial class InteractionInputSystem : SystemBase
 
         SystemAPI.SetSingleton(newInput);
     }
-}
-
-public struct InteractionInput : IComponentData
-{
-    public float2 position;      // Current obstacle position
-    public float2 velocity;      // Obstacle velocity (units per second)
-    public float speed;          // Cached speed magnitude
-    public float2 lineStart;     // Previous frame position (for swept collision)
-    public float2 lineEnd;       // Current frame position (for swept collision)
-    public float deltaTime;      // Frame delta time for interpolation
-    public bool isActive;
 }

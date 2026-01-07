@@ -20,3 +20,12 @@ public class ParticleReloadRequestAuthoring : MonoBehaviour
         }
     }
 }
+
+/// <summary>
+/// Component data for requesting particle reload.
+/// </summary>
+public struct ParticleReloadRequest : IComponentData
+{
+    public bool shouldReload;
+    public int newParticleCount; // -1 means use current particle count
+}

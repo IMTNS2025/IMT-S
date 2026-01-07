@@ -1878,31 +1878,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 496747408}
-  - component: {fileID: 496747406}
+  - component: {fileID: 496747409}
   m_Layer: 0
-  m_Name: ParticleReloadManager
+  m_Name: ParticleReloadController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &496747406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496747405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d638ed3b0003d234dbb856f5fc52cb33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ParticleManager
-  minParticleCount: 2000
-  maxParticleCount: 32000
-  defaultParticleCount: 20000
-  particleCountStep: 500
-  reloadOnPlay: 1
 --- !u!4 &496747408
 Transform:
   m_ObjectHideFlags: 0
@@ -1911,13 +1894,30 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496747405}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1540440968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &496747409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496747405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfced1b220f25b4598ddd7d6afbd0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ParticleReloadController
+  minParticleCount: 2000
+  maxParticleCount: 32000
+  defaultParticleCount: 20000
+  particleCountStep: 500
+  reloadOnPlay: 1
 --- !u!1 &602685993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,7 +2685,7 @@ GameObject:
   - component: {fileID: 846327626}
   - component: {fileID: 846327625}
   m_Layer: 0
-  m_Name: InputController
+  m_Name: SimulatedInputController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2716,12 +2716,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846327624}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1540440968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &870589454
 GameObject:
@@ -3585,9 +3585,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1187342814}
   - component: {fileID: 1187342813}
-  - component: {fileID: 1187342815}
   m_Layer: 0
-  m_Name: MenuSystem
+  m_Name: MainMenuController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3626,7 +3625,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f0c0ee50b4e38924b85b68bc6d00809f, type: 2}
   - {fileID: 11400000, guid: 0d1de42f9e1aa4d4381ff7e2f5091aee, type: 2}
   simulationController: {fileID: 846327625}
-  particleManager: {fileID: 496747406}
+  particleReloadController: {fileID: 0}
 --- !u!4 &1187342814
 Transform:
   m_ObjectHideFlags: 0
@@ -3635,33 +3634,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187342812}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1540440968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1187342815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187342812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fc09f50d9a640f4bbca47b4dd1f9ab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InGameMenuController
-  menuButton: {fileID: 1229434906}
-  reloadButton: {fileID: 1546730077}
-  buttonPanel: {fileID: 606186341}
-  fpsPanel: {fileID: 2110771085}
-  openLogButton: {fileID: 106643477}
-  openSettingsButton: {fileID: 874584321}
-  mainMenuController: {fileID: 1187342813}
-  particleManager: {fileID: 496747406}
 --- !u!1 &1187835981
 GameObject:
   m_ObjectHideFlags: 0
@@ -4141,7 +4120,7 @@ GameObject:
   - component: {fileID: 1257474208}
   - component: {fileID: 1257474207}
   m_Layer: 0
-  m_Name: FPSLog
+  m_Name: LogController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4163,7 +4142,8 @@ MonoBehaviour:
   interval: 0.5
   doLog: 1
   mainMenuController: {fileID: 1187342813}
-  inGameMenuController: {fileID: 1187342815}
+  inGameMenuController: {fileID: 0}
+  particleManager: {fileID: 0}
   viewLogButton: {fileID: 106643481}
   logViewPanel: {fileID: 231186299}
   logContentText: {fileID: 1381174521}
@@ -4177,12 +4157,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257474206}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1540440968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1276503314
 GameObject:
@@ -4954,6 +4934,94 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398975531}
   m_CullTransparentMesh: 1
+--- !u!1 &1422289079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1422289081}
+  - component: {fileID: 1422289080}
+  m_Layer: 0
+  m_Name: InGameMenuController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1422289080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422289079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc09f50d9a640f4bbca47b4dd1f9ab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InGameMenuController
+  menuButton: {fileID: 1229434906}
+  reloadButton: {fileID: 1546730077}
+  buttonPanel: {fileID: 606186341}
+  fpsPanel: {fileID: 2110771085}
+  openLogButton: {fileID: 106643477}
+  openSettingsButton: {fileID: 874584321}
+  mainMenuController: {fileID: 1187342813}
+  particleReloadController: {fileID: 0}
+--- !u!4 &1422289081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422289079}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1540440968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1540440967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1540440968}
+  m_Layer: 0
+  m_Name: Controllers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1540440968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540440967}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 846327626}
+  - {fileID: 496747408}
+  - {fileID: 1187342814}
+  - {fileID: 1422289081}
+  - {fileID: 1257474208}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1546730075
 GameObject:
   m_ObjectHideFlags: 0
@@ -6651,11 +6719,8 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1540440968}
   - {fileID: 870589457}
-  - {fileID: 846327626}
-  - {fileID: 1012627345}
   - {fileID: 1297928348}
-  - {fileID: 1187342814}
-  - {fileID: 1257474208}
-  - {fileID: 496747408}
+  - {fileID: 1012627345}
   - {fileID: 98380037}

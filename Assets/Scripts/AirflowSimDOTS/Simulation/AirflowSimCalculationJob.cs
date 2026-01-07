@@ -29,7 +29,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     public void Execute(ref Particle pParticleA, ref LocalTransform pLocalTransformA, ref URPMaterialPropertyBaseColor color, [EntityIndexInQuery] int entityIndexInQuery)
     {
         // Phase 0: predicted position (external forces)
-        float2 pos2 = new float2(pLocalTransformA.Position.x, pLocalTransformA.Position.y);
+        float2 pos2 = new (pLocalTransformA.Position.x, pLocalTransformA.Position.y);
         pParticleA.velocity += ExternalForces(pLocalTransformA.Position, pParticleA.velocity) * deltaTime;
         float predictionFactor = airflowSimSettings.predictionFactor;
         float2 predictedPos = pos2 + pParticleA.velocity * predictionFactor;
@@ -93,7 +93,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private int2 GetCell(float2 position)
+    private readonly int2 GetCell(float2 position)
     {
         return new int2(
             (int)math.floor(position.x / cellSize),
@@ -102,7 +102,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private int HashCell(int2 cell)
+    private readonly int HashCell(int2 cell)
     {
         // Use prime number hash with addition to avoid XOR symmetry issues
         // Adding a large prime offset prevents (0,0) from hashing to 0
@@ -111,7 +111,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         const int p1 = 73856093;
         const int p2 = 19349663;
         const int offset = 83492791;
-        return ((cell.x * p1) + (cell.y * p2) + offset);
+        return (cell.x * p1) + (cell.y * p2) + offset;
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -132,7 +132,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
 
                 Particle pB = allParticles[neighborIndex];
                 LocalTransform ltB = allParticleLTs[neighborIndex];
-                float2 bPos2 = new float2(ltB.Position.x, ltB.Position.y);
+                float2 bPos2 = new (ltB.Position.x, ltB.Position.y);
                 float2 bPredictedPos = bPos2 + pB.velocity * predictionFactor;
                 float2 offset = bPredictedPos - predictedPos;
                 float sqrDst = math.dot(offset, offset);
@@ -163,8 +163,8 @@ public partial struct AirflowSimCalculationJob : IJobEntity
                 float invDst = dst > 0f ? math.rcp(dst) : 0f;
                 float2 dirToNeighbour = dst > 0f ? offset * invDst : new float2(0f, 1f);
 
-                totalPressureForce += dirToNeighbour * DerivativeSpikyPow2(dst, radius) * sharedPressure * invDenomDensity;
-                totalPressureForce += dirToNeighbour * DerivativeSpikyPow3(dst, radius) * sharedNearPressure * invDenomNearDensity;
+                totalPressureForce += DerivativeSpikyPow2(dst, radius) * invDenomDensity * sharedPressure * dirToNeighbour;
+                totalPressureForce += DerivativeSpikyPow3(dst, radius) * invDenomNearDensity * sharedNearPressure * dirToNeighbour;
 
                 // Viscosity
                 totalViscosityForce += (pB.velocity - particleVelocity) * SmoothingKernelPoly6(dst, radius);
@@ -174,7 +174,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private float SpikyKernelPow2(float dst, float radius)
+    private readonly float SpikyKernelPow2(float dst, float radius)
     {
         if (dst < radius)
         {
@@ -185,7 +185,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private float SpikyKernelPow3(float dst, float radius)
+    private readonly float SpikyKernelPow3(float dst, float radius)
     {
         if (dst < radius)
         {
@@ -196,7 +196,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private float DerivativeSpikyPow2(float dst, float radius)
+    private readonly float DerivativeSpikyPow2(float dst, float radius)
     {
         if (dst <= radius)
         {
@@ -207,7 +207,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private float DerivativeSpikyPow3(float dst, float radius)
+    private readonly float DerivativeSpikyPow3(float dst, float radius)
     {
         if (dst <= radius)
         {
@@ -218,19 +218,19 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private float PressureFromDensity(float density)
+    private readonly float PressureFromDensity(float density)
     {
         return (density - airflowSimSettings.targetDensity) * airflowSimSettings.pressureMultiplier;
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private float NearPressureFromDensity(float nearDensity)
+    private readonly float NearPressureFromDensity(float nearDensity)
     {
         return airflowSimSettings.nearPressureMultiplier * nearDensity;
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private float SmoothingKernelPoly6(float dst, float radius)
+    private readonly float SmoothingKernelPoly6(float dst, float radius)
     {
         if (dst < radius)
         {
@@ -240,11 +240,11 @@ public partial struct AirflowSimCalculationJob : IJobEntity
         return 0f;
     }
 
-    private void HandleCollisions(ref LocalTransform localTransformA, ref Particle particleA)
+    private readonly void HandleCollisions(ref LocalTransform localTransformA, ref Particle particleA)
     {
         float2 boundsCenter = float2.zero;
         float2 halfSize = airflowSimSettings.boundsSize * 0.5f;
-        float2 pos = new float2(localTransformA.Position.x, localTransformA.Position.y);
+        float2 pos = new (localTransformA.Position.x, localTransformA.Position.y);
         float2 rel = pos - boundsCenter;
 
         bool collidedX = false;
@@ -293,15 +293,15 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private float2 ExternalForces(float3 pos, float2 velocity)
+    private readonly float2 ExternalForces(float3 pos, float2 velocity)
     {
-        float2 gravityAccel = new float2(0f, airflowSimSettings.gravity);
+        float2 gravityAccel = new (0f, airflowSimSettings.gravity);
 
         // Early exit if no interaction
         if (!input.isActive)
             return gravityAccel;
 
-        float2 particlePos = new float2(pos.x, pos.y);
+        float2 particlePos = new (pos.x, pos.y);
         float obstacleRadius = airflowSimSettings.interactionInputRadius;
         float2 obstaclePos = input.lineEnd;
 
@@ -395,7 +395,7 @@ public partial struct AirflowSimCalculationJob : IJobEntity
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private void ApplySpeedColor(ref URPMaterialPropertyBaseColor color, float2 velocity)
+    private readonly void ApplySpeedColor(ref URPMaterialPropertyBaseColor color, float2 velocity)
     {
         float speedSqr = math.lengthsq(velocity);
         float colorMaxSpeed = airflowSimSettings.colorGradientMaxSpeed;

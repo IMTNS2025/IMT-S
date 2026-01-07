@@ -6,6 +6,7 @@ using Unity.Transforms;
 
 [UpdateInGroup(typeof(InitializationSystemGroup))]
 [UpdateAfter(typeof(ParticleReloadSystem))]
+[BurstCompile]
 partial struct ParticleSpawnSystem : ISystem
 {
     private uint randomSeed;
@@ -25,7 +26,7 @@ partial struct ParticleSpawnSystem : ISystem
 
         // Update random seed to ensure variety between spawns
         randomSeed = randomSeed * 1664525u + 1013904223u; // Linear congruential generator
-        Random rng = new Random(randomSeed);
+        Random rng = new (randomSeed);
 
         float2 s = pss.ValueRO.spawnSize;
         int numX = (int)math.ceil(math.sqrt(s.x / s.y * pss.ValueRO.particleCount + (s.x - s.y) * (s.x - s.y) / (4 * s.y * s.y)) - (s.x - s.y) / (2 * s.y));
@@ -46,7 +47,7 @@ partial struct ParticleSpawnSystem : ISystem
                 float ty = numY <= 1 ? 0.5f : y / (numY - 1f);
 
                 float angle = rng.NextFloat() * 3.14159265f * 2f;
-                float2 dir = new float2(math.cos(angle), math.sin(angle));
+                float2 dir = new (math.cos(angle), math.sin(angle));
                 float2 jitter = (rng.NextFloat() - 0.5f) * pss.ValueRO.jitterStrength * dir;
                 float2 position = new float2((tx - 0.5f) * pss.ValueRO.spawnSize.x, (ty - 0.5f) * pss.ValueRO.spawnSize.y) + jitter + pss.ValueRO.spawnCenter;
                 float2 velocity = pss.ValueRO.initialVelocity;

@@ -1,13 +1,12 @@
 using Unity.Burst;
-using Unity.Collections;
 using Unity.Entities;
-using UnityEngine;
 
 /// <summary>
 /// System that handles reloading particles by destroying all existing particles and triggering a respawn.
 /// </summary>
 [UpdateInGroup(typeof(InitializationSystemGroup))]
 [UpdateBefore(typeof(ParticleSpawnSystem))]
+[BurstCompile]
 partial struct ParticleReloadSystem : ISystem
 {
     private int framesSinceDestroy;
@@ -38,12 +37,10 @@ partial struct ParticleReloadSystem : ISystem
                 if (pendingParticleCount > 0)
                 {
                     spawnSettings.ValueRW.particleCount = pendingParticleCount;
-                    Debug.Log($"[ParticleReloadSystem] Updated particle count to: {pendingParticleCount}");
                 }
                 
                 // Trigger respawn
                 spawnSettings.ValueRW.doSpawn = true;
-                Debug.Log($"[ParticleReloadSystem] Triggered respawn with doSpawn = true (particle count: {spawnSettings.ValueRO.particleCount})");
                 
                 // Reset state
                 waitingToSpawn = false;
@@ -63,14 +60,9 @@ partial struct ParticleReloadSystem : ISystem
         // Store values locally before structural changes
         int newParticleCount = reloadRequest.ValueRO.newParticleCount;
         
-        Debug.Log($"[ParticleReloadSystem] Processing reload request for {newParticleCount} particles");
-
         // Get all particle entities
         EntityQuery particleQuery = SystemAPI.QueryBuilder().WithAll<Particle>().Build();
-        
-        int particleCount = particleQuery.CalculateEntityCount();
-        Debug.Log($"[ParticleReloadSystem] Destroying {particleCount} existing particles");
-        
+                
         // Destroy all existing particles (this causes structural change)
         state.EntityManager.DestroyEntity(particleQuery);
         
@@ -88,16 +80,5 @@ partial struct ParticleReloadSystem : ISystem
         waitingToSpawn = true;
         framesSinceDestroy = 0;
         pendingParticleCount = newParticleCount;
-        
-        Debug.Log($"[ParticleReloadSystem] Waiting 3 frames before respawning...");
-    }
-}
-
-/// <summary>
-/// Component data for requesting particle reload.
-/// </summary>
-public struct ParticleReloadRequest : IComponentData
-{
-    public bool shouldReload;
-    public int newParticleCount; // -1 means use current particle count
+            }
 }

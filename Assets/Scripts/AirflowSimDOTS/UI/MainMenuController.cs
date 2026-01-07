@@ -35,7 +35,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private SimulatedInputController simulationController;
 
     [Header("Particle Manager Reference")]
-    [SerializeField] private ParticleManager particleManager;
+    [SerializeField] private ParticleReloadController particleReloadController;
 
     private SimulatedInputPatternSO selectedPattern;
     private bool autoReloadOnSliderChange = false;
@@ -106,14 +106,14 @@ public class MainMenuController : MonoBehaviour
         // Auto-find simulation controller if not assigned
         if (simulationController == null)
         {
-            simulationController = FindObjectOfType<SimulatedInputController>();
+            simulationController = FindFirstObjectByType<SimulatedInputController>();
         }
 
         // Auto-find particle manager if not assigned
-        if (particleManager == null)
+        if (particleReloadController == null)
         {
-            particleManager = FindObjectOfType<ParticleManager>();
-            if (particleManager == null)
+            particleReloadController = FindFirstObjectByType<ParticleReloadController>();
+            if (particleReloadController == null)
             {
                 Debug.LogWarning("[MainMenuController] ParticleManager not found in scene!");
             }
@@ -123,9 +123,9 @@ public class MainMenuController : MonoBehaviour
         InitializeParticleCountSlider();
 
         // Initialize reload on play toggle
-        if (reloadOnPlayToggle != null && particleManager != null)
+        if (reloadOnPlayToggle != null && particleReloadController != null)
         {
-            reloadOnPlayToggle.isOn = particleManager.ReloadOnPlay;
+            reloadOnPlayToggle.isOn = particleReloadController.ReloadOnPlay;
         }
 
         // Initialize auto-reload toggle
@@ -137,41 +137,41 @@ public class MainMenuController : MonoBehaviour
 
     private void InitializeParticleCountSlider()
     {
-        if (particleManager == null || particleCountSlider == null)
+        if (particleReloadController == null || particleCountSlider == null)
         {
             Debug.LogWarning("[MainMenuController] Cannot initialize particle count slider - missing references");
             return;
         }
 
-        particleCountSlider.minValue = particleManager.MinParticleCount;
-        particleCountSlider.maxValue = particleManager.MaxParticleCount;
+        particleCountSlider.minValue = particleReloadController.MinParticleCount;
+        particleCountSlider.maxValue = particleReloadController.MaxParticleCount;
         particleCountSlider.wholeNumbers = true;
         
         // Set step size (this is achieved by rounding to nearest step in the callback)
-        particleCountSlider.value = particleManager.DefaultParticleCount;
+        particleCountSlider.value = particleReloadController.DefaultParticleCount;
         
         // Set the particle count in the manager
-        particleManager.SetParticleCount(particleManager.DefaultParticleCount);
+        particleReloadController.SetParticleCount(particleReloadController.DefaultParticleCount);
         
-        UpdateParticleCountText(particleManager.DefaultParticleCount);
+        UpdateParticleCountText(particleReloadController.DefaultParticleCount);
         
         Debug.Log($"[MainMenuController] Initialized slider - min: {particleCountSlider.minValue}, max: {particleCountSlider.maxValue}, value: {particleCountSlider.value}");
     }
 
     private void OnParticleCountChanged(float value)
     {
-        if (particleManager == null)
+        if (particleReloadController == null)
         {
             Debug.LogWarning("[MainMenuController] ParticleManager is null in OnParticleCountChanged");
             return;
         }
 
         // Round to nearest step
-        int step = particleManager.ParticleCountStep;
+        int step = particleReloadController.ParticleCountStep;
         int roundedValue = Mathf.RoundToInt(value / step) * step;
         
         // Clamp to ensure it's within bounds
-        roundedValue = Mathf.Clamp(roundedValue, particleManager.MinParticleCount, particleManager.MaxParticleCount);
+        roundedValue = Mathf.Clamp(roundedValue, particleReloadController.MinParticleCount, particleReloadController.MaxParticleCount);
         
         Debug.Log($"[MainMenuController] Slider changed - raw value: {value}, rounded: {roundedValue}, step: {step}");
         
@@ -182,7 +182,7 @@ public class MainMenuController : MonoBehaviour
             return; // The callback will be triggered again with the correct value
         }
 
-        particleManager.SetParticleCount(roundedValue);
+        particleReloadController.SetParticleCount(roundedValue);
         UpdateParticleCountText(roundedValue);
 
         // Auto-reload if enabled and game is running (not in menu)
@@ -203,10 +203,10 @@ public class MainMenuController : MonoBehaviour
         // Only reload if no more slider changes happened during the delay
         if (Time.realtimeSinceStartup - lastSliderChangeTime >= SLIDER_CHANGE_DELAY - 0.05f)
         {
-            if (particleManager != null)
+            if (particleReloadController != null)
             {
                 Debug.Log("[MainMenuController] Auto-reloading particles after slider change");
-                particleManager.ReloadParticles();
+                particleReloadController.ReloadParticles();
             }
         }
     }
@@ -222,9 +222,9 @@ public class MainMenuController : MonoBehaviour
 
     private void OnReloadOnPlayToggled(bool value)
     {
-        if (particleManager != null)
+        if (particleReloadController != null)
         {
-            particleManager.ReloadOnPlay = value;
+            particleReloadController.ReloadOnPlay = value;
             Debug.Log($"[MainMenuController] Reload on play toggled: {value}");
         }
         else
@@ -239,9 +239,9 @@ public class MainMenuController : MonoBehaviour
         Debug.Log($"[MainMenuController] Auto-reload on slider change toggled: {value}");
         
         // Update the particle count text to show/hide "reload required" note
-        if (particleManager != null)
+        if (particleReloadController != null)
         {
-            UpdateParticleCountText(particleManager.CurrentParticleCount);
+            UpdateParticleCountText(particleReloadController.CurrentParticleCount);
         }
     }
 
@@ -324,9 +324,9 @@ public class MainMenuController : MonoBehaviour
         Time.timeScale = 1f;
 
         // Trigger particle reload if enabled
-        if (particleManager != null)
+        if (particleReloadController != null)
         {
-            particleManager.OnModeStart();
+            particleReloadController.OnModeStart();
         }
 
         Debug.Log($"[MainMenuController] Starting simulation with pattern: {selectedPattern.name}");
@@ -360,9 +360,9 @@ public class MainMenuController : MonoBehaviour
         Time.timeScale = 1f;
 
         // Trigger particle reload if enabled
-        if (particleManager != null)
+        if (particleReloadController != null)
         {
-            particleManager.OnModeStart();
+            particleReloadController.OnModeStart();
         }
 
         Debug.Log("[MainMenuController] Free mode started (SimulatedInputController disabled)");

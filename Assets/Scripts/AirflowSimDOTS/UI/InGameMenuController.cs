@@ -18,7 +18,7 @@ public class InGameMenuController : MonoBehaviour
     [SerializeField] private MainMenuController mainMenuController;
 
     [Header("Particle Manager Reference")]
-    [SerializeField] private ParticleManager particleManager;
+    [SerializeField] private ParticleReloadController particleReloadController;
 
     private void Awake()
     {
@@ -58,14 +58,14 @@ public class InGameMenuController : MonoBehaviour
         // Auto-find main menu controller if not assigned
         if (mainMenuController == null)
         {
-            mainMenuController = FindObjectOfType<MainMenuController>();
+            mainMenuController = FindFirstObjectByType<MainMenuController>();
         }
 
         // Auto-find particle manager if not assigned
-        if (particleManager == null)
+        if (particleReloadController == null)
         {
-            particleManager = FindObjectOfType<ParticleManager>();
-            if (particleManager == null)
+            particleReloadController = FindFirstObjectByType<ParticleReloadController>();
+            if (particleReloadController == null)
             {
                 Debug.LogWarning("[InGameMenuController] ParticleManager not found in scene!");
             }
@@ -156,9 +156,9 @@ public class InGameMenuController : MonoBehaviour
     {
         Debug.Log("[InGameMenuController] Reload button clicked");
         
-        if (particleManager != null)
+        if (particleReloadController != null)
         {
-            particleManager.ReloadParticles();
+            particleReloadController.ReloadParticles();
         }
         else
         {
