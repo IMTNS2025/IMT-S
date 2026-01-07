@@ -32,6 +32,9 @@ public class LogController : MonoBehaviour
 
     private int iterations = 0;
     private int cumulativeFps = 0;
+    // Added fields to accumulate and report delta time
+    private float cumulativeDeltaTime = 0f;
+    private float avgDeltaTime = 0f;
 
     private void Awake()
     {
@@ -103,9 +106,21 @@ public class LogController : MonoBehaviour
         {
             yield return new WaitForSeconds(interval);
 
-            fps = cumulativeFps / iterations;
+            // Safely compute averages only if we recorded frames
+            if (iterations > 0)
+            {
+                fps = (float)cumulativeFps / iterations;
+                avgDeltaTime = cumulativeDeltaTime / iterations;
+            }
+            else
+            {
+                fps = 0f;
+                avgDeltaTime = 0f;
+            }
+
             iterations = 0;
             cumulativeFps = 0;
+            cumulativeDeltaTime = 0f;
 
             // Update current particle count from ParticleManager if available
             if (particleManager != null)
@@ -113,7 +128,12 @@ public class LogController : MonoBehaviour
                 numberOfParticles = particleManager.CurrentParticleCount;
             }
 
-            textFieldFps.SetText("FPS: " + fps);
+            // Update on-screen text with FPS and average delta time
+            if (textFieldFps != null)
+            {
+                textFieldFps.SetText($"FPS: {fps:F1}  dt: {avgDeltaTime:F4}s");
+            }
+
             if (doLog) SaveLogToTxt();
 
             duration += interval;
@@ -201,6 +221,8 @@ public class LogController : MonoBehaviour
     {
         iterations++;
         cumulativeFps += (int)Mathf.Round(1f / Time.unscaledDeltaTime);
+        // Accumulate unscaled delta time for average delta calculation
+        cumulativeDeltaTime += Time.unscaledDeltaTime;
 
         // ESC key to show log viewer (for testing)
         if (Input.GetKeyDown(KeyCode.L) && Input.GetKey(KeyCode.LeftShift))
@@ -213,10 +235,10 @@ public class LogController : MonoBehaviour
     {
         if (!File.Exists(pathFilename))
         {
-            File.WriteAllText(pathFilename, "Time;Number of Particles;FPS\n");
+            File.WriteAllText(pathFilename, "Time;Number of Particles;FPS;DeltaTime\n");
         }
 
-        string content = duration + ";" + numberOfParticles + ";" + fps + "\n";
+        string content = duration + ";" + numberOfParticles + ";" + fps + ";" + avgDeltaTime + "\n";
         File.AppendAllText(pathFilename, content);
     }
 
