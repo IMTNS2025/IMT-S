@@ -1914,9 +1914,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParticleReloadController
   minParticleCount: 2000
-  maxParticleCount: 32000
+  maxParticleCount: 64000
   defaultParticleCount: 20000
-  particleCountStep: 500
+  particleCountStep: 1000
   reloadOnPlay: 1
 --- !u!1 &602685993
 GameObject:
@@ -3618,12 +3618,15 @@ MonoBehaviour:
   reloadOnPlayToggle: {fileID: 228024120}
   autoReloadOnSliderChangeToggle: {fileID: 0}
   availablePatterns:
-  - {fileID: 11400000, guid: ba539e88f766b0e498ca3779207b05a8, type: 2}
+  - {fileID: 11400000, guid: ab674b067d72633439bffaf78b585c95, type: 2}
   - {fileID: 11400000, guid: 74e28be81b984f743852ff1c484d6a25, type: 2}
   - {fileID: 11400000, guid: 6245e968921f40040b7d8e459b0741c3, type: 2}
+  - {fileID: 11400000, guid: 3a83c044fc67d2240aac1ce77335c8bd, type: 2}
+  - {fileID: 11400000, guid: 0d1de42f9e1aa4d4381ff7e2f5091aee, type: 2}
+  - {fileID: 11400000, guid: 51f099d0c62bec94fa7f09ff41f746f5, type: 2}
+  - {fileID: 11400000, guid: ba539e88f766b0e498ca3779207b05a8, type: 2}
   - {fileID: 11400000, guid: b55daca4753555b48a5cd2f7a78fd6ef, type: 2}
   - {fileID: 11400000, guid: f0c0ee50b4e38924b85b68bc6d00809f, type: 2}
-  - {fileID: 11400000, guid: 0d1de42f9e1aa4d4381ff7e2f5091aee, type: 2}
   simulationController: {fileID: 846327625}
   particleReloadController: {fileID: 0}
 --- !u!4 &1187342814
@@ -5600,7 +5603,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.7}
   m_AnchorMax: {x: 0.5, y: 0.7}
-  m_AnchoredPosition: {x: 0, y: -29.99997}
+  m_AnchoredPosition: {x: 0, y: -30}
   m_SizeDelta: {x: 700, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1780664503
