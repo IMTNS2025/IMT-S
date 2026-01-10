@@ -10,9 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Coroutine movementCoroutine;
     private int currentPathIndex = 0;
 
-    private void OnEnable() => EventManager.OnPathCalculated.AddListener(CalculateWalkablePath);
 
-    private void OnDisable() => EventManager.OnPathCalculated.RemoveListener(CalculateWalkablePath);
 
     private void CalculateWalkablePath(List<Vector3> newPath)
     {

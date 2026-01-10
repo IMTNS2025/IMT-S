@@ -1,186 +1,205 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class A_Star : MonoBehaviour
 {
-    private readonly Vector3Int[] directions = {
-        new(-1, 0, 0),  //left
-        new(1, 0, 0),   //right
-        new(0, 1, 0),   //up
-        new(0, -1, 0),  //down
-        new(-1, 1, 0),  //left up
-        new(1, 1, 0),   //right up
-        new(-1, -1, 0), //left down
-        new(1, -1, 0)   //right down
-    };
+    private Vector3Int[] directions;
 
     [SerializeField] private Grid grid;
     [SerializeField] private Tilemap[] walkableTiles;
     [SerializeField] private Tilemap[] obstaclesTiles;
 
-    [SerializeField] private Transform playerPosition;
-    [SerializeField] private Transform endPosition;
     [SerializeField] private GameObject pathGameObject;
+    [SerializeField] private bool useEuclidean = true;
 
-    private List<Vector3> closedList = new();
-    private Vector3Int currentCellPosition;
+    List<long> avrgTime = new();
 
-    [Space]
+    private string displayText = "Theta* Pathfinding";
+    [SerializeField] private bool displayAvarageComputationTime;
 
-    [SerializeField] private bool recalculateOnEndTargetChanged = true;
-    [SerializeField] private float recalculationInterval = 0.01f;
-    private List<GameObject> lastSpawnPathObjects = new();
-    private Vector3 _lastStartCell;
-    private Vector3 _lastEndCell;
-
-    private void Start()
+    private void Awake()
     {
-        if (grid == null || playerPosition == null || endPosition == null)
+        Application.targetFrameRate = -1;
+        if (grid == null)
         {
-            Debug.LogWarning("A_Star: Missing grid/start/end references.");
+            UnityEngine.Debug.LogWarning("A_Star: Missing grid/start/end references.");
             return;
         }
 
-        _lastStartCell = grid.WorldToCell(playerPosition.position);
-        _lastEndCell = grid.WorldToCell(endPosition.position);
-
-        GeneratePath();
-    }
-
-    private void Update()
-    {
-        DynamicPathRecalculation();
-    }
-
-    private void DynamicPathRecalculation()
-    {
-        if (!recalculateOnEndTargetChanged || grid == null || playerPosition == null || endPosition == null)
-            return;
-
-        if (Time.time < recalculationInterval) return;
-
-        var currentStartCell = grid.WorldToCell(playerPosition.position);
-        var currentEndCell = grid.WorldToCell(endPosition.position);
-        
-        if (!IsWalkable(currentStartCell) || !IsWalkable(currentEndCell)) return;
-
-        if (currentStartCell != _lastStartCell || currentEndCell != _lastEndCell)
+        if (useEuclidean)
         {
-            _lastStartCell = currentStartCell;
-            _lastEndCell = currentEndCell;
-
-            foreach (var go in lastSpawnPathObjects)
-                Destroy(go);
-            
-            lastSpawnPathObjects.Clear();
-            closedList.Clear();
-            GeneratePath();
-        }
-    }
-
-    private void GeneratePath()
-    {
-        if (grid == null || playerPosition == null || endPosition == null)
-        {
-            Debug.LogWarning("A_Star: Missing grid/start/end references.");
-            return;
-        }
-
-        var path = FindPathWorld();
-        if (path == null)
-        {
-            Debug.Log("A_Star: No path found.");
-            return;
-        }
-
-        EventManager.OnPathCalculated?.Invoke(path);
-
-
-        if (pathGameObject != null)
-        {
-            foreach (var p in path)
+            directions = new Vector3Int[]
             {
-                var go = Instantiate(pathGameObject, p, Quaternion.identity);
-                lastSpawnPathObjects.Add(go);
-            }
+                new(-1, 0, 0),  //left
+                new(1, 0, 0),   //right
+                new(0, 1, 0),   //up
+                new(0, -1, 0),  //down
+                new(-1, 1, 0),  //left up
+                new(1, 1, 0),   //right up
+                new(-1, -1, 0), //left down
+                new(1, -1, 0)   //right down
+            };
+        }
+        else
+        {
+            directions = new Vector3Int[]
+            {
+                new(-1, 0, 0),  // left
+                new(1, 0, 0),   // right
+                new(0, 1, 0),   // up
+                new(0, -1, 0),  // down
+            };
         }
     }
 
-    public List<Vector3> FindPathWorld()
+    private void OnEnable()
     {
-        var cells = FindPathCells();
-        if (cells == null) return null;
-
-        var result = new List<Vector3>();
-        for (int i = 0; i < cells.Count; i++)
-            result.Add(grid.GetCellCenterWorld(cells[i]));
-        return result;
+        EventManager.OnPathRequested.AddListener(HandlePathRequest);
     }
 
-    public List<Vector3Int> FindPathCells()
+    private void OnDisable()
     {
-        //h cost from current node to end node
-        //g cost from start to current node
-        //f cost = g + h
-        var startCell = grid.WorldToCell(playerPosition.position);
-        var goalCell = grid.WorldToCell(endPosition.position);
+        EventManager.OnPathRequested.RemoveListener(HandlePathRequest);
+    }
 
+    private float deltaTimeDisplay = 0.0f;
+    private float fpsDisplay = 0.0f;
+
+    void Update()
+    {
+        deltaTimeDisplay = Time.deltaTime;
+        fpsDisplay = 1.0f / Time.deltaTime;
+    }
+
+    private void OnGUI()
+    {
+        if (!displayAvarageComputationTime) return;
+        GUIStyle style = new GUIStyle(GUI.skin.box);
+        style.fontSize = 45;
+        style.normal.textColor = Color.black;
+
+        GUI.Box(new Rect(100, 10, 1000, 100), displayText, style);
+        //GUI.Box(new Rect(1500, 5, 700, 100), Time.deltaTime.ToString(), style);
+
+        string text = $"{deltaTimeDisplay * 1000:F1}ms\n" +
+                 $"FPS: {fpsDisplay:F0}\n";
+
+        GUI.Label(new Rect(100, 100, 700, 200), text, style);
+        GUI.Label(new Rect(100, 300, 300, 50), SceneManager.GetActiveScene().name, style);
+
+    }
+
+    private void HandlePathRequest(Transform requester, Vector3Int endCell)
+    {
+        if (grid == null || requester == null) return;
+
+        var startCell = grid.WorldToCell(requester.position);
+
+        if (!IsWalkable(startCell) || !IsWalkable(endCell))
+        {
+            EventManager.OnPathCalculatedFor?.Invoke(requester, null);
+            return;
+        }
+
+        var sw = Stopwatch.StartNew();
+        var cells = FindPathCells(startCell, endCell, out int stepsTaken);
+        sw.Stop();
+
+        TestManager.Save(new ComputationAndLengthData
+        {
+            agent = requester.name,
+            computationTimeMs = (float)(sw.ElapsedTicks * 1000f / Stopwatch.Frequency),
+            pathNodesCount = cells != null ? cells.Count : 0,
+            //pathWorldDistance = worldDistance,
+            stepsTaken = stepsTaken
+        });
+
+        if (cells == null)
+        {
+            EventManager.OnPathCalculatedFor?.Invoke(requester, null);
+            return;
+        }
+
+        var path = new List<Vector3>(cells.Count);
+        foreach (var c in cells)
+            path.Add(grid.GetCellCenterWorld(c));
+
+        EventManager.OnPathCalculatedFor?.Invoke(requester, path);
+    }
+
+
+    public List<Vector3Int> FindPathCells(Vector3Int startCell, Vector3Int goalCell, out int stepsTaken)
+    {
+        stepsTaken = 0;
         List<Vector3Int> openList = new();
+        HashSet<Vector3Int> closedSet = new();
         Dictionary<Vector3Int, Vector3Int> cameFrom = new();
-
         Dictionary<Vector3Int, float> gScore = new() { [startCell] = 0 };
-        Dictionary<Vector3Int, float> fScore = new() { [startCell] = HeuristicCostEstimate(startCell, goalCell) };
+        Dictionary<Vector3Int, float> fScore = new();
+
+        if (useEuclidean)
+            fScore[startCell] = EuclideanCostEstimate(startCell, goalCell);
+        else
+            fScore[startCell] = ManhattanCostEstimate(startCell, goalCell);
 
         openList.Add(startCell);
 
         while (openList.Count > 0)
         {
+            // Find node with lowest fScore
+            Vector3Int current = default;
             float smallestF = float.MaxValue;
 
             foreach (var n in openList)
             {
-                float f = fScore.TryGetValue(n, out float fValue) ? fValue : smallestF;
-
+                float f = fScore.TryGetValue(n, out float fValue) ? fValue : float.MaxValue;
                 if (f < smallestF)
                 {
                     smallestF = f;
-                    currentCellPosition = n;
+                    current = n;
                 }
             }
+            stepsTaken++;
+            if (current == goalCell)
+                return ReconstructPath(cameFrom, current);
 
-            //If we have a path to the end
-            if (currentCellPosition == goalCell)
-                return ReconstructPath(cameFrom, currentCellPosition);
+            openList.Remove(current);
+            closedSet.Add(current);
 
-            //if we dont have a path to the end
-            openList.Remove(currentCellPosition);
-            closedList.Add(currentCellPosition);
-
-            //Check neighbors
+            // Check neighbors
             for (int i = 0; i < directions.Length; i++)
             {
-                Vector3Int neighborCellPosition = currentCellPosition + directions[i];
-                if (closedList.Contains(neighborCellPosition)) continue;
-                if (!IsWalkable(neighborCellPosition)) continue;
+                Vector3Int neighbor = current + directions[i];
 
-                //temp g score
-                float tempGScore = gScore[currentCellPosition] + 1f;
+                if (closedSet.Contains(neighbor)) continue;
+                if (!IsWalkable(neighbor)) continue;
 
-                if (!openList.Contains(neighborCellPosition))
-                    openList.Add(neighborCellPosition);
-                else if (tempGScore >= gScore[neighborCellPosition]) continue;
+                bool isDiagonal = directions[i].x != 0 && directions[i].y != 0;
+                float moveCost = isDiagonal ? 1.414f : 1f;
+                float tempGScore = gScore[current] + moveCost;
 
-                cameFrom[neighborCellPosition] = currentCellPosition;
-                gScore[neighborCellPosition] = tempGScore;
-                fScore[neighborCellPosition] = gScore[neighborCellPosition] + HeuristicCostEstimate(neighborCellPosition, goalCell);
-                openList.Add(neighborCellPosition);
+                // Check if this path is better
+                if (!gScore.ContainsKey(neighbor) || tempGScore < gScore[neighbor])
+                {
+                    cameFrom[neighbor] = current;
+                    gScore[neighbor] = tempGScore;
+
+                    if (useEuclidean)
+                        fScore[neighbor] = tempGScore + EuclideanCostEstimate(neighbor, goalCell);
+                    else
+                        fScore[neighbor] = tempGScore + ManhattanCostEstimate(neighbor, goalCell);
+
+                    if (!openList.Contains(neighbor))
+                        openList.Add(neighbor);
+                }
             }
         }
 
         return null;
     }
-
     private List<Vector3Int> ReconstructPath(Dictionary<Vector3Int, Vector3Int> cameFrom, Vector3Int currentCellPosition)
     {
         //      path = []
@@ -198,10 +217,18 @@ public class A_Star : MonoBehaviour
         return path;
     }
 
-    private int HeuristicCostEstimate(Vector3Int startCell, Vector3Int endCell)
+    private float EuclideanCostEstimate(Vector3Int startCell, Vector3Int endCell)
     {
-        return Mathf.Abs(startCell.x - endCell.x) + Mathf.Abs(startCell.y - endCell.y);
+        float dx = endCell.x - startCell.x;
+        float dy = endCell.y - startCell.y;
+        return Mathf.Sqrt(dx * dx + dy * dy);
     }
+
+    private float ManhattanCostEstimate(Vector3Int startCell, Vector3Int endCell)
+    {
+        return Mathf.Abs(endCell.x - startCell.x) + Mathf.Abs(endCell.y - startCell.y);
+    }
+
 
     private bool IsWalkable(Vector3Int cellPosition)
     {
@@ -212,10 +239,5 @@ public class A_Star : MonoBehaviour
                 return false; // Cell is blocked by an obstacle
         }
         return true; // Cell is walkable and not blocked
-    }
-
-    public void SetEndGoal(Vector3Int cellPos)
-    {
-        endPosition.position = grid.GetCellCenterWorld(cellPos);
     }
 }

@@ -5,8 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AirflowSimDOTS_ALEX.unity
     guid: ba6312eff4df54e41984f50e1033a4dc
-  m_configObjects: {}
+  - enabled: 0
+    path: Assets/Scenes/Pathfinding_ThetaStar.unity
+    guid: 2b512fd9bc37a204e85fbdb068e5f7d3
+  - enabled: 1
+    path: Assets/Scenes/Tests/test menu.unity
+    guid: 421e1963fb294d94595c9d49c1d55f8b
+  - enabled: 1
+    path: Assets/Scenes/Tests/Test-50-Astar.unity
+    guid: 619ec94c87c2c2f4abd215c914cbc0c9
+  - enabled: 1
+    path: Assets/Scenes/Tests/Test-50-Astar 1.unity
+    guid: 238c7b7737898bf44aa35b1ec3cf9991
+  m_configObjects:
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
   m_UseUCBPForAssetBundles: 0

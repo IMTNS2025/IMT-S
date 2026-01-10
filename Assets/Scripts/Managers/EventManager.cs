@@ -4,7 +4,6 @@ using UnityEngine.Events;
 
 public static class EventManager
 {
-    public static UnityEvent<List<Vector3>> OnPathCalculated = new();
     public static UnityEvent<Vector3Int> OnEndTargetPathChanged = new();
 
     public static UnityEvent<Transform, Vector3Int> OnPathRequested = new();
