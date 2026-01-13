@@ -14,13 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AirflowSimSettingsSO
   smoothingRadius: 1
   targetDensity: 20
-  pressureMultiplier: 0.1
-  nearPressureMultiplier: 0.05
+  pressureMultiplier: 0.2
+  nearPressureMultiplier: 0.1
   gravity: 0
-  collisionDampening: 0.9
-  viscosityStrength: 0.001
+  collisionDampening: 0.95
+  viscosityStrength: 0.01
   boundsSize: {x: 16, y: 8}
-  particleCol: {r: 0, g: 0, b: 0, a: 0}
-  negativePressureCol: {r: 0, g: 0, b: 0, a: 0}
-  positivePressureCol: {r: 0, g: 0, b: 0, a: 0}
-  zeroPressureCol: {r: 0, g: 0, b: 0, a: 0}
+  interactionInputStrength: 30
+  interactionInputRadius: 0.3
+  maxParticleSpeed: 10
+  colorGradientMaxSpeed: 2
+  slowParticleColor: {r: 0, g: 0, b: 1, a: 1}
+  fastParticleColor: {r: 1, g: 0, b: 0, a: 1}
+  predictionFactor: 0.00833
+  movementThreshold: 0.001
+  velocityLogScale: 0.5
+  speedDampingFactor: 0.3
+  wakeForceMultiplier: 0.1
+  obstacleDampingFactor: 0.8
+  collisionPushEpsilon: 0.0001

@@ -1,0 +1,117 @@
+using UnityEngine;
+using Unity.Entities;
+using Unity.Mathematics;
+
+[UpdateInGroup(typeof(InitializationSystemGroup))]
+public partial class InteractionInputSystem : SystemBase
+{
+    private Camera mainCamera;
+    private float2 previousPoint;
+    private bool wasActiveLastFrame;
+
+    /// <summary>
+    /// When true, this system will skip its update and let the SimulatedInputController control the input.
+    /// </summary>
+    public static bool UseSimulatedInput { get; set; }
+
+    protected override void OnCreate()
+    {
+        RequireForUpdate<InteractionInput>();
+        RequireForUpdate<AirflowSimSettings>();
+    }
+
+    protected override void OnStartRunning()
+    {
+        mainCamera = Camera.main;
+    }
+
+    protected override void OnUpdate()
+    {
+        // Skip update if simulated input is active - the SimulatedInputController handles input
+        if (UseSimulatedInput)
+        {
+            wasActiveLastFrame = false;
+            return;
+        }
+
+        if (mainCamera == null)
+        {
+            mainCamera = Camera.main;
+            if (mainCamera == null)
+            {
+                SystemAPI.SetSingleton(new InteractionInput());
+                return;
+            }
+        }
+
+        bool inputPressed = Input.touchCount > 0
+            ? Input.GetTouch(0).phase <= TouchPhase.Stationary
+            : Input.GetMouseButton(0);
+
+        if (!inputPressed)
+        {
+            wasActiveLastFrame = false;
+            SystemAPI.SetSingleton(new InteractionInput());
+            return;
+        }
+
+        Vector3 screenPos = Input.touchCount > 0
+            ? (Vector3)Input.GetTouch(0).position
+            : Input.mousePosition;
+
+        float zDist = -mainCamera.transform.position.z;
+        Vector3 worldPos = mainCamera.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, zDist));
+        float2 currentPoint = new(worldPos.x, worldPos.y);
+
+        float dt = SystemAPI.Time.DeltaTime;
+
+        // Get max obstacle speed from settings
+        AirflowSimSettings settings = SystemAPI.GetSingleton<AirflowSimSettings>();
+        float maxObstacleSpeed = settings.maxObstacleSpeed;
+
+        float2 velocity = float2.zero;
+        float speed = 0f;
+        float2 clampedCurrentPoint = currentPoint;
+
+        // Calculate obstacle velocity from movement between frames
+        if (wasActiveLastFrame && dt > 0f)
+        {
+            float2 delta = currentPoint - previousPoint;
+            float deltaLength = math.length(delta);
+            float rawSpeed = deltaLength / dt;
+
+            // Clamp the obstacle speed - if moving too fast, only move in that direction up to max speed
+            if (rawSpeed > maxObstacleSpeed && deltaLength > 0f)
+            {
+                float2 direction = delta / deltaLength;
+                float clampedDelta = maxObstacleSpeed * dt;
+                clampedCurrentPoint = previousPoint + direction * clampedDelta;
+                velocity = direction * maxObstacleSpeed;
+                speed = maxObstacleSpeed;
+            }
+            else
+            {
+                velocity = delta / dt;
+                speed = rawSpeed;
+            }
+        }
+
+        // Obstacle is always active at current position when input is pressed
+        // For continuous collision, we pass the swept path from previous to current position
+        InteractionInput newInput = new InteractionInput
+        {
+            position = clampedCurrentPoint,
+            velocity = velocity,
+            speed = speed,
+            lineStart = wasActiveLastFrame ? previousPoint : clampedCurrentPoint,
+            lineEnd = clampedCurrentPoint,
+            deltaTime = dt,
+            isActive = true
+        };
+
+        previousPoint = clampedCurrentPoint;
+        wasActiveLastFrame = true;
+
+        SystemAPI.SetSingleton(newInput);
+    }
+}

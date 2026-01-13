@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13aeed33dc939a439c3fb67f8b6f25c, type: 3}
+  m_Name: ASS_AI
+  m_EditorClassIdentifier: Assembly-CSharp::AirflowSimSettingsSO
+  smoothingRadius: 0.5
+  targetDensity: 35
+  pressureMultiplier: 2
+  nearPressureMultiplier: 1
+  gravity: 0
+  collisionDampening: 0.85
+  viscosityStrength: 0.005
+  boundsSize: {x: 16, y: 8}
+  interactionInputStrength: 40
+  interactionInputRadius: 0.4
+  maxObstacleSpeed: 5
+  colorGradientMaxSpeed: 5
+  slowParticleColor: {r: 0.5, g: 0.7, b: 1, a: 1}
+  fastParticleColor: {r: 1, g: 0.3, b: 0, a: 1}
+  predictionFactor: 0.09
