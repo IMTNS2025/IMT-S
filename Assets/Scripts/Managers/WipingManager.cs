@@ -45,7 +45,6 @@ public class WipingManager : MonoBehaviour
         DecontaminationItemInfo occupiedItemInfo = occupiedItemDragDrop.GetComponentInChildren<DecontaminationItemInfo>();
 
         if (occupiedItemInfo == null || occupiedItemDragDrop == null
-        || Vector3.Distance(draggedToolInfo.transform.position, workplate.transform.position) > occupiedItemDragDrop.getSnapDistance()
         || occupiedItemInfo.contaminationSpots.Count == 0 || occupiedItemInfo.currentBagLevels > 0) return;
 
         DragAndDrop draggedToolDragDrop = draggedToolInfo.GetComponentInParent<DragAndDrop>();

@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 778383d36c95d4740897a564237d3c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveWardrobe
-  minigameSceneIndexToLoad: 1
+  minigameSceneIndexToLoad: 9
 --- !u!1 &263225848
 GameObject:
   m_ObjectHideFlags: 0
