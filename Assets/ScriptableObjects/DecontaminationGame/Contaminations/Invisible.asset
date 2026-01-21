@@ -20,11 +20,11 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 96682cbf1e7684841a72348de7b849d7, type: 3}
   - {fileID: 2800000, guid: 5280023dd6b8aa148b1231c058601809, type: 3}
   - {fileID: 2800000, guid: d850f1685cfce6342a7161b3b2af2e95, type: 3}
-  amountMin: 5
-  amountMax: 5
+  amountMin: 2
+  amountMax: 4
   colorMin: {r: 0.5924529, g: 0.55921996, b: 0.53097194, a: 0.4509804}
   colorMax: {r: 0.335849, g: 0.335849, b: 0.335849, a: 0.9019608}
-  scaleMin: 200
-  scaleMax: 300
+  scaleMin: 300
+  scaleMax: 500
   visible: 0
   needsAlcohol: 1
