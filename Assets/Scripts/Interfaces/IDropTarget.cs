@@ -4,6 +4,8 @@ public interface IDropTarget
 {
     bool IsTrashbin();
 
+    bool IsLocker();
+
     bool CanAccept(DragAndDrop dragger);
 
     Vector3 GetSnapWorldPosition();

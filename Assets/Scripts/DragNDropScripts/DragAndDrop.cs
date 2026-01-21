@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -10,14 +10,21 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 
     [SerializeField] private float snapDist = 250f;
     [SerializeField] private bool makeInvisible = true;
+    public bool MakeInvisible { get => makeInvisible; set => makeInvisible = value; }
 
     [Header("Drop Targets")]
     [SerializeField] private bool autoFindTargets = true;
     [SerializeField] private bool resizeWithTarget = false;
+    public bool ResizeWithTarget { get => resizeWithTarget; set => resizeWithTarget = value; }
     private IDropTarget[] targets;
     private Vector3 originalPosition;
     private bool dragging;
     private Vector3 lastPosition;
+
+    // Scaling / state
+    private Vector3 initialLocalScale;
+    private IDropTarget currentTarget;
+    private bool wasOnLocker = false;
 
     // UI helpers
     private RectTransform rect;
@@ -26,6 +33,11 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     private Vector2 pointerToAnchorOffset;
 
     private void Start()
+    {
+        Initialize();
+    }
+
+    public void Initialize()
     {
         objectToDrag = transform.childCount > 0 ? transform.GetChild(0) : transform;
 
@@ -46,6 +58,17 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     {
         if (objectToDrag == null) return;
         dragging = true;
+
+        // Track if item was on a locker before starting drag
+        wasOnLocker = currentTarget != null && currentTarget.IsLocker();
+
+        // Clear current target when starting a new drag
+        if (currentTarget != null)
+        {
+            currentTarget.ClearDrop(this);
+            currentTarget = null;
+        }
+
         EventManager.OnItemDragStart?.Invoke(this);
     }
 
@@ -91,6 +114,14 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         if (closest == null)
         {
             objectToDrag.position = originalPosition;
+            currentTarget = null;
+
+            // If item was on a locker, it's now returning to the pocket
+            if (wasOnLocker)
+            {
+                wasOnLocker = false;
+                EventManager.OnItemReturnedToPocket?.Invoke(this);
+            }
             return;
         }
 
@@ -128,6 +159,13 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
                 i.color = new Color(i.color.r, i.color.g, i.color.b, makeInvisible ? 0f : 1f);
             }
             EventManager.OnDragFailed?.Invoke(objectToDrag.gameObject);
+
+            // If item was on a locker, it's now returning to the pocket
+            if (wasOnLocker)
+            {
+                wasOnLocker = false;
+                EventManager.OnItemReturnedToPocket?.Invoke(this);
+            }
 
             EventManager.OnItemDragEnd?.Invoke(this);
         }

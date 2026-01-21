@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class DecontaminationItemInfo : MonoBehaviour
 {
+    public DecontaminationItemSO decontaminationItemSO;
+    public ContaminationTypeSO contaminationTypeSO;
     public List<ContaminationSpot> contaminationSpots; //[HideInInspector] 
     public int maxBagLevels;
     public int currentBagLevels = 0;
