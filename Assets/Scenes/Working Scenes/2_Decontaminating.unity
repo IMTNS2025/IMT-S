@@ -2647,8 +2647,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   wipeSensitivity: 0.5
-  wipeBrushRadius: 65
-  wipeStrength: 0.1
+  wipeBrushRadius: 85
+  wipeStrength: 0.202
   wipeLowerThrashhold: 0.15
   workplate: {fileID: 1865202822}
 --- !u!4 &1275756949
@@ -4200,10 +4200,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 9f0ea92ef8f39064580dc0334b3e0b0b, type: 3}
   colorMin: {r: 0.5149519, g: 0.9924528, b: 0.965167, a: 0.5019608}
   colorMax: {r: 0.12783901, g: 0.5018867, b: 0.47609037, a: 0.8}
-  scaleMin: 200
-  scaleMax: 400
+  scaleMin: 150
+  scaleMax: 250
   splashRadius: 100
-  tickInterval: 0.25
+  tickInterval: 0.1
   workplate: {fileID: 1865202822}
 --- !u!4 &2008747529
 Transform:
