@@ -7,6 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
     path: Assets/Scenes/Working Scenes/0_Pre-Gowning.unity
     guid: 6b6a2eb17d882c0439c430f4c6860ab5
   - enabled: 1
@@ -37,6 +38,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Working Scenes/9_FeebackScreen.unity
     guid: 868ab1a6cc58b3646b9dc170f02d307e
 =======
+=======
+>>>>>>> origin/LockerMinigameFinal
     path: Assets/Scenes/Working Scenes/Pre-Gowning.unity
     guid: 6b6a2eb17d882c0439c430f4c6860ab5
   - enabled: 1
@@ -48,6 +51,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Working Scenes/DecontaminatingMiniGame.unity
     guid: 5be909d667f6a2348b907c4299a12021
+<<<<<<< HEAD
 >>>>>>> cba9287 (LockerMinigame+FontAssets)
+=======
+>>>>>>> origin/LockerMinigameFinal
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
