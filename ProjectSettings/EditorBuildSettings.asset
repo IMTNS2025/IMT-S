@@ -6,7 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/AirflowSimDOTS_ALEX.unity
-    guid: ba6312eff4df54e41984f50e1033a4dc
+    path: Assets/Scenes/Working Scenes/Pre-Gowning.unity
+    guid: 6b6a2eb17d882c0439c430f4c6860ab5
+  - enabled: 1
+    path: Assets/Scenes/Working Scenes/Gowning.unity
+    guid: 81420136c9f7b834b93379b35cb87f40
+  - enabled: 1
+    path: Assets/Scenes/Working Scenes/LockerMiniGame.unity
+    guid: c1ed50451ba75a446bad129a39e1ab09
+  - enabled: 1
+    path: Assets/Scenes/Working Scenes/DecontaminatingMiniGame.unity
+    guid: 5be909d667f6a2348b907c4299a12021
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
