@@ -151,13 +151,13 @@ TextureImporter:
       name: banana_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 36
-        width: 2134
-        height: 1358
+        x: 0
+        y: 0
+        width: 2207
+        height: 1425
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 167, y: 49, z: 75, w: 651}
       customData: 
       outline: []
       physicsShape: []
@@ -178,7 +178,7 @@ TextureImporter:
         width: 11
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -200,7 +200,7 @@ TextureImporter:
         width: 11
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -222,7 +222,7 @@ TextureImporter:
         width: 8
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -239,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f3b38c5e79e557b40b6f6a3301e57fbe
     internalID: 0
     vertices: []
     indices: 

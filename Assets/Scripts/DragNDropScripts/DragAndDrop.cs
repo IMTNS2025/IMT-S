@@ -19,10 +19,6 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     private bool dragging;
     private Vector3 lastPosition;
 
-    // Scaling / state
-    private Vector3 initialLocalScale;
-    private IDropTarget currentTarget;
-
     // UI helpers
     private RectTransform rect;
     private Canvas canvas;
@@ -44,14 +40,6 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
             targets = FindObjectsByType<DropTarget>(FindObjectsSortMode.None);
 
         originalPosition = transform.position;
-
-        // Cache initial local scale and apply container scale
-        if (objectToDrag != null)
-            initialLocalScale = objectToDrag.localScale;
-        else
-            initialLocalScale = transform.localScale;
-
-        currentTarget = null;
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -103,7 +91,6 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         if (closest == null)
         {
             objectToDrag.position = originalPosition;
-            currentTarget = null;
             return;
         }
 
@@ -114,7 +101,6 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         {
             objectToDrag.position = snapPos;
             closest.ApplyDrop(this);
-            currentTarget = closest;
 
             if (resizeWithTarget == true)
             {
@@ -136,7 +122,6 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         {
             objectToDrag.position = originalPosition;
             closest.ClearDrop(this);
-            currentTarget = null;
 
             if (objectToDrag.TryGetComponent<RawImage>(out RawImage i))
             {
