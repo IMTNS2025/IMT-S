@@ -35,5 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Working Scenes/9_FeebackScreen.unity
     guid: 868ab1a6cc58b3646b9dc170f02d307e
+  - enabled: 1
+    path: Assets/Scenes/Working Scenes/10_Inventory.unity
+    guid: 71cc0ef0f43df4543ae3cb1c594112c1
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
