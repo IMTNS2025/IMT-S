@@ -56,6 +56,7 @@ public class JoysticControl : MonoBehaviour, IDragHandler, IEndDragHandler
         float h = rt.rect.height * rt.lossyScale.y;
         return 0.5f * Mathf.Min(w, h);
     }
+
     private void PositionWithinRadius()
     {
         if (outerCircle == null || innerCircle == null) return;
