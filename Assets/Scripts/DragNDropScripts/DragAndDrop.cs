@@ -132,6 +132,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         {
             objectToDrag.position = snapPos;
             closest.ApplyDrop(this);
+            currentTarget = closest;
 
             if (resizeWithTarget == true)
             {

@@ -37,21 +37,15 @@ public class DropTarget : MonoBehaviour, IDropTarget
 
     public void ApplyDrop(DragAndDrop dragger)
     {
-        Debug.Log($"[DropTarget] ApplyDrop called. isLocker={isLocker}, isTrashbin={isTrashbin}, dragger={dragger?.gameObject?.name}");
-        
         if(isLocker && dragger != null && dragger.gameObject != null)
         {
-            Debug.Log($"[DropTarget] Item dropped on LOCKER: {dragger.gameObject.name}");
             EventManager.OnItemPutInLocker?.Invoke(dragger.gameObject);
-            // PocketsSysten handles inventory removal via OnItemRemovedFromPocket event
             EventManager.OnItemRemovedFromPocket?.Invoke(dragger);
         }
 
         if (isTrashbin && dragger != null && dragger.gameObject != null)
         {
-            Debug.Log($"[DropTarget] Item dropped on TRASHBIN: {dragger.gameObject.name}");
             EventManager.OnItemTrashed?.Invoke(dragger.gameObject);
-            // PocketsSysten handles inventory removal via OnItemRemovedFromPocket event
             EventManager.OnItemRemovedFromPocket?.Invoke(dragger);
             
             Destroy(dragger.gameObject);

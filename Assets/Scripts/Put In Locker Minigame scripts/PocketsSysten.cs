@@ -16,6 +16,9 @@ public class PocketsSysten : MonoBehaviour
     
     // Track original sizes for scaling
     private Dictionary<GameObject, Vector2> originalSizes = new Dictionary<GameObject, Vector2>();
+    
+    // Track if initial setup has been done
+    private bool hasInitialized = false;
 
     public List<GameObject> getItemInPocket()
     {
@@ -29,6 +32,12 @@ public class PocketsSysten : MonoBehaviour
         EventManager.OnItemDragStart.AddListener(OnItemDragStart);
         EventManager.OnDragSuccessed.AddListener(OnDragSucceeded);
         EventManager.OnDragFailed.AddListener(OnDragFailed);
+        
+        // Only sync if already initialized (handles re-enabling after scene switches)
+        if (hasInitialized)
+        {
+            SyncWithInventory();
+        }
     }
         
     private void OnDisable()
@@ -74,6 +83,171 @@ public class PocketsSysten : MonoBehaviour
         {
             rect.sizeDelta = originalSize * scalePocket;
         }
+    }
+    
+    private void SyncWithInventory()
+    {
+        if (InventoryManager.Instance == null) return;
+        
+        var inventoryItems = InventoryManager.Instance.GetInventoryItems();
+        
+        // Remove pocket items that are no longer in inventory AND not currently on a locker
+        List<GameObject> itemsToRemove = new List<GameObject>();
+        foreach (var kvp in instantiatedToOriginal)
+        {
+            GameObject pocketItem = kvp.Key;
+            GameObject originalItem = kvp.Value;
+            
+            // Skip if the pocket item no longer exists
+            if (pocketItem == null) continue;
+            
+            // Skip items that are currently on a locker (they should persist even if not in inventory)
+            var dragAndDrop = pocketItem.GetComponent<DragAndDrop>();
+            if (dragAndDrop != null)
+            {
+                // If this item has been dropped on a target, don't remove it
+                // We can check if it's in the itemInPocket list - if not, it's on a locker
+                if (!itemInPocket.Contains(pocketItem))
+                {
+                    continue;
+                }
+            }
+            
+            // Check if the original item is still in inventory
+            bool stillInInventory = false;
+            foreach (var invItem in inventoryItems)
+            {
+                if (invItem == originalItem)
+                {
+                    stillInInventory = true;
+                    break;
+                }
+                
+                // Also check by ScriptableObject reference
+                var invItemInfo = invItem?.GetComponent<DecontaminationItemInfo>();
+                var origItemInfo = originalItem?.GetComponent<DecontaminationItemInfo>();
+                if (invItemInfo != null && origItemInfo != null && 
+                    invItemInfo.decontaminationItemSO == origItemInfo.decontaminationItemSO)
+                {
+                    stillInInventory = true;
+                    break;
+                }
+            }
+            
+            if (!stillInInventory)
+            {
+                itemsToRemove.Add(pocketItem);
+            }
+        }
+        
+        // Destroy and remove items that are no longer in inventory
+        foreach (var pocketItem in itemsToRemove)
+        {
+            itemInPocket.Remove(pocketItem);
+            instantiatedToOriginal.Remove(pocketItem);
+            originalSizes.Remove(pocketItem);
+            if (pocketItem != null)
+            {
+                Destroy(pocketItem);
+            }
+        }
+        
+        // Add items that are in inventory but not in pocket
+        foreach (var inventoryItem in inventoryItems)
+        {
+            if (inventoryItem == null) continue;
+            
+            // Check if this inventory item already has a pocket representation
+            bool alreadyInPocket = false;
+            foreach (var kvp in instantiatedToOriginal)
+            {
+                if (kvp.Value == inventoryItem)
+                {
+                    alreadyInPocket = true;
+                    break;
+                }
+                
+                // Also check by ScriptableObject reference
+                var invItemInfo = inventoryItem.GetComponent<DecontaminationItemInfo>();
+                var origItemInfo = kvp.Value?.GetComponent<DecontaminationItemInfo>();
+                if (invItemInfo != null && origItemInfo != null && 
+                    invItemInfo.decontaminationItemSO == origItemInfo.decontaminationItemSO)
+                {
+                    alreadyInPocket = true;
+                    break;
+                }
+            }
+            
+            if (!alreadyInPocket)
+            {
+                SpawnPocketItem(inventoryItem);
+            }
+        }
+    }
+    
+    private void SpawnPocketItem(GameObject inventoryItem)
+    {
+        var sourceRect = inventoryItem.GetComponent<RectTransform>();
+        if (sourceRect == null) return;
+        
+        // Initialize pocket bounds if not done yet
+        if (pocketSizeX == 0 || pocketSizeY == 0)
+        {
+            pocketSizeX = GetComponent<RectTransform>().rect.width;
+            pocketSizeY = GetComponent<RectTransform>().rect.height;
+        }
+        
+        Bounds pocketBounds = new(transform.position, new Vector3(pocketSizeX, pocketSizeY, 0));
+        
+        // Get the original size from the source
+        Vector2 originalSize = sourceRect.sizeDelta;
+        
+        // Use scaled size for positioning
+        Vector2 scaledSize = originalSize * scalePocket;
+
+        Vector2 randomPosition = new Vector2(
+            Random.Range(pocketBounds.min.x + scaledSize.x / 2, pocketBounds.max.x - scaledSize.x / 2),
+            Random.Range(pocketBounds.min.y + scaledSize.y / 2, pocketBounds.max.y - scaledSize.y / 2)
+        );
+
+        // Instantiate the item directly
+        var go = Instantiate(inventoryItem, transform);
+        go.name = inventoryItem.name;
+        go.transform.position = randomPosition;
+
+        // Add DragAndDrop if not present
+        var dragAndDrop = go.GetComponent<DragAndDrop>();
+        if (dragAndDrop == null)
+        {
+            dragAndDrop = go.AddComponent<DragAndDrop>();
+        }
+        dragAndDrop.ResizeWithTarget = true;
+        dragAndDrop.MakeInvisible = false;
+
+        // Ensure the graphic has raycast target enabled
+        var graphic = go.GetComponent<Graphic>();
+        if (graphic != null)
+        {
+            graphic.raycastTarget = true;
+        }
+
+        // Store original size and apply pocket scale
+        var goRect = go.GetComponent<RectTransform>();
+        if (goRect != null)
+        {
+            originalSizes[go] = originalSize;
+            goRect.sizeDelta = scaledSize;
+            
+            if (go.TryGetComponent<RawImage>(out RawImage img))
+            {
+                img.color = new Color(img.color.r, img.color.g, img.color.b, 1f);
+            }
+        }
+
+        itemInPocket.Add(go);
+        instantiatedToOriginal[go] = inventoryItem;
+
+        dragAndDrop.Initialize();
     }
 
     private void OnItemReturnedToPocket(DragAndDrop item)
@@ -132,68 +306,19 @@ public class PocketsSysten : MonoBehaviour
 
         var inventoryItems = InventoryManager.Instance.GetInventoryItems();
         if (inventoryItems == null || inventoryItems.Count == 0)
+        {
+            hasInitialized = true;
             return;
+        }
 
         pocketSizeX = GetComponent<RectTransform>().rect.width;
         pocketSizeY = GetComponent<RectTransform>().rect.height;
 
-        Bounds pocketBounds = new(transform.position, new Vector3(pocketSizeX, pocketSizeY, 0));
-
         for (int i = 0; i < inventoryItems.Count; i++)
         {
-            var sourceRect = inventoryItems[i].GetComponent<RectTransform>();
-            if (sourceRect == null)
-                continue;
-
-            // Get the original size from the source
-            Vector2 originalSize = sourceRect.sizeDelta;
-            
-            // Use scaled size for positioning
-            Vector2 scaledSize = originalSize * scalePocket;
-
-            Vector2 randomPosition = new Vector2(
-                Random.Range(pocketBounds.min.x + scaledSize.x / 2, pocketBounds.max.x - scaledSize.x / 2),
-                Random.Range(pocketBounds.min.y + scaledSize.y / 2, pocketBounds.max.y - scaledSize.y / 2)
-            );
-
-            // Instantiate the item directly
-            var go = Instantiate(inventoryItems[i], transform);
-            go.name = inventoryItems[i].name;
-            go.transform.position = randomPosition;
-
-            // Add DragAndDrop if not present
-            var dragAndDrop = go.GetComponent<DragAndDrop>();
-            if (dragAndDrop == null)
-            {
-                dragAndDrop = go.AddComponent<DragAndDrop>();
-            }
-            dragAndDrop.ResizeWithTarget = true;
-            dragAndDrop.MakeInvisible = false;
-
-            // Ensure the graphic has raycast target enabled
-            var graphic = go.GetComponent<Graphic>();
-            if (graphic != null)
-            {
-                graphic.raycastTarget = true;
-            }
-
-            // Store original size and apply pocket scale
-            var goRect = go.GetComponent<RectTransform>();
-            if (goRect != null)
-            {
-                originalSizes[go] = originalSize;
-                goRect.sizeDelta = scaledSize;
-                
-                if (go.TryGetComponent<RawImage>(out RawImage img))
-                {
-                    img.color = new Color(img.color.r, img.color.g, img.color.b, 1f);
-                }
-            }
-
-            itemInPocket.Add(go);
-            instantiatedToOriginal[go] = inventoryItems[i];
-
-            dragAndDrop.Initialize();
+            SpawnPocketItem(inventoryItems[i]);
         }
+        
+        hasInitialized = true;
     }
 }
