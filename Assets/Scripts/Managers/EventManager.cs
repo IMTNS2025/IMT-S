@@ -29,4 +29,8 @@ public static class EventManager
     public static UnityEvent<GameObject> OnItemTrashed = new();
     public static UnityEvent<GameObject> OnItemPutInLocker = new();
 
+    public static UnityEvent<GameObject> OnInventoryItemAdded = new();
+    public static UnityEvent<GameObject> OnInventoryItemRemoved = new();
+    public static UnityEvent OnInventoryCleared = new();
+
 }

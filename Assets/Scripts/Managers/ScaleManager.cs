@@ -18,7 +18,7 @@ public class ScaleManager : MonoBehaviour
         {
             objectToDrag = null;
             objectToDragItemInfo = null;
-            objectToDragItemInfo = null;
+            objectToDragToolInfo = null;
         });
 
         EventManager.OnDragSuccessed.AddListener(gameObject =>
@@ -62,9 +62,10 @@ public class ScaleManager : MonoBehaviour
 
     private void ItemInfoDragStart(DragAndDrop item)
     {
-        objectToDrag = item.GetComponent<RectTransform>();
         objectToDragItemInfo = item.GetComponentInChildren<DecontaminationItemInfo>();
-        if (objectToDragItemInfo == null || objectToDrag == null) return;
+        if (objectToDragItemInfo == null) return;
+        objectToDrag = objectToDragItemInfo.GetComponent<RectTransform>();
+        if (objectToDrag == null) return;
         objectToDrag.sizeDelta = objectToDragItemInfo.originalSize * objectToDragItemInfo.scaleDragged;
         CheckScaleBag(objectToDragItemInfo.scaleDragged);
     }
@@ -105,9 +106,10 @@ public class ScaleManager : MonoBehaviour
 
     private void ToolInfoDragStart(DragAndDrop item)
     {
-        objectToDrag = item.GetComponent<RectTransform>();
         objectToDragToolInfo = item.GetComponentInChildren<DecontaminationToolInfo>();
-        if (objectToDragToolInfo == null || objectToDrag == null) return;
+        if (objectToDragToolInfo == null) return;
+        objectToDrag = objectToDragToolInfo.GetComponent<RectTransform>();
+        if (objectToDrag == null) return;
         objectToDrag.sizeDelta = objectToDragToolInfo.originalSize * objectToDragToolInfo.scaleDragged;
     }
 

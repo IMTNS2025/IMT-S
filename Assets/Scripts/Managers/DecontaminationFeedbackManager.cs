@@ -14,6 +14,14 @@ public class DecontaminationFeedbackManager : MonoBehaviour
         }
     }
 
+    public void UnregisterDecontaminationItem(DecontaminationItemInfo item)
+    {
+        if (decontaminationItems.Contains(item))
+        {
+            decontaminationItems.Remove(item);
+        }
+    }
+
     private void RecordPerformance ()
     {
         if (FeedbackSingleton.Instance == null) return;

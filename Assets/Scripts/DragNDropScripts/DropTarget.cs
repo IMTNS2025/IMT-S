@@ -19,6 +19,8 @@ public class DropTarget : MonoBehaviour, IDropTarget
 
     public bool IsTrashbin() => isTrashbin;
 
+    public bool IsLocker() => isLocker;
+
     public bool IsOccupied() => isOccupied;
 
     public DragAndDrop GetObjectOccupied() => occupiedByObject;
@@ -38,11 +40,14 @@ public class DropTarget : MonoBehaviour, IDropTarget
         if(isLocker && dragger != null && dragger.gameObject != null)
         {
             EventManager.OnItemPutInLocker?.Invoke(dragger.gameObject);
+            EventManager.OnItemRemovedFromPocket?.Invoke(dragger);
         }
 
         if (isTrashbin && dragger != null && dragger.gameObject != null)
         {
             EventManager.OnItemTrashed?.Invoke(dragger.gameObject);
+            EventManager.OnItemRemovedFromPocket?.Invoke(dragger);
+            
             Destroy(dragger.gameObject);
             return;
         }

@@ -19,7 +19,10 @@ public class LockerFeedbackManager : MonoBehaviour
             string itemName = item.name;
             if (itemInfos.ContainsKey(itemName)) continue;
 
-            GoesToLockerSpotType supposedAction = item.GetComponent<GoesToLockerSpot>().goesToLockerSpotType;
+            var goesToLockerSpot = item.GetComponentInChildren<GoesToLockerSpot>();
+            if (goesToLockerSpot == null) continue;
+
+            GoesToLockerSpotType supposedAction = goesToLockerSpot.goesToLockerSpotType;
             GoesToLockerSpotType actualAction = GoesToLockerSpotType.Inventory;
 
             if (supposedAction == actualAction)
@@ -63,7 +66,14 @@ public class LockerFeedbackManager : MonoBehaviour
 
     private void StoreFeedback(GameObject gameObject, GoesToLockerSpotType actualAction)
     {
-        GoesToLockerSpotType supposedAction = gameObject.GetComponent<GoesToLockerSpot>().goesToLockerSpotType;
+        var goesToLockerSpot = gameObject.GetComponentInChildren<GoesToLockerSpot>();
+        if (goesToLockerSpot == null)
+        {
+            Debug.LogWarning($"GoesToLockerSpot component not found on {gameObject.name} or its children.");
+            return;
+        }
+
+        GoesToLockerSpotType supposedAction = goesToLockerSpot.goesToLockerSpotType;
         string itemName = gameObject.name;
         if(itemInfos.ContainsKey(itemName))
         {
